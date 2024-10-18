@@ -5,8 +5,7 @@ import "./globals.css";
 import CookiePopup from "@components/ui/cookies/CookiePopup";
 import { AppUserProvider } from "@contexts/UserContext";
 import NavItem from "@components/navigation/molecules/NavItem";
-import { appWithTranslation } from "next-i18next";
-import { AppProps as NextAppProps } from "next/app";
+// import LanguageSwitcher from "@components/ui/header/languageswitcher/LanguageSwitcher";
 
 const figtree = Figtree({ subsets: ["latin"] });
 
@@ -82,6 +81,7 @@ export function RootLayout({
           textSize="text-sm"
           className="text-Villo-light-black dark:text-Villo-dark-white"
           />
+          {/* <LanguageSwitcher/> */}
           </nav>
           {children}
           <CookiePopup />

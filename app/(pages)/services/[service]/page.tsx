@@ -1,4 +1,5 @@
 import { SUBPAGES_DATA } from "@data/subPages_data";
+import textcontent from "@locales/no/common.json"
 
 // type TextContent = {
 //     norText: string;
@@ -26,36 +27,36 @@ interface PageProps {
 }
 
 export default function Page({ params }: PageProps) {
-  const content = SUBPAGES_DATA[params.service];
+  const content = textcontent.services[params.service];
   return (
     <>
       <h1>ofhdgiojh</h1>
       <div className="flex flex-col gap-8 p-4">
-        {/* Top Section */}
+     
         <section>
           <h1 className="text-3xl font-bold mb-4">
-            {content.top.title.engText}
+            {content.top_title}
           </h1>
-          <p className="text-lg">{content.top.paragraph.engText}</p>
+          <p className="text-lg">{content.top_paragraph}</p>
         </section>
 
-        {/* Middle Section */}
+      
         <section>
           <h2 className="text-2xl font-bold mb-4">
-            {content.middle.title.engText}
+            {content.middle_title}
           </h2>
           <ul className="list-disc pl-6 space-y-2">
-            {content.middle.bullitins.map((item, index) => (
-              <li key={index}>{item.engText}</li>
+            {content.bullitins.map((item, index) => (
+              <li key={index}>{item}</li>
             ))}
           </ul>
         </section>
 
-        {/* Bottom Section */}
+      
         <section>
-          {content.bottom.paragraphs.map((paragraph, index) => (
+          {content.bottom_paragraphs.map((paragraph, index) => (
             <p key={index} className="mb-4 text-lg">
-              {paragraph.engText}
+              {paragraph}
             </p>
           ))}
         </section>
