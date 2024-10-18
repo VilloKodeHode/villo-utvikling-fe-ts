@@ -1,0 +1,17 @@
+{
+  "name": "Villo Utvikling",
+  "short_name": "Villo Utvikling",
+  "start_url": "/",
+  "background_color": "#202929",
+  "theme_color": "#a2cbcc",
+  "display": "standalone",
+  "description": "Frontend developer, web designer, web developer, web consultant,",
+  "icons": [
+    {
+      "src": "/logo/WindLogoNoTextDarkMode.svg",
+      "sizes": "32x32",
+      "type": "image/svg",
+      "purpose": "maskable any"
+    }
+  ]
+}
