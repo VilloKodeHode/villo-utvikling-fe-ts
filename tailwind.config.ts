@@ -145,6 +145,11 @@ const config: Config = {
           "0%": { opacity: "0%" },
           "100%": { opacity: "100%" },
         },
+        splashScreenDissapear: {
+          "0%": { opacity: "100%", display: "flex" },
+          "90%": { opacity: "100%", display: "flex"},
+          "100%": { opacity: "0%", display: "none" },
+        },
         themeInAnimation: {
           "0%": {
             translate: "-100%",
@@ -281,6 +286,7 @@ const config: Config = {
         cogSpin:
           "cogSpin 10s cubic-bezier(0, 1.6, 0.68, 1.1) infinite forwards",
         cookieShake: "cookieShake 2s ease-in-out infinite forwards",
+        splashScreenOut: "splashScreenDissapear 2.5s ease-in-out forwards",
       },
     },
   },

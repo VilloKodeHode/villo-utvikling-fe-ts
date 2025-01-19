@@ -1,5 +1,5 @@
 export const i18n = {
-    defaultLocale: 'en',
+    defaultLocale: 'no',
     locales: ['en', 'no'],
 } as const;
 

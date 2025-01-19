@@ -121,15 +121,44 @@
   },
 
   "menu_items": [
-    { "text": "Hjem", "href": "/" },
-    { "text": "Om", "href": "/about" },
-    {
-      "text": "Portofølje",
-      "href": "/portfolio"
-    },
+    { "text": "Hjem", "href": "/{lang}" },
+    { "text": "Om", "href": "/{lang}/about" },
+    { "text": "Portofølje", "href": "/{lang}/portfolio" },
+    { "text": "Kontakt", "href": "/{lang}/contact" },
+    { "text": "Tjenester", "href": "/{lang}/services" }
+  ],
 
-    { "text": "Kontakt", "href": "/contact" },
-    { "text": "Tjenester", "href": "/services_provided" }
+  "service_cards": [
+    {
+      "title": "Nettsider av høyeste kvalitet",
+      "text": "Med design som følger de siste trendene og den nyeste teknologien for en moderne nettside.",
+      "href": "/{lang}/services/website",
+      "buttonText": "Les mer"
+    },
+    {
+      "title": "Søkemotoroptimalisering",
+      "text": "Øk trafikken til din nettside med et bredt spekter av SEO (Søkemotoroptimalisering) tjenester.",
+      "href": "/{lang}/services/SEO",
+      "buttonText": "Les mer"
+    },
+    {
+      "title": "Engasjerende nettinnhold",
+      "text": "Engasjerende opplevelser på nettet som kombinerer kraftfulle ord med iøynefallende visuelle elementer.",
+      "href": "/{lang}/services/webcontent",
+      "buttonText": "Les mer"
+    },
+    {
+      "title": "Content Management System (CMS)",
+      "text": "Integrer et innholdshånderingssystem for at du selv skal kunne styre innholdet på din nettside.",
+      "href": "/{lang}/services/CMS",
+      "buttonText": "Les mer"
+    },
+    {
+      "title": "Sosiale media integrasjon",
+      "text": "Koble sammen dine sosiale medier med din nettside for å vise fram innholdet ditt på en ny og spennende måte.",
+      "href": "/{lang}/services/sosialmedia_integration",
+      "buttonText": "Les mer"
+    }
   ],
 
   "employment": [
@@ -231,6 +260,4 @@
       ]
     }
   ]
-
-
 }
