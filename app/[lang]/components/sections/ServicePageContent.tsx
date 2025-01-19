@@ -34,7 +34,7 @@ const content = dictionary.service_cards;
                     key={item.title}
                     title={item.title}
                     text={item.text}
-                    href={item.href}
+                    href={item.href.replace("{lang}", params.lang)}
                     buttonText={item.buttonText}
                   />
                 ))}

@@ -10,7 +10,7 @@ interface PageProps {
 }
 
 export default async function Page({ params}: PageProps){
-const {service, lang} = params
+  const { service, lang } = params;
 
 
   const dictionary = await getDictionary(lang);
@@ -19,7 +19,7 @@ const {service, lang} = params
     <>
       <div className="flex flex-col gap-8 p-4">
      
-        <section>
+        <section className="">
           <h1 className="text-3xl font-bold mb-4">
             {content.top_title}
           </h1>

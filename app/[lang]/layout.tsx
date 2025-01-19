@@ -27,7 +27,9 @@ export async function RootLayout({ children, params }: PageProps) {
         <AppUserProvider>
           <Header />
           <NavBar params={params} />
+          <main className="">
           {children}
+          </main>
 <SplashScreen/>
           <CookiePopup />
         </AppUserProvider>
