@@ -1,12 +1,9 @@
-import { ServicePageContent } from "@components/sections/ServicePageContent";
+import { ServicePageContent } from "@components/sections/ServicePage/ServicePageContent";
+import { PageProps } from "app/[lang]/interfaces/PageProps";
 import { getDictionary } from "get-dictionary";
-import { Locale } from "i18next.config";
 
-interface PageProps {
-  params: {
-    lang: Locale;     // Dynamically passed language from URL
-  };
-}
+
+
 
 export default async function Home({params}: PageProps) {
   const dictionary = await getDictionary(params.lang);

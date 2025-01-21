@@ -1,4 +1,4 @@
-import { Themedh2, Themedh4, ThemedP } from "@components/atoms/ThemedText";
+import { ThemedH2, ThemedH4, ThemedP } from "@components/atoms/ThemedText";
 import Link from "next/link";
 
 
@@ -21,11 +21,11 @@ const content = dictionary.service_cards;
       >
         <div className="mx-auto max-w-7xl">
           <div className="text-center">
-            <Themedh2 className="text-center underline">
+            <ThemedH2 className="text-center underline">
               {params.lang === "no"
                 ? "Villo Utvikling tilbyr:"
                 : "Villo Development offers:"}
-            </Themedh2>
+            </ThemedH2>
           </div>
           <div className="flex justify-center mt-10">
             <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
@@ -61,9 +61,9 @@ export const ServiceCard = ({
           <div
             className={`grid gap-2 min-h-[240px] transition-colors duration-300 bg-Villo-light-white15 group-hover:bg-Villo-light-white10 dark:bg-Villo-dark-black75 dark:group-hover:bg-Villo-dark-black50 p-6`}
           >
-            <Themedh4 className={`font-bold max-w-fit`}>
+            <ThemedH4 className={`font-bold max-w-fit`}>
               {title}
-            </Themedh4>
+            </ThemedH4>
             <div className="mt-2">
               <ThemedP className={``}>
                 {text}

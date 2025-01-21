@@ -22,7 +22,7 @@ export const SplashScreen = () => {
       className={`fixed animate-splashScreenOut top-0 left-0 flex flex-col items-center justify-center gap-8 h-screen w-screen bg-Villo-dark-white20 dark:bg-Villo-light-black z-[999]`}
     >
       <Image
-        className=" h-36 w-auto"
+        className="h-36 w-auto"
         src={`/images/logo/WindLogo${
           theme === "light" ? "Light" : "Dark"
         }Mode.svg`}

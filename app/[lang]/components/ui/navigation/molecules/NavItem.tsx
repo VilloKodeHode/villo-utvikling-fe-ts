@@ -65,7 +65,7 @@ const NavItem = ({
       </Link>
       {(pathName === href ||
         (href.includes("/services") && prevParam() === "/services")) && (
-        <div className="absolute top-0 w-3 h-full -left-4">
+        <div className="absolute top-0 w-5 h-full -left-[20px]">
           <Image
             src={
               theme === "light"

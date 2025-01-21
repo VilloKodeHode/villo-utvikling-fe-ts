@@ -22,12 +22,14 @@ export async function RootLayout({ children, params }: PageProps) {
   return (
     <html lang={params.lang ? params.lang : "no"}>
       <body
-        className={`${figtree.className} transition-colors duration-1000 bg-Villo-light-white dark:bg-Villo-dark-black overflow-x-hidden antialiased`}
+        className={`${figtree.className} min-h-[200vh] transition-colors duration-1000 bg-Villo-light-white dark:bg-Villo-dark-black overflow-x-hidden antialiased`}
       >
         <AppUserProvider>
           <Header />
           <NavBar params={params} />
-          <main className="">
+          <main
+      className={`flex flex-col animate-Appear items-center px-4 sm:px-6 lg:px-12 justify-start overflow-x-hidden gap-28`}
+    >
           {children}
           </main>
 <SplashScreen/>

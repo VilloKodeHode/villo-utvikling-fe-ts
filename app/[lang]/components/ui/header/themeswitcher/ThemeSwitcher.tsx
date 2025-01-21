@@ -44,7 +44,7 @@ if (!hasMounted) {
   return (
     // <ThemeSwitchButton onClick={toggleTheme} />
     <button
-      className="relative grid active:scale-90 w-[24px] h-[24px] grid-flow-col"
+      className="relative grid hover:scale-105 transition active:scale-90 w-[24px] h-[24px] grid-flow-col"
       onClick={toggleTheme}
     >
       <Image
@@ -67,7 +67,7 @@ if (!hasMounted) {
                  : "animate-ThemeSwitchSlideOut"
                : ""
            }
-          dark:pointer-events-none max-w-8 h-8 absolute translate-x-1/2 origin-top-right -translate-y-1/2 top-1/2 hover:scale-110 right-1/2 transition`}
+          pointer-events-none max-w-8 h-8 absolute translate-x-1/2 origin-top-right -translate-y-1/2 top-1/2 right-1/2`}
       />
 
       <Image
@@ -88,7 +88,7 @@ if (!hasMounted) {
               ? "animate-ThemeSwitchSlideIn"
               : "animate-ThemeSwitchSlideOut"
             : ""
-        } pointer-events-none max-w-8 h-8 absolute translate-x-1/2 origin-top-right -translate-y-1/2 top-1/2 right-1/2 hover:scale-110 transition`}
+        } pointer-events-none max-w-8 h-8 absolute translate-x-1/2 origin-top-right -translate-y-1/2 top-1/2 right-1/2`}
       />
     </button>
   );
