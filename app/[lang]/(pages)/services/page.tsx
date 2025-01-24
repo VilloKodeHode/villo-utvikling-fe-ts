@@ -11,7 +11,6 @@ export default async function Home({params}: PageProps) {
     return (
       <>
      <ServicePageContent dictionary={dictionary} params={params}/>
-  
       </>
     );
   }

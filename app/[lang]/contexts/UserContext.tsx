@@ -1,5 +1,6 @@
 "use client";
 
+import { AddScrollToElement } from "@logic/handleScroll";
 import { ThemeProvider, useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
@@ -10,6 +11,7 @@ export const AppUserProvider = ({
 }) => {
   const { theme } = useTheme();
   const [isThemeLoaded, setIsThemeLoaded] = useState(false);
+  AddScrollToElement();
 
   useEffect(() => {
     setIsThemeLoaded(true);

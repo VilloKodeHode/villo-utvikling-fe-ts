@@ -1,15 +1,18 @@
 import { HeroSection } from "@components/sections/IndexPage/HeroSection";
 import { PageProps } from "./interfaces/PageProps";
+import { OfferSection } from "@components/sections/IndexPage/OfferSection";
+import { ShowcaseSection } from "@components/sections/IndexPage/ShowcaseSection";
+import { getDictionary } from "get-dictionary";
 // import { getDictionary } from "get-dictionary";
 
-export default async function  Home({params}: PageProps) {
-// const dictionary = await getDictionary(params.lang);
+export default async function Home({ params }: PageProps) {
+const dictionary = await getDictionary(params.lang);
+  // const dictionary = await getDictionary(params.lang);
   return (
     <>
-<HeroSection params={params}  />
-      {/* <div className="w-full h-[calc(100vh-112px)] flex justify-center items-center">
-      <p className="text-black dark:text-white">Some text</p>
-      </div> */}
+      <HeroSection params={params} />
+      <ShowcaseSection dictionary={dictionary} params={params} />
+      <OfferSection params={params} />
     </>
   );
 }

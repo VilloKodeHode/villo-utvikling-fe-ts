@@ -153,8 +153,8 @@ const THREESpace = () => {
   return (
     <div className="absolute top-0 -z-20 transition-all">
       <canvas ref={canvasRef} className={`transition-all duration-500 ${theme === "light"
-        ? "shadow-[0_20px_60px_1px_#e6ddff] opacity-20"
-        : "shadow-[0_20px_60px_1px_#2e2f34] opacity-100"
+        ? "shadow-[0_20px_60px_1px_#fefdff] opacity-[10%]"
+        : "shadow-[0_20px_60px_1px_#161618] opacity-100"
         }`} />
     </div>
   )
