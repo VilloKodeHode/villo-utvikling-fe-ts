@@ -5,10 +5,10 @@ interface ThemedTextProps {
 
 export const ThemedH1 = ({ children, className }: ThemedTextProps) => {
   return (
-      <p className={`text-Villo-light-black
+      <h1 className={`text-Villo-light-black
        dark:text-Villo-dark-white md:text-5xl text-4xl ${className}`}>
           {children}
-      </p>
+      </h1>
   )
 }
 
@@ -24,10 +24,10 @@ export const ThemedP = ({ children, className }: ThemedTextProps) => {
 
 export const ThemedH2 = ({ children, className }: ThemedTextProps) => {
     return (
-      <h4 className={`text-Villo-light-black
-       dark:text-Villo-dark-white md:text-4xl text-3xl ${className}`}>
+      <h2 className={`text-Villo-light-black
+       dark:text-Villo-dark-white md:text-4xl sm:text-3xl text-2xl ${className}`}>
         {children}
-      </h4>
+      </h2>
     );
   };
 
@@ -42,10 +42,10 @@ export const ThemedH4 = ({ children, className }: ThemedTextProps) => {
 
 export const ThemedH5 = ({ children, className }: ThemedTextProps) => {
   return (
-    <h4 className={`text-Villo-light-black
+    <h5 className={`text-Villo-light-black
      dark:text-Villo-dark-white md:text-lg text-md ${className}`}>
       {children}
-    </h4>
+    </h5>
   );
 };
 

@@ -7,24 +7,22 @@ import { ThemedH2, ThemedP } from "@components/atoms/ThemedText";
 export const ShowcaseSection = ({ dictionary }) => {
   const content = dictionary.showCaseList;
   const [activeImageIndex, setActiveImageIndex] = useState(0);
-  // const [activeImageType, setActiveImageType] = useState(content[0].type);
-  // const [isAnimating, setIsAnimating] = useState(false);
 
-  const clickNext = () => {
+  const changeToNextImage = () => {
     return activeImageIndex === content.length - 1
       ? setActiveImageIndex(0)
       : setActiveImageIndex(activeImageIndex + 1);
   };
 
-  // const clickPrev = () =>
+  // const changeToPrevImage = () =>
   //   activeImageIndex === 0
   //     ? setActiveImageIndex(content.length - 1)
   //     : setActiveImageIndex(activeImageIndex - 1);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      clickNext();
-    }, 3000);
+      changeToNextImage();
+    }, 5000);
     return () => clearTimeout(timer);
   }, [activeImageIndex]);
 
@@ -35,9 +33,9 @@ export const ShowcaseSection = ({ dictionary }) => {
         id="showcase-section"
       >
         <div className="grid place-content-center h-full m-0">
-          <div className="grid grid-cols-2 gap-8 w-full max-w-6xl md:flex-row">
-            <div className="w-full relative z-10 select-none justify-self-start">
-              <ThemedH2 className="mb-8 ">
+          <div className="grid sm:grid-cols-2 h-[100vh] items-center gap-8 w-full max-w-6xl grid-cols-1 sm:grid-rows-1 grid-rows-3">
+            <div className="w-full relative z-10 select-none sm:self-center self-end">
+              <ThemedH2 className="flex sm:block justify-center gap-x-3 md:gap-x-0">
                 {content.map((showCase, index) => (
                   <Showcase
                     key={showCase.alt + index}
@@ -48,15 +46,14 @@ export const ShowcaseSection = ({ dictionary }) => {
                   />
                 ))}
               </ThemedH2>
-              <ThemedP className="max-h-[48px] mb-8 ">
+              <ThemedP className="mb-8 hidden h-[72px] sm:block">
+                
                 {content[activeImageIndex].paragraph}
               </ThemedP>
             </div>
-            {/* <div
-              className={``}
-            > */}
+
               <div
-                className={`justify-self-end z-10 grid items-center justify-center w-full transition-all relative md:w-[450px] md:h-[450px] outline-offset-4 rounded-2xl overflow-hidden outline-2 outline outline-Villo-light-primary dark:outline-Villo-dark-primary
+                className={`justify-self-end z-10 grid items-center justify-center w-full transition-all relative md:w-full h-full sm:h-[450px] outline-offset-4 rounded-2xl overflow-hidden outline-2 outline outline-Villo-light-primary dark:outline-Villo-dark-primary
                   `}
               >
                 {content.map((image, index) => (
@@ -66,13 +63,15 @@ export const ShowcaseSection = ({ dictionary }) => {
                     alt={image.alt}
                     width={700}
                     height={700}
-                    className={`${image.fileType === "svg" ? "object-contain bg-Villo-dark-white20 p-8" : "object-cover object-left-top"} absolute duration-500  transition-all rounded-[4px] xl:w-[550px] ease-linear lg:w-[500px] md:w-full md:h-full h-[300px] ${
+                    className={`${image.fileType === "svg" ? "object-contain bg-Villo-dark-white20 p-8" : "object-cover object-left-top"} absolute duration-500  transition-all rounded-[4px] w-full h-full ${
                       index === activeImageIndex ? "opacity-100" : "opacity-0"
                     } `}
                   />
                 ))}
               </div>
-            {/* </div> */}
+              <ThemedP className="max-h-[48px] mb-8 block self-start sm:hidden">
+                {content[activeImageIndex].paragraph}
+              </ThemedP>
           </div>
         </div>
       </section>
@@ -87,13 +86,13 @@ export const Showcase = ({ content, setActiveImage, activeImage, index }) => {
     return (
       <span
         onMouseEnter={() => setActiveImage(index)}
-        className={`cursor-pointer group
+        className={`cursor-pointer group sm:block flex sm:flex-row flex-col items-center align-middle border
             text-Villo-light-primary
             dark:text-Villo-dark-primary`}
       >
         <span
           className={`
-              group-hover:text-Villo-light-primary dark:group-hover:text-Villo-dark-primary group-hover:opacity-100 transition-all duration-500 opacity-60  h1hidden ${
+              group-hover:text-Villo-light-primary dark:group-hover:text-Villo-dark-primary group-hover:opacity-100 transition-all duration-500 opacity-60 h-fit h1hidden ${
                 activeImage === index
                   ? "text-Villo-dark-primary"
                   : "text-Villo-light-white20 dark:text-Villo-dark-black50"

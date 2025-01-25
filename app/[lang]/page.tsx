@@ -11,7 +11,7 @@ const dictionary = await getDictionary(params.lang);
   return (
     <>
       <HeroSection params={params} />
-      <ShowcaseSection dictionary={dictionary} params={params} />
+      <ShowcaseSection dictionary={dictionary} />
       <OfferSection params={params} />
     </>
   );

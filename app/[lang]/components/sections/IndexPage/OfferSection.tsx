@@ -12,7 +12,7 @@ export const OfferSection = async ({ params }: PageProps) => {
     >
       <div className="mx-auto max-w-7xl ">
         <div className="text-center">
-          <ThemedH2 className="px-12 text-center">
+          <ThemedH2 className="text-center">
             {params.lang === "no"
               ? "Villo Utvikling tilbyr:"
               : "Villo Development offers:"}
@@ -81,9 +81,9 @@ export const OfferSectionPart = ({
         className={`overflow-hidden max-w-sm transition-transform duration-300 shadow sm:rounded-lg`}
       >
         <div
-          className={`grid gap-6 min-h-[131px] transition-colors duration-300
+          className={`grid gap-2 sm:gap-4 md:gap-6 md:min-h-[131px] transition-colors duration-300
               bg-Villo-light-white15 group-hover:bg-Villo-light-white10
-              dark:bg-Villo-dark-black75 group-hover:dark:bg-Villo-dark-black50 p-12`}
+              dark:bg-Villo-dark-black75 group-hover:dark:bg-Villo-dark-black50 p-6 sm:p-8 md:p-12`}
         >
           <ThemedH4 className={`font-bold max-w-fit `}>
             {params.lang === "no" ? norTitle : engTitle}
