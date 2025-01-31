@@ -3,7 +3,8 @@ import { ThemedH2, ThemedH4, ThemedP } from "@components/atoms/ThemedText";
 import { PageProps } from "app/[lang]/interfaces/PageProps";
 import { ReadMoreButton } from "@components/atoms/Buttons";
 
-export const OfferSection = async ({ params }: PageProps) => {
+export const OfferSection = async ({ params}: PageProps) => {
+  const content = dictionary.service_cards;
   return (
     <section
       id="OfferSection"
@@ -20,7 +21,7 @@ export const OfferSection = async ({ params }: PageProps) => {
         </div>
         <div className="flex justify-center mt-10 opacity-0 animate-on-scroll">
           <div className="flex flex-wrap items-center justify-center md:gap-6">
-            <OfferSectionPart
+            <OfferSectionCard
               params={params}
               norTitle="Høykvalitets nettsider"
               engTitle="High-Quality websites"
@@ -28,7 +29,7 @@ export const OfferSection = async ({ params }: PageProps) => {
               engText="With design that follows the current trends and the latest the technology for a modern website."
               href="/services_provided/website"
             />
-            <OfferSectionPart
+            <OfferSectionCard
               params={params}
               norTitle="Søkemotor-optimalisering"
               engTitle="Search engine optimization"
@@ -36,7 +37,7 @@ export const OfferSection = async ({ params }: PageProps) => {
               engText="Increase traffic to your website with a comprehensive range of SEO (Search Engine Optimization) services."
               href="/services_provided/SEO"
             />
-            <OfferSectionPart
+            <OfferSectionCard
               params={params}
               norTitle="Engasjerende nettinnhold"
               engTitle="Engaging webcontent"
@@ -44,7 +45,7 @@ export const OfferSection = async ({ params }: PageProps) => {
               engText="Captivating experiences that combine powerful words with eye-catching visuals."
               href="/services_provided/webcontent"
             />
-            <OfferSectionPart
+            <OfferSectionCard
               params={params}
               norTitle="Content Management System (CMS)"
               engTitle="Content Management System (CMS)"
@@ -52,7 +53,7 @@ export const OfferSection = async ({ params }: PageProps) => {
               engText="Integrate a content management system so that you can manage your content on your website."
               href="/services_provided/CMS"
             />
-            <OfferSectionPart
+            <OfferSectionCard
               params={params}
               norTitle="Sosiale media integrasjon"
               engTitle="Social media integration"
@@ -67,7 +68,7 @@ export const OfferSection = async ({ params }: PageProps) => {
   );
 };
 
-export const OfferSectionPart = ({
+export const OfferSectionCard = ({
   norTitle,
   engTitle,
   norText,
