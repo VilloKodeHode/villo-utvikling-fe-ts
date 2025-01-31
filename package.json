@@ -10,10 +10,9 @@
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.5.5",
-    "@tailwindcss/postcss": "^4.0.1",
     "cookies-next": "^4.3.0",
     "negotiator": "^0.6.3",
-    "next": "^14.2.23",
+    "next": "14.2.15",
     "next-i18next": "^15.3.1",
     "next-themes": "^0.3.0",
     "react": "^18",
@@ -30,9 +29,9 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.15",
-    "postcss": "^8.5.1",
+    "postcss": "^8",
     "tailwind-scrollbar": "^3.1.0",
-    "tailwindcss": "^3.4.17",
+    "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }
 }
