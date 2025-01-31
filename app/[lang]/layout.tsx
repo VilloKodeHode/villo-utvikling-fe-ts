@@ -19,7 +19,6 @@ interface PageProps {
 }
 
 export async function RootLayout({ children, params }: PageProps) {
-
   return (
     <html lang={params.lang ? params.lang : "no"}>
       <body
@@ -29,11 +28,11 @@ export async function RootLayout({ children, params }: PageProps) {
           <Header />
           <NavBar params={params} />
           <main
-      className={`flex flex-col animate-Appear items-center px-4 sm:px-6 lg:px-12 justify-start overflow-x-hidden gap-28`}
-    >
-          {children}
+            className={`flex flex-col animate-Appear mb-24 items-center px-4 sm:px-6 lg:px-12 justify-start overflow-x-hidden gap-28`}
+          >
+            {children}
           </main>
-<SplashScreen/>
+          <SplashScreen />
           <CookiePopup />
         </AppUserProvider>
       </body>
