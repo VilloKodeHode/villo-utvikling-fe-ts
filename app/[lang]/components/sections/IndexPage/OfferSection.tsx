@@ -4,7 +4,7 @@ import { PageProps } from "app/[lang]/interfaces/PageProps";
 import { ReadMoreButton } from "@components/atoms/Buttons";
 
 export const OfferSection = async ({ params}: PageProps) => {
-  const content = dictionary.service_cards;
+  // const content = dictionary.service_cards;
   return (
     <section
       id="OfferSection"
