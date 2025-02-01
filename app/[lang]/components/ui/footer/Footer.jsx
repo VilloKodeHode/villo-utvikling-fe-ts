@@ -1,4 +1,5 @@
 //Footer component
+//TODO Change to tsx script
 
 import Link from "next/link";
 import { FiMail } from "react-icons/fi";
@@ -14,7 +15,7 @@ export default function Footer() {
   return (
     <div
       className={`relative py-24 sm:px-6 lg:px-12 px-4 ${
-        theme === "light" ? "bg-Villo-light-primary" : "bg-Villo-dark-primary"
+        theme === "light" ? "bg-light-primary" : "bg-dark-primary"
       }`}
     >
       {/* <FooterLinks Theme={Theme} /> */}
@@ -23,8 +24,8 @@ export default function Footer() {
         <div
           className={`flex flex-col gap-2 ${
             theme === "light"
-              ? "text-Villo-light-white"
-              : "text-Villo-dark-white"
+              ? "text-light-white"
+              : "text-dark-white"
           }`}
         >
           <div className="flex gap-4">
@@ -32,8 +33,8 @@ export default function Footer() {
               <FiMail
                 className={`w-8 h-8  ${
                   theme === "light"
-                    ? "text-Villo-light-white10 hover:text-Villo-light-white20"
-                    : "text-Villo-dark-white10 hover:text-Villo-dark-white20"
+                    ? "text-light-white10 hover:text-light-white20"
+                    : "text-dark-white10 hover:text-dark-white20"
                 } duration-200  hover:scale-125`}
               />
             </Link>
@@ -42,8 +43,8 @@ export default function Footer() {
               <VscGithubAlt
                 className={`w-8 h-8  ${
                   theme === "light"
-                    ? "text-Villo-light-white10 hover:text-Villo-light-white20"
-                    : "text-Villo-dark-white10 hover:text-Villo-dark-white20"
+                    ? "text-light-white10 hover:text-light-white20"
+                    : "text-dark-white10 hover:text-dark-white20"
                 } duration-200  hover:scale-125`}
               />
             </a>
@@ -54,8 +55,8 @@ export default function Footer() {
               <SlSocialLinkedin
                 className={`w-8 h-8  ${
                   theme === "light"
-                    ? "text-Villo-light-white10 hover:text-Villo-light-white20"
-                    : "text-Villo-dark-white10 hover:text-Villo-dark-white20"
+                    ? "text-light-white10 hover:text-light-white20"
+                    : "text-dark-white10 hover:text-dark-white20"
                 } duration-200  hover:scale-125`}
               />
             </a>
@@ -68,8 +69,8 @@ export default function Footer() {
         <div
           className={`flex items-center text-center ${
             theme === "light"
-              ? "text-Villo-light-white"
-              : "text-Villo-dark-white"
+              ? "text-light-white"
+              : "text-dark-white"
           }`}
         >
           <h4 className="text-h4">
@@ -80,7 +81,7 @@ export default function Footer() {
         </div>
 
         {/* Privacy Policy and Terms of Service */}
-        {/* <div className={`text-right ${Theme === "light" ? "text-Villo-light-white" : "text-Villo-dark-white"}`}>
+        {/* <div className={`text-right ${Theme === "light" ? "text-light-white" : "text-dark-white"}`}>
             <Link href="/privacy-policy">
               <p className="">Privacy Policy</p>
             </Link>
@@ -109,8 +110,8 @@ export const FooterLinks = () => {
           <FiMail
             className={`w-8 h-8 mr-4  ${
               theme === "light"
-                ? "text-Villo-light-white10 hover:text-Villo-light-secondary"
-                : "text-Villo-dark-white10 hover:text-Villo-dark-secondary"
+                ? "text-light-white10 hover:text-light-secondary"
+                : "text-dark-white10 hover:text-dark-secondary"
             } duration-200  hover:scale-125`}
           />
         </Link>
@@ -120,8 +121,8 @@ export const FooterLinks = () => {
           <VscGithubAlt
             className={`w-8 h-8 mr-4  ${
               theme === "light"
-                ? "text-Villo-light-white10 hover:text-Villo-light-secondary"
-                : "text-Villo-dark-white10 hover:text-Villo-dark-secondary"
+                ? "text-light-white10 hover:text-light-secondary"
+                : "text-dark-white10 hover:text-dark-secondary"
             } duration-200  hover:scale-125`}
           />
         </a>
@@ -134,8 +135,8 @@ export const FooterLinks = () => {
           <SlSocialLinkedin
             className={`w-8 h-8 mr-4  ${
               theme === "light"
-                ? "text-Villo-light-white10 hover:text-Villo-light-secondary"
-                : "text-Villo-dark-white10 hover:text-Villo-dark-secondary"
+                ? "text-light-white10 hover:text-light-secondary"
+                : "text-dark-white10 hover:text-dark-secondary"
             } duration-200  hover:scale-125`}
           />
         </a>

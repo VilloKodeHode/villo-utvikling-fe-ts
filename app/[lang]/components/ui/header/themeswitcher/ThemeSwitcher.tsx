@@ -3,8 +3,8 @@
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import LIGHTMODE from "./assets/lightmode.svg";
-import DARKMODE from "./assets/darkmode.svg";
+// import LIGHTMODE from "./assets/lightmode.svg";
+// import DARKMODE from "./assets/darkmode.svg";
 import { getCookie, setCookie } from "cookies-next";
 
 export const ThemeSwitch: React.FC =  () => {
@@ -48,7 +48,7 @@ if (!hasMounted) {
       onClick={toggleTheme}
     >
       <Image
-        src={LIGHTMODE}
+        src="./assets/lightmode.svg"
         width={30}
         height={30}
         alt="themeswitch to darkmode"
@@ -56,22 +56,22 @@ if (!hasMounted) {
           ${
             runAnimation === false
               ? theme === "light"
-                ? "animate-ThemeSwitchSlideIn"
+                ? "animate-Theme-switch-slide-in"
                 : "hidden"
               : ""
           }
            ${
              runAnimation
                ? theme === "light"
-                 ? "animate-ThemeSwitchSlideIn"
-                 : "animate-ThemeSwitchSlideOut"
+                 ? "animate-Theme-switch-slide-in"
+                 : "animate-Theme-switch-slide-out"
                : ""
            }
           pointer-events-none max-w-8 h-8 absolute translate-x-1/2 origin-top-right -translate-y-1/2 top-1/2 right-1/2`}
       />
 
       <Image
-        src={DARKMODE}
+        src="./assets/darkmode.svg"
         width={30}
         height={30}
         alt="themeswitch to lightmode"
@@ -79,14 +79,14 @@ if (!hasMounted) {
           ${
             runAnimation === false
               ? theme === "dark"
-                ? "animate-ThemeSwitchSlideIn"
+                ? "animate-Theme-switch-slide-in"
                 : "hidden"
               : ""
           } ${
           runAnimation
             ? theme === "dark"
-              ? "animate-ThemeSwitchSlideIn"
-              : "animate-ThemeSwitchSlideOut"
+              ? "animate-Theme-switch-slide-in"
+              : "animate-Theme-switch-slide-out"
             : ""
         } pointer-events-none max-w-8 h-8 absolute translate-x-1/2 origin-top-right -translate-y-1/2 top-1/2 right-1/2`}
       />

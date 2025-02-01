@@ -21,22 +21,23 @@ export const Header = () => {
 
   return (
     <>
-      <header className="bg-opacity-[0.93] transition ease-linear duration-200 backdrop-blur-[10px] z-40 h-10 flex items-center justify-between px-4 sm:px-6 lg:px-12 py-6 bg-Villo-light-white15 dark:bg-Villo-dark-black text-Villo-light-black dark:text-Villo-dark-white10">
+      <header className="transition ease-linear duration-200 backdrop-blur-[10px] z-40 h-10 flex items-center justify-between px-4 sm:px-6 lg:px-12 py-6 bg-light-white15/93 dark:bg-dark-black/93 text-light-black dark:text-dark-white10">
         <div
           className={`grid transition-all z-40 grid-flow-col gap-12
  
-          ${notTop ? "animate-SlideInFromBottom" : "animate-SlideInFromTop"}`}
+          ${notTop ? "animate-Slide-in-from-bottom" : "animate-Slide-in-from-top"}`}
         >
           <LanguageSwitcher />
           <ThemeSwitch />
         </div>
+        {/* TODO: Create a common animation for the whole div below instead of one for each icon */}
         <div className="flex gap-4">
           <a
             href="https://github.com/VilloKodeHode"
             target="_blank"
             className={`transition-all z-40
  
-          ${notTop ? "animate-SlideInFromBottom" : "animate-SlideInFromTop"}`}
+          ${notTop ? "animate-Slide-in-from-bottom" : "animate-Slide-in-from-top"}`}
           >
             <SiLinkedin
               className={`w-8 h-8 mx-auto duration-200 hover:scale-105 flex transition-all`}
@@ -47,7 +48,7 @@ export const Header = () => {
             target="_blank"
             className={`transition-all z-40
  
-          ${notTop ? "animate-SlideInFromBottom" : "animate-SlideInFromTop"}`}
+          ${notTop ? "animate-Slide-in-from-bottom" : "animate-Slide-in-from-top"}`}
           >
             <SiGithub
               className={`w-8 h-8 mx-auto duration-200 hover:scale-105 flex transition-all`}
@@ -58,7 +59,7 @@ export const Header = () => {
             target="_blank"
             className={`transition-all z-40
  
-          ${notTop ? "animate-SlideInFromBottom" : "animate-SlideInFromTop"}`}
+          ${notTop ? "animate-Slide-in-from-bottom" : "animate-Slide-in-from-top"}`}
           >
             <SiFacebook
               className={`w-8 h-8 mx-auto duration-200 hover:scale-105 flex transition-all`}

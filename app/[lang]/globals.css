@@ -1,29 +1,470 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@tailwind;
+@import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@theme {
+  --breakpoint-ms: 320px;
+  --breakpoint-mm: 375px;
+  --breakpoint-ml: 425px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  --color-dark-primary: #858ee0;
+  --color-dark-secondary: #571dff;
+  --color-dark-black: #161618;
+  --color-dark-black85: #2e2f34;
+  --color-dark-black75: #383844;
+  --color-dark-black50: #48485b;
+  --color-dark-white: #fbfbfe;
+  --color-dark-white10: #f3f4fc;
+  --color-dark-white15: #e9ebf9;
+  --color-dark-white20: #e0e2f7;
+
+  --color-light-primary: #571dff;
+  --color-light-secondary: #858ee0;
+  --color-light-black: #141315;
+  --color-light-black85: #2e2f34;
+  --color-light-black75: #383844;
+  --color-light-black50: #48485b;
+  --color-light-white: #fefdff;
+  --color-light-white10: #f6f3ff;
+  --color-light-white15: #efe9ff;
+  --color-light-white20: #e6ddff;
+
+  --text-h1: 4.209rem;
+  --text-h2: 3.157rem;
+  --text-h3: 2.369rem;
+  --text-h4: 1.777rem;
+  --text-h5: 1.333rem;
+  --text-h6: 1rem;
+  --text-p: 1rem;
+  --text-p0: 0.75rem;
+  --text-small: 0.563rem;
+  --text-mini: 0.422rem;
+  --text-4xl: 2.25rem;
+  --text-3xl: 1.875rem;
+  --text-2xl: 1.5rem;
+  --text-xl: 1.25rem;
+  --text-lg: 1.125rem;
+  --text-base: 1rem;
+  --text-sm: 0.875rem;
+  --text-xs: 0.75rem;
+
+  --leading-h1: 1.2em;
+  --leading-h2: 1.2em;
+  --leading-h3: 1.2em;
+  --leading-h4: 1.2em;
+  --leading-h5: 1.2em;
+  --leading-h6: 1.2em;
+  --leading-p: 1.5em;
+  --leading-p0: 1.5em;
+  --leading-small: 1.5em;
+  --leading-mini: 1.5em;
+  --leading-4xl: 2.75rem;
+  --leading-3xl: 2.5rem;
+  --leading-2xl: 2.25rem;
+  --leading-xl: 1.75rem;
+  --leading-lg: 1.5rem;
+  --leading-base: 1.375rem;
+  --leading-sm: 1.25rem;
+  --leading-xs: 1.125rem;
+
+  --font-Roboto: Roboto, sans-serif;
+  --font-Lato: Lato, sans-serif;
+
+  --animate-rotate-left: rotateLeft ease-in 1s alternate;
+  --animate-rotate-right: rotateRight ease-in 1s alternate;
+  --animate-wave-slide-left: waveSlideLeft ease-in 16s alternate infinite;
+  --animate-wave-slide-right: waveSlideRight ease-in 15s 1s alternate infinite;
+  --animate-Button-hover: buttonHover ease-in 1.5s infinite;
+  --animate-Modal-slide-in: slideRight ease 0.3s;
+  --animate-RPSPop-up: popUp 0.1s ease-in;
+  --animate-glow: glow 3s ease-in-out infinite alternate;
+  --animate-Slide-in-from-left: slideLeft 0.5s ease-in-out;
+  --animate-Tools-slide-in: toolsSlideIn 0.5s ease-in-out forwards;
+  --animate-Tools-slide-out: toolsSlideOut 0.5s ease-in-out forwards;
+  --animate-Cookies-slide-out: cookiesSlideOut 0.5s ease-in-out forwards;
+  --animate-Cookies-slide-in: cookiesSlideIn 0.5s ease-in-out forwards;
+  --animate-Slide-in-from-right: slideInRight 0.5s 1s ease-in-out backwards;
+  --animate-Theme-switch-slide-in: themeInAnimation 0.5s ease-in-out backwards;
+  --animate-Theme-switch-slide-out: themeOutAnimation 0.5s ease-in-out forwards;
+  --animate-Slide-in-from-top: slideDown 0.5s ease-in-out;
+  --animate-Slide-in-from-bottom: slideUp 0.5s ease-in-out forwards;
+  --animate-Appear: appear 0.5s ease-in-out;
+  --animate-Disappear: appear 0.3s ease-in-out backwards;
+  --animate-Page-appear-right: slideInRight 0.6s ease-in-out forwards;
+  --animate-Page-appear-left: slideInLeft 0.3s ease-in-out;
+  --animate-RPSPop-up-delayed: popUp 0.1s ease-in 1s backwards;
+  --animate-RPSPop-up-more-delayed: popUp 0.1s ease-in 2s backwards;
+  --animate-fade-in: fadeIn 1s forwards;
+  --animate-scroll: scroll 35s linear infinite;
+  --animate-cog-spin: cogSpin 10s cubic-bezier(0, 1.6, 0.68, 1.1) infinite
+    forwards;
+  --animate-cookie-shake: cookieShake 2s ease-in-out infinite forwards;
+  --animate-splash-screen-out: splashScreenDissapear 2.5s ease-in-out forwards;
+
+  {}
+
+  @keyframes buttonHover {
+    0% {
+      color: #c9fef5;
+    }
+    50% {
+      color: #22555c;
+    }
+    100% {
+      color: #c9fef5;
+    }
+  }
+  @keyframes waveSlideLeft {
+    0% {
+      translate: 1000px;
+    }
+    100% {
+      translate: -1000px;
+    }
+  }
+  @keyframes waveSlideRight {
+    0% {
+      translate: 1000px;
+    }
+    100% {
+      translate: -1000px;
+    }
+  }
+  @keyframes glow {
+    0% {
+      opacity: 30%;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+  @keyframes slideRight {
+    0% {
+      translate: -100%;
+      opacity: 0%;
+    }
+    100% {
+      translate: 0%;
+      opacity: 100%;
+    }
+  }
+  @keyframes slideLeft {
+    0% {
+      translate: 100%;
+      opacity: 0%;
+    }
+    100% {
+      translate: 0%;
+      opacity: 100%;
+    }
+  }
+  @keyframes slideUp {
+    0% {
+      transform: translateY(0%);
+      opacity: 100%;
+    }
+    100% {
+      translate: translateY(100%);
+      opacity: 0%;
+    }
+  }
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0%;
+    }
+    100% {
+      translate: translateY(0%);
+      opacity: 100%;
+    }
+  }
+  @keyframes appear {
+    0% {
+      opacity: 0%;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+  @keyframes splashScreenDissapear {
+    0% {
+      opacity: 100%;
+      display: flex;
+    }
+    90% {
+      opacity: 100%;
+      display: flex;
+    }
+    100% {
+      opacity: 0%;
+      display: none;
+    }
+  }
+  @keyframes themeInAnimation {
+    0% {
+      translate: -100%;
+      scale: 0;
+      opacity: 0%;
+      display: hidden;
+    }
+    100% {
+      translate: -0%;
+      scale: 1;
+      opacity: 100%;
+      display: block;
+    }
+  }
+  @keyframes themeOutAnimation {
+    0% {
+      translate: -0%;
+      scale: 1;
+      opacity: 100%;
+      display: hidden;
+    }
+    100% {
+      translate: -100%;
+      scale: 0;
+      opacity: 0%;
+      display: block;
+    }
+  }
+  @keyframes slideInRight {
+    0% {
+      translate: -100%;
+      opacity: 0%;
+      display: hidden;
+    }
+    100% {
+      translate: -0%;
+      opacity: 100%;
+      display: block;
+    }
+  }
+  @keyframes slideInLeft {
+    0% {
+      translate: 100%;
+      opacity: 0%;
+      display: hidden;
+    }
+    100% {
+      translate: 0%;
+      opacity: 100%;
+      display: block;
+    }
+  }
+  @keyframes slideOutRight {
+    0% {
+      translate: -0%;
+      opacity: 100%;
+      display: hidden;
+    }
+    100% {
+      translate: -100%;
+      opacity: 0%;
+    }
+  }
+  @keyframes slideOutLeft {
+    0% {
+      translate: 0%;
+      opacity: 100%;
+      display: hidden;
+    }
+    100% {
+      translate: 50%;
+      opacity: 0%;
+      display: block;
+    }
+  }
+  @keyframes toolsSlideIn {
+    0% {
+      translate: 0% -280%;
+      display: hidden;
+    }
+    100% {
+      translate: 0% 0%;
+      display: block;
+    }
+  }
+  @keyframes toolsSlideOut {
+    0% {
+      translate: 0% 0%;
+      display: block;
+    }
+    100% {
+      translate: -200% 0%;
+      display: hidden;
+    }
+  }
+  @keyframes cookiesSlideOut {
+    0% {
+      translate: 100% 0%;
+    }
+    100% {
+      translate: 0% 0%;
+    }
+  }
+  @keyframes cookiesSlideIn {
+    0% {
+      translate: 0% 0%;
+    }
+    100% {
+      translate: 100% 0%;
+    }
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  @keyframes reverseScroll {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+  @keyframes rotateLeft {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+  @keyframes rotateRight {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes cogSpin {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    10% {
+      transform: rotate(36deg) scale(1.1);
+    }
+    20% {
+      transform: rotate(72deg) scale(1.1);
+    }
+    30% {
+      transform: rotate(108deg) scale(1.1);
+    }
+    40% {
+      transform: rotate(144deg) scale(1.1);
+    }
+    50% {
+      transform: rotate(180deg) scale(1.1);
+    }
+    60% {
+      transform: rotate(216deg) scale(1.1);
+    }
+    70% {
+      transform: rotate(252deg) scale(1.1);
+    }
+    80% {
+      transform: rotate(288deg) scale(1.1);
+    }
+    90% {
+      transform: rotate(324deg) scale(1.1);
+    }
+    100% {
+      transform: rotate(360deg) scale(1);
+    }
+  }
+  @keyframes cookieShake {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    20% {
+      transform: rotate(10deg) scale(1.1);
+    }
+    30% {
+      transform: rotate(-20deg) scale(1.1);
+    }
+    40% {
+      transform: rotate(20deg) scale(1.1);
+    }
+    50% {
+      transform: rotate(-30deg) scale(1.1);
+    }
+    60% {
+      transform: rotate(20deg) scale(1.1);
+    }
+    70% {
+      transform: rotate(-20deg) scale(1.1);
+    }
+    80% {
+      transform: rotate(-10deg) scale(1.1);
+    }
+    100% {
+      transform: rotate(0deg) scale(1);
+    }
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+@utility text-balance {
+  text-wrap: balance;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  @tailwind;
+}
+
+@layer utilities {
+  :root {
+    --background: #ffffff;
+    --foreground: #171717;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #0a0a0a;
+      --foreground: #ededed;
+    }
+  }
+
+  body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
   }
 }
 

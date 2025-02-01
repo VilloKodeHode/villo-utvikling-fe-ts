@@ -51,7 +51,7 @@ export const ShowcaseSection = ({ dictionary }) => {
             </div>
 
             <div
-              className={`justify-self-end z-10 grid items-center justify-center w-full transition-all relative md:w-full h-full sm:h-[450px] outline-offset-4 rounded-2xl overflow-hidden outline-2 outline outline-Villo-light-primary dark:outline-Villo-dark-primary
+              className={`justify-self-end z-10 grid items-center justify-center w-full transition-all relative md:w-full h-full sm:h-[450px] outline-offset-4 rounded-2xl overflow-hidden outline-2 outline-light-primary dark:outline-dark-primary
                   `}
             >
               {content.map((image, index) => (
@@ -63,7 +63,7 @@ export const ShowcaseSection = ({ dictionary }) => {
                   height={700}
                   className={`${
                     image.fileType === "svg"
-                      ? "object-contain bg-Villo-dark-white20 p-8"
+                      ? "object-contain bg-dark-white20 p-8"
                       : "object-cover object-left-top"
                   } absolute duration-500  transition-all rounded-[4px] w-full h-full ${
                     index === activeImageIndex ? "opacity-100" : "opacity-0"
@@ -88,16 +88,16 @@ export const Showcase = ({ content, setActiveImage, activeImage, index }) => {
       <ThemedH2 className="">
         <span
           onMouseEnter={() => setActiveImage(index)}
-          className={`cursor-pointer group sm:block flex sm:flex-row flex-col items-center align-middle border
-            text-Villo-light-primary
-            dark:text-Villo-dark-primary`}
+          className={`cursor-pointer group sm:block flex sm:flex-row flex-col items-center align-middle
+            text-light-primary
+            dark:text-dark-primary`}
         >
           <span
             className={`
-              group-hover:text-Villo-light-primary dark:group-hover:text-Villo-dark-primary group-hover:opacity-100 transition-all duration-500 opacity-60 h-fit h1hidden ${
+              group-hover:text-light-primary dark:group-hover:text-dark-primary group-hover:opacity-100 transition-all duration-500 opacity-60 h-fit h1hidden ${
                 activeImage === index
-                  ? "text-Villo-dark-primary"
-                  : "text-Villo-light-white20 dark:text-Villo-dark-black50"
+                  ? "text-dark-primary"
+                  : "text-light-white20 dark:text-dark-black50"
               }`}
           >
             <br />

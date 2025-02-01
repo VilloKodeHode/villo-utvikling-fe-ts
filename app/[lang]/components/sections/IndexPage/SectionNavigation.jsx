@@ -10,10 +10,10 @@ export const SectionNavigation = () => {
           <>
             <span
               key={index + char}
-              className=" group drop-shadow-[10px_10px_0px_#383844] hover:drop-shadow-[10px_10px_0px_#858ee0] transition-all duration-500 ease-in-out hover:text-Villo-light-primary"
+              className=" group drop-shadow-[10px_10px_0px_#383844] hover:drop-shadow-[10px_10px_0px_#858ee0] transition-all duration-500 ease-in-out hover:text-light-primary"
             >
               {char}
-              <span className="absolute left-0 w-full border-2 border-Villo-dark-primary transition-all duration-500 ease-in-out top-1/4 h-[60%] hover:scale-110"></span>
+              <span className="absolute left-0 w-full border-2 border-dark-primary transition-all duration-500 ease-in-out top-1/4 h-[60%] hover:scale-110"></span>
             </span>
 
           </>
@@ -28,7 +28,7 @@ export const SectionNavigation = () => {
         id="SectionNavigation"
       >
 
-        <div className="flex flex-col  z-20 tracking-widest sm:text-[70px] ml:text-[70px] mm:text-[50px] text-[40px] justify-end items-end text-end font-extrabold px-12 text-Villo-dark-white20">
+        <div className="flex flex-col  z-20 tracking-widest sm:text-[70px] ml:text-[70px] mm:text-[50px] text-[40px] justify-end items-end text-end font-extrabold px-12 text-dark-white20">
           {generateSpans("WHO?", "#HeroSection")}
           {generateSpans("WHAT?", "#CTAOneSection")}
           {generateSpans("WHY?", "#OfferSection")}

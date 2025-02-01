@@ -24,6 +24,7 @@ export const NavBar = async ({ className, params }: ComponentProps) => {
   return (
     <div className={`flex w-full items-center justify-start ${className}`}>
       <div className="hidden ml-8 md:block">
+        {/* TODO: Check what rounded-bl-full does */}
         <div className="flex-row hidden justify-end h-[112px] items-center rounded-bl-full gap-8 w-full md:flex">
           {menuItems.map((item, index) => (
             <NavItem

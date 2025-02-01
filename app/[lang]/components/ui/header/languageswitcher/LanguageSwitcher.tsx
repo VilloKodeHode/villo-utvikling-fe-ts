@@ -28,7 +28,7 @@ export default function LanguageSwitcher() {
               <Image
                 className={`w-fit h-5 hover:scale-125 transition cursor-pointer ${
                   pathname === redirectedPathname(locale)
-                    ? "scale-110 opacity-100 outline outline-[1px] outline-Villo-dark-primary dark:outline-Villo-light-primary"
+                    ? "scale-110 opacity-100 outline-[1px] outline-dark-primary dark:outline-light-primary"
                     : "opacity-60"
                 }`}
                 src={`/images/flags/${locale}.png`}
@@ -40,7 +40,7 @@ export default function LanguageSwitcher() {
           </li>
         ))}
       </ul>
-      {/* <div className="absolute top-0 left-0 flex items-center justify-center h-screen w-screen bg-Villo-dark-white20 dark:bg-orange-700 z-[999]">
+      {/* <div className="absolute top-0 left-0 flex items-center justify-center h-screen w-screen bg-dark-white20 dark:bg-orange-700 z-999">
         <Image
           className={`h-36 w-36`}
           src={`${

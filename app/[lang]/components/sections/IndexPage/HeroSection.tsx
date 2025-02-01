@@ -14,7 +14,7 @@ export const HeroSection = async ({params}: PageProps) => {
           className=" max-w-6xl z-10 flex items-center justify-center w-full min-h-[calc(100dvh-160px)] bg-center bg-cover"
           id="HeroSection"
         >
-          <div className="max-w-6xl animate-PageAppearRight">
+          <div className="max-w-6xl animate-Page-appear-right">
             <div className="relative z-50 text-left">
               <ThemedP
                 className={`mb-8 text-left w-fit`}

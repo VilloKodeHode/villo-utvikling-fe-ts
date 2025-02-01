@@ -36,11 +36,12 @@ const CookiePopup: React.FC = () => {
   return (
     <div
       className={`${
-        showPopup ? "animate-CookiesSlideIn" : "animate-CookiesSlideOut"
+        showPopup ? "animate-Cookies-slide-in" : "animate-Cookies-slide-out"
       } fixed bottom-0 -left-[320px] z-50 flex items-center justify-center group h-fit w-fit`}
     >
       <div
-        className={`min-h-[131px] max-w-[300px] transition-all duration-300 bg-opacity-[0.95] px-6 py-4 outline m-2 rounded-xl         bg-Villo-light-white10 group-hover:bg-Villo-light-white15 outline-Villo-light-black85 dark:bg-Villo-dark-black75 dark:group-hover:bg-Villo-dark-black85 dark:outline-Villo-dark-white10
+        className={`min-h-[131px] max-w-[300px] transition-all duration-300 bg-opacity-[0.95] px-6 py-4 outline m-2 rounded-xl bg-light-white10
+           group-hover:bg-light-white15 outline-light-black85 dark:bg-dark-black75 dark:group-hover:bg-dark-black85 dark:outline-dark-white10
         `}
       >
         <div className="relative grid items-center justify-center gap-2 pt-3">
@@ -71,7 +72,7 @@ const CookiePopup: React.FC = () => {
           ${
             showPopup
               ? "bottom-[230px] sm:bottom-[242px] left-[280px] sm:left-[290px]"
-              : "bottom-[4px] left-[320px] sm:bottom-[18px] sm:left-[334px] hover:scale-125 opacity-30 hover:animate-cookieShake hover:opacity-100"
+              : "bottom-[4px] left-[320px] sm:bottom-[18px] sm:left-[334px] hover:scale-125 opacity-30 hover:animate-cookie-shake hover:opacity-100"
           }
           `}
           />

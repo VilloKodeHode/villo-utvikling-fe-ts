@@ -5,8 +5,8 @@ interface ThemedTextProps {
 
 export const ThemedH1 = ({ children, className }: ThemedTextProps) => {
   return (
-      <h1 className={`text-Villo-light-black
-       dark:text-Villo-dark-white md:text-5xl text-4xl ${className}`}>
+      <h1 className={`text-light-black
+       dark:text-dark-white md:text-5xl text-4xl ${className}`}>
           {children}
       </h1>
   )
@@ -15,8 +15,8 @@ export const ThemedH1 = ({ children, className }: ThemedTextProps) => {
 
 export const ThemedP = ({ children, className }: ThemedTextProps) => {
     return (
-        <p className={`text-Villo-light-black
-         dark:text-Villo-dark-white ${className}`}>
+        <p className={`text-light-black
+         dark:text-dark-white ${className}`}>
             {children}
         </p>
     )
@@ -24,8 +24,8 @@ export const ThemedP = ({ children, className }: ThemedTextProps) => {
 
 export const ThemedH2 = ({ children, className }: ThemedTextProps) => {
     return (
-      <h2 className={`text-Villo-light-black
-       dark:text-Villo-dark-white md:text-4xl sm:text-3xl text-2xl ${className}`}>
+      <h2 className={`text-light-black
+       dark:text-dark-white md:text-4xl sm:text-3xl text-2xl ${className}`}>
         {children}
       </h2>
     );
@@ -33,8 +33,8 @@ export const ThemedH2 = ({ children, className }: ThemedTextProps) => {
 
 export const ThemedH4 = ({ children, className }: ThemedTextProps) => {
   return (
-    <h4 className={`text-Villo-light-black
-     dark:text-Villo-dark-white md:text-xl text-lg ${className}`}>
+    <h4 className={`text-light-black
+     dark:text-dark-white md:text-xl text-lg ${className}`}>
       {children}
     </h4>
   );
@@ -42,8 +42,8 @@ export const ThemedH4 = ({ children, className }: ThemedTextProps) => {
 
 export const ThemedH5 = ({ children, className }: ThemedTextProps) => {
   return (
-    <h5 className={`text-Villo-light-black
-     dark:text-Villo-dark-white md:text-lg text-md ${className}`}>
+    <h5 className={`text-light-black
+     dark:text-dark-white md:text-lg text-md ${className}`}>
       {children}
     </h5>
   );

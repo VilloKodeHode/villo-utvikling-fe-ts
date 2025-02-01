@@ -16,10 +16,9 @@ export const SplashScreen = () => {
     return segments.join("/");
   };
 
-  // animate-lightSplashScreenOut
   return (
     <div
-      className={`fixed animate-splashScreenOut top-0 left-0 flex flex-col items-center justify-center gap-8 h-screen w-screen bg-Villo-dark-white20 dark:bg-Villo-light-black z-[999]`}
+      className={`fixed animate-splash-screen-out top-0 left-0 flex flex-col items-center justify-center gap-8 h-screen w-screen bg-dark-white20 dark:bg-light-black z-999`}
     >
       <Image
         className="h-36 w-auto"
@@ -55,7 +54,7 @@ export const SplashScreen = () => {
         />
       </div>
 
-      <p className="text-3xl font-bold text-Villo-dark-black dark:text-Villo-light-white">
+      <p className="text-3xl font-bold text-dark-black dark:text-light-white">
         {pathname === redirectedPathname("en")
           ? "Loading..."
           : "Laster..."}

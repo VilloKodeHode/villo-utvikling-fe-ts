@@ -49,7 +49,7 @@ const NavItem = ({
     <div key={text} className={`relative group ${className}`}>
       <Link href={href} className="">
         <p
-          className={`${textSize} text-Villo-light-black dark:text-Villo-dark-white z-10`}
+          className={`${textSize} text-light-black dark:text-dark-white z-10`}
           onClick={onClick}
         >
           {text}
@@ -60,7 +60,7 @@ const NavItem = ({
             (href.includes("/services") && prevParam() === "/services")
               ? "h-2"
               : "group-hover:h-2"
-          } absolute -z-[10] w-full h-0 transition-[height] bg-Villo-light-primary  dark:bg-Villo-dark-primary`}
+          } absolute -z-10 w-full h-0 transition-[height] bg-light-primary  dark:bg-dark-primary`}
         />
       </Link>
       {(pathName === href ||
@@ -102,8 +102,8 @@ const NavItem = ({
 //         <button
 //           className={`${textSize} active:after:rotate-180 ${
 //             theme === "light"
-//               ? "text-Villo-light-black"
-//               : "text-Villo-dark-white"
+//               ? "text-light-black"
+//               : "text-dark-white"
 //           }  z-10`}
 //           onClick={onClick}
 //         >
@@ -115,8 +115,8 @@ const NavItem = ({
 //             ${isServiceSubPage ? `h-2` : "group-hover:h-2"}
 //             absolute w-full h-0 transition-all ${
 //               theme === "light"
-//                 ? "bg-Villo-light-primary"
-//                 : "bg-Villo-dark-primary"
+//                 ? "bg-light-primary"
+//                 : "bg-dark-primary"
 //             }`}
 //       />
 
@@ -153,8 +153,8 @@ const NavItem = ({
 //         <p
 //           className={`z-10 hover:animate-pulse ${textSize} ${
 //             theme === "light"
-//               ? "text-Villo-light-black"
-//               : "text-Villo-dark-white"
+//               ? "text-light-black"
+//               : "text-dark-white"
 //           }
 
 //             `}
@@ -165,8 +165,8 @@ const NavItem = ({
 //         {/* <div
 //           className={`${currentPath === href ? `border opacity-100` : "group-hover:border group-hover:opacity-100"
 //             } absolute w-[110%] bottom-1/2 translate-y-1/2 translate-x-1/2  -z-10 h-[110%] opacity-0 transition-all ${Theme === "light"
-//               ? " border-Villo-light-primary"
-//               : "border-Villo-dark-primary"
+//               ? " border-light-primary"
+//               : "border-dark-primary"
 //             }`}
 //         /> */}
 //       </Link>

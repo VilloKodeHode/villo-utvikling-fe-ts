@@ -25,16 +25,16 @@ export function ScrollToTopButton() {
     return (
       <button
         onClick={scrollToTop}
-        className={`text-Villo-light-white20 hover:text-Villo-light-primary
-            dark:text-Villo-dark-black50 dark:hover:text-Villo-dark-primary
+        className={`text-light-white20 hover:text-light-primary
+            dark:text-dark-black50 dark:hover:text-dark-primary
         z-50 p-1 fixed sm:bottom-4 bottom-1 sm:right-4 right-1 transition-all duration-200 rounded-full hover:scale-125  ${
           isVisible ? "opacity-100 " : "opacity-0 cursor-default"
         }`}
       >
         <FiArrowUpCircle
           className={`w-12 h-12 rounded-full
-              fill-Villo-light-white hover:fill-Villo-light-white20
-              dark:fill-Villo-dark-black85 dark:hover:fill-Villo-dark-black
+              fill-light-white hover:fill-light-white20
+              dark:fill-dark-black85 dark:hover:fill-dark-black
           `}
           strokeWidth={1.5}
         />
