@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
@@ -89,7 +89,7 @@
   --animate-Cookies-slide-out: cookiesSlideOut 0.5s ease-in-out forwards;
   --animate-Cookies-slide-in: cookiesSlideIn 0.5s ease-in-out forwards;
   --animate-Slide-in-from-right: slideInRight 0.5s 1s ease-in-out backwards;
-  --animate-Theme-switch-slide-in: themeInAnimation 0.5s ease-in-out backwards;
+  --animate-Theme-switch-slide-in: themeInAnimation 0.5s ease-in-out forwards;
   --animate-Theme-switch-slide-out: themeOutAnimation 0.5s ease-in-out forwards;
   --animate-Slide-in-from-top: slideDown 0.5s ease-in-out;
   --animate-Slide-in-from-bottom: slideUp 0.5s ease-in-out forwards;
@@ -106,7 +106,8 @@
   --animate-cookie-shake: cookieShake 2s ease-in-out infinite forwards;
   --animate-splash-screen-out: splashScreenDissapear 2.5s ease-in-out forwards;
 
-  {}
+  @keyframes filler {
+  }
 
   @keyframes buttonHover {
     0% {
@@ -483,7 +484,6 @@
     opacity: 1;
   }
 }
-
 
 .gradient-container {
   position: relative;

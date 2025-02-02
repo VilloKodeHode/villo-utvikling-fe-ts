@@ -39,7 +39,7 @@ export function ReadMoreButton({ children, onClick, className }: ButtonProps) {
   return (
     <button
       onClick={onClick}
-      className={`relative flex w-fit justify-center items-center group font-bold uppercase transition duration-200 ease-linear ${className} text-light-black85 hover:text-light-primary dark:text-dark-white10 dark:hover:text-dark-primary
+      className={`relative flex w-fit h-fit justify-center items-center group font-bold uppercase transition duration-200 ease-linear ${className} text-light-black85 hover:text-light-primary dark:text-dark-white10 dark:hover:text-dark-primary
        rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.05] origin-center`}
     >
       <>

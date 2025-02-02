@@ -3,8 +3,8 @@
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-// import LIGHTMODE from "./assets/lightmode.svg";
-// import DARKMODE from "./assets/darkmode.svg";
+import LIGHTMODE from "./assets/lightmode.svg";
+import DARKMODE from "./assets/darkmode.svg";
 import { getCookie, setCookie } from "cookies-next";
 
 export const ThemeSwitch: React.FC =  () => {
@@ -44,11 +44,11 @@ if (!hasMounted) {
   return (
     // <ThemeSwitchButton onClick={toggleTheme} />
     <button
-      className="relative grid hover:scale-105 transition active:scale-90 w-[24px] h-[24px] grid-flow-col"
+      className="relative cursor-pointer hover:scale-105 transition-all active:scale-90 w-[24px] h-[24px] grid-flow-col"
       onClick={toggleTheme}
     >
       <Image
-        src="./assets/lightmode.svg"
+        src={LIGHTMODE}
         width={30}
         height={30}
         alt="themeswitch to darkmode"
@@ -67,11 +67,11 @@ if (!hasMounted) {
                  : "animate-Theme-switch-slide-out"
                : ""
            }
-          pointer-events-none max-w-8 h-8 absolute translate-x-1/2 origin-top-right -translate-y-1/2 top-1/2 right-1/2`}
+          pointer-events-none w-8 h-auto absolute top-0`}
       />
 
       <Image
-        src="./assets/darkmode.svg"
+        src={DARKMODE}
         width={30}
         height={30}
         alt="themeswitch to lightmode"
@@ -88,7 +88,7 @@ if (!hasMounted) {
               ? "animate-Theme-switch-slide-in"
               : "animate-Theme-switch-slide-out"
             : ""
-        } pointer-events-none max-w-8 h-8 absolute translate-x-1/2 origin-top-right -translate-y-1/2 top-1/2 right-1/2`}
+        } pointer-events-none w-8 h-auto absolute top-0`}
       />
     </button>
   );

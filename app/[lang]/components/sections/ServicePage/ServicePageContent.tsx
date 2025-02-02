@@ -64,9 +64,11 @@ export const ServiceCard = ({ title, text, href, buttonText }) => {
         <div className="mt-2">
           <ThemedP className={``}>{text}</ThemedP>
         </div>
-        <Link href={href} className="w-fit">
-          <ReadMoreButton>{buttonText}</ReadMoreButton>
-        </Link>
+        <ReadMoreButton>
+          <Link href={href} className="w-fit">
+            {buttonText}
+          </Link>
+        </ReadMoreButton>
         {/* <div className="absolute group-hover:opacity-80 opacity-0 group-hover:h-[105%] group-hover:w-[103.5%] w-0 h-0 transition-all right-1/2 translate-x-1/2 top-1/2 translate-y-[-50%] sm:rounded-lg -z-99 bg-dark-primary" /> */}
       </div>
     </div>
