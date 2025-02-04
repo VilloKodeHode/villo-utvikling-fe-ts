@@ -1,18 +1,23 @@
 "use client";
 
-import { i18n, type Locale } from "i18next.config";
+
+//TODO: Check if code works:
+import { redirectedPathname } from "@logic/redirectedPathName";
+import { i18n } from "i18next.config";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function LanguageSwitcher() {
   const pathname = usePathname();
-  const redirectedPathname = (locale: Locale) => {
-    if (!pathname) return "/";
-    const segments = pathname.split("/");
-    segments[1] = locale;
-    return segments.join("/");
-  };
+
+  //! Revert back to this if code isnt working:
+  // const redirectedPathname = (locale: Locale) => {
+  //   if (!pathname) return "/";
+  //   const segments = pathname.split("/");
+  //   segments[1] = locale;
+  //   return segments.join("/");
+  // };
 
   // console.log(i18n.locales)
 
@@ -22,12 +27,12 @@ export default function LanguageSwitcher() {
         {i18n.locales.map((locale) => (
           <li key={locale}>
             <Link
-              href={redirectedPathname(locale)}
-              className={pathname === redirectedPathname(locale) ? "" : ""}
+              href={redirectedPathname(pathname ,locale)}
+              className={pathname === redirectedPathname(pathname ,locale) ? "" : ""}
             >
               <Image
                 className={`w-fit h-5 hover:scale-125 transition cursor-pointer ${
-                  pathname === redirectedPathname(locale)
+                  pathname === redirectedPathname(pathname, locale)
                     ? "scale-110 opacity-100 outline-[1px] outline-dark-primary dark:outline-light-primary"
                     : "opacity-60"
                 }`}
