@@ -58,9 +58,9 @@ const NavItem = ({
           className={` ${
             pathName === href ||
             (href.includes("/services") && prevParam() === "/services")
-              ? "h-2"
-              : "group-hover:h-2"
-          } absolute -z-10 w-full h-0 transition-[height] bg-light-primary  dark:bg-dark-primary`}
+              ? "h-1.5"
+              : "group-hover:h-1.5"
+          } absolute w-full h-0 transition-[height] bg-light-primary  dark:bg-dark-primary`}
         />
       </Link>
       {(pathName === href ||

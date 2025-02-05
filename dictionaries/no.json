@@ -1,4 +1,24 @@
 {
+  "logo": {
+    "light": {
+      "text": "Hjem",
+      "href": "/",
+      "textImage": "/images/logo/logo-text-lightMode.svg",
+      "leftLogo": "/images/logo/logo-left-lightMode.svg",
+      "rightLogo": "/images/logo/logo-right-lightMode.svg",
+      "imageWidth": 180,
+      "imageHeight": 180
+    },
+    "dark": {
+      "text": "Hjem",
+      "href": "/",
+      "textImage": "/images/logo/logo-text-darkMode.svg",
+      "leftLogo": "/images/logo/logo-left-darkMode.svg",
+      "rightLogo": "/images/logo/logo-right-darkMode.svg",
+      "imageWidth": 180,
+      "imageHeight": 180
+    }
+  },
   "services": {
     "website": {
       "top_title": "Trenger du ny nettside?",

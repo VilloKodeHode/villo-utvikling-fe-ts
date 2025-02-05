@@ -1,4 +1,20 @@
 {
+  "logo": {
+    "light": {
+      "text": "Home",
+      "href": "/",
+      "imageSrc": "/logo/WindLogoLightmode.svg",
+      "imageWidth": 200,
+      "imageHeight": 200
+    },
+    "dark": {
+      "text": "Home",
+      "href": "/",
+      "imageSrc": "/logo/WindLogoDarkmode.svg",
+      "imageWidth": 200,
+      "imageHeight": 200
+    }
+  },
   "services": {
     "website": {
       "top_title": "Need a new website?",

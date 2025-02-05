@@ -37,7 +37,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "app/**/*.{ts,tsx}",
-    "i18next.config.ts",
+    "i18next.config.ts", "app/[lang]/components/atoms/Logo.jsx",
   ],
   "exclude": ["node_modules"]
 }
