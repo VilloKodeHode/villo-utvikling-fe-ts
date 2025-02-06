@@ -77,6 +77,8 @@
 
   --animate-rotate-left: rotateLeft ease-in 1s alternate;
   --animate-rotate-right: rotateRight ease-in 1s alternate;
+  --animate-rotate-left-logo: rotateLeft ease-in-out 10s alternate infinite;
+  --animate-rotate-right-logo: rotateRight ease-in-out 10s alternate infinite;
   --animate-wave-slide-left: waveSlideLeft ease-in 16s alternate infinite;
   --animate-wave-slide-right: waveSlideRight ease-in 15s 1s alternate infinite;
   --animate-Button-hover: buttonHover ease-in 1.5s infinite;

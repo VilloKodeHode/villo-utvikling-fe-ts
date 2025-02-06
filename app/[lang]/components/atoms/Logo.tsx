@@ -29,21 +29,21 @@ const LogoComponent = ({ onclick, image }) => {
         width={logoObject.imageWidth}
         height={logoObject.imageHeight}
         alt="Villo utvikling logo"
-        className="z-20 h-full lg:p-1 animate-Page-appear-right duration-1000"
+        className="z-20 h-full  lg:p-1 animate-Page-appear-right duration-1000"
       />
       <Image
         src={logoObject.leftLogo}
         width={logoObject.imageWidth}
         height={logoObject.imageHeight}
         alt="Villo utvikling logo"
-        className="-z-10 absolute h-20 -top-5 -right-[54px] lg:p-1 group-hover:-rotate-360 ease-out origin-center duration-1000"
+        className="-z-10 absolute w-fit h-20 -top-5 -right-1 lg:p-1 group-hover:-rotate-360 ease-out origin-center duration-1000"
       />
       <Image
         src={logoObject.rightLogo}
         width={logoObject.imageWidth}
         height={logoObject.imageHeight}
         alt="Villo utvikling logo"
-        className="z-20 h-20 absolute -top-5 -right-[81px] lg:p-1 group-hover:-rotate-360 duration-1000"
+        className="z-20 h-20 w-fit absolute -top-5 -right-7.5 lg:p-1 group-hover:-rotate-360 duration-1000"
       />
     </Link>
   );

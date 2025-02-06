@@ -3,9 +3,11 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { ShowCaseHeaderText, ThemedP } from "@components/atoms/ThemedText";
+import { useTheme } from "next-themes";
 
 export const ShowcaseSection = ({ dictionary }) => {
   const content = dictionary.showCaseList;
+  const { theme } = useTheme();
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
   const changeToNextImage = () => {
@@ -32,6 +34,8 @@ export const ShowcaseSection = ({ dictionary }) => {
         className="relative animate-on-scroll opacity-0 z-10 flex items-center justify-center w-full group/imageEffect"
         id="showcase-section"
       >
+        {/* Image should be visable at all times, so find to make it so */}
+        <Image src={`${theme === "light" ? "/images/logo/WindLogoNoTextLightMode.svg" : "/images/logo/WindLogoNoTextDarkMode.svg"}`} className="absolute opacity-5 h-[150vh]" alt="" width={5000} height={5000} />
         {/* <div className="grid sm:grid-cols-2 h-[100vh] items-center gap-8 w-full max-w-6xl grid-cols-1 sm:grid-rows-1 grid-rows-3"></div> */}
         <div className="flex sm:flex-row h-[100vh] items-center gap-8 w-full max-w-6xl flex-col">
           <div className="w-full relative z-10 select-none sm:self-center sm:block flex self-end justify-center ml:mb-8 gap-x-3 md:gap-x-0">
@@ -107,6 +111,7 @@ export const Showcase = ({ content, setActiveImage, activeImage, index }) => {
               Web
             </span>
             {content[index].type}
+            {/* <div className={`${ activeImage === index ? "w-[106.5px]" : "w-0"}  h-0.5 transition-all bg-light-primary dark:bg-dark-primary`} /> */}
           </span>
         </ShowCaseHeaderText>
       </div>
