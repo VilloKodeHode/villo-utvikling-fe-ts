@@ -49,13 +49,13 @@ const LogoComponent = ({ onclick, image }) => {
   );
 };
 
-export const SimpleLogoComponent = ({ image }) => {
+export const SimpleLogoComponent = () => {
   const { theme } = useTheme();
 
   // Find the logo object based on the theme
-  const logoObject = image[theme];
+  const logoSrc = theme === "light" ? "/images/logo/WindLogoNoTextLightMode.svg" : "/images/logo/WindLogoNoTextDarkMode.svg";
 
-  if (!logoObject) {
+  if (!logoSrc) {
     // Handle case when logo object for the theme is not found
     return null;
   }
@@ -63,9 +63,9 @@ export const SimpleLogoComponent = ({ image }) => {
   return (
     <div>
       <Image
-        src={logoObject.imageSrc}
-        width={logoObject.imageWidth}
-        height={logoObject.imageHeight}
+        src={logoSrc}
+        width={200}
+        height={200}
         alt="Villo utvikling logo"
         className="z-50 m-4"
       />

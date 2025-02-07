@@ -36,6 +36,17 @@ export const ThemedH2 = ({ children, className }: ThemedTextProps) => {
   );
 };
 
+export const ThemedH3 = ({ children, className }: ThemedTextProps) => {
+  return (
+    <h2
+      className={`text-light-black
+       dark:text-dark-white sm:text-h3 text-h5 leading-h5 sm:leading-h3  ${className}`}
+    >
+      {children}
+    </h2>
+  );
+};
+
 export const ShowCaseHeaderText = ({
   children,
   className,
