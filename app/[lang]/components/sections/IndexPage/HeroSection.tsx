@@ -1,5 +1,4 @@
 import Link from "next/link";
-import THREESpace from "@components/animation/Space";
 import { ThemedH1, ThemedH5, ThemedP } from "@components/atoms/ThemedText";
 import { PageProps } from "app/[lang]/interfaces/PageProps";
 import { ArrowCTA } from "@components/atoms/Buttons";
@@ -54,7 +53,7 @@ export const HeroSection = async ({params}: PageProps) => {
             </div>
           </div>
         </section>
-        <THREESpace />
+        {/* <THREESpace /> */}
       </div>
     </>
   );

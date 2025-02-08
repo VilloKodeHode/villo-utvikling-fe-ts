@@ -1,35 +1,22 @@
 "use client"
 
+import { useOpacityScroll } from "@logic/scrollOpacity";
+import { useColors } from "@logic/useColors";
+import { useTheme } from "next-themes";
+// import { useOpacityScroll } from "@logic/scrollOpacity";
 // import { useTheme } from "@logic/useTheme";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import * as THREE from "three";
 
 const THREESpace = () => {
-  const [theme, setTheme] = useState(null);
-
-  useEffect(() => {
-      const htmlElement = document.documentElement;
-      setTheme(htmlElement.getAttribute("data-theme"));
-
-      const observer = new MutationObserver(()=> {
-          setTheme(htmlElement.getAttribute("data-theme"));
-      })
-
-      observer.observe(htmlElement, {
-          attributes: true,
-          attributeFilter: ["data-theme"],
-      })
-
-      return () => observer.disconnect();
-
-  }, [theme]);
+  const { theme } = useTheme();
   const canvasRef = useRef();
   const scene = useRef();
   const camera = useRef();
   const renderer = useRef();
   const particles = useRef();
   let frame = useRef(0);
-  const particleCount = 1500;
+  const particleCount = 2500;
 
   useEffect(() => {
     scene.current = new THREE.Scene();
@@ -40,8 +27,13 @@ const THREESpace = () => {
       1000
     );
 
-    renderer.current = new THREE.WebGLRenderer({ canvas: canvasRef.current });
+    renderer.current = new THREE.WebGLRenderer({
+      canvas: canvasRef.current,
+      alpha: true
+    });
+
     renderer.current.setSize(window.innerWidth, window.innerHeight);
+    renderer.current.setClearColor(0x000000, 0);
 
     const geometry = new THREE.SphereGeometry(0.05, 16, 16);
 
@@ -50,6 +42,8 @@ const THREESpace = () => {
     for (let i = 0; i < particleCount; i++) {
       const material = new THREE.MeshBasicMaterial({
         color: 0xffffff,
+        transparent: true,
+        opacity: 1,
       });
       const particle = new THREE.Mesh(geometry, material);
       particle.position.set(
@@ -91,7 +85,7 @@ const THREESpace = () => {
       particles.current.rotation.y = totalRotationY;
 
       // Parallax scrolling effect
-      const scrollFactor = 0.002;
+      const scrollFactor = 0.001;
       particles.current.position.y = window.scrollY * scrollFactor;
 
       // Additional rotation when scrolling
@@ -108,53 +102,18 @@ const THREESpace = () => {
     };
   }, [canvasRef, scene, camera, renderer, particles]);
 
-  useEffect(() => {
-    if (particles.current) {
-      const colors =
-        theme === "light"
-          ? [
-              0x571dff,
-              0x858ee0,
-              0x141315,
-              0x2e2f34,
-              0x383844,
-              0x48485b,
-              0xfff,
-              0xf6f3ff,
-              0xefe9ff,
-              0xe6ddff,
-            ]
-          : [
-              0x858ee0,
-              0x571dff,
-              0x161618,
-              0x2e2f34,
-              0x383844,
-              0x48485b,
-              0xfbfbfe,
-              0x03f4fc,
-              0xe9ebf9,
-              0xe02f7,
-            ];
 
-      particles.current.children.forEach((particle) => {
-        particle.material.color = new THREE.Color(
-          colors[Math.floor(Math.random() * colors.length)]
-        );
-      });
+  useOpacityScroll(particles);
+  useColors(particles, theme)
 
-      renderer.current.setClearColor(
-        theme === "light" ? 0x571dff : 0x858ee0,
-        0
-      );
-    }
-  }, [theme]);
+
+
 
   return (
-    <div className="absolute top-0 -z-20 transition-all">
-      <canvas ref={canvasRef} className={`transition-all duration-500 ${theme === "light"
-        ? "shadow-[0_20px_60px_1px_#fefdff] opacity-[10%]"
-        : "shadow-[0_20px_60px_1px_#161618] opacity-100"
+    <div className="fixed top-0 -z-20 transition-all ">
+      <canvas ref={canvasRef} className={`transition-all opacity-scroll duration-500 ${theme === "light"
+        ? "shadow-[0_20px_60px_1px_#fefdff] opacity-5"
+        : "shadow-[0_20px_60px_1px_#161618]"
         }`} />
     </div>
   )

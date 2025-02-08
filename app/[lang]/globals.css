@@ -12,16 +12,16 @@
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1536px;
 
-  --color-dark-primary: #858ee0;
-  --color-dark-secondary: #571dff;
-  --color-dark-black: #161618;
-  --color-dark-black85: #2e2f34;
-  --color-dark-black75: #383844;
-  --color-dark-black50: #48485b;
-  --color-dark-white: #fbfbfe;
-  --color-dark-white10: #f3f4fc;
-  --color-dark-white15: #e9ebf9;
-  --color-dark-white20: #e0e2f7;
+  --color-dark-primary: oklch(67.37% 0.1213 287.84);
+  --color-dark-secondary: oklch(50.14% 0.2874 279.95);
+  --color-dark-black: oklch(20% 0.0039 287.84);
+  --color-dark-black85: oklch(30% 0.00039 287.84);
+  --color-dark-black75: oklch(35% 0.0039 287.84);
+  --color-dark-black50: oklch(40% 0.0039 287.84);
+  --color-dark-white: oklch(95% 0.0039 287.84);
+  --color-dark-white10: oklch(90% 0.0039 287.84);
+  --color-dark-white15: oklch(85% 0.0039 287.84);
+  --color-dark-white20: oklch(80% 0.0039 287.84);
 
   --color-light-primary: #571dff;
   --color-light-secondary: #858ee0;

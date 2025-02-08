@@ -7,6 +7,7 @@ import { Locale } from "i18next.config";
 import { NavBar } from "@components/ui/navigation/navbar/NavBar";
 import { Header } from "@components/ui/header/Header";
 import { SplashScreen } from "@components/ui/splashscreen/SplashScreen";
+import THREESpace from "@components/animation/Space";
 // import LanguageSwitcher from "@components/ui/header/languageswitcher/LanguageSwitcher";
 
 const figtree = Figtree({ subsets: ["latin"] });
@@ -25,10 +26,11 @@ export async function RootLayout({ children, params }: PageProps) {
         className={`${figtree.className} min-h-[100vh] transition-colors duration-1000 bg-light-white dark:bg-dark-black overflow-x-hidden antialiased`}
       >
         <AppUserProvider>
+        <THREESpace />
           <Header />
           <NavBar params={params} />
           <main
-            className={`flex flex-col animate-Appear mb-24 items-center px-4 sm:px-6 lg:px-12 justify-start overflow-x-hidden gap-28`}
+            className={`flex flex-col animate-Appear items-center px-4 sm:px-6 lg:px-12 justify-start overflow-x-hidden gap-28`}
           >
             {children}
           </main>
