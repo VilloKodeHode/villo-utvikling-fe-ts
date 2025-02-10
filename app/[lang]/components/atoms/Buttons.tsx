@@ -179,7 +179,7 @@ export function CookieAccept({ children, onClick, className }: ButtonProps) {
   return (
     <button
       onClick={onClick}
-      className={`px-6 outline-2 group hover:outline-hidden py-2 font-bold uppercase transition duration-200 ease-linear ${className}
+      className={`px-6 cursor-pointer outline-2 group hover:outline-hidden py-2 font-bold uppercase transition duration-200 ease-linear ${className}
           text-light-black85 bg-light-white outline-light-black85 hover:text-light-white  hover:bg-light-primary
           dark:text-dark-white10 dark:bg-light-black dark:outline-dark-white10 dark:hover:bg-dark-primary"
       rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.02]`}

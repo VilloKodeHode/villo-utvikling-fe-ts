@@ -186,9 +186,8 @@
       "engText": "design",
       "norParagraph": "Gjennomgående design som er estetisk og funksjonelt, med fokus på brukervennlighet og konvertering",
       "engParagraph": "Consistent design that is aesthetic and functional, with a focus on user-friendliness and conversion"
-      
-  },
-   {
+    },
+    {
       "fileType": "png",
       "path": "/images/showcase/HeroDevelopment.png",
       "alt": "Web development",
@@ -198,8 +197,8 @@
       "engText": "development",
       "norParagraph": "Ekspertise innenfor utvikling av nettsider som er lette på vedlikeholde og endre innhold på",
       "engParagraph": "Expertise in developing websites that are easy to maintain and change content on"
-  },
-{
+    },
+    {
       "fileType": "webp",
       "path": "/images/showcase/HeroCollage.webp",
       "alt": "Web content",
@@ -209,8 +208,8 @@
       "engText": "content",
       "norParagraph": "Originalt høykvalitets innhold til nettsiden din, som er tilpasset ditt formål og målgruppe",
       "engParagraph": "Original high-quality content for your website, customized for your purpose and target audience"
-  },
-  {
+    },
+    {
       "fileType": "png",
       "path": "/images/showcase/HeroLogo.png",
       "alt": "Villo utvikling",
@@ -218,7 +217,16 @@
       "height": 400,
       "norParagraph": "Engasjerende nettsider for ditt formål: Fra enkle til komplekse nettsider, som er tilpasset alle enheter.",
       "engParagraph": "Engaging websites for your business: From simple to complex websites, tailored to all devices."
-
+    }
+  ],
+  "footer": {
+    "companyName": "Villo development"
+  },
+  "cookie": {
+    "title": "Cookies",
+    "why": "This website uses cookies to improve your experience.",
+    "disclaimer": "We do not store information that can identify you as a person. Cookies are stored for 1 year.",
+    "accept": "Accept",
+    "decline": "Decline"
   }
-  ]
 }

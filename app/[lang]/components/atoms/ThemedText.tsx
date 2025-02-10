@@ -25,6 +25,17 @@ export const ThemedP = ({ children, className }: ThemedTextProps) => {
   );
 };
 
+export const ThemedSmall = ({ children, className }: ThemedTextProps) => {
+  return (
+    <p
+      className={`text-light-black  dark:text-dark-white
+      text-p0 leading-p0 ${className}`}
+    >
+      {children}
+    </p>
+  );
+};
+
 export const ThemedH2 = ({ children, className }: ThemedTextProps) => {
   return (
     <h2

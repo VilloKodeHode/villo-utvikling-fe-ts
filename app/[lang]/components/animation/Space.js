@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 // import { useTheme } from "@logic/useTheme";
 import { useEffect, useRef, useState } from "react";
@@ -8,20 +8,19 @@ const THREESpace = () => {
   const [theme, setTheme] = useState(null);
 
   useEffect(() => {
-      const htmlElement = document.documentElement;
+    const htmlElement = document.documentElement;
+    setTheme(htmlElement.getAttribute("data-theme"));
+
+    const observer = new MutationObserver(() => {
       setTheme(htmlElement.getAttribute("data-theme"));
+    });
 
-      const observer = new MutationObserver(()=> {
-          setTheme(htmlElement.getAttribute("data-theme"));
-      })
+    observer.observe(htmlElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
 
-      observer.observe(htmlElement, {
-          attributes: true,
-          attributeFilter: ["data-theme"],
-      })
-
-      return () => observer.disconnect();
-
+    return () => observer.disconnect();
   }, [theme]);
   const canvasRef = useRef();
   const scene = useRef();
@@ -113,28 +112,12 @@ const THREESpace = () => {
       const colors =
         theme === "light"
           ? [
-              0x571dff,
-              0x858ee0,
-              0x141315,
-              0x2e2f34,
-              0x383844,
-              0x48485b,
-              0xfff,
-              0xf6f3ff,
-              0xefe9ff,
-              0xe6ddff,
+              0x571dff, 0x858ee0, 0x141315, 0x2e2f34, 0x383844, 0x48485b, 0xfff,
+              0xf6f3ff, 0xefe9ff, 0xe6ddff,
             ]
           : [
-              0x858ee0,
-              0x571dff,
-              0x161618,
-              0x2e2f34,
-              0x383844,
-              0x48485b,
-              0xfbfbfe,
-              0x03f4fc,
-              0xe9ebf9,
-              0xe02f7,
+              0x858ee0, 0x571dff, 0x161618, 0x2e2f34, 0x383844, 0x48485b,
+              0xfbfbfe, 0x03f4fc, 0xe9ebf9, 0xe02f7,
             ];
 
       particles.current.children.forEach((particle) => {
@@ -151,15 +134,19 @@ const THREESpace = () => {
   }, [theme]);
 
   return (
+    // <div className="relative">
     <div className="absolute top-0 -z-20 transition-all">
-      <canvas ref={canvasRef} className={`transition-all duration-500 ${theme === "light"
-        ? "shadow-[0_20px_60px_1px_#fefdff] opacity-[10%]"
+      {/* <canvas ref={canvasRef} className={`transition-all duration-500 ${theme === "light"
         : "shadow-[0_20px_60px_1px_#161618] opacity-100"
-        }`} />
+        }`} /> */}
+      <canvas
+        ref={canvasRef}
+        className={`transition-all duration-500 relative`}
+      />
     </div>
-  )
-
-
+    // <div/>
+    // </div>
+  );
 };
 
 export default THREESpace;

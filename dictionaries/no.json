@@ -320,5 +320,15 @@
       "title": "innhold",
       "paragraph": "Originalt høykvalitets innhold til nettsiden din, som er tilpasset ditt formål og målgruppe"
     }
-  ]
+  ],
+  "footer": {
+    "companyName": "Villo utvikling"
+  },
+  "cookie": {
+    "title": "Cookies",
+    "why": "Denne nettsiden bruker cookies for å forbedre brukeropplevelsen din",
+    "disclaimer": "Vi lagrer ikke informasjon som kan identifisere deg som person. Cookies blir lagret i 1 år",
+    "accept": "Godta",
+    "decline": "Avslå"
+  }
 }
