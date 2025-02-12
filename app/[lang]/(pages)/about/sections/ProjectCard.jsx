@@ -2,14 +2,15 @@
 
 import Image from "next/image";
 import { useContext } from "react";
-import {ExternalCTA,} from "../../atoms/Buttons";
+
 import {
   ResponsiveThemedH5,
   ResponsiveThemedP,
-} from "../../atoms/ResponsiveText";
+} from "@components/atoms/ResponsiveText";
 import { UserContext } from "@/context/UserContext";
 import Link from "next/link";
 import PROJECT_LIST from "@/data/projects_list";
+import { ExternalCTA } from "@components/atoms/Buttons";
 
 export default function ProjectCards() {
   const { language, theme } = useContext(UserContext);

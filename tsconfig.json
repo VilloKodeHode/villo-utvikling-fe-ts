@@ -9,7 +9,7 @@
     "module": "esnext",
     "moduleResolution": "bundler",
     "noImplicitAny": false,
-    "resolveJsonModule": true,  
+    "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
@@ -25,19 +25,23 @@
       "@types/*": ["app/[lang]/types/*"],
       "@utils/*": ["app/[lang]/utils/*"],
       "@hooks/*": ["app/[lang]/hooks/*"],
-      "@pages/*": ["app/[lang]/pages/*"],
+      "@pages/*": ["app/[lang]/(pages)/*"],
       "@contexts/*": ["app/[lang]/contexts/*"],
       "@data/*": ["app/[lang]/data/*"],
-      "@logic/*": ["app/[lang]/logic/*"]
+      "@logic/*": ["app/[lang]/logic/*"],
+      "@interfaces/*": ["app/[lang]/interfaces/*"]
     }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
+    "**/*.js",
     "**/*.tsx",
+    "**/*.jsx",
     ".next/types/**/*.ts",
     "app/**/*.{ts,tsx}",
-    "i18next.config.ts", "app/[lang]/components/atoms/Logo.jsx",
+    "i18next.config.ts",
+    "app/[lang]/components/atoms/Logo.jsx"
   ],
   "exclude": ["node_modules"]
 }

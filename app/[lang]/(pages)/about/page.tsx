@@ -1,6 +1,6 @@
 import { getDictionary } from "get-dictionary";
-import { CompanyInfo } from "./sections/CompanyInfoSection";
-import { IntroSection } from "./sections/IntroSection";
+import { CompanyInfo } from "@pages/about/sections/CompanyInfoSection";
+import { IntroSection } from "@pages/about/sections/IntroSection";
 
 export default async function Home({ params }) {
   const dictionary = await getDictionary(params.lang);

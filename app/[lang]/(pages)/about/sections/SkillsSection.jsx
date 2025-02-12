@@ -1,14 +1,7 @@
-import {
-  ResponsiveThemedH2,
-  ThemedP,
-} from "../../atoms/ResponsiveText";
-import { UserContext } from "@/context/UserContext";
-import { useContext } from "react";
-import { SkillIcons } from "./organisms/SkillIcons";
-
+import { ResponsiveThemedH2, ThemedP } from "@components/atoms/ResponsiveText";
+import { SkillIcons } from "@pages/about/sections/organisms/SkillIcons";
 
 export const SkillsSection = () => {
-  const { theme, language } = useContext(UserContext);
   return (
     <section
       className={`w-screen py-20 ${
@@ -26,7 +19,7 @@ export const SkillsSection = () => {
               : "I have experience working with the following technologies and design-tools:"}
           </ThemedP>
         </div>
-      <SkillIcons/>
+        <SkillIcons />
       </div>
     </section>
   );

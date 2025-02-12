@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { ThemedH2, ThemedH4, ThemedP } from "@components/atoms/ThemedText";
-import { PageProps } from "app/[lang]/interfaces/PageProps";
 import { ReadMoreButton } from "@components/atoms/Buttons";
+import { PageProps } from "@interfaces/PageProps";
 
-export const OfferSection = async ({ params}: PageProps) => {
+export const OfferSection = async ({ params }: PageProps) => {
   // const content = dictionary.service_cards;
   return (
     <section

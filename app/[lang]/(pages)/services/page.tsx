@@ -1,6 +1,6 @@
-import { ServicePageContent } from "app/[lang]/(pages)/services/sections/ServicePageContent";
-import { PageProps } from "app/[lang]/interfaces/PageProps";
 import { getDictionary } from "get-dictionary";
+import { ServicePageContent } from "@pages/services/sections/ServicePageContent";
+import { PageProps } from "@interfaces/PageProps";
 
 export default async function Home({ params }: PageProps) {
   const dictionary = await getDictionary(params.lang);
