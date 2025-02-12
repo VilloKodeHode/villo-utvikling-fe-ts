@@ -1,4 +1,4 @@
-import { ServicePageContent } from "@components/sections/ServicePage/ServicePageContent";
+import { ServicePageContent } from "app/[lang]/(pages)/services/sections/ServicePageContent";
 import { PageProps } from "app/[lang]/interfaces/PageProps";
 import { getDictionary } from "get-dictionary";
 

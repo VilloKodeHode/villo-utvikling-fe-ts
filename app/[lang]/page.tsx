@@ -1,8 +1,8 @@
-import { HeroSection } from "@components/sections/IndexPage/HeroSection";
+import { HeroSection } from "app/[lang]/(pages)/index/sections/HeroSection";
 import { PageProps } from "./interfaces/PageProps";
-import { ShowcaseSection } from "@components/sections/IndexPage/ShowcaseSection";
+import { ShowcaseSection } from "app/[lang]/(pages)/index/sections/ShowcaseSection";
 import { getDictionary } from "get-dictionary";
-import { ServicePageContent } from "@components/sections/ServicePage/ServicePageContent";
+import { ServicePageContent } from "app/[lang]/(pages)/services/sections/ServicePageContent";
 // import { getDictionary } from "get-dictionary";
 
 export default async function Home({ params }: PageProps) {

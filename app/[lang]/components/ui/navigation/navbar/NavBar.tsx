@@ -2,6 +2,7 @@ import { getDictionary } from "get-dictionary";
 import { Locale } from "i18next.config";
 import NavItem from "../molecules/NavItem";
 import LogoComponent from "@components/atoms/Logo";
+import { LogoDarkMode } from "@components/atoms/logo/LogoDarkMode";
 
 interface ComponentProps {
   className?: string;
@@ -29,7 +30,7 @@ export const NavBar = async ({ params }: ComponentProps) => {
       <div className="absolute w-0 left-0 bottom-0 h-0.5 duration-1000 transition-[width] dark:w-full bg-dark-black85" />
       <div className="absolute w-full right-0 bottom-0 h-0.5 duration-1000 transition-[width] dark:w-0 bg-light-white10" />
       <LogoComponent onclick={null} image={dictionary.logo} />
-
+      {/* <LogoDarkMode /> */}
       <div className="hidden ml-8 md:block">
         {/* TODO: Check what rounded-bl-full does */}
         <div className="flex-row hidden justify-end h-[112px] items-center rounded-bl-full gap-8 w-full md:flex">

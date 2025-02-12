@@ -31,7 +31,7 @@ export const ShowcaseSection = ({ dictionary }) => {
   return (
     <>
       <section
-        className="relative animate-on-scroll opacity-0 z-10 flex items-center justify-center w-full group/imageEffect"
+        className="relative animate-on-scroll opacity-0 flex items-center justify-center w-full group/imageEffect"
         id="showcase-section"
       >
         {/* Image should be visable at all times, so find to make it so */}
@@ -41,7 +41,7 @@ export const ShowcaseSection = ({ dictionary }) => {
               ? "/images/logo/WindLogoNoTextLightMode.svg"
               : "/images/logo/WindLogoNoTextDarkMode.svg"
           }`}
-          className="absolute opacity-5 h-[150vh] animate-rotate-left-logo"
+          className="absolute opacity-5 h-[150vh] -z-10 animate-rotate-left-logo"
           alt=""
           width={5000}
           height={5000}

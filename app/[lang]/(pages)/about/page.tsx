@@ -1,13 +1,12 @@
-import { CompanyInfo } from "@components/sections/AboutPage/CompanyInfoSection";
-import { IntroSection } from "@components/sections/AboutPage/IntroSection";
 import { getDictionary } from "get-dictionary";
+import { CompanyInfo } from "./sections/CompanyInfoSection";
+import { IntroSection } from "./sections/IntroSection";
 
-
-export default async function Home({params}) {
-   const dictionary = await getDictionary(params.lang);
+export default async function Home({ params }) {
+  const dictionary = await getDictionary(params.lang);
   return (
     <>
-        <CompanyInfo content={dictionary.companyInfo}  />
+      <CompanyInfo content={dictionary.companyInfo} />
       <IntroSection content={dictionary.introInfo} />
       {/* <SkillsSection /> */}
       {/* <ProjectSection /> */}
@@ -19,7 +18,6 @@ export default async function Home({params}) {
       >
         {language === "Norwegian" ? "Portofølje" : "Portfolio"}
       </LetsGoCTA> */}
-
     </>
   );
 }

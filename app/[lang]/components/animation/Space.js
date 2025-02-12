@@ -3,8 +3,6 @@
 import { useOpacityScroll } from "@logic/scrollOpacity";
 import { useColors } from "@logic/useColors";
 import { useTheme } from "next-themes";
-// import { useOpacityScroll } from "@logic/scrollOpacity";
-// import { useTheme } from "@logic/useTheme";
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 
@@ -61,9 +59,9 @@ const THREESpace = () => {
     camera.current.position.z = 10;
 
     // Rotation speed
-    const baseRotationSpeed = 0.00008008;
-    const scrollRotationSpeed = 0.0004008;
-    let totalRotationY = 0.00480008;
+    const baseRotationSpeed = 0.00008;
+    const scrollRotationSpeed = 0.0002;
+    let totalRotationY = 0.00008;
 
     function handleResize() {
       const newWidth = window.innerWidth;

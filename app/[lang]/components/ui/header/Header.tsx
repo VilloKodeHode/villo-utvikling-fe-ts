@@ -22,17 +22,27 @@ export const Header = () => {
   return (
     <>
       <header className="transition relative ease-linear duration-200 backdrop-blur-[10px] z-40 h-10 flex items-center justify-between px-4 sm:px-6 lg:px-12 py-6 bg-light-white10 dark:bg-dark-black85 text-light-black dark:text-dark-white10">
-      {/* <div className="absolute w-0 left-0 bottom-0 h-[1px] duration-1000 transition-[width] dark:w-1/7 bg-dark-white" />
+        {/* <div className="absolute w-0 left-0 bottom-0 h-[1px] duration-1000 transition-[width] dark:w-1/7 bg-dark-white" />
       <div className="absolute w-1/7 right-0 bottom-0 h-[1px] duration-1000 transition-[width] dark:w-0 bg-light-black" /> */}
         <div
           className={`grid transition-all z-40 grid-flow-col gap-12
  
-          ${notTop ? "animate-Slide-in-from-bottom" : "animate-Slide-in-from-top"}`}
+          ${
+            notTop
+              ? "animate-Slide-in-from-bottom"
+              : "animate-Slide-in-from-top"
+          }`}
         >
           <LanguageSwitcher />
           <ThemeSwitch />
         </div>
-        <div className={`flex gap-4 ${notTop ? "animate-Slide-in-from-bottom" : "animate-Slide-in-from-top"}`}>
+        <div
+          className={`flex gap-4 ${
+            notTop
+              ? "animate-Slide-in-from-bottom"
+              : "animate-Slide-in-from-top"
+          }`}
+        >
           <a
             href="https://github.com/VilloKodeHode"
             target="_blank"

@@ -8,14 +8,7 @@ const LogoComponent = ({ onclick, image }) => {
   const { theme } = useTheme();
 
   // Find the logo object based on the theme
-  const logoObject = image[theme];
-
-  if (!logoObject) {
-    // Handle case when logo object for the theme is not found
-    return null;
-  }
-
-  // Get the logo details for the theme
+  const logoObject = theme ? image[theme] : null;
 
   return (
     <Link
@@ -53,7 +46,10 @@ export const SimpleLogoComponent = () => {
   const { theme } = useTheme();
 
   // Find the logo object based on the theme
-  const logoSrc = theme === "light" ? "/images/logo/WindLogoNoTextLightMode.svg" : "/images/logo/WindLogoNoTextDarkMode.svg";
+  const logoSrc =
+    theme === "light"
+      ? "/images/logo/WindLogoNoTextLightMode.svg"
+      : "/images/logo/WindLogoNoTextDarkMode.svg";
 
   if (!logoSrc) {
     // Handle case when logo object for the theme is not found
