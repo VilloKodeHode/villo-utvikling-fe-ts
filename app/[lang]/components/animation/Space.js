@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useOpacityScroll } from "@logic/scrollOpacity";
 import { useColors } from "@logic/useColors";
@@ -29,7 +29,7 @@ const THREESpace = () => {
 
     renderer.current = new THREE.WebGLRenderer({
       canvas: canvasRef.current,
-      alpha: true
+      alpha: true,
     });
 
     renderer.current.setSize(window.innerWidth, window.innerHeight);
@@ -102,23 +102,23 @@ const THREESpace = () => {
     };
   }, [canvasRef, scene, camera, renderer, particles]);
 
-
   useOpacityScroll(particles);
-  useColors(particles, theme)
-
-
-
+  useColors(particles, theme);
 
   return (
     <div className="fixed top-0 -z-20 transition-all ">
-      <canvas ref={canvasRef} className={`transition-all opacity-scroll duration-500 ${theme === "light"
-        ? "shadow-[0_20px_60px_1px_#fefdff] opacity-5"
-        : "shadow-[0_20px_60px_1px_#161618]"
-        }`} />
+      <canvas
+        ref={canvasRef}
+        className={`transition-all opacity-scroll duration-500 ${
+          theme === "light"
+            ? "shadow-[0_20px_60px_1px_#fefdff] opacity-5"
+            : "shadow-[0_20px_60px_1px_#161618]"
+        }`}
+      />
     </div>
-  )
-
-
+    // <div/>
+    // </div>
+  );
 };
 
 export default THREESpace;

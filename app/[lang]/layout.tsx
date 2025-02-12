@@ -8,6 +8,8 @@ import { NavBar } from "@components/ui/navigation/navbar/NavBar";
 import { Header } from "@components/ui/header/Header";
 import { SplashScreen } from "@components/ui/splashscreen/SplashScreen";
 import THREESpace from "@components/animation/Space";
+import Footer from "@components/ui/footer/Footer";
+import { getDictionary } from "get-dictionary";
 // import LanguageSwitcher from "@components/ui/header/languageswitcher/LanguageSwitcher";
 
 const figtree = Figtree({ subsets: ["latin"] });
@@ -20,13 +22,14 @@ interface PageProps {
 }
 
 export async function RootLayout({ children, params }: PageProps) {
+  const dictionary = await getDictionary(params.lang);
   return (
     <html lang={params.lang ? params.lang : "no"}>
       <body
         className={`${figtree.className} min-h-[100vh] transition-colors duration-1000 bg-light-white dark:bg-dark-black overflow-x-hidden antialiased`}
       >
         <AppUserProvider>
-        <THREESpace />
+          <THREESpace />
           <Header />
           <NavBar params={params} />
           <main
@@ -34,8 +37,9 @@ export async function RootLayout({ children, params }: PageProps) {
           >
             {children}
           </main>
+          <Footer params={params} />
           <SplashScreen />
-          <CookiePopup />
+          <CookiePopup dictionary={dictionary} />
         </AppUserProvider>
       </body>
     </html>

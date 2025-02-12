@@ -188,6 +188,8 @@
       "engParagraph": "Consistent design that is aesthetic and functional, with a focus on user-friendliness and conversion"
     },
     {
+    },
+    {
       "fileType": "png",
       "path": "/images/showcase/HeroDevelopment.png",
       "alt": "Web development",
@@ -199,6 +201,8 @@
       "engParagraph": "Expertise in developing websites that are easy to maintain and change content on"
     },
     {
+    },
+    {
       "fileType": "webp",
       "path": "/images/showcase/HeroCollage.webp",
       "alt": "Web content",
@@ -208,6 +212,8 @@
       "engText": "content",
       "norParagraph": "Originalt høykvalitets innhold til nettsiden din, som er tilpasset ditt formål og målgruppe",
       "engParagraph": "Original high-quality content for your website, customized for your purpose and target audience"
+    },
+    {
     },
     {
       "fileType": "png",
@@ -230,4 +236,16 @@
       "title": "About me",
       "paragraph": "I'm a trained developer who's currently a leader in programming and web development courses held here in Norway. I hold two bachelor's degrees in other fields, and previous work has been related to those degrees. In 2022, I switched to programming and coding, which has now become my true passion in life."
     }
+    }
+  ],
+  "footer": {
+    "companyName": "Villo development"
+  },
+  "cookie": {
+    "title": "Cookies",
+    "why": "This website uses cookies to improve your experience.",
+    "disclaimer": "We do not store information that can identify you as a person. Cookies are stored for 1 year.",
+    "accept": "Accept",
+    "decline": "Decline"
+  }
 }
