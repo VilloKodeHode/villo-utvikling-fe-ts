@@ -18,6 +18,7 @@
   --color-dark-black85: oklch(30% 0.015 287.84);
   --color-dark-black75: oklch(35% 0.02 287.84);
   --color-dark-black50: oklch(40% 0.03 287.84);
+  --color-dark-grey: oklch(50% 0.03 287.84);
   --color-dark-white20: oklch(80% 0.04 287.84);
   --color-dark-white15: oklch(85% 0.03 287.84);
   --color-dark-white10: oklch(90% 0.015 287.84);
@@ -41,6 +42,7 @@
   --color-light-white10: oklch(90% 0.02 279.96);
   --color-light-white15: oklch(85% 0.025 279.96);
   --color-light-white20: oklch(80% 0.04 279.96);
+  --color-light-grey: oklch(50% 0.04 279.96);
   --color-light-black50: oklch(30% 0.015 279.96);
   --color-light-black75: oklch(25% 0.015 279.96);
   --color-light-black85: oklch(20% 0.01 279.96);
@@ -485,6 +487,37 @@
     :root {
       --background: #0a0a0a;
       --foreground: #ededed;
+    }
+  }
+
+  @layer components {
+    .color_palette_gradient {
+      background: linear-gradient(
+        to right,
+        var(--color-light-white),
+        var(--color-light-white10),
+        var(--color-light-white15),
+        var(--color-light-white20),
+        var(--color-light-grey),
+        var(--color-light-black50),
+        var(--color-light-black75),
+        var(--color-light-black85),
+        var(--color-light-black)
+      );
+    }
+    .color_palette_gradient_dark {
+      background: linear-gradient(
+        to right,
+        var(--color-dark-black),
+        var(--color-dark-black85),
+        var(--color-dark-black75),
+        var(--color-dark-black50),
+        var(--color-dark-grey),
+        var(--color-dark-white20),
+        var(--color-dark-white15),
+        var(--color-dark-white10),
+        var(--color-dark-white)
+      );
     }
   }
 

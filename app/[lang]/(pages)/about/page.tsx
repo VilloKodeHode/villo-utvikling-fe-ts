@@ -1,6 +1,7 @@
 import { getDictionary } from "get-dictionary";
 import { CompanyInfo } from "@pages/about/sections/CompanyInfoSection";
 import { IntroSection } from "@pages/about/sections/IntroSection";
+import { PaletteSection } from "./sections/PaletteSection";
 
 export default async function Home({ params }) {
   const dictionary = await getDictionary(params.lang);
@@ -9,6 +10,7 @@ export default async function Home({ params }) {
       <CompanyInfo content={dictionary.companyInfo} />
       <IntroSection content={dictionary.introInfo} />
       {/* <SkillsSection /> */}
+      <PaletteSection />
       {/* <ProjectSection /> */}
       {/* <LetsGoCTA
         type="portfolio"

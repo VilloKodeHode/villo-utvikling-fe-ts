@@ -33,7 +33,7 @@ export async function RootLayout({ children, params }: PageProps) {
           <Header />
           <NavBar params={params} />
           <main
-            className={`flex flex-col animate-Appear items-center px-4 sm:px-6 lg:px-12 justify-start overflow-x-hidden gap-28`}
+            className={`flex flex-col animate-Appear items-center px-4 sm:px-6 lg:px-12 justify-start overflow-x-hidden mb-24 gap-28 `}
           >
             {children}
           </main>
