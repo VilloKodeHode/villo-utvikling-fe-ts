@@ -7,8 +7,8 @@ export const CompanyInfo = ({ content }) => {
       <div className="animate-PageAppearRight">
         <div
           className={`sm:rounded-lg grid transition-colors duration-1000
-              ? "bg-Villo-light-white10"
-              : "bg-Villo-dark-black75"
+              ? "bg-Villo-light-mist"
+              : "bg-Villo-dark-slate"
           }`}
         >
           <div

@@ -1,6 +1,5 @@
 "use client";
 
-
 //TODO: Check if code works:
 import { redirectedPathname } from "@logic/redirectedPathName";
 import { i18n } from "i18next.config";
@@ -27,13 +26,15 @@ export default function LanguageSwitcher() {
         {i18n.locales.map((locale) => (
           <li key={locale}>
             <Link
-              href={redirectedPathname(pathname ,locale)}
-              className={pathname === redirectedPathname(pathname ,locale) ? "" : ""}
+              href={redirectedPathname(pathname, locale)}
+              className={
+                pathname === redirectedPathname(pathname, locale) ? "" : ""
+              }
             >
               <Image
                 className={`w-fit h-5 hover:scale-125 transition cursor-pointer ${
                   pathname === redirectedPathname(pathname, locale)
-                    ? "scale-110 opacity-100 outline-[1px] outline-dark-primary dark:outline-light-primary"
+                    ? "scale-110 opacity-100 outline-[1px] outline-dark-lavender dark:outline-light-violet"
                     : "opacity-60"
                 }`}
                 src={`/images/flags/${locale}.png`}
@@ -45,7 +46,7 @@ export default function LanguageSwitcher() {
           </li>
         ))}
       </ul>
-      {/* <div className="absolute top-0 left-0 flex items-center justify-center h-screen w-screen bg-dark-white20 dark:bg-orange-700 z-999">
+      {/* <div className="absolute top-0 left-0 flex items-center justify-center h-screen w-screen bg-dark-moonlight dark:bg-orange-700 z-999">
         <Image
           className={`h-36 w-36`}
           src={`${

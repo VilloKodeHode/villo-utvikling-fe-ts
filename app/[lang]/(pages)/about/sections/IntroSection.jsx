@@ -7,7 +7,7 @@ export const IntroSection = ({ content }) => {
       <ThemedH2 className="py-4">{content.title}</ThemedH2>
       <div className="animate-PageAppearRight">
         <div
-          className={`sm:rounded-lg grid min-h-[70dvh] lg:grid-cols-2 transition-colors duration-1000 bg-light-white10 dark:bg-dark-black75`}
+          className={`sm:rounded-lg grid min-h-[70dvh] lg:grid-cols-2 transition-colors duration-1000 bg-light-mist dark:bg-dark-slate`}
         >
           <div
             className={`col-span-1 py-12 min-h-[30dvh] text-left flex flex-col justify-center items-center`}

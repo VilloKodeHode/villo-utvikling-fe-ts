@@ -17,8 +17,8 @@ export const SkillIcons = () => {
               <figure
                 className={`relative z-20 hover:scale-95 transition-all flex justify-center p-6 h-full rounded-sm shadow-lg ${
                   theme === "light"
-                    ? "bg-Villo-light-white15 hover:bg-Villo-light-white10"
-                    : "bg-Villo-dark-black75 hover:bg-Villo-dark-black50"
+                    ? "bg-Villo-light-cloud hover:bg-Villo-light-mist"
+                    : "bg-Villo-dark-slate hover:bg-Villo-dark-shadow"
                 } group`}
               >
                 <Image

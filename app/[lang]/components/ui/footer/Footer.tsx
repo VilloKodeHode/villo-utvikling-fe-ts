@@ -16,29 +16,29 @@ export default async function Footer({ params }) {
   return (
     <footer
       className={`relative py-24 sm:px-6 lg:px-12 px-4
-       bg-light-white20 dark:bg-dark-black85`}
+       bg-light-fog dark:bg-dark-onyx`}
     >
       {/*HUSK Å IMPLEMENTERE FOOTERLINKS COMPONENTS! <FooterLinks Theme={Theme} /> */}
       <div className="flex flex-col items-center justify-center w-full gap-4 sm:justify-between sm:flex-row">
         {/* Contact Information */}
         <div
           className={`flex flex-col gap-2
-            text-light-white dark:text-dark-white
+            text-light-snow dark:text-dark-ice
           `}
         >
           <div className="flex gap-4">
             <Link className="w-fit" href="/contact">
               <FiMail
-                className={`w-8 h-8  text-light-black85 hover:text-light-primary
-                    dark:text-dark-white10 dark:hover:text-dark-white20
+                className={`w-8 h-8  text-light-ash hover:text-light-violet
+                    dark:text-dark-frost dark:hover:text-dark-moonlight
                  duration-200  hover:scale-125`}
               />
             </Link>
 
             <a href="https://github.com/VilloKodeHode" target="_blank">
               <VscGithubAlt
-                className={`w-8 h-8  text-light-black85 hover:text-light-primary
-                    dark:text-dark-white10 dark:hover:text-dark-white20
+                className={`w-8 h-8  text-light-ash hover:text-light-violet
+                    dark:text-dark-frost dark:hover:text-dark-moonlight
                  duration-200  hover:scale-125`}
               />
             </a>
@@ -47,8 +47,8 @@ export default async function Footer({ params }) {
               target="_blank"
             >
               <SlSocialLinkedin
-                className={`w-8 h-8  text-light-black85 hover:text-light-primary
-                    dark:text-dark-white10 dark:hover:text-dark-white20
+                className={`w-8 h-8  text-light-ash hover:text-light-violet
+                    dark:text-dark-frost dark:hover:text-dark-moonlight
                  duration-200  hover:scale-125`}
               />
             </a>
@@ -60,7 +60,7 @@ export default async function Footer({ params }) {
         {/* Copyright Information */}
         <div
           className={`flex items-center text-center
-            text-light-black85 dark:text-white
+            text-light-ash dark:text-white
           `}
         >
           <h4 className="text-h4">
@@ -69,7 +69,7 @@ export default async function Footer({ params }) {
         </div>
 
         {/* Privacy Policy and Terms of Service 
-        {/* <div className={`text-rt${text-light-white" : "textdark:-dark-white"}`}
+        {/* <div className={`text-rt${text-light-snow" : "textdark:-dark-ice"}`}
             <Link href="/privacy-polic">
               <p className="">Privacy Policy</p>
             </Link>
@@ -98,8 +98,8 @@ export default async function Footer({ params }) {
 //           <FiMail
 //             className={`w-8 h-8 mr-4  ${
 //               theme === "light"
-//                 ? "text-light-white10 hover:text-light-secondary"
-//                 : "text-dark-white10 hover:text-dark-secondary"
+//                 ? "text-light-mist hover:text-light-lavender"
+//                 : "text-dark-frost hover:text-dark-deep-violet"
 //             } duration-200  hover:scale-125`}
 //           />
 //         </Link>
@@ -109,8 +109,8 @@ export default async function Footer({ params }) {
 //           <VscGithubAlt
 //             className={`w-8 h-8 mr-4  ${
 //               theme === "light"
-//                 ? "text-light-white10 hover:text-light-secondary"
-//                 : "text-dark-white10 hover:text-dark-secondary"
+//                 ? "text-light-mist hover:text-light-lavender"
+//                 : "text-dark-frost hover:text-dark-deep-violet"
 //             } duration-200  hover:scale-125`}
 //           />
 //         </a>
@@ -123,8 +123,8 @@ export default async function Footer({ params }) {
 //           <SlSocialLinkedin
 //             className={`w-8 h-8 mr-4  ${
 //               theme === "light"
-//                 ? "text-light-white10 hover:text-light-secondary"
-//                 : "text-dark-white10 hover:text-dark-secondary"
+//                 ? "text-light-mist hover:text-light-lavender"
+//                 : "text-dark-frost hover:text-dark-deep-violet"
 //             } duration-200  hover:scale-125`}
 //           />
 //         </a>

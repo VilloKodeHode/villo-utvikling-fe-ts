@@ -67,7 +67,7 @@ export const ShowcaseSection = ({ dictionary }) => {
           <div
             className={`justify-self-end z-10 grid items-center justify-center w-full transition-all 
                 relative md:w-full h-full sm:h-[450px] outline-offset-4 rounded-2xl overflow-hidden outline-2 
-                outline-light-primary dark:outline-dark-primary
+                outline-light-violet dark:outline-dark-lavender
                   `}
           >
             {content.map((image, index) => (
@@ -79,7 +79,7 @@ export const ShowcaseSection = ({ dictionary }) => {
                 height={700}
                 className={`${
                   image.fileType === "svg"
-                    ? "object-contain bg-dark-white20 p-8"
+                    ? "object-contain bg-dark-moonlight p-8"
                     : "object-cover object-left-top"
                 } absolute duration-500 transition-all rounded-[4px] w-full h-full ${
                   index === activeImageIndex ? "opacity-100" : "opacity-0"
@@ -106,22 +106,22 @@ export const Showcase = ({ content, setActiveImage, activeImage, index }) => {
           <span
             onMouseEnter={() => setActiveImage(index)}
             className={`cursor-pointer font-bold group sm:block h-[60px] flex flex-col items-center align-middle
-            text-light-primary
-            dark:text-dark-primary`}
+            text-light-violet
+            dark:text-dark-lavender`}
           >
             <span
-              className={`group-hover:text-light-primary dark:group-hover:text-dark-primary 
+              className={`group-hover:text-light-violet dark:group-hover:text-dark-lavender 
                 group-hover:opacity-100 transition-all duration-500 opacity-60 h1hidden ${
                   activeImage === index
-                    ? "text-dark-primary"
-                    : "text-light-white20 dark:text-dark-black50"
+                    ? "text-dark-lavender"
+                    : "text-light-fog dark:text-dark-shadow"
                 }`}
             >
               <br />
               Web
             </span>
             {content[index].type}
-            {/* <div className={`${ activeImage === index ? "w-[106.5px]" : "w-0"}  h-0.5 transition-all bg-light-primary dark:bg-dark-primary`} /> */}
+            {/* <div className={`${ activeImage === index ? "w-[106.5px]" : "w-0"}  h-0.5 transition-all bg-light-violet dark:bg-dark-lavender`} /> */}
           </span>
         </ShowCaseHeaderText>
       </div>

@@ -44,8 +44,8 @@ const CookiePopup = ({ dictionary }) => {
       <div
         className={`min-h-[131px] max-w-[300px] transition-all duration-300 bg-opacity-[0.95] px-6 py-4 outline m-2 rounded-xl
        
-       bg-light-white10 group-hover:bg-light-white15 outline-light-black85
-          dark:bg-dark-black75 dark:group-hover:bg-dark-black85 dark:outline-dark-white10
+       bg-light-mist group-hover:bg-light-cloud outline-light-ash
+          dark:bg-dark-slate dark:group-hover:bg-dark-onyx dark:outline-dark-frost
         `}
       >
         <div className="relative grid items-center justify-center gap-2 pt-3">

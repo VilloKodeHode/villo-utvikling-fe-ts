@@ -8,7 +8,7 @@ export const OfferSection = async ({ params }: PageProps) => {
   return (
     <section
       id="OfferSection"
-      className={`w-screen overflow-x-hidden py-12 sm:px-6 px-4 lg:px-12 bg-light-white20 dark:bg-dark-black85
+      className={`w-screen overflow-x-hidden py-12 sm:px-6 px-4 lg:px-12 bg-light-fog dark:bg-dark-onyx
       `}
     >
       <div className="mx-auto max-w-7xl ">
@@ -83,8 +83,8 @@ export const OfferSectionCard = ({
       >
         <div
           className={`grid gap-2 sm:gap-4 md:gap-6 md:min-h-[131px] transition-colors duration-300
-              bg-light-white15 group-hover:bg-light-white10
-              dark:bg-dark-black75 dark:group-hover:bg-dark-black50 p-6 sm:p-8 md:p-12`}
+              bg-light-cloud group-hover:bg-light-mist
+              dark:bg-dark-slate dark:group-hover:bg-dark-shadow p-6 sm:p-8 md:p-12`}
         >
           <ThemedH4 className={`font-bold max-w-fit `}>
             {params.lang === "no" ? norTitle : engTitle}

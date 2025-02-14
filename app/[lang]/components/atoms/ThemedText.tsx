@@ -6,8 +6,8 @@ interface ThemedTextProps {
 export const ThemedH1 = ({ children, className }: ThemedTextProps) => {
   return (
     <h1
-      className={`text-light-black
-       dark:text-dark-white md:text-5xl text-4xl ${className}`}
+      className={`text-light-obsidian
+       dark:text-dark-ice md:text-5xl text-4xl ${className}`}
     >
       {children}
     </h1>
@@ -17,8 +17,8 @@ export const ThemedH1 = ({ children, className }: ThemedTextProps) => {
 export const ThemedP = ({ children, className }: ThemedTextProps) => {
   return (
     <p
-      className={`text-light-black
-         dark:text-dark-white ${className}`}
+      className={`text-light-obsidian
+         dark:text-dark-ice ${className}`}
     >
       {children}
     </p>
@@ -28,7 +28,7 @@ export const ThemedP = ({ children, className }: ThemedTextProps) => {
 export const ThemedSmall = ({ children, className }: ThemedTextProps) => {
   return (
     <p
-      className={`text-light-black  dark:text-dark-white
+      className={`text-light-obsidian  dark:text-dark-ice
       text-p0 leading-p0 ${className}`}
     >
       {children}
@@ -39,8 +39,8 @@ export const ThemedSmall = ({ children, className }: ThemedTextProps) => {
 export const ThemedH2 = ({ children, className }: ThemedTextProps) => {
   return (
     <h2
-      className={`text-light-black
-       dark:text-dark-white sm:text-h2 text-h4 leading-h4 sm:leading-h2  ${className}`}
+      className={`text-light-obsidian
+       dark:text-dark-ice sm:text-h2 text-h4 leading-h4 sm:leading-h2  ${className}`}
     >
       {children}
     </h2>
@@ -50,8 +50,8 @@ export const ThemedH2 = ({ children, className }: ThemedTextProps) => {
 export const ThemedH3 = ({ children, className }: ThemedTextProps) => {
   return (
     <h2
-      className={`text-light-black
-       dark:text-dark-white sm:text-h3 text-h5 leading-h5 sm:leading-h3  ${className}`}
+      className={`text-light-obsidian
+       dark:text-dark-ice sm:text-h3 text-h5 leading-h5 sm:leading-h3  ${className}`}
     >
       {children}
     </h2>
@@ -64,8 +64,8 @@ export const ShowCaseHeaderText = ({
 }: ThemedTextProps) => {
   return (
     <h2
-      className={`text-light-black
-       dark:text-dark-white sm:text-h2 ml:text-h4 text-h5 ml:leading-h4 leading-h5 sm:leading-h2  ${className}`}
+      className={`text-light-obsidian
+       dark:text-dark-ice sm:text-h2 ml:text-h4 text-h5 ml:leading-h4 leading-h5 sm:leading-h2  ${className}`}
     >
       {children}
     </h2>
@@ -75,8 +75,8 @@ export const ShowCaseHeaderText = ({
 export const ThemedH4 = ({ children, className }: ThemedTextProps) => {
   return (
     <h4
-      className={`text-light-black
-     dark:text-dark-white md:text-xl text-lg ${className}`}
+      className={`text-light-obsidian
+     dark:text-dark-ice md:text-xl text-lg ${className}`}
     >
       {children}
     </h4>
@@ -86,8 +86,8 @@ export const ThemedH4 = ({ children, className }: ThemedTextProps) => {
 export const ThemedH5 = ({ children, className }: ThemedTextProps) => {
   return (
     <h5
-      className={`text-light-black
-     dark:text-dark-white md:text-lg text-md ${className}`}
+      className={`text-light-obsidian
+     dark:text-dark-ice md:text-lg text-md ${className}`}
     >
       {children}
     </h5>

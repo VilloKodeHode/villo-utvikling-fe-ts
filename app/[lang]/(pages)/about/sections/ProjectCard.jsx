@@ -21,16 +21,14 @@ export default function ProjectCards() {
         <div
           key={project.engProjectName}
           className={`flex flex-col h-[460px] md:h-[550px] lg:h-[600px] justify-between overflow-hidden rounded-lg shadow ${
-            theme === "light"
-              ? "bg-Villo-light-white10"
-              : "bg-Villo-dark-black85"
+            theme === "light" ? "bg-Villo-light-mist" : "bg-Villo-dark-onyx"
           }  shadow-Villo-black75`}
         >
           <div
             className={`p-4 pb-0 border-b-4 ${
               theme === "light"
-                ? "border-Villo-light-primary"
-                : "border-Villo-dark-primary"
+                ? "border-Villo-light-violet"
+                : "border-Villo-dark-lavender"
             } `}
           >
             <Image

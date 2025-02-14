@@ -27,8 +27,8 @@ export const NavBar = async ({ params }: ComponentProps) => {
     <div
       className={`flex w-full px-2 sm:px-4 lg:px-8 justify-between items-center relative dark:backdrop-blur-3xl`}
     >
-      <div className="absolute w-0 left-0 bottom-0 h-0.5 duration-1000 transition-[width] dark:w-full bg-dark-black85" />
-      <div className="absolute w-full right-0 bottom-0 h-0.5 duration-1000 transition-[width] dark:w-0 bg-light-white10" />
+      <div className="absolute w-0 left-0 bottom-0 h-0.5 duration-1000 transition-[width] dark:w-full bg-dark-onyx" />
+      <div className="absolute w-full right-0 bottom-0 h-0.5 duration-1000 transition-[width] dark:w-0 bg-light-mist" />
       <LogoComponent onclick={null} image={dictionary.logo} />
       {/* <LogoDarkMode /> */}
       <div className="hidden ml-8 md:block">

@@ -5,7 +5,7 @@ export const SkillsSection = () => {
   return (
     <section
       className={`w-screen py-20 ${
-        theme === "light" ? "bg-Villo-light-white20" : " bg-Villo-dark-black85"
+        theme === "light" ? "bg-Villo-light-fog" : " bg-Villo-dark-onyx"
       }`}
     >
       <div className="px-4 m-auto max-w-7xl sm:px-6 lg:px-8">

@@ -6,41 +6,52 @@ export const PaletteSection = () => {
   const { theme } = useTheme();
 
   return (
-    <section className="border-2 border-light-black dark:border-dark-white">
-      <div
-        className={`w-full transition-all duration-[20000ms] h-32 ${
-          theme === "light"
-            ? "color_palette_gradient"
-            : "color_palette_gradient_dark"
-        }  `}
-      ></div>
+    <section className="border-2 border-light-obsidian dark:border-dark-ice">
+      <div className="relative h-32">
+        <div
+          className={`w-full dark:opacity-0 opacity-100 absolute transition-colors h-32 color_palette_gradient`}
+        />
+        <div
+          className={`w-full absolute opacity-0 dark:opacity-100 transition-colors h-32 color_palette_gradient_dark`}
+        />
+      </div>
+
       <div className="flex ">
-        <Color className=" bg-light-white dark:bg-dark-black text-light-black dark:text-dark-white">
-          {theme === "light" ? "light-white" : "dark-black"}
+        <Color className=" bg-light-snow dark:bg-dark-midnight text-light-obsidian dark:text-dark-ice">
+          <p>{theme === "light" ? "snow" : "midnight"}</p>
+          <p>{theme === "light" ? "#f3f5fc" : "#0b0a11"}</p>
         </Color>
-        <Color className=" bg-light-white10 dark:bg-dark-black85 text-light-black dark:text-dark-white">
-          {theme === "light" ? "light-white10" : "dark-black85"}
+        <Color className=" bg-light-mist dark:bg-dark-onyx text-light-obsidian dark:text-dark-ice">
+          <p>{theme === "light" ? "mist" : "onyx"}</p>
+          <p>{theme === "light" ? "#e1e3f2" : "#292732"}</p>
         </Color>
-        <Color className=" bg-light-white15 dark:bg-dark-black75 text-light-black dark:text-dark-white">
-          {theme === "light" ? "light-white15" : "dark-black75"}
+        <Color className=" bg-light-cloud dark:bg-dark-slate text-light-obsidian dark:text-dark-ice">
+          <p>{theme === "light" ? "cloud" : "slate"}</p>
+          <p>{theme === "light" ? "#d0d3e8" : "#353342"}</p>
         </Color>
-        <Color className=" bg-light-white20 dark:bg-dark-black50 text-light-black dark:text-dark-white">
-          {theme === "light" ? "light-white20" : "dark-black50"}
+        <Color className=" bg-light-fog dark:bg-dark-shadow text-light-obsidian dark:text-dark-ice">
+          <p>{theme === "light" ? "fog" : "shadow"}</p>
+          <p>{theme === "light" ? "#bdc1e5" : "#4c4a62"}</p>
         </Color>
-        <Color className=" bg-light-grey dark:bg-dark-grey text-light-white">
-          {theme === "light" ? "light-grey" : "dark-grey"}
+        <Color className=" bg-light-storm dark:bg-dark-steel text-light-snow">
+          <p>{theme === "light" ? "storm" : "steel"}</p>
+          <p>{theme === "light" ? "#5d6080" : "#625f7e"}</p>
         </Color>
-        <Color className=" bg-light-black50 dark:bg-dark-white20 text-light-white dark:text-dark-black">
-          {theme === "light" ? "light-black50" : "dark-white20"}
+        <Color className=" bg-light-charcoal dark:bg-dark-moonlight text-light-snow dark:text-dark-midnight">
+          <p>{theme === "light" ? "charcoal" : "moonlight"}</p>
+          <p>{theme === "light" ? "#383a45" : "#c3bfe3"}</p>
         </Color>
-        <Color className=" bg-light-black75 dark:bg-dark-white15 text-light-white dark:text-dark-black">
-          {theme === "light" ? "light-black75" : "dark-white15"}
+        <Color className=" bg-light-graphite dark:bg-dark-glacier text-light-snow dark:text-dark-midnight">
+          <p>{theme === "light" ? "graphite" : "glacier"}</p>
+          <p>{theme === "light" ? "#272833" : "#d3d0ed"}</p>
         </Color>
-        <Color className=" bg-light-black85 dark:bg-dark-white10 text-light-white dark:text-dark-black">
-          {theme === "light" ? "light-black85" : "dark-white10"}
+        <Color className=" bg-light-ash dark:bg-dark-frost text-light-snow dark:text-dark-midnight">
+          <p>{theme === "light" ? "ash" : "frost"}</p>
+          <p>{theme === "light" ? "#191a22" : "#e4e3f1"}</p>
         </Color>
-        <Color className=" bg-light-black dark:bg-dark-white text-light-white dark:text-dark-black">
-          {theme === "light" ? "light-black" : "dark-white"}
+        <Color className=" bg-light-obsidian dark:bg-dark-ice text-light-snow dark:text-dark-midnight">
+          <p>{theme === "light" ? "obsidian" : "ice"}</p>
+          <p>{theme === "light" ? "#0c0d14" : "#f5f4ff"}</p>
         </Color>
       </div>
     </section>
@@ -50,7 +61,7 @@ export const PaletteSection = () => {
 export const Color = ({ children, className }) => {
   return (
     <div
-      className={`${className} transition-all ease-linear duration-[20000ms] h-36 w-36 flex justify-center items-center`}
+      className={`${className} transition-all ease-linear duration-[200ms] h-36 w-36 flex justify-center flex-col items-center`}
     >
       {children}
     </div>

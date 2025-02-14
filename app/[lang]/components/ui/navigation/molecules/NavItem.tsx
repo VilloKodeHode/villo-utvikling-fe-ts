@@ -49,7 +49,7 @@ const NavItem = ({
     <div key={text} className={`relative group ${className}`}>
       <Link href={href} className="">
         <p
-          className={`${textSize} text-light-black dark:text-dark-white z-10`}
+          className={`${textSize} text-light-obsidian dark:text-dark-ice z-10`}
           onClick={onClick}
         >
           {text}
@@ -60,7 +60,7 @@ const NavItem = ({
             (href.includes("/services") && prevParam() === "/services")
               ? "h-1.5"
               : "group-hover:h-1.5"
-          } absolute w-full h-0 transition-[height] bg-light-primary  dark:bg-dark-primary`}
+          } absolute w-full h-0 transition-[height] bg-light-violet  dark:bg-dark-lavender`}
         />
       </Link>
       {(pathName === href ||
@@ -102,8 +102,8 @@ const NavItem = ({
 //         <button
 //           className={`${textSize} active:after:rotate-180 ${
 //             theme === "light"
-//               ? "text-light-black"
-//               : "text-dark-white"
+//               ? "text-light-obsidian"
+//               : "text-dark-ice"
 //           }  z-10`}
 //           onClick={onClick}
 //         >
@@ -115,8 +115,8 @@ const NavItem = ({
 //             ${isServiceSubPage ? `h-2` : "group-hover:h-2"}
 //             absolute w-full h-0 transition-all ${
 //               theme === "light"
-//                 ? "bg-light-primary"
-//                 : "bg-dark-primary"
+//                 ? "bg-light-violet"
+//                 : "bg-dark-lavender"
 //             }`}
 //       />
 
@@ -153,8 +153,8 @@ const NavItem = ({
 //         <p
 //           className={`z-10 hover:animate-pulse ${textSize} ${
 //             theme === "light"
-//               ? "text-light-black"
-//               : "text-dark-white"
+//               ? "text-light-obsidian"
+//               : "text-dark-ice"
 //           }
 
 //             `}
@@ -165,8 +165,8 @@ const NavItem = ({
 //         {/* <div
 //           className={`${currentPath === href ? `border opacity-100` : "group-hover:border group-hover:opacity-100"
 //             } absolute w-[110%] bottom-1/2 translate-y-1/2 translate-x-1/2  -z-10 h-[110%] opacity-0 transition-all ${Theme === "light"
-//               ? " border-light-primary"
-//               : "border-dark-primary"
+//               ? " border-light-violet"
+//               : "border-dark-lavender"
 //             }`}
 //         /> */}
 //       </Link>

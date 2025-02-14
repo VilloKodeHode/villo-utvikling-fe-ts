@@ -11,7 +11,7 @@ export const BaseButton = ({ children, onClick, className }: ButtonProps) => {
   return (
     <button
       onClick={onClick}
-      className={`px-6 outline-2 group hover:outline-hidden py-4 font-bold uppercase shadow-lg transition duration-200 ease-linear ${className} text-light-black85 bg-light-white outline-light-black85 hover:shadow-light-white15 hover:text-light-white  hover:bg-light-primary/95 dark:text-dark-white10 dark:bg-light-black  dark:outline-dark-white10 dark:hover:shadow-dark-black75 dark:hover:bg-dark-primary/95 rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.02]`}
+      className={`px-6 outline-2 group hover:outline-hidden py-4 font-bold uppercase shadow-lg transition duration-200 ease-linear ${className} text-light-ash bg-light-snow outline-light-ash hover:shadow-light-cloud hover:text-light-snow  hover:bg-light-violet/95 dark:text-dark-frost dark:bg-light-obsidian  dark:outline-dark-frost dark:hover:shadow-dark-slate dark:hover:bg-dark-lavender/95 rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.02]`}
     >
       <>{children}</>
     </button>
@@ -26,8 +26,8 @@ export default function CallToActionButton({
   return (
     <button
       onClick={onClick}
-      className={`px-6 outline-2 group hover:outline-hidden py-4 font-bold uppercase shadow-lg transition duration-200 ease-linear ${className} text-light-black85  bg-light-white outline-light-black85 hover:shadow-light-white15 hover:text-light-white  hover:bg-light-primary/95
-          dark:text-dark-white10 dark:bg-light-black dark:outline-dark-white10 dark:hover:shadow-dark-black75 hover:dark:bg-dark-primary/95 rounded-full 
+      className={`px-6 outline-2 group hover:outline-hidden py-4 font-bold uppercase shadow-lg transition duration-200 ease-linear ${className} text-light-ash  bg-light-snow outline-light-ash hover:shadow-light-cloud hover:text-light-snow  hover:bg-light-violet/95
+          dark:text-dark-frost dark:bg-light-obsidian dark:outline-dark-frost dark:hover:shadow-dark-slate hover:dark:bg-dark-lavender/95 rounded-full 
           shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.02]`}
     >
       <>{children}</>
@@ -39,15 +39,15 @@ export function ReadMoreButton({ children, onClick, className }: ButtonProps) {
   return (
     <button
       onClick={onClick}
-      className={`relative flex w-fit h-fit justify-center items-center group font-bold uppercase transition duration-200 ease-linear ${className} text-light-black85 hover:text-light-primary dark:text-dark-white10 dark:hover:text-dark-primary
+      className={`relative flex w-fit h-fit justify-center items-center group font-bold uppercase transition duration-200 ease-linear ${className} text-light-ash hover:text-light-violet dark:text-dark-frost dark:hover:text-dark-lavender
        rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.05] origin-center`}
     >
       <>
         {children}
         <div
           className={`absolute w-full h-[1px] py-[1px] bottom-0
-bg-light-black85 group-hover:bg-light-primary
-dark:bg-dark-white10 dark:group-hover:bg-dark-primary
+bg-light-ash group-hover:bg-light-violet
+dark:bg-dark-frost dark:group-hover:bg-dark-lavender
           `}
         />
       </>
@@ -60,7 +60,7 @@ export function SkillLinkButton({ children, onClick, className }: ButtonProps) {
     <button
       onClick={onClick}
       className={`px-4 outline-[1px] group hover:outline-hidden py-1 font-bold uppercase shadow-lg transition duration-200 ease-linear ${className} 
-          text-light-black85 bg-light-white outline-light-black85 hover:shadow-light-white15 hover:text-light-white  hover:bg-light-primary/95 dark:text-dark-white10 dark:bg-light-black dark:outline-dark-white10 dark:hover:shadow-dark-black75 dark:hover:bg-dark-primary/95 rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.02]`}
+          text-light-ash bg-light-snow outline-light-ash hover:shadow-light-cloud hover:text-light-snow  hover:bg-light-violet/95 dark:text-dark-frost dark:bg-light-obsidian dark:outline-dark-frost dark:hover:shadow-dark-slate dark:hover:bg-dark-lavender/95 rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.02]`}
     >
       <>{children}</>
     </button>
@@ -72,16 +72,16 @@ export function ArrowCTA({ children, onClick, className }: ButtonProps) {
     <button
       onClick={onClick}
       className={`relative px-6 pr-12 outline-2 flex justify-center items-center group hover:outline-hidden py-4 my-4 font-bold uppercase transition 
-        duration-200 ease-linear ${className} text-light-black85 bg-light-white outline-light-black85 hover:text-light-white hover:bg-light-primary
-      dark:text-dark-white10 dark:bg-light-black dark:outline-dark-white10 dark:hover:bg-dark-primary rounded-full shadow-md xl:w-fit active:scale-95 
+        duration-200 ease-linear ${className} text-light-ash bg-light-snow outline-light-ash hover:text-light-snow hover:bg-light-violet
+      dark:text-dark-frost dark:bg-light-obsidian dark:outline-dark-frost dark:hover:bg-dark-lavender rounded-full shadow-md xl:w-fit active:scale-95 
       text-p leading-p hover:scale-[1.05] origin-center`}
     >
       <>
         {children}
         <FiArrowRight
           className={`
-              text-light-black85 group-hover:text-light-white
-              dark:text-dark-white10
+              text-light-ash group-hover:text-light-snow
+              dark:text-dark-frost
           group-hover:rotate-[360deg] absolute inline-block w-5 h-5 m-auto ml-1 transition-all duration-200 right-4 opacity-90 group-hover:ml-2 group-hover:w-7 group-hover:h-7`}
         />
       </>
@@ -94,16 +94,16 @@ export function ExternalCTA({ children, onClick, className }: ButtonProps) {
     <button
       onClick={onClick}
       className={`relative px-6 pr-12 outline-2 flex justify-center items-center group hover:outline-hidden py-4 my-4 
-        font-bold uppercase transition duration-200 ease-linear ${className} text-light-black85 bg-light-white 
-        outline-light-black85 hover:text-light-white hover:bg-light-primary dark:text-dark-white10 dark:bg-light-black 
-        dark:outline-dark-white10 dark:hover:bg-dark-primary rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p 
+        font-bold uppercase transition duration-200 ease-linear ${className} text-light-ash bg-light-snow 
+        outline-light-ash hover:text-light-snow hover:bg-light-violet dark:text-dark-frost dark:bg-light-obsidian 
+        dark:outline-dark-frost dark:hover:bg-dark-lavender rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p 
         hover:scale-[1.05] origin-center`}
     >
       <>
         {children}
         <FiExternalLink
           className={`
-              text-light-black85 group-hover:text-light-white dark:text-dark-white10 absolute inline-block w-5 h-5 m-auto ml-1 
+              text-light-ash group-hover:text-light-snow dark:text-dark-frost absolute inline-block w-5 h-5 m-auto ml-1 
               transition-all duration-200 right-4 opacity-90 group-hover:ml-2 group-hover:w-7 group-hover:h-7`}
         />
       </>
@@ -116,8 +116,8 @@ export const CTAButton = ({ children, onClick, className }: ButtonProps) => {
     <button
       onClick={onClick}
       className={`px-6 outline-2 flex justify-center items-center group hover:outline-hidden py-4 my-4 font-bold uppercase transition 
-        duration-100 ease-linear ${className} text-light-black85 bg-light-white outline-light-black85 hover:text-light-white hover:bg-light-primary
-          dark:text-dark-white10 dark:bg-light-black dark:outline-dark-white10 dark:hover:bg-dark-primary"
+        duration-100 ease-linear ${className} text-light-ash bg-light-snow outline-light-ash hover:text-light-snow hover:bg-light-violet
+          dark:text-dark-frost dark:bg-light-obsidian dark:outline-dark-frost dark:hover:bg-dark-lavender"
       rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.02]`}
     >
       <>{children}</>
@@ -130,8 +130,8 @@ export function SendCTA({ children, onClick, className }: ButtonProps) {
     <button
       onClick={onClick}
       className={`px-6 outline-2 flex justify-center items-center group hover:outline-hidden py-4 my-4 font-bold uppercase transition duration-100 ease-linear ${className} 
-          text-light-black85 bg-light-white outline-light-black85 hover:text-light-white hover:bg-light-primary
-          dark:text-dark-white10 dark:bg-light-black dark:outline-dark-white10 dark:hover:bg-dark-primary"
+          text-light-ash bg-light-snow outline-light-ash hover:text-light-snow hover:bg-light-violet
+          dark:text-dark-frost dark:bg-light-obsidian dark:outline-dark-frost dark:hover:bg-dark-lavender"
       rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.02]`}
     >
       <>
@@ -147,8 +147,8 @@ export function EmailCTA({ children, onClick, className }: ButtonProps) {
     <button
       onClick={onClick}
       className={`px-6 outline-2 flex justify-center items-center group hover:outline-hidden py-4 my-4 font-bold uppercase transition duration-100 ease-linear ${className} 
-          text-light-black85 bg-light-white outline-light-black85 hover:text-light-white hover:bg-light-primary
-          dark:text-dark-white10 dark:bg-light-black dark:outline-dark-white10 dark:hover:bg-dark-primary"
+          text-light-ash bg-light-snow outline-light-ash hover:text-light-snow hover:bg-light-violet
+          dark:text-dark-frost dark:bg-light-obsidian dark:outline-dark-frost dark:hover:bg-dark-lavender"
       rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.02]`}
     >
       <>
@@ -163,8 +163,8 @@ export function PortfolioCTA({ children, onClick, className }: ButtonProps) {
   return (
     <button
       onClick={onClick}
-      className={`px-6 outline-2 flex justify-center shadow items-center group hover:outline-hidden py-4 my-4 font-bold uppercase transition duration-100 ease-linear ${className} text-light-black85 bg-light-white hover:shadow-light-black outline-light-black85 hover:text-light-white hover:bg-light-primary
-          dark:text-dark-white10 dark:bg-light-black dark:outline-dark-white10 dark:hover:shadow-dark-black hover:bg-dark-primary"
+      className={`px-6 outline-2 flex justify-center shadow items-center group hover:outline-hidden py-4 my-4 font-bold uppercase transition duration-100 ease-linear ${className} text-light-ash bg-light-snow hover:shadow-light-obsidian outline-light-ash hover:text-light-snow hover:bg-light-violet
+          dark:text-dark-frost dark:bg-light-obsidian dark:outline-dark-frost dark:hover:shadow-dark-midnight hover:bg-dark-lavender"
       rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.02]`}
     >
       <>
@@ -180,8 +180,8 @@ export function CookieAccept({ children, onClick, className }: ButtonProps) {
     <button
       onClick={onClick}
       className={`px-6 cursor-pointer outline-2 group hover:outline-hidden py-2 font-bold uppercase transition duration-200 ease-linear ${className}
-          text-light-black85 bg-light-white outline-light-black85 hover:text-light-white  hover:bg-light-primary
-          dark:text-dark-white10 dark:bg-light-black dark:outline-dark-white10 dark:hover:bg-dark-primary"
+          text-light-ash bg-light-snow outline-light-ash hover:text-light-snow  hover:bg-light-violet
+          dark:text-dark-frost dark:bg-light-obsidian dark:outline-dark-frost dark:hover:bg-dark-lavender"
       rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.02]`}
     >
       <>{children}</>

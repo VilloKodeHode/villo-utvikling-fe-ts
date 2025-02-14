@@ -54,10 +54,10 @@ export const ServiceCard = ({ title, text, href, buttonText }) => {
   return (
     <div>
       <div
-        className={`relative z-99 max-w-sm shadow-sm sm:rounded-lg transition-all ease-linear md:mt-0 md:col-span-1 hover:scale-[1.02] active:scale-[1.02] group cursor-default grid gap-2 min-h-[240px] bg-light-white15 group-hover:bg-light-white10 dark:bg-dark-black75 dark:group-hover:bg-dark-black50 p-6`}
+        className={`relative z-99 max-w-sm shadow-sm sm:rounded-lg transition-all ease-linear md:mt-0 md:col-span-1 hover:scale-[1.02] active:scale-[1.02] group cursor-default grid gap-2 min-h-[240px] bg-light-cloud group-hover:bg-light-mist dark:bg-dark-slate dark:group-hover:bg-dark-shadow p-6`}
       >
         <ThemedH4
-          className={`font-bold z-10 max-w-fit transition-colors dark:group-hover:text-dark-primary ease-linear group-hover:text-light-primary`}
+          className={`font-bold z-10 max-w-fit transition-colors dark:group-hover:text-dark-lavender ease-linear group-hover:text-light-violet`}
         >
           {title}
         </ThemedH4>
@@ -69,7 +69,7 @@ export const ServiceCard = ({ title, text, href, buttonText }) => {
             {buttonText}
           </Link>
         </ReadMoreButton>
-        {/* <div className="absolute group-hover:opacity-80 opacity-0 group-hover:h-[105%] group-hover:w-[103.5%] w-0 h-0 transition-all right-1/2 translate-x-1/2 top-1/2 translate-y-[-50%] sm:rounded-lg -z-99 bg-dark-primary" /> */}
+        {/* <div className="absolute group-hover:opacity-80 opacity-0 group-hover:h-[105%] group-hover:w-[103.5%] w-0 h-0 transition-all right-1/2 translate-x-1/2 top-1/2 translate-y-[-50%] sm:rounded-lg -z-99 bg-dark-lavender" /> */}
       </div>
     </div>
   );

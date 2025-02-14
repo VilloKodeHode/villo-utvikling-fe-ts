@@ -12,53 +12,53 @@
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1536px;
 
-  --color-dark-primary: oklch(67.37% 0.1213 287.84);
-  --color-dark-secondary: oklch(50.14% 0.2874 279.96);
-  --color-dark-black: oklch(20% 0.01 287.84);
-  --color-dark-black85: oklch(30% 0.015 287.84);
-  --color-dark-black75: oklch(35% 0.02 287.84);
-  --color-dark-black50: oklch(40% 0.03 287.84);
-  --color-dark-grey: oklch(50% 0.03 287.84);
-  --color-dark-white20: oklch(80% 0.04 287.84);
-  --color-dark-white15: oklch(85% 0.03 287.84);
-  --color-dark-white10: oklch(90% 0.015 287.84);
-  --color-dark-white: oklch(95% 0.01 287.84);
+  --color-dark-lavender: oklch(70% 0.15 290);
+  --color-dark-deep-violet: oklch(50% 0.3 280);
+  --color-dark-midnight: oklch(15% 0.015 288);
+  --color-dark-onyx: oklch(28% 0.02 290);
+  --color-dark-slate: oklch(33% 0.025 290);
+  --color-dark-shadow: oklch(42% 0.04 290);
+  --color-dark-steel: oklch(50% 0.05 290);
+  --color-dark-moonlight: oklch(82% 0.05 290);
+  --color-dark-glacier: oklch(87% 0.04 290);
+  --color-dark-frost: oklch(92% 0.02 290);
+  --color-dark-ice: oklch(97% 0.015 290);
 
   /* previous darkMode colors: */
-  /* --color-dark-primary: oklch(67.37% 0.1213 287.84);
-  --color-dark-secondary: oklch(50.14% 0.2874 279.95);
-  --color-dark-black: oklch(20% 0.0039 287.84);
-  --color-dark-black85: oklch(30% 0.00039 287.84);
-  --color-dark-black75: oklch(35% 0.0039 287.84);
-  --color-dark-black50: oklch(40% 0.0039 287.84);
-  --color-dark-white: oklch(95% 0.0039 287.84);
-  --color-dark-white10: oklch(90% 0.0039 287.84);
-  --color-dark-white15: oklch(85% 0.0039 287.84);
-  --color-dark-white20: oklch(80% 0.0039 287.84); */
+  /* --color-dark-lavender: oklch(67.37% 0.1213 287.84);
+  --color-dark-deep-violet: oklch(50.14% 0.2874 279.95);
+  --color-dark-midnight: oklch(20% 0.0039 287.84);
+  --color-dark-onyx: oklch(30% 0.00039 287.84);
+  --color-dark-slate: oklch(35% 0.0039 287.84);
+  --color-dark-shadow: oklch(40% 0.0039 287.84);
+  --color-dark-ice: oklch(95% 0.0039 287.84);
+  --color-dark-frost: oklch(90% 0.0039 287.84);
+  --color-dark-glacier: oklch(85% 0.0039 287.84);
+  --color-dark-moonlight: oklch(80% 0.0039 287.84); */
 
-  --color-light-primary: oklch(50.14% 0.2874 279.96);
-  --color-light-secondary: oklch(67.37% 0.1213 287.84);
-  --color-light-white: oklch(95% 0.01 279.96);
-  --color-light-white10: oklch(90% 0.02 279.96);
-  --color-light-white15: oklch(85% 0.025 279.96);
-  --color-light-white20: oklch(80% 0.04 279.96);
-  --color-light-grey: oklch(50% 0.04 279.96);
-  --color-light-black50: oklch(30% 0.015 279.96);
-  --color-light-black75: oklch(25% 0.015 279.96);
-  --color-light-black85: oklch(20% 0.01 279.96);
-  --color-light-black: oklch(15% 0.01 279.96);
+  --color-light-violet: oklch(50% 0.3 280);
+  --color-light-lavender: oklch(70% 0.15 290);
+  --color-light-snow: oklch(97% 0.01 280);
+  --color-light-mist: oklch(92% 0.02 280);
+  --color-light-cloud: oklch(87% 0.03 280);
+  --color-light-fog: oklch(82% 0.05 280);
+  --color-light-storm: oklch(50% 0.05 280);
+  --color-light-charcoal: oklch(35% 0.02 280);
+  --color-light-graphite: oklch(28% 0.02 280);
+  --color-light-ash: oklch(22% 0.015 280);
+  --color-light-obsidian: oklch(16% 0.015 280);
 
   /* previous lightMode colors: */
-  /* --color-light-primary: #571dff;
-  --color-light-secondary: #858ee0;
-  --color-light-black: #141315;
-  --color-light-black85: #2e2f34;
-  --color-light-black75: #383844;
-  --color-light-black50: #48485b;
-  --color-light-white: #fefdff;
-  --color-light-white10: #f6f3ff;
-  --color-light-white15: #efe9ff;
-  --color-light-white20: #e6ddff; */
+  /* --color-light-violet: #571dff;
+  --color-light-lavender: #858ee0;
+  --color-light-obsidian: #141315;
+  --color-light-ash: #2e2f34;
+  --color-light-graphite: #383844;
+  --color-light-charcoal: #48485b;
+  --color-light-snow: #fefdff;
+  --color-light-mist: #f6f3ff;
+  --color-light-cloud: #efe9ff;
+  --color-light-fog: #e6ddff; */
 
   --text-h1: 4.209rem;
   --text-h2: 3.157rem;
@@ -494,29 +494,29 @@
     .color_palette_gradient {
       background: linear-gradient(
         to right,
-        var(--color-light-white),
-        var(--color-light-white10),
-        var(--color-light-white15),
-        var(--color-light-white20),
-        var(--color-light-grey),
-        var(--color-light-black50),
-        var(--color-light-black75),
-        var(--color-light-black85),
-        var(--color-light-black)
+        var(--color-light-snow),
+        var(--color-light-mist),
+        var(--color-light-cloud),
+        var(--color-light-fog),
+        var(--color-light-storm),
+        var(--color-light-charcoal),
+        var(--color-light-graphite),
+        var(--color-light-ash),
+        var(--color-light-obsidian)
       );
     }
     .color_palette_gradient_dark {
       background: linear-gradient(
         to right,
-        var(--color-dark-black),
-        var(--color-dark-black85),
-        var(--color-dark-black75),
-        var(--color-dark-black50),
-        var(--color-dark-grey),
-        var(--color-dark-white20),
-        var(--color-dark-white15),
-        var(--color-dark-white10),
-        var(--color-dark-white)
+        var(--color-dark-midnight),
+        var(--color-dark-onyx),
+        var(--color-dark-slate),
+        var(--color-dark-shadow),
+        var(--color-dark-steel),
+        var(--color-dark-moonlight),
+        var(--color-dark-glacier),
+        var(--color-dark-frost),
+        var(--color-dark-ice)
       );
     }
   }

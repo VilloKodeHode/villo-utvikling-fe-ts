@@ -21,7 +21,7 @@ export const SplashScreen = () => {
   return (
     <div
       className={`fixed animate-splash-screen-out top-0 left-0 flex flex-col items-center justify-center gap-8 
-        h-screen w-screen bg-dark-white20 dark:bg-light-black z-999`}
+        h-screen w-screen bg-dark-moonlight dark:bg-light-obsidian z-999`}
     >
       <Image
         className="h-36 w-auto"
@@ -36,7 +36,7 @@ export const SplashScreen = () => {
         <Image
           className={`h-28 w-auto z-10`}
           src={`${
-            pathname === redirectedPathname(pathname,"en")
+            pathname === redirectedPathname(pathname, "en")
               ? "/images/flags/en.png"
               : "/images/flags/no.png"
           }`}
@@ -53,8 +53,10 @@ export const SplashScreen = () => {
         />
       </div>
 
-      <p className="text-3xl font-bold text-dark-black dark:text-light-white">
-        {pathname === redirectedPathname(pathname, "en") ? "Loading..." : "Laster..."}
+      <p className="text-3xl font-bold text-dark-midnight dark:text-light-snow">
+        {pathname === redirectedPathname(pathname, "en")
+          ? "Loading..."
+          : "Laster..."}
       </p>
     </div>
   );

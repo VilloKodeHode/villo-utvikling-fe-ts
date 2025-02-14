@@ -26,7 +26,7 @@ export async function RootLayout({ children, params }: PageProps) {
   return (
     <html lang={params.lang ? params.lang : "no"}>
       <body
-        className={`${figtree.className} min-h-[100vh] transition-colors duration-1000 bg-light-white dark:bg-dark-black overflow-x-hidden antialiased`}
+        className={`${figtree.className} min-h-[100vh] transition-colors duration-1000 bg-light-snow dark:bg-dark-midnight overflow-x-hidden antialiased`}
       >
         <AppUserProvider>
           <THREESpace />
