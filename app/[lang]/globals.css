@@ -14,36 +14,25 @@
 
   --color-dark-lavender: oklch(70% 0.15 290);
   --color-dark-deep-violet: oklch(50% 0.3 280);
-  --color-dark-midnight: oklch(15% 0.015 288);
-  --color-dark-onyx: oklch(28% 0.02 290);
-  --color-dark-slate: oklch(33% 0.025 290);
-  --color-dark-shadow: oklch(42% 0.04 290);
-  --color-dark-steel: oklch(50% 0.05 290);
+  --color-dark-midnight: oklch(15% 0.017 288);
+  --color-dark-onyx: oklch(20% 0.022 290);
+  --color-dark-slate: oklch(27% 0.035 290);
+  --color-dark-shadow: oklch(35% 0.05 290);
+  --color-dark-storm: oklch(50% 0.06 290);
   --color-dark-moonlight: oklch(82% 0.05 290);
   --color-dark-glacier: oklch(87% 0.04 290);
-  --color-dark-frost: oklch(92% 0.02 290);
-  --color-dark-ice: oklch(97% 0.015 290);
+  --color-dark-frost: oklch(92% 0.03 290);
+  --color-dark-ice: oklch(97% 0.02 290);
 
-  /* previous darkMode colors: */
-  /* --color-dark-lavender: oklch(67.37% 0.1213 287.84);
-  --color-dark-deep-violet: oklch(50.14% 0.2874 279.95);
-  --color-dark-midnight: oklch(20% 0.0039 287.84);
-  --color-dark-onyx: oklch(30% 0.00039 287.84);
-  --color-dark-slate: oklch(35% 0.0039 287.84);
-  --color-dark-shadow: oklch(40% 0.0039 287.84);
-  --color-dark-ice: oklch(95% 0.0039 287.84);
-  --color-dark-frost: oklch(90% 0.0039 287.84);
-  --color-dark-glacier: oklch(85% 0.0039 287.84);
-  --color-dark-moonlight: oklch(80% 0.0039 287.84); */
 
   --color-light-violet: oklch(50% 0.3 280);
   --color-light-lavender: oklch(70% 0.15 290);
   --color-light-snow: oklch(97% 0.01 280);
-  --color-light-mist: oklch(92% 0.02 280);
-  --color-light-cloud: oklch(87% 0.03 280);
+  --color-light-mist: oklch(92% 0.025 280);
+  --color-light-cloud: oklch(87% 0.04 280);
   --color-light-fog: oklch(82% 0.05 280);
-  --color-light-storm: oklch(50% 0.05 280);
-  --color-light-charcoal: oklch(35% 0.02 280);
+  --color-light-dusk: oklch(70% 0.06 280);
+  --color-light-charcoal: oklch(35% 0.03 280);
   --color-light-graphite: oklch(28% 0.02 280);
   --color-light-ash: oklch(22% 0.015 280);
   --color-light-obsidian: oklch(16% 0.015 280);
@@ -498,7 +487,7 @@
         var(--color-light-mist),
         var(--color-light-cloud),
         var(--color-light-fog),
-        var(--color-light-storm),
+        var(--color-light-dusk),
         var(--color-light-charcoal),
         var(--color-light-graphite),
         var(--color-light-ash),
@@ -512,7 +501,7 @@
         var(--color-dark-onyx),
         var(--color-dark-slate),
         var(--color-dark-shadow),
-        var(--color-dark-steel),
+        var(--color-dark-storm),
         var(--color-dark-moonlight),
         var(--color-dark-glacier),
         var(--color-dark-frost),

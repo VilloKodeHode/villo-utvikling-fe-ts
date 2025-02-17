@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export default function LanguageSwitcher() {
+export default function LanguageSwitcher({className}) {
   const pathname = usePathname();
 
   //! Revert back to this if code isnt working:
@@ -21,7 +21,7 @@ export default function LanguageSwitcher() {
   // console.log(i18n.locales)
 
   return (
-    <div>
+    <div className={className}>
       <ul className="flex gap-3">
         {i18n.locales.map((locale) => (
           <li key={locale}>

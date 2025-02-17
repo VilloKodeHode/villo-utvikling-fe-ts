@@ -54,7 +54,7 @@ export const ServiceCard = ({ title, text, href, buttonText }) => {
   return (
     <div>
       <div
-        className={`relative z-99 max-w-sm shadow-sm sm:rounded-lg transition-all ease-linear md:mt-0 md:col-span-1 hover:scale-[1.02] active:scale-[1.02] group cursor-default grid gap-2 min-h-[240px] bg-light-cloud group-hover:bg-light-mist dark:bg-dark-slate dark:group-hover:bg-dark-shadow p-6`}
+        className={`relative z-99 max-w-sm shadow-sm sm:rounded-lg transition-all ease-linear md:mt-0 md:col-span-1 hover:scale-[1.02] active:scale-[1.02] group cursor-default grid gap-2 min-h-[240px] bg-light-cloud group-hover:bg-light-mist dark:bg-dark-onyx dark:group-hover:bg-dark-shadow p-6`}
       >
         <ThemedH4
           className={`font-bold z-10 max-w-fit transition-colors dark:group-hover:text-dark-lavender ease-linear group-hover:text-light-violet`}

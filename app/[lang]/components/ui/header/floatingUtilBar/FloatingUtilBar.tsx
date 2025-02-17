@@ -1,16 +1,20 @@
+"use client"
+
 import { FcSettings } from "react-icons/fc";
-import LanguageSwitch from "../../features/LanguageSwitch/LanguageSwitch";
-import ThemeSwitch from "../../features/ThemeSwitch/ThemeSwitch";
-import { NavigationContext } from "../../../context/NavigationContext";
-import { useContext, useEffect } from "react";
-import { UserContext } from "@/context/UserContext";
+import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
+import LanguageSwitcher from "../languageswitcher/LanguageSwitcher";
+import { ThemeSwitch } from "../themeswitcher/ThemeSwitcher";
 
 export const FloatingUtilsBar = () => {
-  const { theme } = useContext(UserContext);
-  const { notTop, showToolBar, setShowToolBar, setNotTop } = useContext(NavigationContext);
+  const { theme } = useTheme();
+  const [notTop, setNotTop] = useState(false);
+  const [showToolBar, setShowToolBar] = useState(false);
+
   const toggleToolBar = () => {
     setShowToolBar(!showToolBar);
   };
+
   useEffect(() => {
     function handleScroll() {
       setNotTop(window.scrollY > 0);
@@ -23,14 +27,14 @@ export const FloatingUtilsBar = () => {
   }, [setNotTop]);
 
   return (
-    <div className="relative">
+    // <div className="relative">
       <div
-        className={`fixed transition-all p-3 group top-2 duration-1000 z-[999] hover:bg-opacity-100 border-b-2 hover:border-opacity-100 bg-opacity-40  border-opacity-40 flex items-center rounded-r-[30px] pr-5 justify-between ${
-          notTop ? "animate-ToolsSlideIn" : "animate-ToolsSlideOut"
+        className={`fixed transition-all p-3 group top-2 duration-1000 z-[999] hover:bg-opacity-100 border-b-2 hover:border-opacity-100 bg-opacity-40 flex items-center rounded-r-[30px] pr-5 justify-between ${
+          notTop ? "animate-Tools-slide-in" : "animate-Tools-slide-out"
         } ${
           theme === "light"
-            ? "bg-Villo-light-white15  text-Villo-light-black border-Villo-light-primary"
-            : "bg-Villo-dark-black75 text-Villo-dark-white10 border-Villo-dark-black85"
+            ? "bg-light-cloud  text-light-ash border-light-violet"
+            : "bg-dark-slate text-dark-frost border-dark-onyx"
         } 
           ${showToolBar ? "" : "translate-x-[-100%]"}
           `}
@@ -38,7 +42,7 @@ export const FloatingUtilsBar = () => {
         <div
           className={`flex 2xl:flex-row flex-col opacity-30 group-hover:opacity-100  right-0 transition-all top-0 gap-4`}
         >
-          <LanguageSwitch className={`2xl:flex-row flex-col`} />
+          <LanguageSwitcher className={`2xl:flex-row flex-col`} />
 
           <ThemeSwitch />
           <button onClick={toggleToolBar} className="">
@@ -49,6 +53,6 @@ export const FloatingUtilsBar = () => {
           </button>
         </div>
       </div>
-    </div>
+    // </div>
   );
 };

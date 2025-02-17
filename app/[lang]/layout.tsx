@@ -10,6 +10,7 @@ import { SplashScreen } from "@components/ui/splashscreen/SplashScreen";
 import THREESpace from "@components/animation/Space";
 import Footer from "@components/ui/footer/Footer";
 import { getDictionary } from "get-dictionary";
+import { FloatingUtilsBar } from "@components/ui/header/floatingUtilBar/FloatingUtilBar";
 // import LanguageSwitcher from "@components/ui/header/languageswitcher/LanguageSwitcher";
 
 const figtree = Figtree({ subsets: ["latin"] });
@@ -31,7 +32,9 @@ export async function RootLayout({ children, params }: PageProps) {
         <AppUserProvider>
           <THREESpace />
           <Header />
+          <FloatingUtilsBar/>
           <NavBar params={params} />
+          
           <main
             className={`flex flex-col animate-Appear items-center px-4 sm:px-6 lg:px-12 justify-start overflow-x-hidden mb-24 gap-28 `}
           >

@@ -31,7 +31,7 @@ export const ShowcaseSection = ({ dictionary }) => {
   return (
     <>
       <section
-        className="relative animate-on-scroll opacity-0 flex items-center justify-center w-full group/imageEffect"
+        className="relative flex items-center justify-center w-full group/imageEffect"
         id="showcase-section"
       >
         {/* Image should be visable at all times, so find to make it so */}
@@ -47,7 +47,7 @@ export const ShowcaseSection = ({ dictionary }) => {
           height={5000}
         />
         {/* <div className="grid sm:grid-cols-2 h-[100vh] items-center gap-8 w-full max-w-6xl grid-cols-1 sm:grid-rows-1 grid-rows-3"></div> */}
-        <div className="flex sm:flex-row h-[100vh] items-center gap-8 w-full max-w-6xl flex-col">
+        <div className="flex animate-on-scroll opacity-0 sm:flex-row h-[100vh] items-center gap-8 w-full max-w-6xl flex-col">
           <div className="w-full relative z-10 select-none sm:self-center sm:block flex self-end justify-center ml:mb-8 gap-x-3 md:gap-x-0">
             {content.map((showCase, index) => (
               <Showcase
