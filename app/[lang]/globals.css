@@ -305,13 +305,13 @@
     }
     100% {
       translate: 0% 0%;
-      display: block;
+      display: fixed;
     }
   }
   @keyframes toolsSlideOut {
     0% {
       translate: 0% 0%;
-      display: block;
+      display: fixed;
     }
     100% {
       translate: -200% 0%;
