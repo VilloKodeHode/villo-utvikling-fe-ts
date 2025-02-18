@@ -23,7 +23,7 @@ export const ScrollToSectionButton = ({children}) => {
     };
     return (
         <a
-        onClick={(event) => scrollToSection(event, "OfferSection")}
+        onClick={(event) => scrollToSection(event, "service_section")}
         className=""
       >
         <ReadMoreButton className="">

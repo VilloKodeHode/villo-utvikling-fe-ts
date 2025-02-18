@@ -39,7 +39,7 @@ export function ReadMoreButton({ children, onClick, className }: ButtonProps) {
   return (
     <button
       onClick={onClick}
-      className={`relative flex w-fit h-fit justify-center items-center group font-bold uppercase transition duration-200 ease-linear ${className} text-light-ash hover:text-light-violet dark:text-dark-frost dark:hover:text-dark-lavender
+      className={`relative cursor-pointer flex w-fit h-fit justify-center items-center group font-bold uppercase transition duration-200 ease-linear ${className} text-light-ash hover:text-light-violet dark:text-dark-frost dark:hover:text-dark-lavender
        rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.05] origin-center`}
     >
       <>
@@ -71,7 +71,7 @@ export function ArrowCTA({ children, onClick, className }: ButtonProps) {
   return (
     <button
       onClick={onClick}
-      className={`relative px-6 pr-12 outline-2 flex justify-center items-center group hover:outline-hidden py-4 my-4 font-bold uppercase transition 
+      className={`relative cursor-pointer px-6 pr-12 outline-2 flex justify-center items-center group hover:outline-hidden py-4 my-4 font-bold uppercase transition 
         duration-200 ease-linear ${className} text-light-ash bg-light-snow outline-light-ash hover:text-light-snow hover:bg-light-violet
       dark:text-dark-frost dark:bg-light-obsidian dark:outline-dark-frost dark:hover:bg-dark-lavender rounded-full shadow-md xl:w-fit active:scale-95 
       text-p leading-p hover:scale-[1.05] origin-center`}

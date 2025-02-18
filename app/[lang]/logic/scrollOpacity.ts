@@ -10,9 +10,10 @@ useEffect(() => {
       const scrollY = window.scrollY;
       const scrollableHeight =
         document.documentElement.scrollHeight - window.innerHeight;
-
-      const opacity = Math.max(0, Math.min(1, 1 - scrollY / scrollableHeight));
-
+        
+//TODO check if the numbers can be tweaked so opacity is 0 earlier:
+      const opacity = Math.max(0, Math.min(1, 1 - scrollY / (scrollableHeight)));
+console.log(opacity)
       particles.current.children.forEach((particle) => {
         particle.material.opacity = opacity;
       });

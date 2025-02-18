@@ -26,7 +26,6 @@ export const HeroSection = async ({ params }: PageProps) => {
                     : "Websites for small and medium-sized businesses and clubs"}
                 </span>{" "}
               </ThemedH1>
-
               <ThemedH5 className="mb-8 font-normal text-left">
                 {params.lang === "no"
                   ? "Jeg bygger nettsider raskt og effektivt ved å bruke de nyeste webteknologiene. Enten du ønsker en enkel løsning med et brukervennlig system, eller en skreddersydd nettside etter dine behov, kan du stole på min ekspertise."
@@ -34,7 +33,7 @@ export const HeroSection = async ({ params }: PageProps) => {
               </ThemedH5>
               <div className="grid justify-start grid-flow-col gap-8">
                 <div className="h-[60px] flex justify-start items-center">
-                  <Link href="/contact" className="">
+                  <Link href="/contact">
                     <ArrowCTA>
                       {params.lang === "no" ? "Kontakt nå" : "Contact now"}
                     </ArrowCTA>

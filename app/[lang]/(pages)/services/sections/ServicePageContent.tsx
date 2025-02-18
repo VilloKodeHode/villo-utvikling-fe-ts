@@ -6,6 +6,7 @@ export const ServicePageContent = async ({
   params,
   dictionary,
   showOnScroll,
+  id = "service_section",
 }) => {
   const content = dictionary.service_cards;
 
@@ -17,10 +18,14 @@ export const ServicePageContent = async ({
 
   return (
     <section
-      id="serviceContent"
-      className={`w-full overflow-x-hidden py-12 sm:px-6 px-4 lg:px-12`}
+      id={id}
+      className={`w-full overflow-x-hidden scroll-into-view py-12 sm:px-6 px-4 lg:px-12`}
     >
-      <div className="mx-auto max-w-7xl scroll-into-view">
+      <div
+        className={`mx-auto max-w-7xl  ${
+          showOnScroll ? "opacity-0 animate-on-scroll" : ""
+        }`}
+      >
         <div className="text-center">
           <ThemedH2 className="text-center underline">
             {params.lang === "no"
@@ -28,11 +33,7 @@ export const ServicePageContent = async ({
               : "Villo Development offers:"}
           </ThemedH2>
         </div>
-        <div
-          className={`flex justify-center mt-10 ${
-            showOnScroll ? "opacity-0 animate-on-scroll" : ""
-          }`}
-        >
+        <div className={`flex justify-center mt-10`}>
           <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
             {content.map((item) => (
               <ServiceCard
