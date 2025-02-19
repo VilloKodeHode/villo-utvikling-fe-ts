@@ -4,11 +4,10 @@ import Link from "next/link";
 
 export const ServicePageContent = async ({
   params,
-  dictionary,
+  content,
   showOnScroll,
   id = "service_section",
 }) => {
-  const content = dictionary.service_cards;
 
   //     <MetaTags
   //     description="Profesjonell frontend webutvikling og webdesign service. Vi omskaper ideer til fengslende nettsider med fokus på responsive, brukervennlige og visuelt tiltalende nettsteder."

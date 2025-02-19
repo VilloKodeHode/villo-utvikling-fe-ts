@@ -1,3 +1,6 @@
+import { SimpleLogoComponent } from "./Logo";
+
+
 interface ThemedTextProps {
   children: React.ReactNode;
   className?: string;
@@ -11,6 +14,28 @@ export const ThemedH1 = ({ children, className }: ThemedTextProps) => {
     >
       {children}
     </h1>
+  );
+};
+
+export const ThemedH2 = ({ children, className }: ThemedTextProps) => {
+  return (
+    <h2
+      className={`text-light-obsidian
+       dark:text-dark-ice sm:text-h2 text-h4 leading-h4 sm:leading-h2  ${className}`}
+    >
+      {children}
+    </h2>
+  );
+};
+
+export const ThemedH3 = ({ children, className }: ThemedTextProps) => {
+  return (
+    <h2
+      className={`text-light-obsidian
+       dark:text-dark-ice sm:text-h3 text-h5 leading-h5 sm:leading-h3  ${className}`}
+    >
+      {children}
+    </h2>
   );
 };
 
@@ -36,27 +61,29 @@ export const ThemedSmall = ({ children, className }: ThemedTextProps) => {
   );
 };
 
-export const ThemedH2 = ({ children, className }: ThemedTextProps) => {
+export function ThemedLi({ children, className }) {
   return (
-    <h2
-      className={`text-light-obsidian
-       dark:text-dark-ice sm:text-h2 text-h4 leading-h4 sm:leading-h2  ${className}`}
+    <li
+      className={`flex gap-2 items-center md:text-h5 text-base md:leading-h5 leading-base text-light-obsidian  dark:text-dark-ice ${className}`}
     >
       {children}
-    </h2>
+    </li>
   );
-};
+}
 
-export const ThemedH3 = ({ children, className }: ThemedTextProps) => {
+export function ThemedLiWithLogo({ children, className }) {
   return (
-    <h2
-      className={`text-light-obsidian
-       dark:text-dark-ice sm:text-h3 text-h5 leading-h5 sm:leading-h3  ${className}`}
+    <li
+      className={`flex gap-2 max-w-xl items-center md:text-h5 text-base md:leading-h5 leading-base text-light-obsidian  dark:text-dark-ice ${className}`}
     >
-      {children}
-    </h2>
+     <SimpleLogoComponent className="" />
+      <p>{children}</p>
+    </li>
   );
-};
+}
+
+
+
 
 export const ShowCaseHeaderText = ({
   children,

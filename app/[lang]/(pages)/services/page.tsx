@@ -2,14 +2,14 @@ import { getDictionary } from "get-dictionary";
 import { ServicePageContent } from "@pages/services/sections/ServicePageContent";
 import { PageProps } from "@interfaces/PageProps";
 
-export default async function Home({ params }: PageProps) {
+export default async function Home({ params }: PageProps,) {
   const dictionary = await getDictionary(params.lang);
   // console.log(dictionary)
   return (
     <>
       <ServicePageContent
         showOnScroll={false}
-        dictionary={dictionary}
+        content={dictionary.service_cards}
         params={params}
       />
     </>

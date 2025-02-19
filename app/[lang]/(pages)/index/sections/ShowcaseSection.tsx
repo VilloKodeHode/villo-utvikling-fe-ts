@@ -5,8 +5,7 @@ import { useEffect, useState } from "react";
 import { ShowCaseHeaderText, ThemedP } from "@components/atoms/ThemedText";
 import { useTheme } from "next-themes";
 
-export const ShowcaseSection = ({ dictionary }) => {
-  const content = dictionary.showCaseList;
+export const ShowcaseSection = ({ content }) => {
   const { theme } = useTheme();
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 

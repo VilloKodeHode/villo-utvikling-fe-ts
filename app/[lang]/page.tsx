@@ -7,15 +7,13 @@ import { ServicePageContent } from "app/[lang]/(pages)/services/sections/Service
 
 export default async function Home({ params }: PageProps) {
   const dictionary = await getDictionary(params.lang);
-  // const dictionary = await getDictionary(params.lang);
   return (
     <>
-      <HeroSection dictionary={dictionary} />
-      <ShowcaseSection dictionary={dictionary} />
-      {/* <OfferSection dictionary={dictionary} params={params} /> */}
+      <HeroSection content={dictionary.heroSection} />
+      <ShowcaseSection content={dictionary.showCaseList} />
       <ServicePageContent
         showOnScroll={true}
-        dictionary={dictionary}
+        content={dictionary.service_cards}
         params={params}
       />
     </>

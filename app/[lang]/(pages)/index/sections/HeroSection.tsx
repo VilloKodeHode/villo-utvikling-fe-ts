@@ -3,8 +3,7 @@ import { ThemedH1, ThemedH5, ThemedP } from "@components/atoms/ThemedText";
 import { ArrowCTA } from "@components/atoms/Buttons";
 import { ScrollToSectionButton } from "@components/atoms/ScrolltoSectionButton";
 
-export const HeroSection = async ({ dictionary }) => {
-  const content = dictionary.heroSection;
+export const HeroSection = async ({ content }) => {
   return (
     <>
       <div className="flex justify-center w-full h-full">

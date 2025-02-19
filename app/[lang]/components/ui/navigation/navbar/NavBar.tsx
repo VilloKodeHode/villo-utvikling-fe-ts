@@ -2,7 +2,7 @@ import { getDictionary } from "get-dictionary";
 import { Locale } from "i18next.config";
 import NavItem from "../molecules/NavItem";
 import LogoComponent from "@components/atoms/Logo";
-import { LogoDarkMode } from "@components/atoms/logo/LogoDarkMode";
+
 
 interface ComponentProps {
   className?: string;

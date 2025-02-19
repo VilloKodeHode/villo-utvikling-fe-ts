@@ -42,7 +42,7 @@ const LogoComponent = ({ onclick, image }) => {
   );
 };
 
-export const SimpleLogoComponent = () => {
+export const SimpleLogoComponent = ({className}) => {
   const { theme } = useTheme();
 
   // Find the logo object based on the theme
@@ -57,13 +57,13 @@ export const SimpleLogoComponent = () => {
   }
 
   return (
-    <div>
+    <div className="">
       <Image
         src={logoSrc}
         width={200}
         height={200}
         alt="Villo utvikling logo"
-        className="z-50 m-4"
+        className={`h-8 w-8 ${className}`}
       />
     </div>
   );

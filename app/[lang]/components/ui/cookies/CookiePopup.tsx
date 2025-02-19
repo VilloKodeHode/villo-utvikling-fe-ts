@@ -8,6 +8,7 @@ import { CookieAccept } from "@components/atoms/Buttons";
 
 const CookiePopup = ({ dictionary }) => {
   const [showPopup, setShowPopup] = useState(false);
+  const content = dictionary.cookie;
 
   const handleCookieAccept = () => {
     // Set a cookie to remember that the user has accepted cookies
@@ -49,20 +50,20 @@ const CookiePopup = ({ dictionary }) => {
         `}
       >
         <div className="relative grid items-center justify-center gap-2 pt-3">
-          <ThemedH5 className={`pb-2`}>{dictionary.cookie.title}</ThemedH5>
-          <ThemedSmall>{dictionary.cookie.why}</ThemedSmall>
+          <ThemedH5 className={`pb-2`}>{content.title}</ThemedH5>
+          <ThemedSmall>{content.why}</ThemedSmall>
           <ThemedSmall
             className={` py-2
           `}
           >
-            {dictionary.cookie.disclaimer}
+            {content.disclaimer}
           </ThemedSmall>
           <div className="flex justify-around gap-2">
             <CookieAccept onClick={handleAccept} className="">
-              {dictionary.cookie.accept}
+              {content.accept}
             </CookieAccept>
             <CookieAccept onClick={handleDecline} className="">
-              {dictionary.cookie.decline}
+              {content.decline}
             </CookieAccept>
           </div>
         </div>
@@ -72,11 +73,11 @@ const CookiePopup = ({ dictionary }) => {
             width="50"
             height="50"
             alt="cookie"
-            className={`absolute transition-all duration-500 
+            className={`absolute transition-all cursor-pointer duration-500 
         ${
           showPopup
             ? "bottom-[230px] sm:bottom-[242px] left-[280px] sm:left-[290px]"
-            : "bottom-[4px] left-[320px] sm:bottom-[18px] sm:left-[334px] hover:scale-125 opacity-30 hover:animate-cookie-shake cursor-pointer hover:opacity-100"
+            : "bottom-[4px] left-[320px] sm:bottom-[18px] sm:left-[334px] hover:scale-125 opacity-30 hover:animate-cookie-shake  hover:opacity-100"
         }
         `}
           ></Image>
