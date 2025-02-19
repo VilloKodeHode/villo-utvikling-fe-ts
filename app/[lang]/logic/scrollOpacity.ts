@@ -9,7 +9,7 @@ useEffect(() => {
     function updateOpacity() {
       const scrollY = window.scrollY;
       const scrollableHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
+        document.documentElement.scrollHeight - (window.innerHeight *1.5);
         
 //TODO check if the numbers can be tweaked so opacity is 0 earlier:
       const opacity = Math.max(0, Math.min(1, 1 - scrollY / (scrollableHeight)));

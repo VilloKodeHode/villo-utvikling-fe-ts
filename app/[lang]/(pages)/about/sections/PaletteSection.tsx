@@ -1,12 +1,16 @@
 "use client";
 
+import { ThemedH2 } from "@components/atoms/ThemedText";
 import { useTheme } from "next-themes";
 
 export const PaletteSection = () => {
   const { theme } = useTheme();
 
   return (
-    <section className="border-2 border-light-obsidian dark:border-dark-ice">
+    <section className="">
+            <ThemedH2>My Color Palette</ThemedH2>
+
+      <div className="border-2 border-light-obsidian dark:border-dark-ice">
       <div className="relative h-32">
         <div
           className={`w-full dark:opacity-0 opacity-100 transition-opacity duration-800 absolute h-32 color_palette_gradient`}
@@ -16,7 +20,7 @@ export const PaletteSection = () => {
         />
       </div>
 
-      <div className="flex ">
+      <div className="flex overflow-hidden">
         <Color className=" bg-light-snow dark:bg-dark-midnight text-light-obsidian dark:text-dark-ice">
           <p>{theme === "light" ? "snow" : "midnight"}</p>
           <p>{theme === "light" ? "#f3f5fc" : "#0b0a12"}</p>
@@ -54,6 +58,7 @@ export const PaletteSection = () => {
           <p>{theme === "light" ? "#0c0d14" : "#f4f3ff"}</p>
         </Color>
       </div>
+      </div>
     </section>
   );
 };
@@ -61,7 +66,7 @@ export const PaletteSection = () => {
 export const Color = ({ children, className }) => {
   return (
     <div
-      className={`${className} transition-colors duration-500 ease-linear h-36 w-36 flex justify-center flex-col items-center`}
+      className={`${className} dark:animate-blur-in-out animate-blur-in-out-heavy transition-colors duration-500 ease-linear h-36 w-36 flex justify-center flex-col items-center`}
     >
       {children}
     </div>

@@ -28,12 +28,12 @@ export const FloatingUtilsBar = () => {
 
   return (
     <div
-      className={`fixed duration-1000  z-[999] transition-all ${
-        showToolBar ? "-translate-x-40" : ""
+      className={`fixed duration-1000 top-2 z-[999] transition-all ${
+        showToolBar ? "" : "-translate-x-40"
       }`}
     >
       <div
-        className={`transition-all p-3 group top-2 border-b-2 flex items-center rounded-r-[30px] pr-5 justify-between ${
+        className={`transition-all p-3 group border-b-2 flex items-center rounded-r-[30px] pr-5 justify-between ${
           notTop ? "animate-Tools-slide-in" : "animate-Tools-slide-out"
         } ${
           theme === "light"
@@ -49,11 +49,17 @@ export const FloatingUtilsBar = () => {
 
           <ThemeSwitch />
           <button
-            className={`absolute  top-0 2xl:left-[140px] left-[50px] transition-all not-hover:animate-return-cog-spin duration-500 hover:animate-cog-spin 
-          ${showToolBar ? "2xl:left-[165px] left-[65px]" : ""}`}
+            className={`absolute top-0 2xl:left-[140px] left-[50px] transition-all  duration-500 hover:animate-cog-spin
+          ${
+            showToolBar
+              ? "not-hover:animate-out-cog-spin"
+              : "2xl:left-[165px] left-[65px] not-hover:animate-return-cog-spin "
+          }`}
             onClick={toggleToolBar}
           >
-            <FcSettings className={` h-[50px] w-fit`}></FcSettings>
+            <FcSettings
+              className={` h-[48px] flex -translate-y-[1px] w-fit`}
+            ></FcSettings>
           </button>
         </div>
       </div>

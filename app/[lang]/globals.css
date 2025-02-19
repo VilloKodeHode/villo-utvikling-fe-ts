@@ -119,9 +119,12 @@
   --animate-scroll: scroll 35s linear infinite;
   --animate-cog-spin: cogSpin 10s cubic-bezier(0, 1.6, 0.68, 1.1) infinite
     forwards;
-  --animate-return-cog-spin: returnCogSpin 0.3s ease-out forwards;
+  --animate-return-cog-spin: rotateLeft 0.5s ease-out forwards;
+  --animate-out-cog-spin: rotateRight 0.5s ease-out forwards;
   --animate-cookie-shake: cookieShake 2s ease-in-out infinite forwards;
   --animate-splash-screen-out: splashScreenDissapear 2.5s ease-in-out forwards;
+  --animate-blur-in-out: blurInOut 0.3s ease-in-out forwards;
+  --animate-blur-in-out-heavy: blurInOutHeavy 0.3s ease-in-out forwards;
 
   @keyframes filler {
   }
@@ -409,14 +412,6 @@
       transform: rotate(360deg);
     }
   }
-  @keyframes returnCogSpin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(720deg);
-    }
-  }
   @keyframes cookieShake {
     0% {
       transform: rotate(0deg) scale(1);
@@ -445,6 +440,23 @@
     100% {
       transform: rotate(0deg) scale(1);
     }
+  }
+}
+@keyframes blurInOut {
+  0% {
+    filter: blur(10px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+
+@keyframes blurInOutHeavy {
+  0% {
+    filter: blur(15px);
+  }
+  100% {
+    filter: blur(0px);
   }
 }
 

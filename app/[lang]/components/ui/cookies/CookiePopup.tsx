@@ -76,7 +76,7 @@ const CookiePopup = ({ dictionary }) => {
         ${
           showPopup
             ? "bottom-[230px] sm:bottom-[242px] left-[280px] sm:left-[290px]"
-            : "bottom-[4px] left-[320px] sm:bottom-[18px] sm:left-[334px] hover:scale-125 opacity-30 hover:animate-cookieShake hover:opacity-100"
+            : "bottom-[4px] left-[320px] sm:bottom-[18px] sm:left-[334px] hover:scale-125 opacity-30 hover:animate-cookie-shake cursor-pointer hover:opacity-100"
         }
         `}
           ></Image>

@@ -19,6 +19,13 @@
       "imageHeight": 180
     }
   },
+  "heroSection": {
+    "slogan": "Bringing your consept to reality",
+    "title": "Websites for small and medium-sized businesses and clubs",
+    "subtitle": "I build websites quickly and efficiently using the latest web technologies. Whether you want a simple solution with a user-friendly system, or a custom website tailored to your needs, you can rely on my expertise.",
+    "cta": "Contact now",
+    "ctaTwo": "Services"
+  },
   "services": {
     "website": {
       "top_title": "Need a new website?",

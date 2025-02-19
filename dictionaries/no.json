@@ -19,6 +19,13 @@
       "imageHeight": 180
     }
   },
+  "heroSection": {
+    "slogan": "Fører ditt konsept til realitet",
+    "title": "Nettsider for små og mellomstore bedrifter og klubber",
+    "subtitle": "Jeg bygger nettsider raskt og effektivt ved å bruke de nyeste webteknologiene. Enten du ønsker en enkel løsning med et brukervennlig system, eller en skreddersydd nettside etter dine behov, kan du stole på min ekspertise.",
+    "cta": "Kontakt nå",
+    "ctaTwo": "Tjenester"
+  },
   "services": {
     "website": {
       "top_title": "Trenger du ny nettside?",

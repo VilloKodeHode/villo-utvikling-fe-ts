@@ -10,7 +10,7 @@ export default async function Home({ params }: PageProps) {
   // const dictionary = await getDictionary(params.lang);
   return (
     <>
-      <HeroSection params={params} />
+      <HeroSection dictionary={dictionary} />
       <ShowcaseSection dictionary={dictionary} />
       {/* <OfferSection dictionary={dictionary} params={params} /> */}
       <ServicePageContent
