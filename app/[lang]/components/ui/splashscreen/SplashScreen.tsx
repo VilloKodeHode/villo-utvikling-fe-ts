@@ -20,8 +20,8 @@ export const SplashScreen = () => {
 
   return (
     <div
-      className={`fixed animate-splash-screen-out top-0 left-0 flex flex-col items-center justify-center gap-8 
-        h-screen w-screen bg-dark-moonlight dark:bg-light-obsidian z-999`}
+      className={`fixed animate-splash-screen-out dark:bg-dark-onyx bg-light-cloud transition-colors top-0 left-0 flex flex-col items-center justify-center gap-8 
+        h-screen w-screen z-999`}
     >
       <Image
         className="h-36 w-auto"

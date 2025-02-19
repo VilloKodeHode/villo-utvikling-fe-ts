@@ -41,7 +41,7 @@ export const ShowcaseSection = ({ dictionary }) => {
               ? "/images/logo/WindLogoNoTextLightMode.svg"
               : "/images/logo/WindLogoNoTextDarkMode.svg"
           }`}
-          className="absolute opacity-5 h-[150vh] -z-10 animate-rotate-left-logo"
+          className="absolute opacity-5 h-[150vh] ease-in-out -z-10 animate-rotate-left-logo"
           alt=""
           width={5000}
           height={5000}

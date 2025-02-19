@@ -3,16 +3,20 @@
     "light": {
       "text": "Home",
       "href": "/",
-      "imageSrc": "/logo/WindLogoLightmode.svg",
-      "imageWidth": 200,
-      "imageHeight": 200
+      "textImage": "/images/logo/logo-text-lightMode.svg",
+      "leftLogo": "/images/logo/logo-left-lightMode.svg",
+      "rightLogo": "/images/logo/logo-right-lightMode.svg",
+      "imageWidth": 180,
+      "imageHeight": 180
     },
     "dark": {
       "text": "Home",
       "href": "/",
-      "imageSrc": "/logo/WindLogoDarkmode.svg",
-      "imageWidth": 200,
-      "imageHeight": 200
+      "textImage": "/images/logo/logo-text-darkMode.svg",
+      "leftLogo": "/images/logo/logo-left-darkMode.svg",
+      "rightLogo": "/images/logo/logo-right-darkMode.svg",
+      "imageWidth": 180,
+      "imageHeight": 180
     }
   },
   "services": {
@@ -177,49 +181,48 @@
   ],
   "showCaseList": [
     {
+      "type": "logo",
+      "fileType": "svg",
+      "src": "/images/logo/WindLogoLightMode.svg",
+      "alt": "Villo development",
+      "width": 400,
+      "height": 400,
+      "paragraph": "Engaging websites for your business: From simple to complex websites, tailored to all devices."
+    },
+    {
+      "type": "design",
       "fileType": "png",
-      "path": "/images/showcase/HeroDesign.png",
+      "src": "/images/showcase/HeroDesign.png",
       "alt": "Web design",
       "width": 500,
       "height": 300,
-      "norText": "design",
-      "engText": "design",
-      "norParagraph": "Gjennomgående design som er estetisk og funksjonelt, med fokus på brukervennlighet og konvertering",
-      "engParagraph": "Consistent design that is aesthetic and functional, with a focus on user-friendliness and conversion"
+      "title": "design",
+      "paragraph": "Consistent design that is aesthetic and functional, with a focus on user-friendliness and conversion"
     },
     {
+      "type": "development",
       "fileType": "png",
-      "path": "/images/showcase/HeroDevelopment.png",
+      "src": "/images/showcase/HeroDevelopment.png",
       "alt": "Web development",
       "width": 500,
       "height": 300,
-      "norText": "utvikling",
-      "engText": "development",
-      "norParagraph": "Ekspertise innenfor utvikling av nettsider som er lette på vedlikeholde og endre innhold på",
-      "engParagraph": "Expertise in developing websites that are easy to maintain and change content on"
+      "title": "development",
+      "paragraph": "Expertise in developing websites that are easy to maintain and change content on"
     },
     {
+      "type": "collage",
       "fileType": "webp",
-      "path": "/images/showcase/HeroCollage.webp",
+      "src": "/images/showcase/HeroCollage.webp",
       "alt": "Web content",
       "width": 500,
       "height": 300,
-      "norText": "innhold",
-      "engText": "content",
-      "norParagraph": "Originalt høykvalitets innhold til nettsiden din, som er tilpasset ditt formål og målgruppe",
-      "engParagraph": "Original high-quality content for your website, customized for your purpose and target audience"
-    },
-
-    {
-      "fileType": "png",
-      "path": "/images/showcase/HeroLogo.png",
-      "alt": "Villo utvikling",
-      "width": 400,
-      "height": 400,
-      "norParagraph": "Engasjerende nettsider for ditt formål: Fra enkle til komplekse nettsider, som er tilpasset alle enheter.",
-      "engParagraph": "Engaging websites for your business: From simple to complex websites, tailored to all devices."
+      "title": "content",
+      "paragraph": "Original high-quality content for your website, customized for your purpose and target audience"
     }
   ],
+  "footer": {
+    "companyName": "Villo development"
+  },
   "companyInfo": {
     "title": "Norwegian web developer",
     "paragraphOne": "Seeing my services make a positive impact on a customer's business is what I love the most. My goal is to build strong, long-lasting, and valuable relationships with my customers. I do this by providing high-quality services and open communication throughout the work process",
@@ -228,9 +231,6 @@
   "introInfo": {
     "title": "About me",
     "paragraph": "I'm a trained developer who's currently a leader in programming and web development courses held here in Norway. I hold two bachelor's degrees in other fields, and previous work has been related to those degrees. In 2022, I switched to programming and coding, which has now become my true passion in life."
-  },
-  "footer": {
-    "companyName": "Villo development"
   },
   "cookie": {
     "title": "Cookies",

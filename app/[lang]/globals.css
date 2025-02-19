@@ -24,7 +24,6 @@
   --color-dark-frost: oklch(92% 0.03 290);
   --color-dark-ice: oklch(97% 0.02 290);
 
-
   --color-light-violet: oklch(50% 0.3 280);
   --color-light-lavender: oklch(70% 0.15 290);
   --color-light-snow: oklch(97% 0.01 280);
@@ -120,6 +119,7 @@
   --animate-scroll: scroll 35s linear infinite;
   --animate-cog-spin: cogSpin 10s cubic-bezier(0, 1.6, 0.68, 1.1) infinite
     forwards;
+  --animate-return-cog-spin: returnCogSpin 0.3s ease-out forwards;
   --animate-cookie-shake: cookieShake 2s ease-in-out infinite forwards;
   --animate-splash-screen-out: splashScreenDissapear 2.5s ease-in-out forwards;
 
@@ -376,37 +376,45 @@
   }
   @keyframes cogSpin {
     0% {
-      transform: rotate(0deg) scale(1);
+      transform: rotate(0deg);
     }
     10% {
-      transform: rotate(36deg) scale(1.1);
+      transform: rotate(36deg);
     }
     20% {
-      transform: rotate(72deg) scale(1.1);
+      transform: rotate(72deg);
     }
     30% {
-      transform: rotate(108deg) scale(1.1);
+      transform: rotate(108deg);
     }
     40% {
-      transform: rotate(144deg) scale(1.1);
+      transform: rotate(144deg);
     }
     50% {
-      transform: rotate(180deg) scale(1.1);
+      transform: rotate(180deg);
     }
     60% {
-      transform: rotate(216deg) scale(1.1);
+      transform: rotate(216deg);
     }
     70% {
-      transform: rotate(252deg) scale(1.1);
+      transform: rotate(252deg);
     }
     80% {
-      transform: rotate(288deg) scale(1.1);
+      transform: rotate(288deg);
     }
     90% {
-      transform: rotate(324deg) scale(1.1);
+      transform: rotate(324deg);
     }
     100% {
-      transform: rotate(360deg) scale(1);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes returnCogSpin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(720deg);
     }
   }
   @keyframes cookieShake {

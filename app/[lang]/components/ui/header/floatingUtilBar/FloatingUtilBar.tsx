@@ -48,11 +48,12 @@ export const FloatingUtilsBar = () => {
           <LanguageSwitcher className={`2xl:flex-row flex-col`} />
 
           <ThemeSwitch />
-          <button onClick={toggleToolBar}>
-            <FcSettings
-              className={`absolute h-[50px] w-fit top-0 2xl:left-[140px] left-[50px] transition-all duration-500 hover:animate-cog-spin 
+          <button
+            className={`absolute  top-0 2xl:left-[140px] left-[50px] transition-all not-hover:animate-return-cog-spin duration-500 hover:animate-cog-spin 
           ${showToolBar ? "2xl:left-[165px] left-[65px]" : ""}`}
-            ></FcSettings>
+            onClick={toggleToolBar}
+          >
+            <FcSettings className={` h-[50px] w-fit`}></FcSettings>
           </button>
         </div>
       </div>

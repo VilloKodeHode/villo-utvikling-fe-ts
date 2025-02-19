@@ -324,13 +324,6 @@
   "footer": {
     "companyName": "Villo utvikling"
   },
-  "cookie": {
-    "title": "Cookies",
-    "why": "Denne nettsiden bruker cookies for å forbedre brukeropplevelsen din",
-    "disclaimer": "Vi lagrer ikke informasjon som kan identifisere deg som person. Cookies blir lagret i 1 år",
-    "accept": "Godta",
-    "decline": "Avslå"
-  },
   "companyInfo": {
     "title": "Norsk Webutvikler",
     "paragraphOne": "Det er ingenting som gir meg større glede enn å se hvordan mine tjenester har en positiv innvirkning på kundens virksomhet. Målet mitt er å bygge sterke, langsiktige og verdifulle forhold med kundene mine. Dette oppnås ved å levere tjenester av høy kvalitet og åpen kommunikasjonen gjennom arbeidesprosessen.",
@@ -339,5 +332,12 @@
   "introInfo": {
     "title": "Kort om meg",
     "paragraph": "Jeg er en utdannet utvikler som for øyeblikket leder et programmerings- og webutviklings-kurs her i Norge. Jeg har to bachelorgrader i andre fagfelt, og tidligere jobb har hatt sammenheng med disse gradene. I 2022 byttet jeg til programmering og koding, som nå har blitt min sanne lidenskap i livet."
+  },
+  "cookie": {
+    "title": "Cookies",
+    "why": "Denne nettsiden bruker cookies for å forbedre brukeropplevelsen din",
+    "disclaimer": "Vi lagrer ikke informasjon som kan identifisere deg som person. Cookies blir lagret i 1 år",
+    "accept": "Godta",
+    "decline": "Avslå"
   }
 }
