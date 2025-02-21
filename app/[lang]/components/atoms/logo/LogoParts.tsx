@@ -20,7 +20,7 @@ export const LogoIconLeft = ({className}) => {
 export const LogoIconRight = ({className}) => {
   return (
     <svg
-      className={`z-20 w-fit absolute lg:p-1 group-hover:-rotate-360 duration-1000 ${className}`}
+      className={`z-20 w-fit absolute lg:p-1 ease-out group-hover:-rotate-360 duration-1000 ${className}`}
       width="239"
       height="239"
       viewBox="0 0 239 239"

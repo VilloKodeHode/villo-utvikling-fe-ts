@@ -52,8 +52,8 @@ export const FloatingUtilsBar = () => {
             className={`absolute top-0 2xl:left-[140px] left-[50px] transition-all  duration-500 hover:animate-cog-spin
           ${
             showToolBar
-              ? "not-hover:animate-out-cog-spin"
-              : "2xl:left-[165px] left-[65px] not-hover:animate-return-cog-spin "
+              ? "not-hover:animate-out-cog-spin animate-out-cog-spin"
+              : "2xl:left-[165px] left-[65px] not-hover:animate-return-cog-spin animate-return-cog-spin"
           }`}
             onClick={toggleToolBar}
           >

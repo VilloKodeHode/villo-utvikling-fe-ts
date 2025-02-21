@@ -1,14 +1,14 @@
-"use client";
+// "use client";
 
 //TODO: Check if code works:
-import { redirectedPathname } from "@logic/redirectedPathName";
-import { useTheme } from "next-themes";
-import Image from "next/image";
-import { usePathname } from "next/navigation";
+// import { redirectedPathname } from "@logic/redirectedPathName";
+// import { useTheme } from "next-themes";
+// import Image from "next/image";
+// import { usePathname } from "next/navigation";
 
 export const SplashScreen = () => {
-  const { theme } = useTheme();
-  const pathname = usePathname();
+  // const { theme } = useTheme();
+  // const pathname = usePathname();
 
   //! Revert back to this if code isnt working:
   // const redirectedPathname = (locale: Locale) => {
@@ -20,10 +20,10 @@ export const SplashScreen = () => {
 
   return (
     <div
-      className={`fixed animate-splash-screen-out dark:bg-dark-onyx bg-light-cloud transition-colors duration-500 top-0 left-0 flex flex-col items-center justify-center gap-8 
+      className={`fixed animate-splash-screen-out backdrop-blur-[1000px] transition-colors duration-500 top-0 left-0 flex flex-col items-center justify-center gap-8 
         h-screen w-screen z-999`}
     >
-      <Image
+      {/* <Image
         className="h-36 w-auto"
         src={`/images/logo/WindLogo${
           theme === "light" ? "Light" : "Dark"
@@ -57,7 +57,7 @@ export const SplashScreen = () => {
         {pathname === redirectedPathname(pathname, "en")
           ? "Loading..."
           : "Laster..."}
-      </p>
+      </p> */}
     </div>
   );
 };

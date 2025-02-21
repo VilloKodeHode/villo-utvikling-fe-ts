@@ -46,7 +46,7 @@ const NavItem = ({
       </Link>
       {(pathName === href ||
         (href.includes("/services") && prevParam() === "/services")) && (
-        <div className="absolute top-0 w-5 h-full -left-6">
+        <div className="absolute animate-blur-in-out-heavy top-0 w-5 h-full -left-6">
         <LogoIconLeft className="h-6.5 -right-0" />
         <LogoIconRight className="h-6.5 -left-0" />
         </div>

@@ -8,6 +8,7 @@ import { CookieAccept } from "@components/atoms/Buttons";
 
 const CookiePopup = ({ dictionary }) => {
   const [showPopup, setShowPopup] = useState(false);
+  const [beenUsed, setbeenUsed] = useState(false);
   const content = dictionary.cookie;
 
   const handleCookieAccept = () => {
@@ -33,13 +34,18 @@ const CookiePopup = ({ dictionary }) => {
   };
 
   const handleShowPopup = () => {
+    setbeenUsed(true);
     setShowPopup(!showPopup);
   };
 
   return (
     <div
       className={`${
-        showPopup ? "animate-Cookies-slide-in" : "animate-Cookies-slide-out"
+        showPopup
+          ? "animate-Cookies-slide-in"
+          : beenUsed && !showPopup
+          ? "animate-Cookies-slide-out"
+          : ""
       } fixed bottom-0 -left-[320px] z-50 flex items-center justify-center group h-fit w-fit`}
     >
       <div
