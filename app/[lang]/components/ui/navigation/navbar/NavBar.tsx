@@ -16,9 +16,15 @@ interface MenuItem {
 }
 
 export const NavBar = async ({ params }: ComponentProps) => {
-  const dictionary = await getDictionary(params.lang);
+  const lang = params.lang || "en";
+  const dictionary = await getDictionary(lang);
   const menuItems = dictionary.menu_items.map((item: MenuItem) => {
-    const hrefWithLang = item.href.replace("{lang}", params.lang);
+    if (!item.href) {
+      console.error("Menu item missing href:", item);
+      return { ...item, href: "#" }; // Default to "#" if href is missing
+    }
+    
+    const hrefWithLang = item.href.replace("{lang}", lang);
     return { ...item, href: hrefWithLang };
   });
 
