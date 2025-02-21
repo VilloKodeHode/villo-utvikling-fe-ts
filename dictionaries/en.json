@@ -2,7 +2,7 @@
   "logo": {
     "light": {
       "text": "Home",
-      "href": "/",
+      "href": "/{lang}",
       "textImage": "/images/logo/logo-text-lightMode.svg",
       "leftLogo": "/images/logo/logo-left-lightMode.svg",
       "rightLogo": "/images/logo/logo-right-lightMode.svg",
@@ -11,7 +11,7 @@
     },
     "dark": {
       "text": "Home",
-      "href": "/",
+      "href": "/{lang}",
       "textImage": "/images/logo/logo-text-darkMode.svg",
       "leftLogo": "/images/logo/logo-left-darkMode.svg",
       "rightLogo": "/images/logo/logo-right-darkMode.svg",
@@ -35,14 +35,36 @@
       "middle_title": "Why you should choose me as your website-developer...",
 
       "bullitins": [
-        "No middleman that takes a big part of the budget. A a final price is set before the project starts",
-        "Preparatory work with a design brief and market research that is tailored to your specific needs",
-        "Insight and the opportunity to provide feedback throughout the entire development process.",
-        "Guarantee of quality! The result will be as agreed, and I will go the extra mile to give you a good product.",
-        "The latest technology will be used to create a website that is secure, user-friendly, and scalable.",
-        "User-friendly database integration is done according to your needs so that you can update the content on the site yourself according to your needs",
-        "Search engine optimization that makes it easier for you to get more traffic to the site and make it easier to search for it",
-        "Full support during learning of how you can manage the content on your website."
+        {
+          "title": "No middleman",
+          "description": "Normal this takes a big part of the budget, but not with me! A a final price is set before the project starts",
+          "icon": "/images/service_icons/handshake.svg"
+        },
+        {
+          "title": "Project insight",
+          "description": "You get the opportunity to provide feedback throughout the entire development process to achieve the desired result.",
+          "icon": "/images/service_icons/insight.svg"
+        },
+        {
+          "title": "Secure and modern website",
+          "description": "To create a website that is secure, user-friendly, and scalable, the latest technology is used.",
+          "icon": "/images/service_icons/security.svg"
+        },
+        {
+          "title": "User-friendly database",
+          "description": "If needed, a database will be integrated for you to manage your website content with.",
+          "icon": "/images/service_icons/database.svg"
+        },
+        {
+          "title": "Search engine optimization",
+          "description": "You get more traffic to the site and make it easier to search for it on search engines.",
+          "icon": "/images/service_icons/eyes.svg"
+        },
+        {
+          "title": "Full support",
+          "description": "You get taught how you can manage the content on your website by using a content management system.",
+          "icon": "/images/service_icons/training.svg"
+        }
       ],
 
       "bottom_paragraphs": [
@@ -58,14 +80,36 @@
       "middle_title": "Why you should choose me upgrade your SEO...",
 
       "bullitins": [
-        "Benefits from customized SEO solutions designed to meet your specific business needs and goals.",
-        "Achieve higher rankings on popular search engines like Google, ensuring your website gets noticed by your target audience.",
-        "Strategic keyword optimization to boost your website's visibility and relevance in search results.",
-        "Enhanced quality and relevance of your website's content to engage users and search engines alike.",
-        "A comprehensive approach that includes both on-page and off-page SEO techniques to maximize your online success",
-        "Local market domination with my specialized local SEO strategies, driving more local customers to your business",
-        "Search engine optimization that makes it easier for you to get more traffic to the site and make it easier to search for it",
-        "Tracking of your SEO progress with transparent reporting and analytics, ensuring you can see the tangible results of my efforts."
+        {
+          "title": "Customized SEO solutions",
+          "description": "Tailored to meet your specific business needs and goals.",
+          "icon": "/images/service_icons/search.svg"
+        },
+        {
+          "title": "Higher search engine rankings",
+          "description": "Boost visibility on Google and ensure your website reaches your target audience.",
+          "icon": "/images/service_icons/growth.svg"
+        },
+        {
+          "title": "SEO-optimized content",
+          "description": "Improves content quality and relevance to engage both users and search engines.",
+          "icon": "/images/service_icons/content.svg"
+        },
+        {
+          "title": "Local SEO expertise",
+          "description": "Attracts more local customers through targeted local SEO strategies.",
+          "icon": "/images/service_icons/map_pin.svg"
+        },
+        {
+          "title": "Increased website traffic",
+          "description": "SEO improvements that drive more visitors and make your site easier to find.",
+          "icon": "/images/service_icons/traffic.svg"
+        },
+        {
+          "title": "SEO insights & reporting",
+          "description": "Track your SEO progress with detailed analytics and transparent reports.",
+          "icon": "/images/service_icons/graph.svg"
+        }
       ],
 
       "bottom_paragraphs": [
@@ -82,14 +126,36 @@
       "middle_title": "Why you should choose me as your webcontent-creator...",
 
       "bullitins": [
-        "Engaging and user-centric content that attracts your target audience and drives engagement.",
-        "Elevated quality and relevance of your web content to engage both users and search engines.",
-        "Tailor-made web content solutions designed to align with your specific business needs and goals.",
-        "Web content that is not only visually appealing but also easy to navigate for your audience.",
-        "Consistent project deadlines to ensure your web content is available when you need it.",
-        "Web content that works seamlessly across various devices and screen sizes.",
-        "Continuous open communication channels to ensure your requirements are met and expectations are exceeded.",
-        "Content that resonates with your target audience, encouraging interaction and building brand loyalty."
+        {
+          "title": "Engaging content",
+          "description": "Captures your audience's attention and enhances user experience.",
+          "icon": "/images/service_icons/bullseye.svg"
+        },
+        {
+          "title": "Tailor-made solutions",
+          "description": "Content crafted to align with your unique business goals and needs.",
+          "icon": "/images/service_icons/tools.svg"
+        },
+        {
+          "title": "User-friendly design",
+          "description": "Visually appealing and easy-to-navigate content for your audience.",
+          "icon": "/images/service_icons/palette.svg"
+        },
+        {
+          "title": "Timely delivery",
+          "description": "Ensuring your content is ready when you need it.",
+          "icon": "/images/service_icons/hourglass.svg"
+        },
+        {
+          "title": "Responsive content",
+          "description": "Seamlessly adapts to various devices and screen sizes.",
+          "icon": "/images/service_icons/mobile.svg"
+        },
+        {
+          "title": "Brand-building content",
+          "description": "Resonates with your audience, drives engagement, and builds loyalty.",
+          "icon": "/images/service_icons/rocket.svg"
+        }
       ],
 
       "bottom_paragraphs": [
@@ -106,14 +172,36 @@
       "middle_title": "Why you should choose me create a CMS for your website...",
 
       "bullitins": [
-        "100% control on what is displayed on your website",
-        "Easy content management without technical knowledge",
-        "Scalable solution that grows with your business",
-        "Customization to meet specific needs and requirements",
-        "Secure storage and handling of data",
-        "Automatic backups to protect your content",
-        "Integration with popular tools and third-party services",
-        "Optimized for fast website loading"
+        {
+          "title": "Easy content management",
+          "description": "Update your content effortlessly without any technical knowledge. You decide what is displayed",
+          "icon": "/images/service_icons/edit.svg"
+        },
+        {
+          "title": "Scalable solution",
+          "description": "Designed to grow with your business and adapt to future needs.",
+          "icon": "/images/service_icons/growth.svg"
+        },
+        {
+          "title": "Customized to your needs",
+          "description": "Built to match your specific requirements for optimal functionality.",
+          "icon": "/images/service_icons/tuning.svg"
+        },
+        {
+          "title": "Secure data storage",
+          "description": "Reliable storage and handling of sensitive information.",
+          "icon": "/images/service_icons/security.svg"
+        },
+        {
+          "title": "Automatic backups",
+          "description": "Protects your content from loss and unexpected issues.",
+          "icon": "/images/service_icons/storage.svg"
+        },
+        {
+          "title": "Seamless integration",
+          "description": "Compatible with popular tools and third-party services.",
+          "icon": "/images/service_icons/lightning.svg"
+        }
       ],
 
       "bottom_paragraphs": [
@@ -129,14 +217,36 @@
 
       "middle_title": "Why you should choose me connect your social media with your website...",
       "bullitins": [
-        "Automatic updates of content from your social media",
-        "Save time by syncing posts across platforms",
-        "Boost engagement by displaying real-time content",
-        "The content will be customized to match your website's design",
-        "Integration with popular platforms like Instagram, Facebook, and Twitter",
-        "Mobile-friendly and optimized for fast loading",
-        "No need for technical expertise to display content",
-        "Increase visibility of your social media profile"
+        {
+          "title": "Seamless platform integration",
+          "description": "Connects effortlessly with Instagram, Facebook, Twitter, and more.",
+          "icon": "/images/service_icons/connect.svg"
+        },
+        {
+          "title": "Automatic content updates",
+          "description": "Syncs your social media content directly to your website.",
+          "icon": "/images/service_icons/sync.svg"
+        },
+        {
+          "title": "Time-saving synchronization",
+          "description": "Easily publish posts across multiple platforms without extra effort.",
+          "icon": "/images/service_icons/hourglass.svg"
+        },
+        {
+          "title": "Design-matched content",
+          "description": "Social media posts are styled to seamlessly match your website's design.",
+          "icon": "/images/service_icons/palette.svg"
+        },
+        {
+          "title": "No technical knowledge needed",
+          "description": "Easily display and manage content without any coding skills.",
+          "icon": "/images/service_icons/tools.svg"
+        },
+        {
+          "title": "Increased visibility",
+          "description": "Enhance your social media reach by sharing content across multiple platforms.",
+          "icon": "/images/service_icons/eyes.svg"
+        }
       ],
 
       "bottom_paragraphs": [

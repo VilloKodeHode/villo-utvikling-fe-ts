@@ -1,11 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useTheme } from "next-themes";
 import { LogoIconLeft, LogoIconRight, LogoText } from "./logo/LogoParts";
 
-const LogoComponent = ({ onclick, image }) => {
+const LogoComponent = ({ onclick, image, params }) => {
   const { theme } = useTheme();
 
   // Find the logo object based on the theme
@@ -15,7 +14,7 @@ const LogoComponent = ({ onclick, image }) => {
     <Link
       onClick={onclick}
       key={logoObject.text}
-      href={logoObject.href}
+      href={logoObject.href.replace("{lang}", params.lang)}
       className="relative hover:scale-105 duration-1000 group mt-4"
     >
       <LogoText/>

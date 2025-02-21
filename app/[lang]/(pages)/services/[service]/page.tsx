@@ -32,7 +32,7 @@ export default async function Page({ params }: PageProps) {
         </section>
 
         <section>
-          <ThemedH2 className="text-2xl font-bold mb-4">
+          <ThemedH2 className="text-2xl text-center font-bold mb-4">
             {content.middle_title}
           </ThemedH2>
           <ul className="flex flex-wrap justify-center gap-8">

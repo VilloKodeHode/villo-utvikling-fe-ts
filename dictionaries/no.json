@@ -2,7 +2,7 @@
   "logo": {
     "light": {
       "text": "Hjem",
-      "href": "/",
+      "href": "/{lang}",
       "textImage": "/images/logo/logo-text-lightMode.svg",
       "leftLogo": "/images/logo/logo-left-lightMode.svg",
       "rightLogo": "/images/logo/logo-right-lightMode.svg",
@@ -11,7 +11,7 @@
     },
     "dark": {
       "text": "Hjem",
-      "href": "/",
+      "href": "/{lang}",
       "textImage": "/images/logo/logo-text-darkMode.svg",
       "leftLogo": "/images/logo/logo-left-darkMode.svg",
       "rightLogo": "/images/logo/logo-right-darkMode.svg",
@@ -37,7 +37,7 @@
       "bullitins": [
         {
           "title": "Ingen mellomledd",
-          "description": "Normalt tar en stor del av budsjettet, men ikke hos meg! Vi avtaler ferdig pris før prosjektet starter.",
+          "description": "Normalt tar dette en stor del av budsjettet, men ikke hos meg! Vi avtaler ferdig pris før prosjektet starter.",
           "icon": "/images/service_icons/handshake.svg"
         },
         {
@@ -62,7 +62,7 @@
         },
         {
           "title": "Full support",
-          "description": "Du får opplæring på hvordan du kan styre innhold og utseende på nettsiden din via en brukervennlig database.",
+          "description": "Du får opplæring på hvordan du kan styre innhold og utseende på nettsiden din via en innholdshåndteringssystem.",
           "icon": "/images/service_icons/training.svg"
         }
       ],
