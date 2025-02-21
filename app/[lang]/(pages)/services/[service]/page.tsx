@@ -46,7 +46,7 @@ export default async function Page({ params }: PageProps) {
                   alt={item.title}
                   width={100}
                   height={100}
-                  className="absolute h-32 w-32 -z-10 -right-0 -top-0 text-9xl group-hover:opacity-25 transition-all ease-linear opacity-50"
+                  className="absolute h-16 w-16 -z-10 right-2 top-2 text-9xl transition-all ease-linear brightness-0 group-hover:brightness-75"
                 />
                 <ThemedH4
                   className={`font-bold z-10 max-w-fit transition-colors dark:group-hover:text-dark-lavender ease-linear group-hover:text-light-violet`}
