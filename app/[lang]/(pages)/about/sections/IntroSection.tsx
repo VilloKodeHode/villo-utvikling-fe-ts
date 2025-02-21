@@ -3,19 +3,19 @@ import Image from "next/image";
 
 export const IntroSection = ({ content }) => {
   return (
-    <div className="grid max-w-7xl justify-center text-center items-center min-h-screen">
-      <ThemedH2 className="py-4">{content.title}</ThemedH2>
+    <div className="flex flex-col max-w-7xl gap-10 justify-center text-center items-center min-h-screen">
+      <ThemedH2 className="font-bold">{content.title}</ThemedH2>
       <div className="animate-PageAppearRight">
         <div
           className={`sm:rounded-lg grid min-h-[70dvh] lg:grid-cols-2 transition-colors duration-1000 bg-light-mist dark:bg-dark-slate`}
         >
           <div
-            className={`col-span-1 py-12 min-h-[30dvh] text-left flex flex-col justify-center items-center`}
+            className={`col-span-1 py-12 min-h-[30dvh] flex flex-col justify-center items-center`}
           >
-            <ThemedH3 className="py-5 text-left text-bold">
+            <ThemedH3 className="py-5 text-bold">
               Joakim Villo
             </ThemedH3>
-            <ThemedP className="max-w-md px-8 pb-5 text-center">
+            <ThemedP className="max-w-md px-8 pb-5">
               {content.paragraph}
             </ThemedP>
           </div>

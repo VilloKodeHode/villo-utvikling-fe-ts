@@ -8,42 +8,32 @@ export const ServicePageContent = async ({
   showOnScroll,
   id = "service_section",
 }) => {
-
-  //     <MetaTags
-  //     description="Profesjonell frontend webutvikling og webdesign service. Vi omskaper ideer til fengslende nettsider med fokus på responsive, brukervennlige og visuelt tiltalende nettsteder."
-  //     title="Villo Utvikling - Services"
-  //     url="https://www.villoutvikling.com/services_provided"
-  //   />
-
   return (
     <section
       id={id}
       className={`w-full overflow-x-hidden scroll-into-view py-12 sm:px-6 px-4 lg:px-12`}
     >
       <div
-        className={`mx-auto max-w-7xl  ${
+        className={`mx-auto flex flex-col gap-10 max-w-7xl  ${
           showOnScroll ? "opacity-0 animate-on-scroll" : ""
         }`}
       >
-        <div className="text-center">
-          <ThemedH2 className="text-center underline">
-            {params.lang === "no"
-              ? "Villo Utvikling tilbyr:"
-              : "Villo Development offers:"}
-          </ThemedH2>
-        </div>
-        <div className={`flex justify-center mt-10`}>
-          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
-            {content.map((item) => (
-              <ServiceCard
-                key={item.title}
-                title={item.title}
-                text={item.text}
-                href={item.href.replace("{lang}", params.lang)}
-                buttonText={item.buttonText}
-              />
-            ))}
-          </div>
+        <ThemedH2 className="font-bold text-center">
+          {params.lang === "no"
+            ? "Villo Utvikling tilbyr:"
+            : "Villo Development offers:"}
+        </ThemedH2>
+
+        <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
+          {content.map((item) => (
+            <ServiceCard
+              key={item.title}
+              title={item.title}
+              text={item.text}
+              href={item.href.replace("{lang}", params.lang)}
+              buttonText={item.buttonText}
+            />
+          ))}
         </div>
       </div>
     </section>
@@ -61,9 +51,7 @@ export const ServiceCard = ({ title, text, href, buttonText }) => {
         >
           {title}
         </ThemedH4>
-        <div className="mt-2">
-          <ThemedP className={``}>{text}</ThemedP>
-        </div>
+        <ThemedP>{text}</ThemedP>
         <ReadMoreButton>
           <Link href={href} className="w-fit">
             {buttonText}

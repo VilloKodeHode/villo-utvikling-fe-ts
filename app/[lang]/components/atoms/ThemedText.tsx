@@ -64,7 +64,7 @@ export const ThemedSmall = ({ children, className }: ThemedTextProps) => {
 export function ThemedLi({ children, className }) {
   return (
     <li
-      className={`flex gap-2 items-center md:text-h5 text-base md:leading-h5 leading-base text-light-obsidian  dark:text-dark-ice ${className}`}
+      className={`flex gap-2 items-center text-base leading-base text-light-obsidian  dark:text-dark-ice ${className}`}
     >
       {children}
     </li>

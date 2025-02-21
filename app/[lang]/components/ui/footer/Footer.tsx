@@ -30,7 +30,7 @@ export default async function Footer({ params }) {
             <Link className="w-fit" href="/contact">
               <FiMail
                 className={`w-8 h-8  text-light-ash hover:text-light-violet
-                    dark:text-dark-frost dark:hover:text-dark-moonlight
+                    dark:text-dark-frost dark:hover:text-dark-twilight
                  duration-200  hover:scale-125`}
               />
             </Link>
@@ -38,7 +38,7 @@ export default async function Footer({ params }) {
             <a href="https://github.com/VilloKodeHode" target="_blank">
               <VscGithubAlt
                 className={`w-8 h-8  text-light-ash hover:text-light-violet
-                    dark:text-dark-frost dark:hover:text-dark-moonlight
+                    dark:text-dark-frost dark:hover:text-dark-twilight
                  duration-200  hover:scale-125`}
               />
             </a>
@@ -48,7 +48,7 @@ export default async function Footer({ params }) {
             >
               <SlSocialLinkedin
                 className={`w-8 h-8  text-light-ash hover:text-light-violet
-                    dark:text-dark-frost dark:hover:text-dark-moonlight
+                    dark:text-dark-frost dark:hover:text-dark-twilight
                  duration-200  hover:scale-125`}
               />
             </a>

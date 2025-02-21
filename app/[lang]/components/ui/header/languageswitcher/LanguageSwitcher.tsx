@@ -46,7 +46,7 @@ export default function LanguageSwitcher({className}) {
           </li>
         ))}
       </ul>
-      {/* <div className="absolute top-0 left-0 flex items-center justify-center h-screen w-screen bg-dark-moonlight dark:bg-orange-700 z-999">
+      {/* <div className="absolute top-0 left-0 flex items-center justify-center h-screen w-screen bg-dark-twilight dark:bg-orange-700 z-999">
         <Image
           className={`h-36 w-36`}
           src={`${

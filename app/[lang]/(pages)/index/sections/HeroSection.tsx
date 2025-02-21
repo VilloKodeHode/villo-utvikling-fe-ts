@@ -16,10 +16,8 @@ export const HeroSection = async ({ content }) => {
               <ThemedP className={`mb-8 text-left w-fit`}>
                 {content.slogan}
               </ThemedP>
-              <ThemedH1 className="mb-8">
-                <span>
-                  {content.title}
-                </span>{" "}
+              <ThemedH1 className="font-bold mb-8">
+                <span>{content.title}</span>{" "}
               </ThemedH1>
               <ThemedH5 className="mb-8 font-normal text-left">
                 {content.subtitle}
@@ -27,9 +25,7 @@ export const HeroSection = async ({ content }) => {
               <div className="grid justify-start grid-flow-col gap-8">
                 <div className="h-[60px] flex justify-start items-center">
                   <Link href="/contact">
-                    <ArrowCTA>
-                      {content.cta}
-                    </ArrowCTA>
+                    <ArrowCTA>{content.cta}</ArrowCTA>
                   </Link>
                 </div>
                 <div className="h-[60px] flex justify-start items-center max-w-fit">

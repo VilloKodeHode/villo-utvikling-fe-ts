@@ -3,9 +3,11 @@ import { getDictionary } from "get-dictionary";
 import {
   ThemedH1,
   ThemedH2,
+  ThemedH4,
   ThemedLi,
   ThemedP,
 } from "@components/atoms/ThemedText";
+import Image from "next/image";
 
 interface PageProps {
   params: {
@@ -33,11 +35,26 @@ export default async function Page({ params }: PageProps) {
           <ThemedH2 className="text-2xl font-bold mb-4">
             {content.middle_title}
           </ThemedH2>
-          <ul className="grid grid-cols-2 gap-3">
+          <ul className="flex flex-wrap justify-center gap-8">
             {content.bullitins.map((item, index) => (
-              <ThemedLi className="" key={index + service + "bullitin"}>
-                {item}
-              </ThemedLi>
+              <div
+                key={index + service + "bullitin"}
+                className={`relative group z-99 max-w-md flex-auto shadow-sm sm:rounded-lg transition-all ease-linear md:mt-0 md:col-span-1 hover:scale-[1.02] active:scale-[1.02] group cursor-default grid gap-2 min-h-[155px] bg-light-cloud group-hover:bg-light-mist dark:bg-dark-onyx dark:group-hover:bg-dark-shadow p-6 overflow-hidden`}
+              >
+                <Image
+                  src={item.icon}
+                  alt={item.title}
+                  width={100}
+                  height={100}
+                  className="absolute h-32 w-32 -z-10 -right-0 -top-0 text-9xl group-hover:opacity-25 transition-all ease-linear opacity-50"
+                />
+                <ThemedH4
+                  className={`font-bold z-10 max-w-fit transition-colors dark:group-hover:text-dark-lavender ease-linear group-hover:text-light-violet`}
+                >
+                  {item.title}
+                </ThemedH4>
+                <ThemedLi className="">{item.description}</ThemedLi>
+              </div>
             ))}
           </ul>
         </section>

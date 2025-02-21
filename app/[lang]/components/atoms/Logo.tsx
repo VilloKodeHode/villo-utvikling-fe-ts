@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useTheme } from "next-themes";
+import { LogoIconLeft, LogoIconRight, LogoText } from "./logo/LogoParts";
 
 const LogoComponent = ({ onclick, image }) => {
   const { theme } = useTheme();
@@ -17,55 +18,22 @@ const LogoComponent = ({ onclick, image }) => {
       href={logoObject.href}
       className="relative hover:scale-105 duration-1000 group mt-4"
     >
-      <Image
-        src={logoObject.textImage}
-        width={logoObject.imageWidth}
-        height={logoObject.imageHeight}
-        alt="Villo utvikling logo"
-        className="z-20 h-full  lg:p-1 animate-Page-appear-right duration-1000"
-      />
-      <Image
-        src={logoObject.leftLogo}
-        width={logoObject.imageWidth}
-        height={logoObject.imageHeight}
-        alt="Villo utvikling logo"
-        className="-z-10 absolute w-fit h-20 -top-5 -right-1 lg:p-1 group-hover:-rotate-360 ease-out origin-center duration-1000"
-      />
-      <Image
-        src={logoObject.rightLogo}
-        width={logoObject.imageWidth}
-        height={logoObject.imageHeight}
-        alt="Villo utvikling logo"
-        className="z-20 h-20 w-fit absolute -top-5 -right-7.5 lg:p-1 group-hover:-rotate-360 duration-1000"
-      />
+      <LogoText/>
+      <LogoIconLeft className="h-20 -right-1 -top-5" />
+      <LogoIconRight className="h-20 -right-7.5 -top-5" />
     </Link>
   );
 };
 
-export const SimpleLogoComponent = ({className}) => {
-  const { theme } = useTheme();
-
-  // Find the logo object based on the theme
-  const logoSrc =
-    theme === "light"
-      ? "/images/logo/WindLogoNoTextLightMode.svg"
-      : "/images/logo/WindLogoNoTextDarkMode.svg";
-
-  if (!logoSrc) {
-    // Handle case when logo object for the theme is not found
-    return null;
-  }
+export const SimpleLogoComponent = () => {
 
   return (
-    <div className="">
-      <Image
-        src={logoSrc}
-        width={200}
-        height={200}
-        alt="Villo utvikling logo"
-        className={`h-8 w-8 ${className}`}
-      />
+    <>
+    <div className="relative group h-20 w-20">
+    <LogoIconLeft className="h-20 right-3" />
+    <LogoIconRight className="h-20 left-3" />
     </div>
+    </>
   );
 };
 

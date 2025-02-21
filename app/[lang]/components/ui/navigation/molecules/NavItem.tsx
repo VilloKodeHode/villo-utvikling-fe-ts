@@ -1,10 +1,8 @@
 "use client";
 
-import { useTheme } from "next-themes";
-import Image from "next/image";
+import { LogoIconLeft, LogoIconRight } from "@components/atoms/logo/LogoParts";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-// import { useEffect, useState } from "react";
 
 interface NavItemProps {
   text: string;
@@ -21,30 +19,13 @@ const NavItem = ({
   className,
   textSize,
 }: NavItemProps) => {
-  const { theme } = useTheme();
+
   const pathName = usePathname();
-  // const lastParam = () => {
-  //   const result = "/" + pathName.split("/")[pathName.split("/").length - 1];
-  //   return result.replace(/\/(en|no)$/, "/");
-  // };
   const prevParam = () => {
     const result = "/" + pathName.split("/")[pathName.split("/").length - 2];
     return result.replace(/\/(en|no)$/, "/");
   };
-  // const ignoreLanguageParam = prevParam === "/no" || prevParam === "en";
-  // console.log("prevParam:", prevParam());
-  // console.log("lastParam:", lastParam());
-  // console.log("pathName:", pathName);
-  // console.log("href", href);
-  // console.log(href.startsWith(prevParam))
 
-  // const [isThemeLoaded, setIsThemeLoaded] = useState(false);
-
-  // useEffect(() => {
-  //   setIsThemeLoaded(true);
-  // }, [theme]);
-
-  // if (!isThemeLoaded) return null;
   return (
     <div key={text} className={`relative group ${className}`}>
       <Link href={href} className="">
@@ -65,17 +46,9 @@ const NavItem = ({
       </Link>
       {(pathName === href ||
         (href.includes("/services") && prevParam() === "/services")) && (
-        <div className="absolute top-0 w-5 h-full -left-[20px]">
-          <Image
-            src={
-              theme === "light"
-                ? "/images/logo/WindLogoNoTextLightMode.svg"
-                : "/images/logo/WindLogoNoTextDarkMode.svg"
-            }
-            className="w-auto h-full animate-Appear"
-            fill={true}
-            alt=""
-          />
+        <div className="absolute top-0 w-5 h-full -left-6">
+        <LogoIconLeft className="h-6.5 -right-0" />
+        <LogoIconRight className="h-6.5 -left-0" />
         </div>
       )}
     </div>

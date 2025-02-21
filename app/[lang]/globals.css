@@ -12,29 +12,29 @@
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1536px;
 
-  --color-dark-lavender: oklch(70% 0.15 290);
+  --color-dark-lavender: oklch(70% 0.2 290);
   --color-dark-deep-violet: oklch(50% 0.3 280);
-  --color-dark-midnight: oklch(15% 0.017 288);
-  --color-dark-onyx: oklch(20% 0.022 290);
-  --color-dark-slate: oklch(27% 0.035 290);
-  --color-dark-shadow: oklch(35% 0.05 290);
-  --color-dark-storm: oklch(50% 0.06 290);
-  --color-dark-moonlight: oklch(82% 0.05 290);
-  --color-dark-glacier: oklch(87% 0.04 290);
-  --color-dark-frost: oklch(92% 0.03 290);
+  --color-dark-midnight: oklch(15% 0.02 288);
+  --color-dark-onyx: oklch(20% 0.03 290);
+  --color-dark-slate: oklch(27% 0.05 290);
+  --color-dark-shadow: oklch(35% 0.07 290);
+  --color-dark-storm: oklch(50% 0.08 290);
+  --color-dark-twilight: oklch(75% 0.07 290);
+  --color-dark-glacier: oklch(86% 0.06 290);
+  --color-dark-frost: oklch(93% 0.04 290);
   --color-dark-ice: oklch(97% 0.02 290);
 
-  --color-light-violet: oklch(50% 0.3 280);
-  --color-light-lavender: oklch(70% 0.15 290);
-  --color-light-snow: oklch(97% 0.01 280);
-  --color-light-mist: oklch(92% 0.025 280);
-  --color-light-cloud: oklch(87% 0.04 280);
-  --color-light-fog: oklch(82% 0.05 280);
-  --color-light-dusk: oklch(70% 0.06 280);
-  --color-light-charcoal: oklch(35% 0.03 280);
-  --color-light-graphite: oklch(28% 0.02 280);
-  --color-light-ash: oklch(22% 0.015 280);
-  --color-light-obsidian: oklch(16% 0.015 280);
+  --color-light-violet: oklch(50% 0.3 290);
+  --color-light-lavender: oklch(70% 0.2 290);
+  --color-light-snow: oklch(96% 0.03 290);
+  --color-light-mist: oklch(93% 0.04 290);
+  --color-light-cloud: oklch(87% 0.05 290);
+  --color-light-fog: oklch(82% 0.06 290);
+  --color-light-dusk: oklch(70% 0.07 290);
+  --color-light-charcoal: oklch(35% 0.05 290);
+  --color-light-graphite: oklch(28% 0.04 290);
+  --color-light-ash: oklch(20% 0.03 290);
+  --color-light-obsidian: oklch(16% 0.02 290);
 
   /* previous lightMode colors: */
   /* --color-light-violet: #571dff;
@@ -522,7 +522,7 @@
         var(--color-dark-slate),
         var(--color-dark-shadow),
         var(--color-dark-storm),
-        var(--color-dark-moonlight),
+        var(--color-dark-twilight),
         var(--color-dark-glacier),
         var(--color-dark-frost),
         var(--color-dark-ice)

@@ -78,7 +78,7 @@ export const ShowcaseSection = ({ content }) => {
                 height={700}
                 className={`${
                   image.fileType === "svg"
-                    ? "object-contain bg-dark-moonlight p-8"
+                    ? "object-contain bg-dark-twilight p-8"
                     : "object-cover object-left-top"
                 } absolute duration-500 transition-all rounded-[4px] w-full h-full ${
                   index === activeImageIndex ? "opacity-100" : "opacity-0"

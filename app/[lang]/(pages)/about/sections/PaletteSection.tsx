@@ -41,7 +41,7 @@ export const PaletteSection = () => {
           <p>{theme === "light" ? "dusk" : "storm"}</p>
           <p>{theme === "light" ? "#979bc4" : "#625e83"}</p>
         </Color>
-        <Color className=" bg-light-charcoal dark:bg-dark-moonlight text-light-snow dark:text-dark-midnight">
+        <Color className=" bg-light-charcoal dark:bg-dark-twilight text-light-snow dark:text-dark-midnight">
           <p>{theme === "light" ? "charcoal" : "moonlight"}</p>
           <p>{theme === "light" ? "#37394a" : "#c3bfe3"}</p>
         </Color>

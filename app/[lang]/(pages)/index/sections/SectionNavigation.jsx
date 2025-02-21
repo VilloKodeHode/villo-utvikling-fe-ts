@@ -26,7 +26,7 @@ export const SectionNavigation = () => {
         className="relative flex z-10 items-center justify-end w-full h-[calc(100vh-152px)]"
         id="SectionNavigation"
       >
-        <div className="flex flex-col  z-20 tracking-widest sm:text-[70px] ml:text-[70px] mm:text-[50px] text-[40px] justify-end items-end text-end font-extrabold px-12 text-dark-moonlight">
+        <div className="flex flex-col  z-20 tracking-widest sm:text-[70px] ml:text-[70px] mm:text-[50px] text-[40px] justify-end items-end text-end font-extrabold px-12 text-dark-twilight">
           {generateSpans("WHO?", "#HeroSection")}
           {generateSpans("WHAT?", "#CTAOneSection")}
           {generateSpans("WHY?", "#OfferSection")}

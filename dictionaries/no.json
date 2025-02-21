@@ -35,16 +35,37 @@
       "middle_title": "Hvorfor du burde velge meg som din nettside-utvikler...",
 
       "bullitins": [
-        "Ingen mellomledd som tar en stor del av budsjettet. Vi avtaler ferdig pris før prosjektet starter",
-        "Grundig forarbeid med designmal og markedsundersøkelser som er tilpasset dine spesifikke behov",
-        "Full innsikt og mulighet til å gi tilbakemeldinger under hele utviklingsprosessen.",
-        "Fornøydhetsgaranti! Resultatet skal bli som avtalt, og jeg strekker meg ekstra langt for å gi et godt produkt.",
-        "Den nyeste teknologien blir brukt for å lage en nettside som er sikker, brukervennlig og skalerbar.",
-        "Brukervennlig database integreres ved behov slik at du kan oppdatere innholdet på siden selv ved behov",
-        "Søkemotoroptimalisering som gjør at du får mer trafikk til nettsiden og blir lettere å søke opp",
-        "Full support på opplæring av hvordan du kan styre innholdet på nettsiden din."
+        {
+          "title": "Ingen mellomledd",
+          "description": "Normalt tar en stor del av budsjettet, men ikke hos meg! Vi avtaler ferdig pris før prosjektet starter.",
+          "icon": "/images/service_icons/handshake.svg"
+        },
+        {
+          "title": "Full innsikt",
+          "description": "Man får muligheten til å gi tilbakemeldinger under hele utviklingsprosessen for å oppnå best mulig resultat.",
+          "icon": "/images/service_icons/insight.svg"
+        },
+        {
+          "title": "Sikker og moderne nettside",
+          "description": "For å lage en nettside som er sikker, brukervennlig og skalerbar brukes den nyeste teknologien.",
+          "icon": "/images/service_icons/security.svg"
+        },
+        {
+          "title": "Brukervennlig database",
+          "description": "Ved behov integreres en database slik at du kan oppdatere innholdet på siden selv ved behov.",
+          "icon": "/images/service_icons/database.svg"
+        },
+        {
+          "title": "Søkemotoroptimalisering",
+          "description": "Du får mer trafikk til nettsiden og blir lettere å søke opp på søkemotorer.",
+          "icon": "/images/service_icons/eyes.svg"
+        },
+        {
+          "title": "Full support",
+          "description": "Du får opplæring på hvordan du kan styre innhold og utseende på nettsiden din via en brukervennlig database.",
+          "icon": "/images/service_icons/training.svg"
+        }
       ],
-
       "bottom_paragraphs": [
         "Med års erfaring innen feltet forstår jeg betydningen av en sterk tilstedeværelse på nett i dagens digitale tidsalder. Mine tjenester er skreddersydd for enkeltpersoner og bedrifter som ønsker å etablere eller forbedre sin online tilstedeværelse. Jeg tar en personlig tilnærming til hvert prosjekt, slik at nettstedet ditt ikke bare ser visuelt tiltalende ut, men også fungerer sømløst på alle enheter.",
         "Enten du lanserer en helt ny nettside eller ønsker å fornye den eksisterende, er jeg her for å gjøre din visjon til virkelighet. Fra brukervennlig navigasjon til iøynefallende designelementer, legger jeg nøye vekt på hver detalj. La oss samarbeide for å skape en nettside som ikke bare gjenspeiler merket ditt, men også gir resultater og etterlater et varig inntrykk på dine besøkende"
@@ -58,16 +79,37 @@
       "middle_title": "Hvorfor velge meg til å oppgradere din SEO...",
 
       "bullitins": [
-        "Dra nytte av tilpassede SEO løsninger utviklet for å møte dine spesifikke forretningsbehov og mål.",
-        "Oppnå høyere rangering på populære søkemotorer som Google, slik at nettsiden din blir lagt merke til av målgruppen din.",
-        "Strategisk nøkkelordoptimalisering for å øke nettsidens synlighet og relevans i søkeresultatene.",
-        "Forbedret kvaliteten og relevansen til nettsidens innhold for å engasjere brukere og søkemotorer.",
-        "En omfattende tilnærming som inkluderer både on-page og off-page SEO teknikker for å maksimere din online suksess",
-        "Dominere ditt lokale marked med mine spesialiserte lokale SEO strategier, som tiltrekker flere lokale kunder til din virksomhet",
-        "Søkemotoroptimalisering som gjør at du får mer trafikk til nettsiden og blir lettere å søke opp",
-        "Oversikt over din SEO fremgang med gjennomsiktig rapportering og analyser, som sikrer at du kan se de konkrete resultatene av min innsats."
+        {
+          "title": "Tilpassede SEO-løsninger",
+          "description": "Skreddersydd for å møte dine spesifikke forretningsbehov og mål.",
+          "icon": "/images/service_icons/search.svg"
+        },
+        {
+          "title": "Høyere søkemotorrangering",
+          "description": "Oppnå bedre synlighet på Google og nå målgruppen din mer effektivt.",
+          "icon": "/images/service_icons/growth.svg"
+        },
+        {
+          "title": "Kvalitetsinnhold for SEO",
+          "description": "Forbedrer innholdets relevans for både brukere og søkemotorer.",
+          "icon": "/images/service_icons/content.svg"
+        },
+        {
+          "title": "Lokal SEO-strategi",
+          "description": "Tiltrekker flere kunder i ditt nærområde med spesialiserte metoder.",
+          "icon": "/images/service_icons/map_pin.svg"
+        },
+        {
+          "title": "Økt nettsidetrafikk",
+          "description": "SEO-tiltak som sikrer at du blir lettere å finne på nett.",
+          "icon": "/images/service_icons/traffic_lights.svg"
+        },
+        {
+          "title": "Innsikt og rapportering",
+          "description": "Få oversikt over SEO-fremgangen med detaljert rapportering og analyser.",
+          "icon": "/images/service_icons/graph.svg"
+        }
       ],
-
       "bottom_paragraphs": [
         "Å velge meg betyr suksess. Vi tilpasser SEO-løsninger eksklusivt for din bedrift, forbedrer nettsidens innhold og struktur for høyere rangering. Vår ekspertise omfatter lokale SEO-strategier, transparent rapportering og maksimal online suksess. Med meg øker du trafikken og blir mer synlig for brukere. Velkommen til å forbedre din online tilstedeværelse.",
         "Ikke la nettsiden din forbli ubemerket. Forbedre din online synlighet, øk organisk trafikk og forbedre konverteringer med våre ekspert SEO-tjenester. Ta kontakt i dag for å diskutere hvordan vi kan forbedre din SEO-strategi og løfte din bedrift til nye høyder i den digitale verden."
@@ -82,16 +124,37 @@
       "middle_title": "Hvorfor velge meg som din nettinnhold-skaper...",
 
       "bullitins": [
-        "Engasjerende og brukersentrert innhold som fanger målgruppens oppmerksomhet og gir en enestående brukeropplevelse.",
-        "Økt kvaliteten og relevansen til webinnholdet ditt for å engasjere både brukere og søkemotorer.",
-        "Skreddersydde webinnholdsløsninger som samsvarer med dine spesifikke forretningsbehov og mål.",
-        "Webinnhold som er både visuelt tiltalende og enkelt å navigere for målgruppen.",
-        "Overholdt prosjektfrister for å sikre at webinnholdet er tilgjengelig når du trenger det.",
-        "Webinnhold som fungerer sømløst på ulike enheter og skjermstørrelser.",
-        "Opprettholdt åpen kommunikasjon for å sikre at dine krav blir møtt og forventninger overskrides.",
-        "Innhold som treffer målgruppen din, oppfordrer til interaksjon og bygger merkevarelojalitet."
+        {
+          "title": "Engasjerende innhold",
+          "description": "Fanger målgruppens oppmerksomhet og gir en enestående brukeropplevelse.",
+          "icon": "/images/service_icons/bullseye.svg"
+        },
+        {
+          "title": "Skreddersydde løsninger",
+          "description": "Innhold tilpasset dine spesifikke forretningsbehov og mål.",
+          "icon": "/images/service_icons/tools.svg"
+        },
+        {
+          "title": "Brukervennlig design",
+          "description": "Visuelt tiltalende innhold som er enkelt å navigere for målgruppen.",
+          "icon": "/images/service_icons/palette.svg"
+        },
+        {
+          "title": "Punktlige leveranser",
+          "description": "Overholdelse av prosjektfrister sikrer at innholdet er klart når du trenger det.",
+          "icon": "/images/service_icons/hourglass.svg"
+        },
+        {
+          "title": "Responsivt innhold",
+          "description": "Fungerer sømløst på ulike enheter og skjermstørrelse.",
+          "icon": "/images/service_icons/mobile.svg"
+        },
+        {
+          "title": "Merkevarebyggende innhold",
+          "description": "Treffer målgruppen, oppfordrer til interaksjon og styrker merkevarelojalitet.",
+          "icon": "/images/service_icons/rocket.svg"
+        }
       ],
-
       "bottom_paragraphs": [
         "Med en lidenskap for effektiv kommunikasjon og en evne for kreativitet, tilbyr jeg profesjonelle tjenester innen webinnholdsskaping til bedrifter og enkeltpersoner som ønsker å skape et varig inntrykk på nettet. Min tilnærming til innholdsskaping er skreddersydd for dine unike behov og mål.",
         "Enten du trenger engasjerende blogginnlegg, informative artikler, overbevisende produktbeskrivelser eller engasjerende innhold for sosiale medier, har jeg ferdighetene som kreves. Jeg gjennomfører grundig research for å sikre at innholdet ikke bare er velinformert, men også relevant for din målgruppe."
@@ -104,18 +167,38 @@
       "top_paragraph": "Ved å koble til en database til nettsiden din kan du enkelt gjennom et brukervennlig grensesnitt endre på og legge til innhold til nettsiden din. Databasen er skalerbar og kan spesifiseres til akkurat dine behov.",
 
       "middle_title": "Hvorfor velge meg til å lage en CMS for din nettside...",
-
       "bullitins": [
-        "100% kontroll på hva som vises på nettsiden din",
-        "Enkel administrasjon av innhold uten teknisk kunnskap",
-        "Skalerbar løsning som vokser med bedriften din",
-        "Tilpasning til spesifikke behov og krav",
-        "Sikker lagring og håndtering av data",
-        "Automatiske sikkerhetskopier for å beskytte innholdet",
-        "Integrasjon med populære verktøy og tredjepartstjenester",
-        "Optimalisert for rask lasting av nettsiden"
+        {
+          "title": "Enkel administrasjon",
+          "description": "Oppdater innholdet selv, uten behov for teknisk kunnskap. Du bestemmer hva som vises.",
+          "icon": "/images/service_icons/edit.svg"
+        },
+        {
+          "title": "Skalerbar løsning",
+          "description": "Vokser i takt med bedriften din og tilpasses fremtidige behov.",
+          "icon": "/images/service_icons/growth.svg"
+        },
+        {
+          "title": "Tilpasset dine krav",
+          "description": "Utformes etter spesifikke behov for optimal funksjonalitet.",
+          "icon": "/images/service_icons/tuning.svg"
+        },
+        {
+          "title": "Datasikkerhet",
+          "description": "Trygg lagring og håndtering av sensitiv informasjon.",
+          "icon": "/images/service_icons/security.svg"
+        },
+        {
+          "title": "Automatiske sikkerhetskopier",
+          "description": "Beskytter innholdet ditt mot tap og uforutsette hendelser.",
+          "icon": "/images/service_icons/storage.svg"
+        },
+        {
+          "title": "Sømløs integrasjon",
+          "description": "Kompatibel med populære verktøy og tredjepartstjenester.",
+          "icon": "/images/service_icons/lightning.svg"
+        }
       ],
-
       "bottom_paragraphs": [
         "Å integrere en CMS for sin nettsiden er et strategisk steg for å videreutvikle din bedrift. I stedet for å måtte be andre oppdatere nettsiden din kan man styre dette helt selv, akkurat når man vil. Ønsker man å delegere bort innholds-oppdatering så kan man enkelt gjøre dette ved å ha flere brukertilganger til CMS'en.",
         "Enten du trenger en CMS til å styre innhold som bilde, tekst, bloggposter, artikler, nettsiden farger eller til og med utseende, har jeg ferdighetene som krever for å lage dette. Jeg lager en robust CMS som kan brukes til alle dine behov."
@@ -130,16 +213,37 @@
       "middle_title": "Hvorfor velge meg til å koble sammen din sosiale media med din nettside...",
 
       "bullitins": [
-        "Automatisk oppdatering av innhold fra dine sosiale medier",
-        "Spar tid ved å synkronisere innlegg på tvers av plattformer",
-        "Øk engasjement ved å vise sanntidsinnhold",
-        "Innholdet blir tilpasset for å matche nettsidens design",
-        "Integrasjon med populære plattformer som Instagram, Facebook, og Twitter",
-        "Mobilvennlig og optimalisert for rask lasting",
-        "Ingen behov for teknisk kunnskap for å vise innhold",
-        "Øk synligheten til din sosiale medieprofil"
+        {
+          "title": "Plattformintegrasjon",
+          "description": "Kobles sømløst til Instagram, Facebook, Twitter og flere sosiale medier.",
+          "icon": "/images/service_icons/connect.svg"
+        },
+        {
+          "title": "Automatisk innholdsoppdatering",
+          "description": "Synkroniser innhold fra dine sosiale medier direkte til nettsiden.",
+          "icon": "/images/service_icons/sync.svg"
+        },
+        {
+          "title": "Tidsbesparende synkronisering",
+          "description": "Publiser innlegg på tvers av plattformer uten ekstra arbeid.",
+          "icon": "/images/service_icons/hourglass.svg"
+        },
+        {
+          "title": "Designtilpasset innhold",
+          "description": "Sosiale innlegg tilpasses nettsidens utseende for en helhetlig stil på alle enheter.",
+          "icon": "/images/service_icons/mobile.svg"
+        },
+        {
+          "title": "Ingen teknisk kunnskap nødvendig",
+          "description": "Vis og administrer innhold enkelt uten behov for noe tekniske kunnskaper.",
+          "icon": "/images/service_icons/tools.svg"
+        },
+        {
+          "title": "Økt synlighet",
+          "description": "Forbedrer eksponeringen av din sosiale medieprofil ved å dele innhold på flere plattformer samtidig.",
+          "icon": "/images/service_icons/eyes.svg"
+        }
       ],
-
       "bottom_paragraphs": [
         "Å koble sammen dine sosiale medier med din nettside gjør at du kan vise fram innholdet ditt på en ny måte. Du kan velge om det skal være de siste innholdet, noe spesifikt, eller alt. På denne måten kan man selv styre innholdet på din egen nettside.",
         "Enten du trenger en integrasjon til sosiale medier til å vise innhold som bilder, tekst, bloggposter, artikler, videoer, osv, har jeg ferdighetene som krever for å lage fikse dette. Jeg lager en lager en løsning DU blir stolt av å vise frem til verden."
