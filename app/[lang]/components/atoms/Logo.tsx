@@ -14,7 +14,7 @@ const LogoComponent = ({ onclick, image, params }) => {
     <Link
       onClick={onclick}
       key={logoObject.text}
-      href={logoObject.href.replace("{lang}", params.lang)}
+      href={"/"+params.lang}
       className="relative hover:scale-105 duration-1000 group mt-4"
     >
       <LogoText/>
