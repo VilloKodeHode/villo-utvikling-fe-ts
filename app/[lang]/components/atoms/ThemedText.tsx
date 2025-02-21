@@ -76,7 +76,7 @@ export function ThemedLiWithLogo({ children, className }) {
     <li
       className={`flex gap-2 max-w-xl items-center md:text-h5 text-base md:leading-h5 leading-base text-light-obsidian  dark:text-dark-ice ${className}`}
     >
-     <SimpleLogoComponent className="" />
+     <SimpleLogoComponent />
       <p>{children}</p>
     </li>
   );
