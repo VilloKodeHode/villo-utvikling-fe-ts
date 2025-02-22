@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Figtree } from "next/font/google";
+import { Figtree, Noto_Color_Emoji } from "next/font/google";
 import "./globals.css";
 import CookiePopup from "@components/ui/cookies/CookiePopup";
 import { AppUserProvider } from "@contexts/UserContext";
@@ -13,7 +13,8 @@ import { getDictionary } from "get-dictionary";
 import { FloatingUtilsBar } from "@components/ui/header/floatingUtilBar/FloatingUtilBar";
 // import LanguageSwitcher from "@components/ui/header/languageswitcher/LanguageSwitcher";
 
-const figtree = Figtree({ subsets: ["latin"] });
+export const figtree = Figtree({ subsets: ["latin"] });
+export const noto_emoji = Noto_Color_Emoji({ weight: "400", subsets: ["emoji"] });
 
 interface PageProps {
   children: React.ReactNode;
@@ -36,7 +37,7 @@ export async function RootLayout({ children, params }: PageProps) {
           <NavBar params={params} />
           
           <main
-            className={`flex flex-col animate-Appear items-center px-4 sm:px-6 lg:px-12 justify-start overflow-x-hidden mb-24 gap-28 `}
+            className={`flex flex-col animate-Appear items-center px-4 sm:px-6 lg:px-12 justify-start overflow-x-hidden my-24 gap-28 `}
           >
             {children}
           </main>

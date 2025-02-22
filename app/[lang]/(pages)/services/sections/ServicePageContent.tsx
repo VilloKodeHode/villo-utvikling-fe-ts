@@ -11,7 +11,8 @@ export const ServicePageContent = async ({
   return (
     <section
       id={id}
-      className={`w-full overflow-x-hidden scroll-into-view py-12 sm:px-6 px-4 lg:px-12`}
+      //! py-1 used to prevent overflow on hover (because of scale)
+      className={`w-full py-1 scroll-into-view`}
     >
       <div
         className={`mx-auto flex flex-col gap-10 max-w-7xl  ${

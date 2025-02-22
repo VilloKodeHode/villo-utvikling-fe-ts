@@ -9,8 +9,8 @@ interface ThemedTextProps {
 export const ThemedH1 = ({ children, className }: ThemedTextProps) => {
   return (
     <h1
-      className={`text-light-obsidian
-       dark:text-dark-ice md:text-5xl text-4xl ${className}`}
+      className={`text-light-obsidian font-bold
+       dark:text-dark-ice md:text-h1 text-h2 md:leading-h1 leading-h2 ${className}`}
     >
       {children}
     </h1>
@@ -43,6 +43,17 @@ export const ThemedP = ({ children, className }: ThemedTextProps) => {
   return (
     <p
       className={`text-light-obsidian
+         dark:text-dark-ice ${className}`}
+    >
+      {children}
+    </p>
+  );
+};
+
+export const ThemedPLarge = ({ children, className }: ThemedTextProps) => {
+  return (
+    <p
+      className={`text-light-obsidian md:text-h5 md:leading-h5 text-p leading-p
          dark:text-dark-ice ${className}`}
     >
       {children}

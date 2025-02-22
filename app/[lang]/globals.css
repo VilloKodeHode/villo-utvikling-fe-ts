@@ -48,13 +48,13 @@
   --color-light-cloud: #efe9ff;
   --color-light-fog: #e6ddff; */
 
-  --text-h1: 4.209rem;
+  --text-h1: 4.209rem; 
   --text-h2: 3.157rem;
   --text-h3: 2.369rem;
   --text-h4: 1.777rem;
   --text-h5: 1.333rem;
   --text-h6: 1rem;
-  --text-p: 1rem;
+  --text-p: 1rem; 
   --text-p0: 0.75rem;
   --text-small: 0.563rem;
   --text-mini: 0.422rem;
@@ -67,16 +67,16 @@
   --text-sm: 0.875rem;
   --text-xs: 0.75rem;
 
-  --leading-h1: 1.2em;
-  --leading-h2: 1.2em;
-  --leading-h3: 1.2em;
-  --leading-h4: 1.2em;
-  --leading-h5: 1.2em;
-  --leading-h6: 1.2em;
-  --leading-p: 1.5em;
-  --leading-p0: 1.5em;
-  --leading-small: 1.5em;
-  --leading-mini: 1.5em;
+  --leading-h1: 5.05rem;
+  --leading-h2: 3.8rem;
+  --leading-h3: 2.9rem;
+  --leading-h4: 2.2rem;
+  --leading-h5: 1.7rem;
+  --leading-h6: 1.3rem;
+  --leading-p: 1.5rem;
+  --leading-p0: 1.25rem;
+  --leading-small: 1rem;
+  --leading-mini: 0.85rem;
   --leading-4xl: 2.75rem;
   --leading-3xl: 2.5rem;
   --leading-2xl: 2.25rem;
@@ -545,4 +545,8 @@
   /* overflow: hidden; */
   /* background: linear-gradient(to right, #ff7eb3, #ff758c, #ff6b66, #ff6240);  */
   /* border-radius: 0.375rem */
+}
+
+.service_icon {
+  text-shadow:  0px 0px 5px var(--color-dark-frost), 0px 0px 10px var(--color-dark-ice), 0px 0px 15px var(--color-dark-shadow), 0px 0px 20px var(--color-dark-frost);
 }

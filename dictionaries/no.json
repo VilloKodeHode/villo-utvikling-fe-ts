@@ -38,32 +38,32 @@
         {
           "title": "Ingen mellomledd",
           "description": "Normalt tar dette en stor del av budsjettet, men ikke hos meg! Vi avtaler ferdig pris før prosjektet starter.",
-          "icon": "/images/service_icons/handshake.svg"
+          "icon": "🤝🏼"
         },
         {
           "title": "Full innsikt",
           "description": "Man får muligheten til å gi tilbakemeldinger under hele utviklingsprosessen for å oppnå best mulig resultat.",
-          "icon": "/images/service_icons/insight.svg"
+          "icon": "🙋🏽"
         },
         {
           "title": "Sikker og moderne nettside",
           "description": "For å lage en nettside som er sikker, brukervennlig og skalerbar brukes den nyeste teknologien.",
-          "icon": "/images/service_icons/security.svg"
+          "icon": "🖥️"
         },
         {
           "title": "Brukervennlig database",
           "description": "Ved behov integreres en database slik at du kan oppdatere innholdet på siden selv ved behov.",
-          "icon": "/images/service_icons/database.svg"
+          "icon": "🏢"
         },
         {
           "title": "Søkemotoroptimalisering",
           "description": "Du får mer trafikk til nettsiden og blir lettere å søke opp på søkemotorer.",
-          "icon": "/images/service_icons/eyes.svg"
+          "icon": "👁️"
         },
         {
           "title": "Full support",
           "description": "Du får opplæring på hvordan du kan styre innhold og utseende på nettsiden din via en innholdshåndteringssystem.",
-          "icon": "/images/service_icons/training.svg"
+          "icon": "👨🏼‍🏫"
         }
       ],
       "bottom_paragraphs": [
@@ -82,32 +82,32 @@
         {
           "title": "Tilpassede SEO-løsninger",
           "description": "Skreddersydd for å møte dine spesifikke forretningsbehov og mål.",
-          "icon": "/images/service_icons/search.svg"
+          "icon": "🔍"
         },
         {
           "title": "Høyere søkemotorrangering",
           "description": "Oppnå bedre synlighet på Google og nå målgruppen din mer effektivt.",
-          "icon": "/images/service_icons/growth.svg"
+          "icon": "📈"
         },
         {
           "title": "Kvalitetsinnhold for SEO",
           "description": "Forbedrer innholdets relevans for både brukere og søkemotorer.",
-          "icon": "/images/service_icons/content.svg"
+          "icon": "🔑"
         },
         {
           "title": "Lokal SEO-strategi",
           "description": "Tiltrekker flere kunder i ditt nærområde med spesialiserte metoder.",
-          "icon": "/images/service_icons/map_pin.svg"
+          "icon": "📍"
         },
         {
           "title": "Økt nettsidetrafikk",
           "description": "SEO-tiltak som sikrer at du blir lettere å finne på nett.",
-          "icon": "/images/service_icons/traffic_lights.svg"
+          "icon": "🚦"
         },
         {
           "title": "Innsikt og rapportering",
           "description": "Få oversikt over SEO-fremgangen med detaljert rapportering og analyser.",
-          "icon": "/images/service_icons/graph.svg"
+          "icon": "📊"
         }
       ],
       "bottom_paragraphs": [
@@ -127,32 +127,32 @@
         {
           "title": "Engasjerende innhold",
           "description": "Fanger målgruppens oppmerksomhet og gir en enestående brukeropplevelse.",
-          "icon": "/images/service_icons/bullseye.svg"
+          "icon": "🎯"
         },
         {
           "title": "Skreddersydde løsninger",
           "description": "Innhold tilpasset dine spesifikke forretningsbehov og mål.",
-          "icon": "/images/service_icons/tools.svg"
+          "icon": "🛠"
         },
         {
           "title": "Brukervennlig design",
           "description": "Visuelt tiltalende innhold som er enkelt å navigere for målgruppen.",
-          "icon": "/images/service_icons/palette.svg"
+          "icon": "🎨"
         },
         {
           "title": "Punktlige leveranser",
           "description": "Overholdelse av prosjektfrister sikrer at innholdet er klart når du trenger det.",
-          "icon": "/images/service_icons/hourglass.svg"
+          "icon": "⏳"
         },
         {
           "title": "Responsivt innhold",
           "description": "Fungerer sømløst på ulike enheter og skjermstørrelse.",
-          "icon": "/images/service_icons/mobile.svg"
+          "icon": "📱"
         },
         {
           "title": "Merkevarebyggende innhold",
           "description": "Treffer målgruppen, oppfordrer til interaksjon og styrker merkevarelojalitet.",
-          "icon": "/images/service_icons/rocket.svg"
+          "icon": "🚀"
         }
       ],
       "bottom_paragraphs": [
@@ -171,32 +171,32 @@
         {
           "title": "Enkel administrasjon",
           "description": "Oppdater innholdet selv, uten behov for teknisk kunnskap. Du bestemmer hva som vises.",
-          "icon": "/images/service_icons/edit.svg"
+          "icon": "⚙"
         },
         {
           "title": "Skalerbar løsning",
           "description": "Vokser i takt med bedriften din og tilpasses fremtidige behov.",
-          "icon": "/images/service_icons/growth.svg"
+          "icon": "📈"
         },
         {
           "title": "Tilpasset dine krav",
           "description": "Utformes etter spesifikke behov for optimal funksjonalitet.",
-          "icon": "/images/service_icons/tuning.svg"
+          "icon": "🎛"
         },
         {
           "title": "Datasikkerhet",
           "description": "Trygg lagring og håndtering av sensitiv informasjon.",
-          "icon": "/images/service_icons/security.svg"
+          "icon": "🔐"
         },
         {
           "title": "Automatiske sikkerhetskopier",
           "description": "Beskytter innholdet ditt mot tap og uforutsette hendelser.",
-          "icon": "/images/service_icons/storage.svg"
+          "icon": "💾"
         },
         {
           "title": "Sømløs integrasjon",
           "description": "Kompatibel med populære verktøy og tredjepartstjenester.",
-          "icon": "/images/service_icons/lightning.svg"
+          "icon": "🔗"
         }
       ],
       "bottom_paragraphs": [
@@ -216,32 +216,32 @@
         {
           "title": "Plattformintegrasjon",
           "description": "Kobles sømløst til Instagram, Facebook, Twitter og flere sosiale medier.",
-          "icon": "/images/service_icons/connect.svg"
+          "icon": "🔗"
         },
         {
           "title": "Automatisk innholdsoppdatering",
           "description": "Synkroniser innhold fra dine sosiale medier direkte til nettsiden.",
-          "icon": "/images/service_icons/sync.svg"
+          "icon": "🔄"
         },
         {
           "title": "Tidsbesparende synkronisering",
           "description": "Publiser innlegg på tvers av plattformer uten ekstra arbeid.",
-          "icon": "/images/service_icons/hourglass.svg"
+          "icon": "⏳"
         },
         {
           "title": "Designtilpasset innhold",
           "description": "Sosiale innlegg tilpasses nettsidens utseende for en helhetlig stil på alle enheter.",
-          "icon": "/images/service_icons/mobile.svg"
+          "icon": "📱"
         },
         {
           "title": "Ingen teknisk kunnskap nødvendig",
           "description": "Vis og administrer innhold enkelt uten behov for noe tekniske kunnskaper.",
-          "icon": "/images/service_icons/tools.svg"
+          "icon": "🛠"
         },
         {
           "title": "Økt synlighet",
           "description": "Forbedrer eksponeringen av din sosiale medieprofil ved å dele innhold på flere plattformer samtidig.",
-          "icon": "/images/service_icons/eyes.svg"
+          "icon": "👀"
         }
       ],
       "bottom_paragraphs": [
@@ -436,7 +436,7 @@
     "companyName": "Villo utvikling"
   },
   "companyInfo": {
-    "title": "Norsk Webutvikler",
+    "title": "Villo Utvikling - En Norsk Webutvikler",
     "paragraphOne": "Det er ingenting som gir meg større glede enn å se hvordan mine tjenester har en positiv innvirkning på kundens virksomhet. Målet mitt er å bygge sterke, langsiktige og verdifulle forhold med kundene mine. Dette oppnås ved å levere tjenester av høy kvalitet og åpen kommunikasjonen gjennom arbeidesprosessen.",
     "paragraphTwo": "Min visjon er å lage gode nettsider for små og mellomstore bedrifter, uten at det skal bli for dyrt, men allikevel å tilby god kvalitet med de nyeste webteknologiene, søkemotoroptimalisering og innhold."
   },

@@ -9,7 +9,7 @@ export default async function Home({ params }: PageProps) {
   const dictionary = await getDictionary(params.lang);
   return (
     <>
-      <HeroSection content={dictionary.heroSection} />
+      <HeroSection params={params} content={dictionary.heroSection} />
       <ShowcaseSection content={dictionary.showCaseList} />
       <ServicePageContent
         showOnScroll={true}
