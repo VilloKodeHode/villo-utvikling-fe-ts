@@ -16,14 +16,14 @@ export const HeroSection = async ({ content, params }) => {
             <ThemedH1 className="">{content.title}</ThemedH1>
             <ThemedPLarge className="">{content.subtitle}</ThemedPLarge>
             <div className="grid justify-start grid-flow-col gap-8">
-              <div className=" flex justify-start items-center">
+              {/* <div className="flex justify-start items-end"> */}
                 <Link href={`/${params.lang}/contact`}>
                   <ArrowCTA>{content.cta}</ArrowCTA>
                 </Link>
-              </div>
-              <div className=" flex justify-start items-center max-w-fit">
+              {/* </div> */}
+              {/* <div className="flex justify-start items-center"> */}
                 <ScrollToSectionButton>{content.ctaTwo}</ScrollToSectionButton>
-              </div>
+              {/* </div> */}
             </div>
           </div>
         </div>

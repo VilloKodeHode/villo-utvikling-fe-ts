@@ -53,8 +53,8 @@ export const ServiceCard = ({ title, text, href, buttonText }) => {
           {title}
         </ThemedH4>
         <ThemedP>{text}</ThemedP>
-        <ReadMoreButton>
-          <Link href={href} className="w-fit">
+        <ReadMoreButton className="self-end">
+          <Link href={href} className="">
             {buttonText}
           </Link>
         </ReadMoreButton>
