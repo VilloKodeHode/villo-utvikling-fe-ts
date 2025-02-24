@@ -46,12 +46,10 @@ export default async function Page({ params }: PageProps) {
                   height={100}
                   className="absolute transition-all ease-linear opacity-25 scale-300 group-hover:scale-100 h-36 w-36 -z-10 right-2 top-2 group-hover:opacity-100"
                 /> */}
-                <div className="absolute flex items-center justify-center w-1/3 h-full transition-all duration-200 ease-linear -translate-y-1/2 bg-gradient-to-r dark:from-dark-onyx dark:to-dark-storm opacity-10 -z-10 -right-24 group-hover:right-0 top-1/2 group-hover:opacity-100">
-              <p
-                className={`${noto_emoji.className} text-8xl`}
-              >
-                {item.icon}
-              </p>
+              <div className="absolute flex items-center justify-end pr-8 w-1/2 h-full transition-all duration-300 -translate-y-1/2 bg-gradient-to-r from-light-cloud to-light-violet dark:from-dark-onyx dark:to-dark-lavender opacity-50 -z-10 -right-28 group-hover:right-0 top-1/2 group-hover:opacity-100">
+                <p className={`${noto_emoji.className} text-8xl`}>
+                  {item.icon}
+                </p>
               </div>
               <ThemedH4
                 className={`font-bold z-10 max-w-1/2 transition-colors dark:group-hover:text-dark-lavender ease-linear group-hover:text-light-violet`}
