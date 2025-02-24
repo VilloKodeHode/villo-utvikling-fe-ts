@@ -46,7 +46,7 @@ export default async function Page({ params }: PageProps) {
                   height={100}
                   className="absolute transition-all ease-linear opacity-25 scale-300 group-hover:scale-100 h-36 w-36 -z-10 right-2 top-2 group-hover:opacity-100"
                 /> */}
-              <div className="absolute flex items-center justify-end pr-8 w-1/2 h-full transition-all duration-300 -translate-y-1/2 bg-gradient-to-r from-light-cloud to-light-violet dark:from-dark-onyx dark:to-dark-lavender opacity-50 -z-10 -right-28 group-hover:right-0 top-1/2 group-hover:opacity-100">
+              <div className="absolute flex items-center justify-end pr-8 w-1/2 h-full transition-all duration-300 -translate-y-1/2 bg-gradient-to-r from-transparent to-light-violet dark:from-transparent dark:to-dark-lavender opacity-50 -z-10 -right-28 group-hover:right-0 top-1/2 group-hover:opacity-100">
                 <p className={`${noto_emoji.className} text-8xl`}>
                   {item.icon}
                 </p>
@@ -61,11 +61,11 @@ export default async function Page({ params }: PageProps) {
           ))}
         </div>
       </section>
-      <section>
+      <section className="grid gap-8">
         {content.bottom_paragraphs.map((paragraph, index) => (
-          <p key={index} className="mb-4 text-lg">
+          <ThemedP key={index} className="mb-4 text-lg max-w-3xl">
             {paragraph}
-          </p>
+          </ThemedP>
         ))}
       </section>
     </>
