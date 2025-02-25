@@ -48,13 +48,13 @@
   --color-light-cloud: #efe9ff;
   --color-light-fog: #e6ddff; */
 
-  --text-h1: 4.209rem; 
+  --text-h1: 4.209rem;
   --text-h2: 3.157rem;
   --text-h3: 2.369rem;
   --text-h4: 1.777rem;
   --text-h5: 1.333rem;
   --text-h6: 1rem;
-  --text-p: 1rem; 
+  --text-p: 1rem;
   --text-p0: 0.75rem;
   --text-small: 0.563rem;
   --text-mini: 0.422rem;
@@ -123,8 +123,27 @@
   --animate-splash-screen-out: splashScreenDissapear 1.5s ease-in-out forwards;
   --animate-blur-in-out: blurInOut 0.3s ease-in-out forwards;
   --animate-blur-in-out-heavy: blurInOutHeavy 0.3s ease-in-out forwards;
+  --animate-color-change: color-change-5x 8s linear infinite alternate both;
 
   @keyframes filler {
+  }
+
+  @keyframes color-change-5x {
+    0% {
+      background: #19dcea;
+    }
+    25% {
+      background: #b22cff;
+    }
+    50% {
+      background: #ea2222;
+    }
+    75% {
+      background: #f5be10;
+    }
+    100% {
+      background: #3bd80d;
+    }
   }
 
   @keyframes buttonHover {
@@ -548,5 +567,7 @@
 }
 
 .service_icon {
-  text-shadow:  0px 0px 5px var(--color-dark-frost), 0px 0px 10px var(--color-dark-ice), 0px 0px 15px var(--color-dark-shadow), 0px 0px 20px var(--color-dark-frost);
+  text-shadow: 0px 0px 5px var(--color-dark-frost),
+    0px 0px 10px var(--color-dark-ice), 0px 0px 15px var(--color-dark-shadow),
+    0px 0px 20px var(--color-dark-frost);
 }
