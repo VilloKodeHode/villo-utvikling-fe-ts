@@ -1,8 +1,8 @@
 import { getDictionary } from "get-dictionary";
 import { CompanyInfo } from "@pages/about/sections/CompanyInfoSection";
-// import { IntroSection } from "@pages/about/sections/IntroSection";
 import { PaletteSection } from "./sections/PaletteSection";
 import { TextAndImageSection } from "@components/molecyles/Sections";
+import { SkillsSection } from "./sections/SkillsSection";
 
 export default async function Home({ params }) {
   const dictionary = await getDictionary(params.lang);
@@ -10,7 +10,7 @@ export default async function Home({ params }) {
     <>
       <CompanyInfo content={dictionary.companyInfo} />
       <TextAndImageSection content={dictionary.introInfo} />
-      {/* <SkillsSection /> */}
+      <SkillsSection content={dictionary.skills} />
       <PaletteSection />
       {/* <ProjectSection /> */}
       {/* <LetsGoCTA

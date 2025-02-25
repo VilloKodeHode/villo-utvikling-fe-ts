@@ -26,6 +26,111 @@
     "cta": "Contact now",
     "ctaTwo": "Services"
   },
+  "skills": {
+    "title": "My tech-stack",
+    "paragraph": "This is my tech-stack. I use the best methods to ensure that the website is fast, modern and responsive.",
+    "skills": [
+      {
+        "name": "HTML",
+        "logo": "html",
+        "imageSrc": "/images/skills/html-logo.png",
+        "alt": "HTML logo",
+        "options": {
+          "saturate": "70",
+          "width": 53.5,
+          "colored": true
+        }
+      },
+      {
+        "name": "CSS",
+        "logo": "css",
+        "imageSrc": "/images/skills/css-logo.png",
+        "alt": "CSS3 logo",
+        "options": {
+          "saturate": "70",
+          "width": 53.5,
+          "colored": true
+        }
+      },
+      {
+        "name": "Javascript",
+        "logo": "javascript",
+        "imageSrc": "/images/skills/javascript-logo.png",
+        "alt": "Javascript logo",
+        "options": {
+          "saturate": "70",
+          "width": 60,
+          "colored": true
+        }
+      },
+      {
+        "name": "React",
+        "logo": "react",
+        "imageSrc": "/images/skills/react-logo.png",
+        "alt": "React logo",
+        "options": {
+          "saturate": "70",
+          "width": 60,
+          "colored": true
+        }
+      },
+      {
+        "name": "Nextjs",
+        "logo": "nextjs",
+        "imageSrc": "/images/skills/nextjs-logo.png",
+        "alt": "Nextjs logo",
+        "options": {
+          "saturate": "10",
+          "width": 53.5,
+          "colored": false
+        }
+      },
+      {
+        "name": "Tailwind CSS",
+        "logo": "tailwindcss",
+        "imageSrc": "/images/skills/tailwindcss-logo.png",
+        "alt": "Tailwind CSS logo",
+        "options": {
+          "saturate": "70",
+          "width": 60,
+          "colored": true
+        }
+      },
+      {
+        "name": "Figma",
+        "logo": "figma",
+        "imageSrc": "/images/skills/figma-logo.png",
+        "alt": "Figma logo",
+        "options": {
+          "saturate": "70",
+          "width": 40,
+          "colored": true
+        }
+      },
+      {
+        "name": "Sanity",
+        "logo": "sanity",
+        "imageSrc": "/images/skills/sanity-logo.png",
+        "alt": "Sanity logo",
+        "options": {
+          "saturate": "70",
+          "width": 45,
+          "colored": true
+        }
+      },
+      {
+        "name": "MongoDB",
+        "logo": "mongodb",
+        "imageSrc": "/images/skills/mongodb-logo.png",
+        "alt": "Mongo DB logo",
+        "options": {
+          "saturate": "70",
+          "width": 60,
+          "colored": true
+        }
+      }
+    ]
+  },
   "services": {
     "website": {
       "top_title": "Need a new website?",
