@@ -62,11 +62,11 @@ export default async function Page({ params }: PageProps) {
           ))}
         </div>
       </section>
-      <section>
+      <section className="grid gap-8">
         {content.bottom_paragraphs.map((paragraph, index) => (
-          <p key={index} className="mb-4 text-lg">
+          <ThemedP key={index} className="mb-4 text-lg max-w-3xl">
             {paragraph}
-          </p>
+          </ThemedP>
         ))}
       </section>
     </>
