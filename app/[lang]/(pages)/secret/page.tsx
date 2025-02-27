@@ -8,10 +8,6 @@ import { createLights } from "./components/light";
 import { Map } from "./components/map";
 
 // Setup map
-export const minTileIndex = -8;
-export const maxTileIndex = 8;
-export const tilesPerRow = maxTileIndex - minTileIndex + 1;
-export const tileSize = 42;
 
 export default function Home() {
   const player = useRef<THREE.Group | null>(null);
@@ -94,7 +90,10 @@ export default function Home() {
 
   return (
     <>
-      <canvas ref={canvas} className=""></canvas>
+      <canvas
+        ref={canvas}
+        className="min-h-[calc(100vh-160px)] canvas_game"
+      ></canvas>
     </>
   );
 }

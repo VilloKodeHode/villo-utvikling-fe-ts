@@ -1,7 +1,7 @@
 "use client";
 
 import * as THREE from "three";
-import { tileSize } from "../page";
+import { tileSize } from "./constants";
 
 export const Tree = (tileIndex, height) => {
   const tree = new THREE.Group();

@@ -1,7 +1,7 @@
 "use client";
 
 import * as THREE from "three";
-import { tileSize, tilesPerRow } from "../page";
+import { tileSize, tilesPerRow } from "./constants";
 
 export const Grass = (rowIndex) => {
   const grass = new THREE.Group();

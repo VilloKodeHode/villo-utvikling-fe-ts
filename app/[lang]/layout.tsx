@@ -37,7 +37,8 @@ export async function RootLayout({ children, params }: PageProps) {
           <NavBar params={params} />
           
           <main
-            className={`flex flex-col animate-Appear items-center px-4 sm:px-6 lg:px-12 justify-start overflow-x-hidden my-24 gap-28 `}
+          //TODO fix the has selector:
+            className={`flex flex-col animate-Appear [&>canvas]:has-[canvas_game]:my-0 items-center px-4 sm:px-6 lg:px-12 justify-start overflow-x-hidden my-24 gap-28 `}
           >
             {children}
           </main>
