@@ -130,19 +130,22 @@
 
   @keyframes color-change-5x {
     0% {
-      background: #19dcea;
+      background: var(--color-light-snow);
     }
-    25% {
-      background: #b22cff;
+    20% {
+      background: var(--color-dark-lavender);
     }
-    50% {
-      background: #ea2222;
+    40% {
+      background: var(--color-dark-storm);
     }
-    75% {
-      background: #f5be10;
+    60% {
+      background: var(--color-dark-onyx);
+    }
+    80% {
+      background: var(--color-light-violet);
     }
     100% {
-      background: #3bd80d;
+      background: var(--color-light-dusk);
     }
   }
 
