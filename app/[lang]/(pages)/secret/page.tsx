@@ -5,6 +5,13 @@ import { useEffect, useRef } from "react";
 import { createPlayer } from "./components/player";
 import { createCamera } from "./components/camera";
 import { createLights } from "./components/light";
+import { Map } from "./components/map";
+
+// Setup map
+export const minTileIndex = -8;
+export const maxTileIndex = 8;
+export const tilesPerRow = maxTileIndex - minTileIndex + 1;
+export const tileSize = 42;
 
 export default function Home() {
   const player = useRef<THREE.Group | null>(null);
@@ -12,6 +19,7 @@ export default function Home() {
   const renderer = useRef<THREE.WebGLRenderer | null>(null);
   const scene = useRef<THREE.Scene | null>(null);
   const canvas = useRef<HTMLCanvasElement | null>(null);
+  const map = useRef<THREE.Group | null>(null);
 
   useEffect(() => {
     if (!canvas.current) return;
@@ -32,6 +40,14 @@ export default function Home() {
     const { ambientLight, directionalLight } = createLights();
     scene.current.add(ambientLight);
     scene.current.add(directionalLight);
+
+    // Grass
+    // grass.current = Grass(0);
+
+    map.current = Map();
+    // map.current.add(grass.current);
+
+    scene.current.add(map.current);
 
     // Renderer
     renderer.current = new THREE.WebGLRenderer({

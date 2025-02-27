@@ -36,11 +36,11 @@ export default async function Page({ params }: PageProps) {
         <div className="flex flex-wrap justify-center gap-8 ">
           {content.bullitins.map((item, index) => (
             <div
-              className="hover:p-0.5 fade-on-hover m-0.5 hover:m-0 transition-all outline-transparent hover:scale-[1.02] rounded-xl animate-color-change"
+              className="hover:p-0.5 fade-on-hover m-0.5 hover:m-0 transition-all hover:scale-[1.02] rounded-xl animate-color-change"
               key={service + "bullitin" + index}
             >
               <div
-                className={`relative group z-99 h-44  w-md shadow-sm sm:rounded-lg transition-all ease-linear md:mt-0 md:col-span-1  active:scale-[1.02] group cursor-default grid gap-2 min-h-[155px] bg-light-cloud group-hover:bg-light-mist dark:bg-dark-onyx dark:group-hover:bg-dark-shadow p-6 overflow-hidden`}
+                className={`relative group z-99 h-44 w-md shadow-sm sm:rounded-lg transition-all ease-linear md:mt-0 md:col-span-1 active:scale-[1.02] group cursor-default grid gap-2 min-h-[155px] bg-light-cloud group-hover:bg-light-mist dark:bg-dark-onyx dark:group-hover:bg-dark-shadow p-6 overflow-hidden`}
               >
                 {/* <Image
                   src={item.icon}

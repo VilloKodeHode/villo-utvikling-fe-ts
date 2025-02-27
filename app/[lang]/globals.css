@@ -123,7 +123,7 @@
   --animate-splash-screen-out: splashScreenDissapear 1.5s ease-in-out forwards;
   --animate-blur-in-out: blurInOut 0.3s ease-in-out forwards;
   --animate-blur-in-out-heavy: blurInOutHeavy 0.3s ease-in-out forwards;
-  --animate-color-change: color-change-5x 8s linear infinite alternate both;
+  --animate-color-change: color-change-5x 16s linear infinite alternate both;
 
   @keyframes filler {
   }
