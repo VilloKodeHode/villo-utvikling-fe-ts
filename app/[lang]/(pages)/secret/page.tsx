@@ -6,6 +6,9 @@ import { createPlayer } from "./components/player";
 import { createCamera } from "./components/camera";
 import { createLights } from "./components/light";
 import { Map } from "./components/map";
+import { Renderer } from "./components/renderer";
+import { animateVehicle, Car } from "./components/car";
+import { metaData } from "./components/metaData";
 
 // Setup map
 
@@ -46,11 +49,7 @@ export default function Home() {
     scene.current.add(map.current);
 
     // Renderer
-    renderer.current = new THREE.WebGLRenderer({
-      alpha: true,
-      antialias: true,
-      canvas: canvas.current,
-    });
+    renderer.current = Renderer();
     renderer.current.setSize(window.innerWidth, window.innerHeight);
     renderer.current.setPixelRatio(window.devicePixelRatio);
 
@@ -74,9 +73,24 @@ export default function Home() {
 
     window.addEventListener("resize", handleResize);
 
+    function setupVehicles() {
+      metaData.forEach((rowData) => {
+        if (rowData.type === "car") {
+          rowData.vehicles = rowData.vehicles?.map(
+            ({ initialTileIndex, color }) => {
+              const car = Car(initialTileIndex, rowData.direction, color); // ✅ Create Car
+              scene.current?.add(car); // ✅ Add Car to Scene
+              return { initialTileIndex, color, ref: car }; // ✅ Store ref
+            }
+          );
+        }
+      });
+    }
+    setupVehicles();
     // Animation Loop
     function animate() {
-      requestAnimationFrame(animate);
+      // requestAnimationFrame(animate);
+      animateVehicle();
       renderer.current?.render(scene.current!, camera.current!);
     }
 
@@ -90,10 +104,7 @@ export default function Home() {
 
   return (
     <>
-      <canvas
-        ref={canvas}
-        className="min-h-[calc(100vh-160px)] canvas_game"
-      ></canvas>
+      <canvas ref={canvas} className="min-h-[calc(100vh-160px)] game"></canvas>
     </>
   );
 }

@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
 import * as THREE from "three";
 
-const Renderer = () => {
+export const Renderer = () => {
   const canvas = document.querySelector("canvas.game");
 
   if (!canvas) {
@@ -13,11 +13,9 @@ const Renderer = () => {
     alpha: true,
     antialias: true,
     canvas: canvas,
-  })
-  renderer.setPixelRatio(window.devicePixelRatio)
+  });
+  renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
 
-return renderer
+  return renderer;
 };
-
-export const renderer = Renderer();

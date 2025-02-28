@@ -15,7 +15,7 @@ export const Tree = (tileIndex, height) => {
   trunk.position.z = 10;
   tree.add(trunk);
 
-  // 3d model for crown
+  // 3d model for crown of tree
   const crown = new THREE.Mesh(
     // SphereGeometry works, but does not look good with the parameters
     new THREE.BoxGeometry(30, 30, height),
