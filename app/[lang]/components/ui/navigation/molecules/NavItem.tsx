@@ -1,5 +1,6 @@
 "use client";
 
+import { LogoIconLeft, LogoIconRight } from "@components/atoms/logo/LogoParts";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
@@ -65,17 +66,9 @@ const NavItem = ({
       </Link>
       {(pathName === href ||
         (href.includes("/services") && prevParam() === "/services")) && (
-        <div className="absolute top-0 w-5 h-full -left-[20px]">
-          <Image
-            src={
-              theme === "light"
-                ? "/images/logo/WindLogoNoTextLightMode.svg"
-                : "/images/logo/WindLogoNoTextDarkMode.svg"
-            }
-            className="w-auto h-full animate-Appear"
-            fill={true}
-            alt=""
-          />
+        <div className="absolute animate-blur-in-out-heavy top-0 w-5 h-full -left-6">
+        <LogoIconLeft className="h-6.5 w-6.5 -right-0" />
+        <LogoIconRight className="h-6.5 w-6.5 -left-0" />
         </div>
       )}
     </div>

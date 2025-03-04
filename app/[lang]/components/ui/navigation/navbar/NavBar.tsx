@@ -2,6 +2,7 @@ import { getDictionary } from "get-dictionary";
 import { Locale } from "i18next.config";
 import NavItem from "../molecules/NavItem";
 import LogoComponent from "@components/atoms/Logo";
+import HamburgerBar from "../hamburgerbar/HamburgerBar";
 import { LogoDarkMode } from "@components/atoms/logo/LogoDarkMode";
 
 interface ComponentProps {
@@ -14,6 +15,7 @@ interface ComponentProps {
 interface MenuItem {
   text: string;
   href: string;
+  hide?: boolean;
 }
 
 export const NavBar = async ({ params }: ComponentProps) => {
@@ -34,7 +36,7 @@ export const NavBar = async ({ params }: ComponentProps) => {
       <div className="hidden ml-8 md:block">
         {/* TODO: Check what rounded-bl-full does */}
         <div className="flex-row hidden justify-end h-[112px] items-center rounded-bl-full gap-8 w-full md:flex">
-          {menuItems.map((item, index) => (
+          {menuItems.filter((item)=> !item.hide).map((item, index) => (
             <NavItem
               textSize="text-p"
               key={item.text + "navitem" + index}
@@ -44,6 +46,7 @@ export const NavBar = async ({ params }: ComponentProps) => {
           ))}
         </div>
       </div>
+        <HamburgerBar menuItems={menuItems} params={params} />
     </div>
   );
 };
