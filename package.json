@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.5.5",
+    "@react-three/drei": "^10.0.3",
+    "@react-three/fiber": "^8.13.7",
     "animejs": "^3.2.2",
     "cookies-next": "^4.3.0",
     "gsap": "^3.12.7",

@@ -1,110 +1,114 @@
 "use client";
 
 import * as THREE from "three";
-import { useEffect, useRef } from "react";
-import { createPlayer } from "./components/player";
-import { createCamera } from "./components/camera";
-import { createLights } from "./components/light";
-import { Map } from "./components/map";
-import { Renderer } from "./components/renderer";
-import { animateVehicle, Car } from "./components/car";
-import { metaData } from "./components/metaData";
-
-// Setup map
+import { Canvas, useFrame } from "@react-three/fiber";
+import { Edges, Text } from "@react-three/drei";
+import { useState, useRef } from "react";
 
 export default function Home() {
-  const player = useRef<THREE.Group | null>(null);
-  const camera = useRef<THREE.OrthographicCamera | null>(null);
-  const renderer = useRef<THREE.WebGLRenderer | null>(null);
-  const scene = useRef<THREE.Scene | null>(null);
-  const canvas = useRef<HTMLCanvasElement | null>(null);
-  const map = useRef<THREE.Group | null>(null);
+  const Box = (props) => {
+    const [hovered, setHover] = useState(false);
+    const [active, setActive] = useState(false);
+    const meshRef = useRef<THREE.Mesh>(null);
+    const positions: { position: THREE.Vector3; normal: THREE.Vector3 }[] = [];
+    const diceGeometry = new THREE.IcosahedronGeometry(1, 0);
 
-  useEffect(() => {
-    if (!canvas.current) return;
+    if (diceGeometry.index) {
+      for (let i = 0; i < diceGeometry.index?.count; i += 3) {
+        const a = diceGeometry.index?.array[i];
+        const b = diceGeometry.index?.array[i + 1];
+        const c = diceGeometry.index?.array[i + 2];
 
-    // Initialize Scene
-    scene.current = new THREE.Scene();
+        const vA = new THREE.Vector3().fromBufferAttribute(
+          diceGeometry.attributes.position,
+          a
+        );
+        const vB = new THREE.Vector3().fromBufferAttribute(
+          diceGeometry.attributes.position,
+          b
+        );
+        const vC = new THREE.Vector3().fromBufferAttribute(
+          diceGeometry.attributes.position,
+          c
+        );
 
-    // Initialize Player
-    player.current = createPlayer();
+        const center = new THREE.Vector3()
+          .addVectors(vA, vB)
+          .add(vC)
+          .divideScalar(3);
 
-    // Initialize Camera
-    camera.current = createCamera();
+        const normal = new THREE.Vector3()
+          .crossVectors(vB.clone().sub(vA), vC.clone().sub(vA))
+          .normalize();
 
-    // Add player to scene
-    scene.current.add(player.current);
-
-    // Lights
-    const { ambientLight, directionalLight } = createLights();
-    scene.current.add(ambientLight);
-    scene.current.add(directionalLight);
-
-    // Grass
-    // grass.current = Grass(0);
-
-    map.current = Map();
-    // map.current.add(grass.current);
-
-    scene.current.add(map.current);
-
-    // Renderer
-    renderer.current = Renderer();
-    renderer.current.setSize(window.innerWidth, window.innerHeight);
-    renderer.current.setPixelRatio(window.devicePixelRatio);
-
-    // Resize Handling
-    function handleResize() {
-      if (!camera.current) return;
-
-      const size = 300;
-      const newViewRatio = window.innerWidth / window.innerHeight;
-      const newWidth = newViewRatio < 1 ? size : size * newViewRatio;
-      const newHeight = newViewRatio < 1 ? size * newViewRatio : size;
-
-      camera.current.left = newWidth / -2;
-      camera.current.right = newWidth / 2;
-      camera.current.top = newHeight / 2;
-      camera.current.bottom = newHeight / -2;
-      camera.current.updateProjectionMatrix();
-
-      renderer.current?.setSize(window.innerWidth, window.innerHeight);
+        positions.push({
+          position: center.clone().add(normal.clone().multiplyScalar(0.5)),
+          normal,
+        });
+      }
     }
 
-    window.addEventListener("resize", handleResize);
+    useFrame((state, delta) => {
+      if (meshRef.current) {
+        meshRef.current.rotation.x += delta / 3;
+        meshRef.current.rotation.y += delta / 3;
+      }
+    });
 
-    function setupVehicles() {
-      metaData.forEach((rowData) => {
-        if (rowData.type === "car") {
-          rowData.vehicles = rowData.vehicles?.map(
-            ({ initialTileIndex, color }) => {
-              const car = Car(initialTileIndex, rowData.direction, color); // ✅ Create Car
-              scene.current?.add(car); // ✅ Add Car to Scene
-              return { initialTileIndex, color, ref: car }; // ✅ Store ref
-            }
-          );
-        }
-      });
-    }
-    setupVehicles();
-    // Animation Loop
-    function animate() {
-      // requestAnimationFrame(animate);
-      animateVehicle();
-      renderer.current?.render(scene.current!, camera.current!);
-    }
-
-    animate();
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-      renderer.current?.dispose();
-    };
-  }, []);
-
+    return (
+      <>
+        <group {...props}>
+          <mesh
+            ref={meshRef}
+            scale={active ? 1.5 : 1}
+            onClick={() => setActive(!active)}
+            onPointerOver={() => setHover(true)}
+            onPointerOut={() => setHover(false)}
+          >
+            <icosahedronGeometry args={[1, 0]} />
+            <meshStandardMaterial color={hovered ? "hotpink" : "orange"} />
+            <Edges color="darkOrange" />
+          </mesh>
+          {positions.map((pos, index) => (
+            <Text
+              key={index}
+              position={pos.position.toArray()}
+              fontSize={0.2}
+              font="helvetiker"
+              color="black"
+              anchorX="center"
+              anchorY="middle"
+              // rotation={pos.normal.clone().multiplyScalar(-1).toArray()}
+              // onUpdate={(self) => self.lookAt(new THREE.Vector3(0, 0, 0))}
+              onUpdate={(self) =>
+                self.lookAt(pos.normal.clone().multiplyScalar(5))
+              }
+              // depthOffset={-1}
+            >
+              {index + 1}
+            </Text>
+          ))}
+        </group>
+      </>
+    );
+  };
   return (
     <>
-      <canvas ref={canvas} className="min-h-[calc(100vh-160px)] game"></canvas>
+      <div className="h-screen w-full">
+        <Canvas>
+          <ambientLight intensity={Math.PI / 2} />
+          <spotLight
+            position={[10, 10, 10]}
+            angle={0.15}
+            penumbra={1}
+            decay={0}
+            intensity={Math.PI}
+          />
+          <Box position={[0, 0, 0]} />
+          {/* <Box position={[-1.2, 0, 0]} /> */}
+          {/* <Box position={[1.2, 0, 0]} /> */}
+        </Canvas>
+      </div>
     </>
   );
 }
