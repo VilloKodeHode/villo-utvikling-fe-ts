@@ -50,6 +50,28 @@ export const ThemedP = ({ children, className }: ThemedTextProps) => {
   );
 };
 
+export const CTOThemedP = ({ children, className }: ThemedTextProps) => {
+  return (
+    <p
+      className={`text-light-snow
+         dark:text-dark-ice ${className}`}
+    >
+      {children}
+    </p>
+  );
+};
+
+export const ShrinkingThemedP = ({ children, className }: ThemedTextProps) => {
+  return (
+    <p
+      className={`text-light-obsidian md:text-base text-p0 leading-p0
+         dark:text-dark-ice ${className}`}
+    >
+      {children}
+    </p>
+  );
+};
+
 export const ThemedPLarge = ({ children, className }: ThemedTextProps) => {
   return (
     <p
@@ -122,6 +144,18 @@ export const ThemedH4 = ({ children, className }: ThemedTextProps) => {
 };
 
 export const ThemedH5 = ({ children, className }: ThemedTextProps) => {
+  return (
+    <h5
+      className={`text-light-obsidian
+     dark:text-dark-ice md:text-lg text-md ${className}`}
+    >
+      {children}
+    </h5>
+  );
+};
+
+
+export const CustomText = ({ children, className }: ThemedTextProps) => {
   return (
     <h5
       className={`text-light-obsidian

@@ -59,7 +59,7 @@ export function SkillLinkButton({ children, onClick, className }: ButtonProps) {
   return (
     <button
       onClick={onClick}
-      className={`px-4 outline-[1px] group hover:outline-hidden py-1 font-bold uppercase shadow-lg transition duration-200 ease-linear ${className} 
+      className={`px-4 cursor-pointer outline-[1px] group hover:outline-hidden py-1 font-bold uppercase shadow-lg transition duration-200 ease-linear ${className} 
           text-light-ash bg-light-snow outline-light-ash hover:shadow-light-cloud hover:text-light-snow  hover:bg-light-violet/95 dark:text-dark-frost dark:bg-light-obsidian dark:outline-dark-frost dark:hover:shadow-dark-slate dark:hover:bg-dark-lavender/95 rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.02]`}
     >
       <>{children}</>

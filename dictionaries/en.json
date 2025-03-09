@@ -401,6 +401,152 @@
       "buttonText": "Read more"
     }
   ],
+  "portfolio": {
+    "title": "Portfolio",
+    "description": "With a passion for front-end development and a commitment to creating user-centric designs, I bring your vision to life. Explore the projects I've had the privilege to work on, each representing the blend of art and technology that defines my approach.",
+    "customer_projects": {
+      "title": "Customer projects",
+      "projects": [
+        {
+          "name": "Wileo AS",
+          "jobDone": "Created landing page and content for the website",
+          "imageUrl": "/images/companies/Wileo-logo.svg",
+          "href": "https://wileo.no/",
+          "completed": false,
+          "projectInfo": "Completed"
+
+        },
+        {
+          "name": "Hawii Analytics",
+          "jobDone": "Project Manager for building the new Hawii.no website.",
+          "imageUrl": "/images/companies/Hawii-logo-black.svg",
+          "href": "https://www.hawiianalyse.no/",
+          "completed": true,
+          "projectInfo": "Completed"
+        },
+        {
+          "name": "Trond Borg",
+          "jobDone": "Complete webstore with wix",
+          "imageUrl": "/images/companies/TrondBorg_logo.svg",
+          "href": "https://www.trond-borg.com/",
+          "completed": true,
+          "projectInfo": "Completed"
+        },
+        {
+          "name": "KVS - Kristensen Vedlikehold Service",
+          "jobDone": "New company homepage for KVS. Made with next.js",
+          "imageUrl": "/images/companies/KVS-full-logo-alternative-black.svg",
+          "href": "https://www.kvstrefelling.no/",
+          "completed": true,
+          "projectInfo": "Completed"
+        }
+      ]
+    },
+    "employment": {
+      "title": "Employment",
+      "companies": [
+        {
+          "name": "Kodeverket Bergen",
+          "jobTitle": "Intern/project-leader",
+          "jobDone": "Here I worked as a project manager for building the website Hawii.no. We used Next.js, tailwind css and Sanity for this project",
+          "imageUrl": "/images/companies/kodeverket_logo.svg",
+          "href": "https://www.kodeverketbergen.no/",
+          "progress": "done",
+          "colors": {
+            "shadow": "shadow-[#7fe5d3]",
+            "text": "text-[#7fe5d3]",
+            "bg": "bg-[#7fe5d3]"
+          },
+          "skillsUsed": [
+            { "name": "Next.js", "href": "https://nextjs.org/" },
+            { "name": "Tailwind CSS", "href": "https://tailwindcss.com/" },
+            { "name": "Sanity", "href": "https://www.sanity.io/" }
+          ]
+        },
+        {
+          "name": "Jobloop",
+          "jobTitle": "Course instructor",
+          "jobDone": "In this job I worked as a course instructor for programming and coding in the period 2023-2024. I taught HTML, CSS, Javascipt, Figma, and React, along with a wide range of developer tools",
+          "imageUrl": "/images/companies/jobloop_logo.png",
+          "href": "https://www.jobloop.no/",
+          "progress": "done",
+          "colors": {
+            "shadow": "shadow-[#f4a366]",
+            "text": "text-[#f4a366]",
+            "bg": "bg-[#f4a366]"
+          },
+          "skillsUsed": [
+            {
+              "name": "HTML",
+              "href": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+            },
+            {
+              "name": "CSS",
+              "href": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+            },
+            {
+              "name": "JavaScript",
+              "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            },
+            { "name": "Figma", "href": "https://www.figma.com/" },
+            { "name": "React", "href": "https://reactjs.org/" }
+          ]
+        },
+        {
+          "name": "Villo development",
+          "jobTitle": "Webdeveloper",
+          "jobDone": "My freelancer gig. I create everthing from simple personal sites to complex e-commerce platforms. In addition I also deliver webcontent and improve SEO for increasing traffic.",
+          "imageUrl": "/images/companies/WindLogoDarkmode.svg",
+          "href": "https://www.villoutvikling.com/",
+          "progress": "current",
+          "colors": {
+            "shadow": "shadow-[#a082ff]",
+            "text": "text-[#a082ff]",
+            "bg": "bg-[#a082ff]"
+          },
+          "skillsUsed": [
+            { "name": "Next.js", "href": "https://nextjs.org/" },
+            { "name": "Tailwind CSS", "href": "https://tailwindcss.com/" },
+            { "name": "Sanity", "href": "https://www.sanity.io/" },
+            { "name": "Figma", "href": "https://www.figma.com/" },
+            { "name": "React", "href": "https://reactjs.org/" },
+            { "name": "Wix", "href": "https://wix.com/" }
+          ]
+        },
+        {
+          "name": "Jobloop",
+          "jobTitle": "Course Leader",
+          "jobDone": "In October 2024 I got promoted within Jobloop to a local course leader. My tasks extended to management, including more responsibility in regards to participants, course instructors and administrative work",
+          "imageUrl": "/images/companies/jobloop_logo.png",
+          "href": "https://www.jobloop.no/",
+          "progress": "current",
+          "colors": {
+            "shadow": "shadow-[#f4a366]",
+            "text": "text-[#f4a366]",
+            "bg": "bg-[#f4a366]"
+          },
+          "skillsUsed": [
+            {
+              "name": "HTML",
+              "href": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+            },
+            {
+              "name": "CSS",
+              "href": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+            },
+            {
+              "name": "JavaScript",
+              "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            },
+            { "name": "Figma", "href": "https://www.figma.com/" },
+            { "name": "React", "href": "https://reactjs.org/" },
+            { "name": "Tailwind CSS", "href": "https://tailwindcss.com/" },
+            { "name": "Next.js", "href": "https://nextjs.org/" }
+          ]
+        }
+      ]
+    }
+  },
   "showCaseList": [
     {
       "type": "logo",
