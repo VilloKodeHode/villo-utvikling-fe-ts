@@ -93,7 +93,7 @@ export function ExternalCTA({ children, onClick, className }: ButtonProps) {
   return (
     <button
       onClick={onClick}
-      className={`relative px-6 pr-12 outline-2 flex justify-center items-center group hover:outline-hidden py-4 my-4 
+      className={`relative cursor-pointer px-6 pr-12 outline-2 flex justify-center items-center group hover:outline-hidden py-4 my-4 
         font-bold uppercase transition duration-200 ease-linear ${className} text-light-ash bg-light-snow 
         outline-light-ash hover:text-light-snow hover:bg-light-violet dark:text-dark-frost dark:bg-light-obsidian 
         dark:outline-dark-frost dark:hover:bg-dark-lavender rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p 

@@ -4,6 +4,7 @@ import { SimpleLogoComponent } from "./Logo";
 interface ThemedTextProps {
   children: React.ReactNode;
   className?: string;
+  reversedColors?: boolean;
 }
 
 export const ThemedH1 = ({ children, className }: ThemedTextProps) => {
@@ -39,11 +40,11 @@ export const ThemedH3 = ({ children, className }: ThemedTextProps) => {
   );
 };
 
-export const ThemedP = ({ children, className }: ThemedTextProps) => {
+export const ThemedP = ({reversedColors=false, children, className }: ThemedTextProps) => {
   return (
+    //TODO: legg til reversedColors på alt!
     <p
-      className={`text-light-obsidian
-         dark:text-dark-ice ${className}`}
+      className={`${reversedColors ? "text-light-snow dark:text-dark-onyx" : "text-light-obsidian dark:text-dark-ice" } ${className}`}
     >
       {children}
     </p>

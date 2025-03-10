@@ -17,6 +17,7 @@ export default async function Home({ params }) {
       </div>
       <ClientsSection content={content.customer_projects} />
       <EmploymentSection content={content.employment} />
+      
       {/* <QuotesSection /> */}
       {/* <LetsGoCTA
         type="email"

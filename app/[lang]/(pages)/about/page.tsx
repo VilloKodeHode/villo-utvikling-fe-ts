@@ -3,6 +3,7 @@ import { CompanyInfo } from "@pages/about/sections/CompanyInfoSection";
 import { PaletteSection } from "./sections/PaletteSection";
 import { TextAndImageSection } from "@components/molecyles/Sections";
 import { SkillsSection } from "./sections/SkillsSection";
+import { ProjectSection } from "./sections/ProjectSection";
 
 export default async function Home({ params }) {
   const dictionary = await getDictionary(params.lang);
@@ -12,7 +13,7 @@ export default async function Home({ params }) {
       <TextAndImageSection content={dictionary.introInfo} />
       <SkillsSection content={dictionary.skills} />
       <PaletteSection />
-      {/* <ProjectSection /> */}
+      <ProjectSection content={dictionary.personal_projects} />
       {/* <LetsGoCTA
         type="portfolio"
         engText="Check my portfolio"
