@@ -1,18 +1,18 @@
-import { ResponsiveThemedH1 } from "@components/atoms/ResponsiveText";
+import { ThemedH1 } from "@components/atoms/ThemedText";
 import ProjectCards from "./ProjectCard";
 
-export const ProjectSection = () => {
+export const ProjectSection = ({content}) => {
   return (
     <div className="py-12">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="text-center">
-          <ResponsiveThemedH1>
-            {language === "Norwegian" ? "Hobby prosjekter" : "Hobby projects"}
-          </ResponsiveThemedH1>
+          <ThemedH1>
+            {content.title}
+          </ThemedH1>
         </div>
         <div className="mt-10 animate-PageAppearRight">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <ProjectCards />
+            <ProjectCards content={content} />
           </div>
         </div>
       </div>
