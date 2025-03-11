@@ -8,8 +8,7 @@ export const HeroSection = async ({ content, params }) => {
     <>
       <section
         className="grid items-center max-w-6xl justify-center w-full min-h-[calc(100dvh-352px)]"
-        id="HeroSection"
-      >
+        id="HeroSection">
         <div className="animate-Page-appear-right">
           <div className="grid gap-8">
             <ThemedP className={`w-fit`}>{content.slogan}</ThemedP>
@@ -17,12 +16,13 @@ export const HeroSection = async ({ content, params }) => {
             <ThemedPLarge className="">{content.subtitle}</ThemedPLarge>
             <div className="grid justify-start grid-flow-col gap-8">
               {/* <div className="flex justify-start items-end"> */}
-                <Link href={`/${params.lang}/contact`}>
-                  <ArrowCTA>{content.cta}</ArrowCTA>
-                </Link>
+              <Link href={`/${params.lang}/contact`}>
+                <ArrowCTA>{content.cta}</ArrowCTA>
+              </Link>
               {/* </div> */}
+
               {/* <div className="flex justify-start items-center"> */}
-                <ScrollToSectionButton>{content.ctaTwo}</ScrollToSectionButton>
+              <ScrollToSectionButton>{content.ctaTwo}</ScrollToSectionButton>
               {/* </div> */}
             </div>
           </div>

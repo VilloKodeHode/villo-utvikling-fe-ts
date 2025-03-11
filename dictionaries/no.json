@@ -450,7 +450,8 @@
           "colors": {
             "shadow": "shadow-[#7fe5d3]",
             "text": "text-[#7fe5d3]",
-            "bg": "bg-[#7fe5d3]"
+            "bg": "bg-[#7fe5d3]",
+            "border": "border-[#7fe5d3]"
           },
           "skillsUsed": [
             { "name": "Next.js", "href": "https://nextjs.org/" },
@@ -468,7 +469,8 @@
           "colors": {
             "shadow": "shadow-[#f4a366]",
             "text": "text-[#f4a366]",
-            "bg": "bg-[#f4a366]"
+            "bg": "bg-[#f4a366]",
+            "border": "border-[#f4a366]"
           },
           "skillsUsed": [
             {
@@ -497,7 +499,8 @@
           "colors": {
             "shadow": "shadow-[#858ee0]",
             "text": "text-[#858ee0]",
-            "bg": "bg-[#858ee0]"
+            "bg": "bg-[#858ee0]",
+            "border": "border-[#858ee0]"
           },
           "skillsUsed": [
             { "name": "Next.js", "href": "https://nextjs.org/" },
@@ -518,7 +521,8 @@
           "colors": {
             "shadow": "shadow-[#f4a366]",
             "text": "text-[#f4a366]",
-            "bg": "bg-[#f4a366]"
+            "bg": "bg-[#f4a366]",
+            "border": "border-[#f4a366]"
           },
           "skillsUsed": [
             {

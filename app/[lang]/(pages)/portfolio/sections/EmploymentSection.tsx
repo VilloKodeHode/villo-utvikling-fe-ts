@@ -11,16 +11,14 @@ export const EmploymentSection = ({ content }) => {
         {content.companies.map((company) => (
           <div
             key={company.name + company.id}
-            className={`shadow-md gap-2 lg:gap-4 flex flex-col justify-between overflow-hidden h-94 md:w-125 w-full hover:scale-105
+            className={`shadow-md gap-2 lg:gap-4 flex flex-col justify-between overflow-hidden h-94 md:w-125 w-full hover:scale-102
                 ${company.colors.shadow}
-                 transition-all rounded-lg bg-light-mist dark:bg-dark-onyx`}
-          >
+                 transition-all rounded-lg bg-light-mist dark:bg-dark-onyx`}>
             <Link
               target="_blank"
               rel="noreferrer"
               href={company.href}
-              className="gap-4 bg-light-graphite hover:bg-light-charcoal dark:bg-dark-slate dark:hover:bg-dark-storm transition-colors flex items-center md:flex-row h-fit flex-col p-2 md:p-6 w-full"
-            >
+              className="gap-4 bg-light-graphite hover:bg-light-charcoal dark:bg-dark-slate dark:hover:bg-dark-storm transition-colors flex items-center md:flex-row h-fit flex-col p-2 md:p-6 w-full">
               <Image
                 className="h-28 w-fit"
                 src={company.imageUrl}
@@ -30,8 +28,7 @@ export const EmploymentSection = ({ content }) => {
               />
               {/* <ThemedH4 className="font-medium">{company.name}</ThemedH4> */}
               <h5
-                className={`${company.colors.text} md:text-2xl text-lg h-fit font-bold`}
-              >
+                className={`${company.colors.text} md:text-2xl text-lg h-fit font-bold`}>
                 {company.jobTitle}
               </h5>
             </Link>
@@ -40,15 +37,17 @@ export const EmploymentSection = ({ content }) => {
               {company.jobDone}
             </ShrinkingThemedP>
 
-            <div className="flex flex-wrap w-fit items-center px-2 md:px-6 pb-2 md:pb-6 gap-2 md:gap-4 h-fit">
+            <div className="flex flex-wrap w-full items-center p-2 h-fit">
+              {/* px-2 md:px-6 pb-2 md:pb-6 gap-2 md:gap-4 */}
               {company.skillsUsed.map((skill) => (
                 <a
                   key={skill.name}
                   href={skill.href}
                   target="_blank"
-                  rel="noreferrer"
-                >
-                  <SkillLinkButton>{skill.name}</SkillLinkButton>
+                  rel="noreferrer">
+                  <SkillLinkButton borderColor={company.colors.border}>
+                    {skill.name}
+                  </SkillLinkButton>
                 </a>
               ))}
             </div>
@@ -75,12 +74,10 @@ export const NewWorkedWithSection = ({ content }) => {
               key={company.id}
               href={company.href}
               target={company.href ? "_blank" : undefined}
-              className={`overflow-hidden w-48 rounded-sm shadow-lg hover:scale-105 transition`}
-            >
+              className={`overflow-hidden w-48 rounded-sm shadow-lg hover:scale-105 transition`}>
               <div
                 className={`z-20 group grid justify-center transition-all px-2 py-4 bg-light-white15 hover:bg-light-mist bg-light-dusk
-                    dark:bg-dark-onyx dark:hover:bg-dark-shadow`}
-              >
+                    dark:bg-dark-onyx dark:hover:bg-dark-shadow`}>
                 <div className="relative w-28 h-28">
                   <p className="absolute z-10 text-center transition-all translate-x-1/2 translate-y-1/2 opacity-0 group-hover:opacity-100 bottom-1/2 right-1/2">
                     {["current", "nåværende"].includes(company.progress)
