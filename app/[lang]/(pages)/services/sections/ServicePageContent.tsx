@@ -11,8 +11,7 @@ export const ServicePageContent = async ({
   return (
     <section
       id={id}
-      //! py-1 used to prevent overflow on hover (because of scale)
-      className={`w-full py-1 scroll-into-view`}>
+      className={`w-full py-2 scroll-into-view`}>
       <div
         className={`mx-auto flex flex-col gap-10 max-w-7xl  ${
           showOnScroll ? "opacity-0 animate-on-scroll" : ""
@@ -43,7 +42,7 @@ export const ServiceCard = ({ title, text, href, buttonText }) => {
   return (
     <div>
       <div
-        className={`relative z-99 max-w-sm shadow-sm sm:rounded-lg transition-all ease-linear md:mt-0 md:col-span-1 hover:scale-[1.02] active:scale-[1.02] group cursor-default grid gap-2 min-h-[240px] bg-light-cloud/50 hover:bg-light-mist/60 border dark:border-dark-shadow border-light-dusk dark:bg-dark-onyx/50 dark:hover:bg-dark-shadow/60 p-6`}>
+        className={`relative z-[99] max-w-sm md:mt-0 md:col-span-1 group cursor-default grid gap-2 min-h-[240px] p-6 glass-morphism interactive-box`}>
         <ThemedH4
           className={`font-bold z-10 max-w-fit transition-colors dark:group-hover:text-dark-lavender ease-linear group-hover:text-light-violet`}>
           {title}

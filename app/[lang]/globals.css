@@ -492,7 +492,6 @@
 }
 
 @layer utilities {
-  
   :root {
     --background: #ffffff;
     --foreground: #171717;
@@ -506,7 +505,7 @@
   }
 
   @layer components {
-    @tailwind;
+    /* @tailwind; */
     .color_palette_gradient {
       background: linear-gradient(
         to right,
@@ -534,6 +533,42 @@
         var(--color-dark-frost),
         var(--color-dark-ice)
       );
+    }
+
+
+    .interactive-box {
+      @apply transition duration-200 ease-linear hover:scale-[1.05] active:scale-95 rounded-sm;
+    }
+
+    .button-style {
+      @apply text-p leading-p rounded-full transition duration-200 ease-linear hover:scale-[1.05] active:scale-95 px-6 py-4 font-bold uppercase shadow-lg cursor-pointer flex justify-center items-center;
+    }
+
+    .glass-morphism {
+      @apply bg-light-cloud/50 hover:bg-light-mist/60 
+             border border-light-dusk 
+             dark:bg-dark-onyx/50 dark:hover:bg-dark-shadow/60 
+             dark:border-dark-shadow;
+    }
+
+    .glass-morphism-button {
+      @apply bg-light-snow text-light-ash hover:bg-light-violet hover:text-light-snow 
+             outline outline-light-dusk hover:outline-hidden
+             dark:bg-dark-onyx/70 dark:text-dark-frost dark:hover:bg-dark-lavender/90 
+             dark:outline-dark-shadow;
+    }
+
+    .glass-morphism-button-inverse {
+      @apply bg-light-violet text-light-snow hover:bg-light-snow hover:text-light-ash outline-light-dusk hover:outline
+             dark:bg-dark-lavender/90 dark:text-dark-frost dark:hover:bg-dark-onyx/70 dark:hover:text-dark-ice 
+             dark:outline-dark-shadow;
+    }
+
+    .glass-morphism-inverse {
+      @apply bg-light-dusk/60 hover:bg-light-cloud/50 
+             border border-light-charcoal 
+             dark:bg-dark-twilight/50 dark:hover:bg-dark-glacier/60 
+             dark:border-dark-shadow;
     }
   }
 

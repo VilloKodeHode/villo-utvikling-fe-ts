@@ -14,9 +14,9 @@ export const HeroSection = async ({ content, params }) => {
             <ThemedP className={`w-fit`}>{content.slogan}</ThemedP>
             <ThemedH1 className="">{content.title}</ThemedH1>
             <ThemedPLarge className="">{content.subtitle}</ThemedPLarge>
-            <div className="grid justify-start grid-flow-col gap-8">
+            <div className="grid justify-start items-center grid-flow-col gap-8">
               {/* <div className="flex justify-start items-end"> */}
-              <Link href={`/${params.lang}/contact`}>
+              <Link className="h-fit" href={`/${params.lang}/contact`}>
                 <ArrowCTA>{content.cta}</ArrowCTA>
               </Link>
               {/* </div> */}

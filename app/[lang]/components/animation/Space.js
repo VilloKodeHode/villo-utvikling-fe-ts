@@ -109,8 +109,8 @@ const THREESpace = () => {
         ref={canvasRef}
         className={`transition-all opacity-scroll duration-500 ${
           theme === "light"
-            ? "shadow-[0_20px_60px_1px_#fefdff] opacity-5"
-            : "shadow-[0_20px_60px_1px_#161618]"
+            ? "opacity-5"
+            : ""
         }`}
       />
     </div>
