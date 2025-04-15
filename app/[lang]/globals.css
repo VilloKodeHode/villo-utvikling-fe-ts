@@ -492,6 +492,7 @@
 }
 
 @layer utilities {
+  
   :root {
     --background: #ffffff;
     --foreground: #171717;
@@ -505,6 +506,7 @@
   }
 
   @layer components {
+    @tailwind;
     .color_palette_gradient {
       background: linear-gradient(
         to right,
