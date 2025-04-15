@@ -19,7 +19,6 @@ const NavItem = ({
   className,
   textSize,
 }: NavItemProps) => {
-
   const pathName = usePathname();
   const prevParam = () => {
     const result = "/" + pathName.split("/")[pathName.split("/").length - 2];
@@ -27,12 +26,15 @@ const NavItem = ({
   };
 
   return (
-    <div key={text} className={`relative group ${className}`}>
-      <Link href={href} className="">
+    <div
+      key={text}
+      className={`relative group ${className}`}>
+      <Link
+        href={href}
+        className="">
         <p
           className={`${textSize} text-light-obsidian dark:text-dark-ice z-10`}
-          onClick={onClick}
-        >
+          onClick={onClick}>
           {text}
         </p>
         <div
@@ -46,9 +48,9 @@ const NavItem = ({
       </Link>
       {(pathName === href ||
         (href.includes("/services") && prevParam() === "/services")) && (
-        <div className="absolute animate-blur-in-out-heavy top-0 w-5 h-full -left-6">
-        <LogoIconLeft className="h-6.5 -right-0" />
-        <LogoIconRight className="h-6.5 -left-0" />
+        <div className="absolute animate-blur-in-out-heavy top-1 w-5 h-full -left-5">
+          <LogoIconLeft className="h-4.5 right-[3px]" />
+          <LogoIconRight className="h-4.5 left-[3px]" />
         </div>
       )}
     </div>
