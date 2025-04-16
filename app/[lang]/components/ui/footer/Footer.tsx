@@ -8,26 +8,29 @@ import { VscGithubAlt } from "react-icons/vsc";
 import Image from "next/image";
 import { getDictionary } from "get-dictionary";
 import { ThemedP } from "@components/atoms/ThemedText";
+import { ComponentProps } from "@interfaces/PageProps";
 
-export default async function Footer({ params }) {
-  const dictionary = await getDictionary(params.lang);
+export default async function Footer({ params }: ComponentProps) {
+  const { lang } = await params;
+
+  const dictionary = await getDictionary(lang);
 
   const year = new Date().getFullYear();
   return (
     <footer
       className={`relative py-24 sm:px-6 lg:px-12 px-4
-       bg-light-fog dark:bg-dark-onyx`}
-    >
+       bg-light-fog dark:bg-dark-onyx`}>
       {/*HUSK Å IMPLEMENTERE FOOTERLINKS COMPONENTS! <FooterLinks Theme={Theme} /> */}
       <div className="flex flex-col items-center justify-center w-full gap-4 sm:justify-between sm:flex-row">
         {/* Contact Information */}
         <div
           className={`flex flex-col gap-2
             text-light-snow dark:text-dark-ice
-          `}
-        >
+          `}>
           <div className="flex gap-4">
-            <Link className="w-fit" href="/contact">
+            <Link
+              className="w-fit"
+              href="/contact">
               <FiMail
                 className={`w-8 h-8  text-light-ash hover:text-light-violet
                     dark:text-dark-frost dark:hover:text-dark-twilight
@@ -35,7 +38,9 @@ export default async function Footer({ params }) {
               />
             </Link>
 
-            <a href="https://github.com/VilloKodeHode" target="_blank">
+            <a
+              href="https://github.com/VilloKodeHode"
+              target="_blank">
               <VscGithubAlt
                 className={`w-8 h-8  text-light-ash hover:text-light-violet
                     dark:text-dark-frost dark:hover:text-dark-twilight
@@ -44,8 +49,7 @@ export default async function Footer({ params }) {
             </a>
             <a
               href="https://www.linkedin.com/in/joakim-villo-71b814a1/"
-              target="_blank"
-            >
+              target="_blank">
               <SlSocialLinkedin
                 className={`w-8 h-8  text-light-ash hover:text-light-violet
                     dark:text-dark-frost dark:hover:text-dark-twilight
@@ -61,8 +65,7 @@ export default async function Footer({ params }) {
         <div
           className={`flex items-center text-center
             text-light-ash dark:text-white
-          `}
-        >
+          `}>
           <h4 className="text-h4">
             {`© ${year} ${dictionary.footer.companyName}`}
           </h4>

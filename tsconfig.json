@@ -30,7 +30,8 @@
       "@data/*": ["app/[lang]/data/*"],
       "@logic/*": ["app/[lang]/logic/*"],
       "@interfaces/*": ["app/[lang]/interfaces/*"]
-    }
+    },
+    "target": "ES2017"
   },
   "include": [
     "next-env.d.ts",

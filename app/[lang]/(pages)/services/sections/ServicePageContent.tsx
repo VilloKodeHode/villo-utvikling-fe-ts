@@ -1,13 +1,17 @@
 import { ReadMoreButton } from "@components/atoms/Buttons";
 import { ThemedH2, ThemedH4, ThemedP } from "@components/atoms/ThemedText";
+import { PageProps } from "@interfaces/PageProps";
+import { getDictionary } from "get-dictionary";
 import Link from "next/link";
 
 export const ServicePageContent = async ({
   params,
-  content,
+  // content,
   showOnScroll,
   id = "service_section",
-}) => {
+}: PageProps) => {
+  const { lang } = await params;
+  const dictionary = await getDictionary(lang);
   return (
     <section
       id={id}
@@ -17,18 +21,18 @@ export const ServicePageContent = async ({
           showOnScroll ? "opacity-0 animate-on-scroll" : ""
         }`}>
         <ThemedH2 className="font-bold text-center">
-          {params.lang === "no"
+          {lang === "no"
             ? "Villo Utvikling tilbyr:"
             : "Villo Development offers:"}
         </ThemedH2>
 
         <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
-          {content.map((item) => (
+          {dictionary.service_cards.map((item) => (
             <ServiceCard
               key={item.title}
               title={item.title}
               text={item.text}
-              href={item.href.replace("{lang}", params.lang)}
+              href={item.href.replace("{lang}", lang)}
               buttonText={item.buttonText}
             />
           ))}

@@ -1,9 +1,20 @@
 import { Locale } from "i18next.config";
 
 export interface PageProps {
-  params: {
-    lang: Locale; // Dynamically passed language from URL
-  };
+  params: Promise<{
+    lang: Locale;
+  }>;
+  content?: any[];
+  showOnScroll?: boolean;
+  id?: string;
+}
+
+export interface ComponentProps {
+  className?: string;
+  params: Promise<{
+    lang: Locale;
+  }>;
+  content?: Record<string, any>;
 }
 
 export interface ButtonProps {
