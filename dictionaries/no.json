@@ -21,7 +21,7 @@
   },
   "heroSection": {
     "slogan": "Fører ditt konsept til realitet",
-    "title": "Nettsider for små og mellomstore bedrifter og klubber",
+    "title": "Nettsider for privatpersoner, små og mellomstore bedrifter og klubber",
     "subtitle": "Jeg bygger nettsider raskt og effektivt ved å bruke de nyeste webteknologiene. Enten du ønsker en enkel løsning med et brukervennlig system, eller en skreddersydd nettside etter dine behov, kan du stole på min ekspertise.",
     "cta": "Kontakt nå",
     "ctaTwo": "Tjenester"
@@ -603,7 +603,7 @@
   },
   "personal_projects": {
     "title": "Mine personlige prosjekter",
-    "cta" : "Sjekk ut",
+    "cta": "Sjekk ut",
     "projects": [
       {
         "projectName": "Gavehjelper app",

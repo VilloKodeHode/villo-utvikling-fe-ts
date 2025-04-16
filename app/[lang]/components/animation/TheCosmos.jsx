@@ -69,8 +69,7 @@ export const TheCosmos = () => {
     <div
       className={`fixed top-0 left-0 w-full h-full -z-20 pointer-events-none transition-all ${
         theme === "light" ? "opacity-5" : "opacity-100"
-      }`}
-    >
+      }`}>
       <Canvas camera={{ position: [0, 0, 0], fov: 75 }}>
         <Starfield />
       </Canvas>

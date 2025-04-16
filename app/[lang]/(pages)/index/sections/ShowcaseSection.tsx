@@ -31,8 +31,7 @@ export const ShowcaseSection = ({ content }) => {
     <>
       <section
         className="relative flex items-center justify-center w-full group/imageEffect"
-        id="showcase-section"
-      >
+        id="showcase-section">
         {/* Image should be visable at all times, so find to make it so */}
         <Image
           src={`${
@@ -40,14 +39,14 @@ export const ShowcaseSection = ({ content }) => {
               ? "/images/logo/WindLogoNoTextLightMode.svg"
               : "/images/logo/WindLogoNoTextDarkMode.svg"
           }`}
-          className="absolute opacity-5 h-[150vh] ease-in-out -z-10 animate-rotate-left-logo"
+          className="absolute opacity-5 top-0 md:-top-1/2 w-screen ease-in-out -z-10 animate-rotate-left-logo"
           alt=""
-          width={5000}
-          height={5000}
+          width={1000}
+          height={1000}
         />
         {/* <div className="grid sm:grid-cols-2 h-[100vh] items-center gap-8 w-full max-w-6xl grid-cols-1 sm:grid-rows-1 grid-rows-3"></div> */}
-        <div className="flex animate-on-scroll opacity-0 sm:flex-row h-[100vh] items-center gap-8 w-full max-w-6xl flex-col">
-          <div className="w-full relative z-10 select-none sm:self-center sm:block flex self-end justify-center ml:mb-8 gap-x-3 md:gap-x-0">
+        <div className="flex animate-on-scroll opacity-0 md:flex-row h-[100vh] items-center gap-8 w-full max-w-6xl flex-col">
+          <div className="w-full relative z-10 select-none md:self-center md:block flex self-end justify-center ml:mb-8 gap-x-3 md:gap-x-0">
             {content.map((showCase, index) => (
               <Showcase
                 key={showCase.alt + index}
@@ -58,17 +57,16 @@ export const ShowcaseSection = ({ content }) => {
               />
             ))}
 
-            <ThemedP className="mb-8 mt-24 hidden h-[72px] sm:block">
+            <ThemedP className="mb-8 mt-24 hidden h-[72px] md:block">
               {content[activeImageIndex].paragraph}
             </ThemedP>
           </div>
 
           <div
             className={`justify-self-end z-10 grid items-center justify-center w-full transition-all 
-                relative md:w-full h-full sm:h-[450px] outline-offset-4 rounded-2xl overflow-hidden outline-2 
+                relative md:w-full sm:h-113 h-1/2 outline-offset-4 rounded-2xl overflow-hidden outline-2 
                 outline-light-violet dark:outline-dark-lavender
-                  `}
-          >
+                  `}>
             {content.map((image, index) => (
               <Image
                 key={image.alt}
@@ -86,7 +84,7 @@ export const ShowcaseSection = ({ content }) => {
               />
             ))}
           </div>
-          <ThemedP className="max-h-[48px] mb-8 block self-start sm:hidden">
+          <ThemedP className="max-h-[48px] mb-8 block self-start md:hidden">
             {content[activeImageIndex].paragraph}
           </ThemedP>
         </div>
@@ -104,18 +102,16 @@ export const Showcase = ({ content, setActiveImage, activeImage, index }) => {
         <ShowCaseHeaderText>
           <span
             onMouseEnter={() => setActiveImage(index)}
-            className={`cursor-pointer font-bold group sm:block h-[60px] flex flex-col items-center align-middle
+            className={`cursor-pointer font-bold group md:block h-[60px] flex flex-col items-center align-middle
             text-light-violet
-            dark:text-dark-lavender`}
-          >
+            dark:text-dark-lavender`}>
             <span
               className={`group-hover:text-light-violet dark:group-hover:text-dark-lavender 
                 group-hover:opacity-100 transition-all duration-500 opacity-60 h1hidden ${
                   activeImage === index
                     ? "text-dark-lavender"
                     : "text-light-fog dark:text-dark-shadow"
-                }`}
-            >
+                }`}>
               <br />
               Web
             </span>

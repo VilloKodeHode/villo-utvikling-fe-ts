@@ -15,7 +15,10 @@ import { TheCosmos } from "@components/animation/TheCosmos";
 // import LanguageSwitcher from "@components/ui/header/languageswitcher/LanguageSwitcher";
 
 export const figtree = Figtree({ subsets: ["latin"] });
-export const noto_emoji = Noto_Color_Emoji({ weight: "400", subsets: ["emoji"] });
+export const noto_emoji = Noto_Color_Emoji({
+  weight: "400",
+  subsets: ["emoji"],
+});
 
 interface PageProps {
   children: React.ReactNode;
@@ -24,24 +27,24 @@ interface PageProps {
   };
 }
 
+//TODO: Lag pris underside (tydeligvis lovpålagt!)
+
 export async function RootLayout({ children, params }: PageProps) {
   const dictionary = await getDictionary(params.lang);
   return (
     <html lang={params.lang ? params.lang : "no"}>
       <body
-        className={`${figtree.className} min-h-[100vh] transition-colors duration-1000 bg-light-snow dark:bg-dark-midnight overflow-x-hidden antialiased`}
-      >
+        className={`${figtree.className} min-h-[100vh] transition-colors duration-1000 bg-light-snow dark:bg-dark-midnight overflow-x-hidden antialiased`}>
         <AppUserProvider>
           {/* <THREESpace /> */}
-          <TheCosmos/>
+          <TheCosmos />
           <Header />
-          <FloatingUtilsBar/>
+          <FloatingUtilsBar />
           <NavBar params={params} />
-          
+
           <main
-          //TODO fix the has selector:
-            className={`flex flex-col animate-Appear [&>canvas]:has-[canvas_game]:my-0 items-center px-4 sm:px-6 lg:px-12 justify-start overflow-x-hidden my-24 gap-28 `}
-          >
+            //TODO fix the has selector:
+            className={`flex flex-col animate-Appear [&>canvas]:has-[canvas_game]:my-0 items-center px-4 sm:px-6 lg:px-12 justify-start overflow-x-hidden sm:mb-24 mb-12 sm:gap-28 gap-14`}>
             {children}
           </main>
           <Footer params={params} />
