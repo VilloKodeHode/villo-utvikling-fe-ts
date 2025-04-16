@@ -45,7 +45,7 @@ export const SkillIcons = ({ content }) => {
           {content?.skills.map((skill) => (
             <div key={skill.alt}>
               <figure
-                className={`relative  z-20 hover:scale-95 transition-all flex justify-center p-6 w-36 h-full rounded-sm shadow-lg bg-light-cloud hover:bg-light-mist dark:bg-dark-slate dark:hover:bg-dark-shadow
+                className={`relative z-20 hover:scale-95 transition-all flex justify-center p-6 w-36 h-full rounded-sm shadow-lg bg-light-cloud hover:bg-light-mist dark:bg-dark-slate dark:hover:bg-dark-shadow
                 group`}
               >
                 <Image
