@@ -20,19 +20,20 @@ export const noto_emoji = Noto_Color_Emoji({
   subsets: ["emoji"],
 });
 
-interface PageProps {
+interface RootProps {
   children: React.ReactNode;
-  params: {
+  params: Promise<{
     lang: Locale;
-  };
+  }>;
 }
 
 //TODO: Lag pris underside (tydeligvis lovpålagt!)
 
-export async function RootLayout({ children, params }: PageProps) {
-  const dictionary = await getDictionary(params.lang);
+export async function RootLayout({ children, params }: RootProps) {
+  const { lang } = await params;
+  const dictionary = await getDictionary(lang);
   return (
-    <html lang={params.lang ? params.lang : "no"}>
+    <html lang={lang ? lang : "no"}>
       <body
         className={`${figtree.className} min-h-[100vh] transition-colors duration-1000 bg-light-snow dark:bg-dark-midnight overflow-x-hidden antialiased`}>
         <AppUserProvider>

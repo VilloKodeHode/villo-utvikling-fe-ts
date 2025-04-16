@@ -6,10 +6,15 @@ import { ServicePageContent } from "app/[lang]/(pages)/services/sections/Service
 // import { getDictionary } from "get-dictionary";
 
 export default async function Home({ params }: PageProps) {
-  const dictionary = await getDictionary(params.lang);
+  const { lang } = await params;
+
+  const dictionary = await getDictionary(lang);
   return (
     <>
-      <HeroSection params={params} content={dictionary.heroSection} />
+      <HeroSection
+        params={params}
+        content={dictionary.heroSection}
+      />
       <ShowcaseSection content={dictionary.showCaseList} />
       <ServicePageContent
         showOnScroll={true}
