@@ -7,6 +7,7 @@ import { useTheme } from "next-themes";
 import generateStarTexture from "./components/generateStarTexture";
 import { createStarLayer, StarLayer } from "./components/StarLayer";
 import { ShootingStar } from "./components/ShootingStar";
+import { Nebula } from "./components/Nebula";
 
 const Starfield = () => {
   const starTexture = useMemo(() => generateStarTexture(), []);
@@ -69,8 +70,10 @@ export const TheCosmos = () => {
     <div
       className={`fixed top-0 left-0 w-full h-full -z-20 pointer-events-none transition-all ${
         theme === "light" ? "opacity-5" : "opacity-100"
-      }`}>
-      <Canvas camera={{ position: [0, 0, 0], fov: 75 }}>
+      }`}
+    >
+      <Canvas camera={{ position: [0, 0, 0], fov: 75, far: 200 }}>
+        <Nebula  />
         <Starfield />
       </Canvas>
     </div>

@@ -6,6 +6,9 @@ import { useTheme } from "next-themes";
 import LanguageSwitcher from "../languageswitcher/LanguageSwitcher";
 import { ThemeSwitch } from "../themeswitcher/ThemeSwitcher";
 
+//TODO cogwheel going in outside of screen when not fullscreen
+
+
 export const FloatingUtilsBar = () => {
   const { theme } = useTheme();
   const [notTop, setNotTop] = useState(false);
@@ -49,16 +52,16 @@ export const FloatingUtilsBar = () => {
 
           <ThemeSwitch />
           <button
-            className={`absolute top-0 2xl:left-[140px] left-[50px] transition-all  duration-500 hover:animate-cog-spin
+            className={`absolute top-0 left-[140px] transition-all  duration-500 hover:animate-cog-spin
           ${
             showToolBar
               ? "not-hover:animate-out-cog-spin animate-out-cog-spin"
-              : "2xl:left-[165px] left-[65px] not-hover:animate-return-cog-spin animate-return-cog-spin"
+              : "left-[165px] not-hover:animate-return-cog-spin animate-return-cog-spin"
           }`}
             onClick={toggleToolBar}
           >
             <FcSettings
-              className={` h-[48px] flex -translate-y-[1px] w-fit`}
+              className={`cursor-pointer h-[48px] flex -translate-y-[1px] w-fit`}
             ></FcSettings>
           </button>
         </div>
