@@ -1,14 +1,15 @@
-import { getDictionary } from "get-dictionary";
+// import { getDictionary } from "get-dictionary";
 import { ServicePageContent } from "@pages/services/sections/ServicePageContent";
-import { PageProps } from "@interfaces/PageProps";
+import { DynamicPageProps } from "@interfaces/PageProps";
 
-export default async function Home({ params }: PageProps,) {
-  const dictionary = await getDictionary(params.lang);
+export default async function Home({ params }: DynamicPageProps) {
+  // const { lang } = await params;
+  // const dictionary = await getDictionary(lang);
   return (
     <>
       <ServicePageContent
         showOnScroll={false}
-        content={dictionary.service_cards}
+        // content={dictionary.service_cards}
         params={params}
       />
     </>

@@ -5,7 +5,7 @@ export interface PageProps {
     lang: Locale;
     service?: string;
   }>;
-  content?: any[];
+  content?: Record<string, any>;
   showOnScroll?: boolean;
   id?: string;
 }
@@ -15,9 +15,6 @@ export interface DynamicPageProps {
     lang: Locale;
     service: string;
   }>;
-  content?: any[];
-  showOnScroll?: boolean;
-  id?: string;
 }
 
 export interface ComponentProps {
