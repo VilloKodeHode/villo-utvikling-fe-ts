@@ -1,4 +1,3 @@
-import { Locale } from "i18next.config";
 import { getDictionary } from "get-dictionary";
 import {
   ThemedH1,
@@ -8,16 +7,10 @@ import {
   ThemedPLarge,
 } from "@components/atoms/ThemedText";
 import { noto_emoji } from "app/[lang]/layout";
+import { DynamicPageProps } from "@interfaces/PageProps";
 
-interface PageProps {
-  params: {
-    service: string; // Dynamically passed service type from URL
-    lang: Locale; // Dynamically passed language from URL
-  };
-}
-
-export default async function Page({ params }: PageProps) {
-  const { service, lang } = params;
+export default async function Page({ params }: DynamicPageProps) {
+  const { service, lang } = await params;
 
   const dictionary = await getDictionary(lang);
   const content = dictionary.services[service];
@@ -37,11 +30,9 @@ export default async function Page({ params }: PageProps) {
           {content.bullitins.map((item, index) => (
             <div
               className="hover:p-0.5 fade-on-hover m-0.5 hover:m-0 transition-all hover:scale-[1.02] rounded-xl animate-color-change"
-              key={service + "bullitin" + index}
-            >
+              key={service + "bullitin" + index}>
               <div
-                className={`relative group z-99 h-44 w-md shadow-sm sm:rounded-lg transition-all ease-linear md:mt-0 md:col-span-1 active:scale-[1.02] group cursor-default grid gap-2 min-h-[155px] bg-light-cloud group-hover:bg-light-mist dark:bg-dark-onyx dark:group-hover:bg-dark-shadow p-6 overflow-hidden`}
-              >
+                className={`relative group z-99 h-44 w-md shadow-sm sm:rounded-lg transition-all ease-linear md:mt-0 md:col-span-1 active:scale-[1.02] group cursor-default grid gap-2 min-h-[155px] bg-light-cloud group-hover:bg-light-mist dark:bg-dark-onyx dark:group-hover:bg-dark-shadow p-6 overflow-hidden`}>
                 {/* <Image
                   src={item.icon}
                   alt={item.title}
@@ -55,8 +46,7 @@ export default async function Page({ params }: PageProps) {
                   </p>
                 </div>
                 <ThemedH4
-                  className={`font-bold z-10 max-w-1/2 transition-colors dark:group-hover:text-dark-lavender ease-linear group-hover:text-light-violet`}
-                >
+                  className={`font-bold z-10 max-w-1/2 transition-colors dark:group-hover:text-dark-lavender ease-linear group-hover:text-light-violet`}>
                   {item.title}
                 </ThemedH4>
                 <ThemedP className="w-2/3">{item.description}</ThemedP>
@@ -67,7 +57,9 @@ export default async function Page({ params }: PageProps) {
       </section>
       <section className="grid gap-8">
         {content.bottom_paragraphs.map((paragraph, index) => (
-          <ThemedP key={index} className="mb-4 text-lg max-w-3xl">
+          <ThemedP
+            key={index}
+            className="mb-4 text-lg max-w-3xl">
             {paragraph}
           </ThemedP>
         ))}

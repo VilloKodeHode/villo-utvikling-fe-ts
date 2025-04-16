@@ -3,6 +3,17 @@ import { Locale } from "i18next.config";
 export interface PageProps {
   params: Promise<{
     lang: Locale;
+    service?: string;
+  }>;
+  content?: any[];
+  showOnScroll?: boolean;
+  id?: string;
+}
+
+export interface DynamicPageProps {
+  params: Promise<{
+    lang: Locale;
+    service: string;
   }>;
   content?: any[];
   showOnScroll?: boolean;
