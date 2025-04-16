@@ -17,7 +17,7 @@ export default async function Page({ params }: DynamicPageProps) {
   return (
     <>
       <section className="">
-        <ThemedH1 className="mb-4 text-3xl font-bold">
+        <ThemedH1 className="mb-4 text-3xl font-bold ">
           {content.top_title}
         </ThemedH1>
         <ThemedPLarge>{content.top_paragraph}</ThemedPLarge>
