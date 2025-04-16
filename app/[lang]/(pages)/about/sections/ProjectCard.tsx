@@ -4,11 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { ExternalCTA } from "@components/atoms/Buttons";
 import { ThemedH5, ThemedP } from "@components/atoms/ThemedText";
+import { ComponentProps } from "@interfaces/PageProps";
 
-export default function ProjectCards({ content }) {
+export default function ProjectCards({ content }: ComponentProps) {
   return (
     <>
-      {content.projects.map((project, index) => (
+      {content?.projects.map((project, index) => (
         <div
           key={project.projectName + index}
           className={`flex flex-col h-[460px] md:h-[550px] lg:h-[600px] justify-between overflow-hidden rounded-lg shadow bg-light-mist darK:bg-dark-onyx

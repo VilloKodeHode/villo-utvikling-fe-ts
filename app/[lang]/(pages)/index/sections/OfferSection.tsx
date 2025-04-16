@@ -4,7 +4,7 @@ import { ReadMoreButton } from "@components/atoms/Buttons";
 import { PageProps } from "@interfaces/PageProps";
 
 export const OfferSection = async ({ params }: PageProps) => {
-  // const content = dictionary.service_cards;
+  const { lang } = await params;
   return (
     <section
       id="OfferSection"
@@ -14,7 +14,7 @@ export const OfferSection = async ({ params }: PageProps) => {
       <div className="mx-auto max-w-7xl ">
         <div className="text-center">
           <ThemedH2 className="text-center">
-            {params.lang === "no"
+            {lang === "no"
               ? "Villo Utvikling tilbyr:"
               : "Villo Development offers:"}
           </ThemedH2>

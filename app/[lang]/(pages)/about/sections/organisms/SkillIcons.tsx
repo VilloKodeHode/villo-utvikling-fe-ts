@@ -1,8 +1,9 @@
 "use client";
 
 import { ThemedP } from "@components/atoms/ThemedText";
-import Image from "next/image";
+// @ts-ignore
 import anime from "animejs";
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 export const SkillIcons = ({ content }) => {

@@ -3,7 +3,6 @@ import { Figtree, Noto_Color_Emoji } from "next/font/google";
 import "./globals.css";
 import CookiePopup from "@components/ui/cookies/CookiePopup";
 import { AppUserProvider } from "@contexts/UserContext";
-import { Locale } from "i18next.config";
 import { NavBar } from "@components/ui/navigation/navbar/NavBar";
 import { Header } from "@components/ui/header/Header";
 import { SplashScreen } from "@components/ui/splashscreen/SplashScreen";
@@ -12,6 +11,7 @@ import Footer from "@components/ui/footer/Footer";
 import { getDictionary } from "get-dictionary";
 import { FloatingUtilsBar } from "@components/ui/header/floatingUtilBar/FloatingUtilBar";
 import { TheCosmos } from "@components/animation/TheCosmos";
+import { RootProps } from "@interfaces/PageProps";
 // import LanguageSwitcher from "@components/ui/header/languageswitcher/LanguageSwitcher";
 
 export const figtree = Figtree({ subsets: ["latin"] });
@@ -20,12 +20,6 @@ export const noto_emoji = Noto_Color_Emoji({
   subsets: ["emoji"],
 });
 
-interface RootProps {
-  children: React.ReactNode;
-  params: Promise<{
-    lang: Locale;
-  }>;
-}
 
 //TODO: Lag pris underside (tydeligvis lovpålagt!)
 
@@ -41,16 +35,16 @@ export async function RootLayout({ children, params }: RootProps) {
           <TheCosmos />
           <Header />
           <FloatingUtilsBar />
-          <NavBar params={params} />
+          <NavBar params={{lang}} content={dictionary.menu_items} />
 
           <main
             //TODO fix the has selector:
             className={`flex flex-col animate-Appear [&>canvas]:has-[canvas_game]:my-0 items-center px-4 sm:px-6 lg:px-12 justify-start overflow-x-hidden sm:mb-24 mb-12 sm:gap-28 gap-14`}>
             {children}
           </main>
-          <Footer params={params} />
+          <Footer content={dictionary.footer} />
           <SplashScreen />
-          <CookiePopup dictionary={dictionary} />
+          <CookiePopup content={dictionary.cookie} />
         </AppUserProvider>
       </body>
     </html>

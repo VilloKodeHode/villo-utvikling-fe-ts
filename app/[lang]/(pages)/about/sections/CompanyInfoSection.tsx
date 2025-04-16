@@ -1,7 +1,10 @@
 import { SimpleLogoComponent } from "@components/atoms/Logo";
 import { ThemedH1, ThemedP } from "@components/atoms/ThemedText";
+import { ComponentProps } from "@interfaces/PageProps";
 
-export const CompanyInfo = ({ content }) => {
+
+export const CompanyInfo = ({ content }: ComponentProps) => {
+
   return (
     <section className="grid max-w-7xl justify-center items-center min-h-[calc(50dvh)]">
       <div className="animate-Page-appear-right">
@@ -14,12 +17,12 @@ export const CompanyInfo = ({ content }) => {
           >
             <SimpleLogoComponent />
 
-            <ThemedH1 className="">{content.title}</ThemedH1>
+            <ThemedH1 className="">{content?.title}</ThemedH1>
             <ThemedP className="">
-              {content.paragraphOne}
+              {content?.paragraphOne}
             </ThemedP>
             <ThemedP className="">
-              {content.paragraphTwo}
+              {content?.paragraphTwo}
             </ThemedP>
             {/* <ThemedP className="max-w-5xl px-8 pb-5 ">
               {language === "Norwegian" ? "" : ""}

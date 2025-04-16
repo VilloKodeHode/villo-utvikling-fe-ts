@@ -1,13 +1,14 @@
 import { Locale } from "i18next.config";
 
+export interface DictionaryContent {
+  [key: string]: any;
+}
+
 export interface PageProps {
   params: Promise<{
     lang: Locale;
     service?: string;
   }>;
-  content?: Record<string, any>;
-  showOnScroll?: boolean;
-  id?: string;
 }
 
 export interface DynamicPageProps {
@@ -17,13 +18,24 @@ export interface DynamicPageProps {
   }>;
 }
 
+
 export interface ComponentProps {
   className?: string;
-  params: Promise<{
-    lang: Locale;
-  }>;
-  content?: Record<string, any>;
+  content?: DictionaryContent;
+  id?: string;
+  showOnScroll?: boolean;
 }
+
+export interface ComponentPropsWithParams {
+  className?: string;
+  params: {
+    lang: Locale;
+  };
+  content?: DictionaryContent;
+  id?: string;
+  showOnScroll?: boolean;
+}
+
 
 export interface ButtonProps {
   children: React.ReactNode;
@@ -31,3 +43,11 @@ export interface ButtonProps {
   className?: string;
   borderColor?: string;
 }
+
+export interface RootProps {
+  children: React.ReactNode;
+  params: Promise<{
+    lang: Locale;
+  }>;
+}
+

@@ -6,14 +6,10 @@ import { FiMail } from "react-icons/fi";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { VscGithubAlt } from "react-icons/vsc";
 import Image from "next/image";
-import { getDictionary } from "get-dictionary";
 import { ThemedP } from "@components/atoms/ThemedText";
-import { ComponentProps } from "@interfaces/PageProps";
+import { ComponentProps} from "@interfaces/PageProps";
 
-export default async function Footer({ params }: ComponentProps) {
-  const { lang } = await params;
-
-  const dictionary = await getDictionary(lang);
+export default async function Footer({ content }: ComponentProps) {
 
   const year = new Date().getFullYear();
   return (
@@ -67,7 +63,7 @@ export default async function Footer({ params }: ComponentProps) {
             text-light-ash dark:text-white
           `}>
           <h4 className="text-h4">
-            {`© ${year} ${dictionary.footer.companyName}`}
+            {`© ${year} ${content?.companyName}`}
           </h4>
         </div>
 

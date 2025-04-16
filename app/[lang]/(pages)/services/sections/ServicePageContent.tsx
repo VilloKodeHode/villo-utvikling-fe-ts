@@ -1,25 +1,23 @@
 import { ReadMoreButton } from "@components/atoms/Buttons";
 import { ThemedH2, ThemedH4, ThemedP } from "@components/atoms/ThemedText";
-import { PageProps } from "@interfaces/PageProps";
-import { getDictionary } from "get-dictionary";
+import { ComponentPropsWithParams } from "@interfaces/PageProps";
 import Link from "next/link";
 
-export const ServicePageContent = async ({
+export const ServicePageContent = ({
   params,
-  // content,
+  content,
   showOnScroll,
   id = "service_section",
-}: PageProps) => {
-  const { lang } = await params;
-  const dictionary = await getDictionary(lang);
+}: ComponentPropsWithParams) => {
+  const { lang } = params;
+
   return (
-    <section
-      id={id}
-      className={`w-full py-2 scroll-into-view`}>
+    <section id={id} className={`w-full py-2 scroll-into-view`}>
       <div
         className={`mx-auto flex flex-col gap-10 max-w-7xl  ${
           showOnScroll ? "opacity-0 animate-on-scroll" : ""
-        }`}>
+        }`}
+      >
         <ThemedH2 className="font-bold text-center">
           {lang === "no"
             ? "Villo Utvikling tilbyr:"
@@ -27,7 +25,7 @@ export const ServicePageContent = async ({
         </ThemedH2>
 
         <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
-          {dictionary.service_cards.map((item) => (
+          {content?.map((item) => (
             <ServiceCard
               key={item.title}
               title={item.title}
@@ -46,16 +44,16 @@ export const ServiceCard = ({ title, text, href, buttonText }) => {
   return (
     <div>
       <div
-        className={`relative z-[99] max-w-sm md:mt-0 md:col-span-1 group cursor-default grid gap-2 min-h-[240px] p-6 glass-morphism interactive-box`}>
+        className={`relative z-[99] max-w-sm md:mt-0 md:col-span-1 group cursor-default grid gap-2 min-h-[240px] p-6 glass-morphism interactive-box`}
+      >
         <ThemedH4
-          className={`font-bold z-10 max-w-fit transition-colors dark:group-hover:text-dark-lavender ease-linear group-hover:text-light-violet`}>
+          className={`font-bold z-10 max-w-fit transition-colors dark:group-hover:text-dark-lavender ease-linear group-hover:text-light-violet`}
+        >
           {title}
         </ThemedH4>
         <ThemedP>{text}</ThemedP>
         <ReadMoreButton className="self-end">
-          <Link
-            href={href}
-            className="">
+          <Link href={href} className="">
             {buttonText}
           </Link>
         </ReadMoreButton>

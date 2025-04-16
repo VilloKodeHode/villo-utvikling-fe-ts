@@ -5,11 +5,12 @@ import { useState } from "react";
 import { deleteCookie, setCookie } from "cookies-next";
 import { ThemedH5, ThemedSmall } from "@components/atoms/ThemedText";
 import { CookieAccept } from "@components/atoms/Buttons";
+import { ComponentProps } from "@interfaces/PageProps";
 
-const CookiePopup = ({ dictionary }) => {
+const CookiePopup = ({ content }: ComponentProps) => {
   const [showPopup, setShowPopup] = useState(false);
   const [beenUsed, setbeenUsed] = useState(false);
-  const content = dictionary.cookie;
+  
 
   const handleCookieAccept = () => {
     // Set a cookie to remember that the user has accepted cookies
@@ -56,20 +57,20 @@ const CookiePopup = ({ dictionary }) => {
         `}
       >
         <div className="relative grid items-center justify-center gap-2 pt-3">
-          <ThemedH5 className={`pb-2`}>{content.title}</ThemedH5>
-          <ThemedSmall>{content.why}</ThemedSmall>
+          <ThemedH5 className={`pb-2`}>{content?.title}</ThemedH5>
+          <ThemedSmall>{content?.why}</ThemedSmall>
           <ThemedSmall
             className={` py-2
           `}
           >
-            {content.disclaimer}
+            {content?.disclaimer}
           </ThemedSmall>
           <div className="flex justify-around gap-2">
             <CookieAccept onClick={handleAccept} className="">
-              {content.accept}
+              {content?.accept}
             </CookieAccept>
             <CookieAccept onClick={handleDecline} className="">
-              {content.decline}
+              {content?.decline}
             </CookieAccept>
           </div>
         </div>

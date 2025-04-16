@@ -1,25 +1,16 @@
-import { getDictionary } from "get-dictionary";
-// import { Locale } from "i18next.config";
 import NavItem from "../molecules/NavItem";
 import LogoComponent from "@components/atoms/Logo";
-import { ComponentProps } from "@interfaces/PageProps";
-
-// interface ComponentProps {
-//   className?: string;
-//   params: {
-//     lang: Locale; // Dynamically passed language from URL
-//   };
-// }
+import { ComponentPropsWithParams } from "@interfaces/PageProps";
 
 interface MenuItem {
   text: string;
   href: string;
 }
 
-export const NavBar = async ({ params }: ComponentProps) => {
-  const { lang } = await params;
-  const dictionary = await getDictionary(lang);
-  const menuItems = dictionary.menu_items.map((item: MenuItem) => {
+export const NavBar = ({ content, params }: ComponentPropsWithParams) => {
+  const { lang } = params;
+
+  const menuItems = content?.map((item: MenuItem) => {
     if (!item.href) {
       console.error("Menu item missing href:", item);
       return { ...item, href: "#" }; // Default to "#" if href is missing

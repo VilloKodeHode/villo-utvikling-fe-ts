@@ -1,13 +1,14 @@
 import { ThemedH1 } from "@components/atoms/ThemedText";
 import ProjectCards from "./ProjectCard";
+import { ComponentProps } from "@interfaces/PageProps";
 
-export const ProjectSection = ({content}) => {
+export const ProjectSection = ({content}: ComponentProps) => {
   return (
     <div className="py-12">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="text-center">
           <ThemedH1>
-            {content.title}
+            {content?.title}
           </ThemedH1>
         </div>
         <div className="mt-10 animate-PageAppearRight">

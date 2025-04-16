@@ -4,9 +4,11 @@ import { PaletteSection } from "./sections/PaletteSection";
 import { TextAndImageSection } from "@components/molecyles/Sections";
 import { SkillsSection } from "./sections/SkillsSection";
 import { ProjectSection } from "./sections/ProjectSection";
+import { PageProps } from "@interfaces/PageProps";
 
-export default async function Home({ params }) {
-  const dictionary = await getDictionary(params.lang);
+export default async function Home({ params }: PageProps) {
+  const { lang } = await params;
+  const dictionary = await getDictionary(lang);
   return (
     <>
       <CompanyInfo content={dictionary.companyInfo} />
