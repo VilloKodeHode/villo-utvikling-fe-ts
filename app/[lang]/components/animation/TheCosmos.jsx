@@ -24,15 +24,15 @@ const Starfield = () => {
   );
 
   const layerOne = useMemo(
-    () => createStarLayer(1500, [100, 120], starColors),
+    () => createStarLayer(1000, [100, 120], starColors),
     [starColors]
   );
   const layerTwo = useMemo(
-    () => createStarLayer(1500, [120, 140], starColors),
+    () => createStarLayer(1000, [120, 140], starColors),
     [starColors]
   );
   const layerThree = useMemo(
-    () => createStarLayer(20, [50, 70], starColors),
+    () => createStarLayer(40, [50, 70], starColors),
     [starColors]
   );
 
@@ -69,7 +69,7 @@ export const TheCosmos = () => {
   return (
     <div
       className={`fixed top-0 left-0 w-full h-full -z-20 pointer-events-none transition-all ${
-        theme === "light" ? "opacity-5" : "opacity-100"
+        theme === "light" ? "opacity-5" : "opacity-80"
       }`}
     >
       <Canvas camera={{ position: [0, 0, 0], fov: 75, far: 200 }}>

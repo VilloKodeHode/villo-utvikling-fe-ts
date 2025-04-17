@@ -42,6 +42,7 @@ export const NavBar = ({ content, params }: ComponentPropsWithParams) => {
           ))}
         </div>
       </div>
+      {/* <HamburgerBar params={{lang}} content={content}/> */}
     </div>
   );
 };

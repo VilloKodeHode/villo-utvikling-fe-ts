@@ -365,8 +365,7 @@
     { "text": "Home", "href": "/{lang}" },
     { "text": "About", "href": "/{lang}/about" },
     { "text": "Portfolio", "href": "/{lang}/portfolio" },
-    { "text": "Contact", "href": "/{lang}/contact" },
-    { "text": "Services", "href": "/{lang}/services" }
+    { "text": "Contact", "href": "/{lang}/contact" }
   ],
 
   "service_cards": [

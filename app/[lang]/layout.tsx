@@ -53,7 +53,9 @@ export async function RootLayout({ children, params }: RootProps) {
 
 export default RootLayout;
 
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.villoutvikling.com"),
   title: "Villo Utvikling",
   description:
     "Profesjonell frontend- og webutvikling med fokus på responsive, brukervennlige og visuelt tiltalende nettsider for bedrifter, klubber og privatpersoner.",
@@ -74,7 +76,7 @@ export const metadata: Metadata = {
     locale: "no-NO",
     images: [
       {
-        url: "/images/logo/WindLogoNoTextLightMode.svg",
+        url: "/images/logo/WindLogoNoTextLightMode.svg", // now resolves with metadataBase
         width: 1200,
         height: 630,
         alt: "Villo Utvikling Logo",
@@ -87,3 +89,4 @@ export const metadata: Metadata = {
     apple: "/images/logo/WindLogoNoTextLightMode.svg",
   },
 };
+

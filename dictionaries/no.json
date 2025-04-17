@@ -361,8 +361,7 @@
     { "text": "Om", "href": "/{lang}/about" },
     { "text": "Portofølje", "href": "/{lang}/portfolio" },
     { "text": "Kontakt", "href": "/{lang}/contact" },
-    { "text": "Tjenester", "href": "/{lang}/services" },
-    { "text": "?", "href": "/{lang}/secret" }
+    { "text": "Tjenester", "href": "/{lang}/services" }
   ],
 
   "service_cards": [

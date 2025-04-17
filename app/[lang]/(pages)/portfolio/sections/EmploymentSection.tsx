@@ -8,9 +8,9 @@ export const EmploymentSection = ({ content }) => {
     <section className="px-4 gap-10 grid max-w-7xl sm:px-6 lg:px-8">
       <ThemedH2 className="px-12 text-center">{content.title} </ThemedH2>
       <div className="flex flex-wrap items-center justify-center py-4 gap-8">
-        {content.companies.map((company) => (
+        {content.companies.map((company, index) => (
           <div
-            key={company.name + company.id}
+            key={company.name+index}
             className={`shadow-md gap-2 lg:gap-4 flex flex-col justify-between overflow-hidden h-94 md:w-125 w-full hover:scale-102
                 ${company.colors.shadow}
                  transition-all rounded-lg bg-light-mist dark:bg-dark-onyx`}>
@@ -39,9 +39,9 @@ export const EmploymentSection = ({ content }) => {
 
             <div className="flex flex-wrap w-full items-center p-2 h-fit">
               {/* px-2 md:px-6 pb-2 md:pb-6 gap-2 md:gap-4 */}
-              {company.skillsUsed.map((skill) => (
+              {company.skillsUsed.map((skill, index) => (
                 <a
-                  key={skill.name}
+                  key={skill.name+index}
                   href={skill.href}
                   target="_blank"
                   rel="noreferrer">

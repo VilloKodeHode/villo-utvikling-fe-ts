@@ -14,7 +14,7 @@ export const ClientsSection = ({ content }) => {
       <div className={`z-10 flex flex-wrap justify-center gap-12`}>
         {content.projects.map((clientProject) => (
           <a
-            key={clientProject.id}
+            key={clientProject.name}
             href={clientProject.href}
             target={clientProject.href ? "_blank" : undefined}
             className={`overflow-hidden relative rounded-sm shadow-lg hover:scale-105 transition`}

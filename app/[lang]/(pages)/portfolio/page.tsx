@@ -3,9 +3,11 @@ import { getDictionary } from "get-dictionary";
 import { ThemedH1, ThemedP } from "@components/atoms/ThemedText";
 import { EmploymentSection } from "./sections/EmploymentSection";
 import { ClientsSection } from "./sections/ClientSection";
+import { PageProps } from "@interfaces/PageProps";
 
-export default async function Home({ params }) {
-  const dictionary = await getDictionary(params.lang);
+export default async function Home({ params }: PageProps) {
+  const { lang } = await params;
+  const dictionary = await getDictionary(lang);
   const content = dictionary.portfolio;
   return (
     <>

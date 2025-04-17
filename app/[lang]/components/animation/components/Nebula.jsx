@@ -93,7 +93,7 @@ float noise(vec2 p){
 }
 
 void main() {
-  vec2 uv = vUv * 5.0;
+  vec2 uv = vUv * 3.0;
   float n = 0.0;
   float scale = 1.0;
 
