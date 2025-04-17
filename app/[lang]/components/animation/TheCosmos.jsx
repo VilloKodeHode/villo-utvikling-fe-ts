@@ -21,9 +21,10 @@ export const TheCosmos = () => {
         camera={{ position: [0, 0, 0], fov: 75, far: 200 }}
         eventSource={document.body}
         eventPrefix="client"
+        style={{ pointerEvents: "auto" }} 
       >
         <Suspense fallback={null}>
-          <ArrowUpContellation />
+          {/* <ArrowUpContellation /> */}
           <ArrowDownConstellation />
           <Nebula />
           <Starfield />

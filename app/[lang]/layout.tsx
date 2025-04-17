@@ -6,13 +6,12 @@ import { AppUserProvider } from "@contexts/UserContext";
 import { NavBar } from "@components/ui/navigation/navbar/NavBar";
 import { Header } from "@components/ui/header/Header";
 import { SplashScreen } from "@components/ui/splashscreen/SplashScreen";
-// import THREESpace from "@components/animation/Space";
 import Footer from "@components/ui/footer/Footer";
 import { getDictionary } from "get-dictionary";
 import { FloatingUtilsBar } from "@components/ui/header/floatingUtilBar/FloatingUtilBar";
 import { TheCosmos } from "@components/animation/TheCosmos";
 import { RootProps } from "@interfaces/PageProps";
-// import LanguageSwitcher from "@components/ui/header/languageswitcher/LanguageSwitcher";
+import FloatingScrollToTopCanvas from "@components/animation/components/ArrowUpConstellation";
 
 export const figtree = Figtree({ subsets: ["latin"] });
 export const noto_emoji = Noto_Color_Emoji({
@@ -32,6 +31,7 @@ export async function RootLayout({ children, params }: RootProps) {
         className={`${figtree.className} relative min-h-[100vh] transition-colors duration-1000 bg-light-snow dark:bg-dark-midnight overflow-x-hidden antialiased`}>
         <AppUserProvider>
           {/* <THREESpace /> */}
+          <FloatingScrollToTopCanvas />
           <TheCosmos />
           <Header />
           <FloatingUtilsBar />

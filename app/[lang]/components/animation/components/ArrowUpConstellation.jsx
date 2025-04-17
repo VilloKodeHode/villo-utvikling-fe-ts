@@ -1,23 +1,15 @@
 "use client";
-import { useEffect, useMemo, useRef, useState } from "react";
-import { useThree, useFrame } from "@react-three/fiber";
+import { Suspense, useMemo, useRef, useState } from "react";
+import { useThree, useFrame, Canvas } from "@react-three/fiber";
 import * as THREE from "three";
 
-export const ArrowUpContellation = () => {
+export const ArrowUpConstellation = ({ standalone = false }) => {
   const groupRef = useRef();
   const clickPlaneRef = useRef();
   const { size, camera } = useThree();
 
-  const [isVisible, setIsVisible] = useState(false);
+  const [hovered, setHovered] = useState(false);
   const targetOpacity = useRef(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsVisible(window.scrollY > 0);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const starTexture = useMemo(() => {
     const canvas = document.createElement("canvas");
@@ -52,19 +44,27 @@ export const ArrowUpContellation = () => {
     return array;
   }, [starPositions]);
 
-  const buttonZ = -20;
+  const buttonZ = -5;
+
+  // Floating mode uses fixed X/Y
   const buttonY = useMemo(() => {
+    if (standalone) return 0;
     const distance = Math.abs(buttonZ);
     const fov = (camera.fov * Math.PI) / 180;
     const visibleHeight = 2 * Math.tan(fov / 2) * distance;
     return -visibleHeight / 2 + visibleHeight * 0.1;
-  }, [camera.fov, size]);
+  }, [camera.fov, size, standalone]);
 
   const buttonX = useMemo(() => {
+    if (standalone) return 0;
     const distance = Math.abs(buttonZ);
-    const visibleWidth = (2 * Math.tan((camera.fov * Math.PI) / 360) * distance) * (size.width / size.height);
-    return visibleWidth / 2 - 1.5; // 1.5 units in from right
-  }, [camera.fov, size]);
+    const visibleWidth =
+      2 *
+      Math.tan((camera.fov * Math.PI) / 360) *
+      distance *
+      (size.width / size.height);
+    return visibleWidth / 2 - 1.5;
+  }, [camera.fov, size, standalone]);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -73,8 +73,17 @@ export const ArrowUpContellation = () => {
   useFrame(({ clock }) => {
     const t = clock.getElapsedTime();
     const flicker = 0.3 + 0.2 * Math.sin(t * 2);
-    const target = isVisible ? flicker : 0;
-    targetOpacity.current = THREE.MathUtils.lerp(targetOpacity.current, target, 0.1);
+    const scrollY = window.scrollY;
+    const fade = Math.min(1, scrollY / (window.innerHeight * 0.4)); // fades in near top
+
+    const hoverBoost = hovered ? 1.0 : 0.0;
+    const target = (flicker + hoverBoost) * fade;
+
+    targetOpacity.current = THREE.MathUtils.lerp(
+      targetOpacity.current,
+      target,
+      0.1
+    );
 
     if (groupRef.current) {
       groupRef.current.material.opacity = targetOpacity.current;
@@ -82,10 +91,14 @@ export const ArrowUpContellation = () => {
 
     if (clickPlaneRef.current) {
       const plane = clickPlaneRef.current;
-      plane.visible = targetOpacity.current > 0.01;
-      plane.raycast = plane.visible
-        ? plane.__originalRaycast ?? plane.raycast
-        : () => {};
+
+      if (!plane.__originalRaycast && typeof plane.raycast === "function") {
+        plane.__originalRaycast = plane.raycast;
+      }
+
+      const shouldBeVisible = targetOpacity.current > 0.01;
+      plane.visible = shouldBeVisible;
+      plane.raycast = shouldBeVisible ? plane.__originalRaycast : () => {};
     }
   });
 
@@ -95,11 +108,17 @@ export const ArrowUpContellation = () => {
         ref={clickPlaneRef}
         position={[buttonX, buttonY, buttonZ + 0.01]}
         onPointerDown={scrollToTop}
-        onPointerOver={() => (document.body.style.cursor = "pointer")}
-        onPointerOut={() => (document.body.style.cursor = "default")}
+        onPointerOver={() => {
+          setHovered(true);
+          document.body.style.cursor = "pointer";
+        }}
+        onPointerOut={() => {
+          setHovered(false);
+          document.body.style.cursor = "default";
+        }}
       >
         <planeGeometry args={[4, 4]} />
-        <meshBasicMaterial transparent opacity={0} />
+        <meshBasicMaterial transparent opacity={0.2} color={"white"} depthTest={false} />
       </mesh>
 
       <points ref={groupRef} position={[buttonX, buttonY, buttonZ]}>
@@ -118,9 +137,27 @@ export const ArrowUpContellation = () => {
           transparent
           opacity={1}
           depthWrite={false}
+          depthTest={false}
           blending={THREE.AdditiveBlending}
         />
       </points>
     </>
   );
 };
+
+
+export default function FloatingScrollToTopCanvas() {
+  return (
+    <div className="fixed bottom-6 right-6 z-[1000] w-20 h-20">
+      <Canvas
+        camera={{ position: [0, 0, 5], fov: 75 }}
+        eventSource={document.body}
+        eventPrefix="client"
+      >
+               <Suspense fallback={null}>
+        <ArrowUpConstellation standalone />
+        </Suspense>
+      </Canvas>
+    </div>
+  );
+}
