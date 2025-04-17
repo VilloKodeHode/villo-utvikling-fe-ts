@@ -7,6 +7,7 @@ export const Nebula = () => {
   const meshRef = useRef();
   const { camera, size } = useThree();
   const [planeSize, setPlaneSize] = useState({ width: 200, height: 120 });
+  const parallaxFactor = 0.015;
 
   // Dynamically calculate plane size based on camera and canvas size
   useEffect(() => {
@@ -27,13 +28,19 @@ export const Nebula = () => {
 
   useFrame(({ clock }) => {
     uniforms.uTime.value = clock.getElapsedTime();
-  
+
+
     // Same scroll logic as stars
     const scrollY = window.scrollY;
-    const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight * 1.5;
+    const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight * 2.5;
     const opacityFactor = Math.max(0, 1 - scrollY / scrollableHeight);
   
     uniforms.uOpacity.value = 0.4 * opacityFactor; // Base opacity * scroll fade
+
+    // Parallax effect
+    if (meshRef.current) {
+      meshRef.current.position.y = window.scrollY * parallaxFactor;
+    }
   });
 
   return (

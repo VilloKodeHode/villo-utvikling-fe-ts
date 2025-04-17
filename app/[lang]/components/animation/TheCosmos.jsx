@@ -40,21 +40,21 @@ const Starfield = () => {
     <>
       <StarLayer
         data={layerOne}
-        scrollFactor={0.05}
+        scrollFactor={0.005}
         starTexture={starTexture}
         rotationSpeed={{ x: 0.00003, y: 0.000016 }}
       />
       <StarLayer
         data={layerTwo}
-        scrollFactor={0.02}
+        scrollFactor={0.002}
         starTexture={starTexture}
         rotationSpeed={{ x: 0.000015, y: 0.000008 }}
       />
       <StarLayer
         data={layerThree}
-        scrollFactor={0.002}
+        scrollFactor={0.0005}
         starTexture={starTexture}
-        rotationSpeed={{ x: 0.00003, y: 0.000012 }}
+        rotationSpeed={{ x: 0.00008, y: 0.000012 }}
       />
       <ShootingStar />
       <ShootingStar />
