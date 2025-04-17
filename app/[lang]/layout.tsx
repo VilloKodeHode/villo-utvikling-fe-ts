@@ -55,7 +55,7 @@ export default RootLayout;
 
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.villoutvikling.com"),
+  metadataBase: new URL("https://villo-utvikling-fe-ts.vercel.app/no"),
   title: "Villo Utvikling",
   description:
     "Profesjonell frontend- og webutvikling med fokus på responsive, brukervennlige og visuelt tiltalende nettsider for bedrifter, klubber og privatpersoner.",
@@ -64,11 +64,11 @@ export const metadata: Metadata = {
   authors: [{ name: "Joakim Villo - Villo Utvikling" }],
   robots: "index, follow",
   alternates: {
-    canonical: "https://www.villoutvikling.com/",
+    canonical: "https://villo-utvikling-fe-ts.vercel.app/no/",
   },
   openGraph: {
     type: "website",
-    url: "https://www.villoutvikling.com/",
+    url: "https://villo-utvikling-fe-ts.vercel.app/no/",
     siteName: "Villo Utvikling",
     title: "Villo Utvikling",
     description:
