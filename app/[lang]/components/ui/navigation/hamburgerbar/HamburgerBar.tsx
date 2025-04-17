@@ -1,7 +1,6 @@
 "use client";
 
 import NavItem from "../molecules/NavItem";
-import LogoComponent from "@components/atoms/Logo";
 import { IoCloseSharp } from "react-icons/io5";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useEffect, useRef, useState } from "react";
@@ -9,7 +8,6 @@ import { useTheme } from "next-themes";
 
 export default function HamburgerBar({
   menuItems,
-  params,
 }: {
   menuItems: { text: string; href: string }[];
   params: { lang: string };

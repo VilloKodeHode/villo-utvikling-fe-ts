@@ -15,7 +15,6 @@ export default async function Home({ params }: PageProps) {
       <IntroSection content={content} />
       <ClientsSection content={content.customer_projects} />
       <EmploymentSection content={content.employment} />
-
       {/* <QuotesSection /> */}
       {/* <LetsGoCTA
         type="email"

@@ -2,7 +2,6 @@
 
 import { FcSettings } from "react-icons/fc";
 import { useEffect, useState } from "react";
-import { useTheme } from "next-themes";
 import LanguageSwitcher from "../languageswitcher/LanguageSwitcher";
 import { ThemeSwitch } from "../themeswitcher/ThemeSwitcher";
 
