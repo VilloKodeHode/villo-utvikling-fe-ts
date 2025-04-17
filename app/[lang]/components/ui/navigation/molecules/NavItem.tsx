@@ -1,6 +1,5 @@
 "use client";
 
-import { LogoIconLeft, LogoIconRight } from "@components/atoms/logo/LogoParts";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 

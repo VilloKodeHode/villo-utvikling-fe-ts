@@ -1,4 +1,4 @@
-import { BadgeButton, SkillLinkButton } from "@components/atoms/Buttons";
+import { BadgeButton } from "@components/atoms/Buttons";
 import {
   ShrinkingThemedP,
   ThemedH2,

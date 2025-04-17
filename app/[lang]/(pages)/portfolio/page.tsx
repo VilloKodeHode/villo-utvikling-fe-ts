@@ -1,6 +1,5 @@
 import { getDictionary } from "get-dictionary";
 
-import { ThemedH1, ThemedP } from "@components/atoms/ThemedText";
 import { EmploymentSection } from "./sections/EmploymentSection";
 import { ClientsSection } from "./sections/ClientSection";
 import { PageProps } from "@interfaces/PageProps";

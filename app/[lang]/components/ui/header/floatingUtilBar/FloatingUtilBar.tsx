@@ -10,7 +10,6 @@ import { ThemeSwitch } from "../themeswitcher/ThemeSwitcher";
 
 
 export const FloatingUtilsBar = () => {
-  const { theme } = useTheme();
   const [notTop, setNotTop] = useState(false);
   const [showToolBar, setShowToolBar] = useState(false);
 
