@@ -45,7 +45,7 @@ export const Header = () => {
         >
           
           <a
-            href="https://github.com/VilloKodeHode"
+            href="https://www.linkedin.com/in/joakim-villo-71b814a1/"
             target="_blank"
             className={`transition-all z-40`}
           >
