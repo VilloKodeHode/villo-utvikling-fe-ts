@@ -42,23 +42,21 @@ export const ServicePageContent = ({
 
 export const ServiceCard = ({ title, text, href, buttonText }) => {
   return (
-    <div>
-      <div
-        className={`relative z-[99] max-w-sm md:mt-0 md:col-span-1 group cursor-default grid gap-2 min-h-[240px] p-6 glass-morphism interactive-box`}
-      >
-        <ThemedH4
-          className={`font-bold z-10 max-w-fit transition-colors dark:group-hover:text-dark-lavender ease-linear group-hover:text-light-violet`}
+    <div className="">
+      <Link href={href} className="cursor-pointer">
+        <div
+          className={`relative z-[99] max-w-sm md:mt-0 md:col-span-1 group grid gap-2 min-h-[240px] p-6 glass-morphism interactive-box`}
         >
-          {title}
-        </ThemedH4>
-        <ThemedP>{text}</ThemedP>
-        <ReadMoreButton className="self-end">
-          <Link href={href} className="">
-            {buttonText}
-          </Link>
-        </ReadMoreButton>
-        {/* <div className="absolute group-hover:opacity-80 opacity-0 group-hover:h-[105%] group-hover:w-[103.5%] w-0 h-0 transition-all right-1/2 translate-x-1/2 top-1/2 translate-y-[-50%] sm:rounded-lg -z-99 bg-dark-lavender" /> */}
-      </div>
+          <ThemedH4
+            className={`font-bold z-10 max-w-fit transition-colors dark:group-hover:text-dark-lavender ease-linear group-hover:text-light-violet`}
+          >
+            {title}
+          </ThemedH4>
+          <ThemedP>{text}</ThemedP>
+          <ReadMoreButton className="self-end">{buttonText}</ReadMoreButton>
+          {/* <div className="absolute group-hover:opacity-80 opacity-0 group-hover:h-[105%] group-hover:w-[103.5%] w-0 h-0 transition-all right-1/2 translate-x-1/2 top-1/2 translate-y-[-50%] sm:rounded-lg -z-99 bg-dark-lavender" /> */}
+        </div>
+      </Link>
     </div>
   );
 };
