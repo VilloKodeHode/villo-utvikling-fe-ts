@@ -19,11 +19,9 @@ export const ClientsSection = ({ content }) => {
             target={clientProject.href ? "_blank" : undefined}
             className={`overflow-hidden relative rounded-sm shadow-lg hover:scale-105 transition`}
           >
-            {/* {!clientProject.completed && ( */}
               <CTOThemedP className="absolute z-10 transition-all top-0 right-0 p-1 rounded-bl-sm bg-light-violet">
                 {clientProject.projectInfo}
               </CTOThemedP>
-            {/* )} */}
 
             <div
               className={`z-20 group grid justify-center transition-all bg-light-cloud hover:bg-light-mist

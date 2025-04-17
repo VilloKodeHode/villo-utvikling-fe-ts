@@ -359,7 +359,7 @@
   "menu_items": [
     { "text": "Hjem", "href": "/{lang}" },
     { "text": "Om", "href": "/{lang}/about" },
-    { "text": "Portofølje", "href": "/{lang}/portfolio" },
+    { "text": "Portfolio", "href": "/{lang}/portfolio" },
     { "text": "Kontakt", "href": "/{lang}/contact" },
     { "text": "Tjenester", "href": "/{lang}/services" }
   ],
@@ -400,7 +400,7 @@
     "title": "Portofølje",
     "description": "Med lidenskap for front-end-utvikling og et forpliktende fokus på å skape brukersentrerte design, gir jeg liv til din visjon. Utforsk prosjektene jeg har hatt gleden av å jobbe med, hver av dem representerer en blanding av kunst og teknologi som definerer min tilnærming",
     "customer_projects": {
-      "title": "Kunderprosjekter",
+      "title": "Kundeprosjekter",
       "projects": [
         {
           "name": "Wileo AS",
