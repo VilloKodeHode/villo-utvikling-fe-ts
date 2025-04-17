@@ -47,15 +47,15 @@ export const ThemeSwitch: React.FC = () => {
           ${
             runAnimation === false
               ? theme === "light"
-                ? "animate-Theme-switch-slide-in"
+                ? "animate-theme-switch-slide-in"
                 : "hidden"
               : ""
           }
            ${
              runAnimation
                ? theme === "light"
-                 ? "animate-Theme-switch-slide-in"
-                 : "animate-Theme-switch-slide-out"
+                 ? "animate-theme-switch-slide-in"
+                 : "animate-theme-switch-slide-out"
                : ""
            }
           pointer-events-none w-8 h-auto absolute top-0`}
@@ -66,14 +66,14 @@ export const ThemeSwitch: React.FC = () => {
           ${
             runAnimation === false
               ? theme === "dark"
-                ? "animate-Theme-switch-slide-in"
+                ? "animate-theme-switch-slide-in"
                 : "hidden"
               : ""
           } ${
           runAnimation
             ? theme === "dark"
-              ? "animate-Theme-switch-slide-in"
-              : "animate-Theme-switch-slide-out"
+              ? "animate-theme-switch-slide-in"
+              : "animate-theme-switch-slide-out"
             : ""
         } pointer-events-none w-8 h-auto absolute top-0`}
       />

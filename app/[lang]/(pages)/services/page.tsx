@@ -1,5 +1,5 @@
 import { ServicePageContent } from "@pages/services/sections/ServicePageContent";
-import {PageProps } from "@interfaces/PageProps";
+import { PageProps } from "@interfaces/PageProps";
 import { getDictionary } from "get-dictionary";
 
 export default async function Home({ params }: PageProps) {
@@ -7,11 +7,13 @@ export default async function Home({ params }: PageProps) {
   const dictionary = await getDictionary(lang);
   return (
     <>
-      <ServicePageContent
-        showOnScroll={false}
-        content={dictionary.service_cards}
-        params={{ lang }}
-      />
+      <div className="grid items-center justify-center w-full min-h-[calc(100dvh-160px)]">
+        <ServicePageContent
+          showOnScroll={false}
+          content={dictionary.service_cards}
+          params={{ lang }}
+        />
+      </div>
     </>
   );
 }

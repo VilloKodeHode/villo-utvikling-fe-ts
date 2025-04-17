@@ -20,12 +20,13 @@
     }
   },
   "heroSection": {
-    "slogan": "Fører ditt konsept til realitet",
-    "title": "Nettsider for privatpersoner, små og mellomstore bedrifter og klubber",
-    "subtitle": "Jeg bygger nettsider raskt og effektivt ved å bruke de nyeste webteknologiene. Enten du ønsker en enkel løsning med et brukervennlig system, eller en skreddersydd nettside etter dine behov, kan du stole på min ekspertise.",
-    "cta": "Kontakt nå",
-    "ctaTwo": "Tjenester"
-  },
+    "slogan": "Smarte nettsider. Klare resultater.",
+    "title": "For deg som vil ha en nettside som faktisk funker",
+    "subtitle": "Jeg utvikler moderne, raske og brukervennlige nettsider for små bedrifter, privatpersoner og klubber – med teknologi som tåler fremtiden og design som bygger tillit.",
+    "cta": "Start prosjektet",
+    "ctaTwo": "Se hva jeg tilbyr"
+  }
+,
   "skills": {
     "title": "Min tech-stack",
     "paragraph": "Dette er tech-stacken jeg bruker. Jeg bruker de beste metodene for å sikre at nettstedet er raskt, moderne og responsivt.",
@@ -397,7 +398,7 @@
     }
   ],
   "portfolio": {
-    "title": "Portofølje",
+    "title": "Portfolio",
     "description": "Med lidenskap for front-end-utvikling og et forpliktende fokus på å skape brukersentrerte design, gir jeg liv til din visjon. Utforsk prosjektene jeg har hatt gleden av å jobbe med, hver av dem representerer en blanding av kunst og teknologi som definerer min tilnærming",
     "customer_projects": {
       "title": "Kundeprosjekter",
@@ -492,7 +493,7 @@
           "name": "Villo utvikling",
           "jobTitle": "Webutvikler",
           "jobDone": "Min frilanser jobb. Jeg lager alt fra simple personlige nettsider til nettbutikker, hjemmesider, informasjonssider, osv. I tillegg leverer jeg nettinnhold og forbedrer SEO for økt trafikk.",
-          "imageUrl": "/images/companies/WindLogoDarkmode.svg",
+          "imageUrl": "/images/logo/WindLogoDarkMode.svg",
           "href": "https://www.villoutvikling.com/",
           "progress": "nåværende",
           "colors": {
@@ -589,7 +590,7 @@
     "companyName": "Villo utvikling"
   },
   "companyInfo": {
-    "title": "Villo Utvikling - En Norsk Webutvikler",
+    "title": "Norsk Webutvikler",
     "paragraphOne": "Det er ingenting som gir meg større glede enn å se hvordan mine tjenester har en positiv innvirkning på kundens virksomhet. Målet mitt er å bygge sterke, langsiktige og verdifulle forhold med kundene mine. Dette oppnås ved å levere tjenester av høy kvalitet og åpen kommunikasjonen gjennom arbeidesprosessen.",
     "paragraphTwo": "Min visjon er å lage gode nettsider for små og mellomstore bedrifter, uten at det skal bli for dyrt, men allikevel å tilby god kvalitet med de nyeste webteknologiene, søkemotoroptimalisering og innhold."
   },

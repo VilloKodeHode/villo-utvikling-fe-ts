@@ -31,24 +31,19 @@ export const FloatingUtilsBar = () => {
 
   return (
     <div
-      className={`fixed duration-1000 top-2 z-[999] transition-all ${
+      className={`fixed duration-1000 top-2 z-150 transition-all ${
         showToolBar ? "" : "-translate-x-40"
       }`}
     >
       <div
-        className={`transition-all p-3 group border-b-2 flex items-center rounded-r-[30px] pr-5 justify-between ${
-          notTop ? "animate-Tools-slide-in" : "animate-Tools-slide-out"
-        } ${
-          theme === "light"
-            ? "bg-light-cloud  text-light-ash border-light-violet"
-            : "bg-dark-onyx text-dark-frost border-dark-lavender"
-        } 
-          `}
+        className={`glass-morphism-tool_bar transition-all group flex items-center justify-between ${
+          notTop ? "animate-tools-slide-in" : "animate-tools-slide-out"
+        }`}
       >
         <div
-          className={`flex 2xl:flex-row flex-col right-0 transition-all top-0 gap-4`}
+          className={`flex right-0 transition-all top-0 gap-4`}
         >
-          <LanguageSwitcher className={`2xl:flex-row flex-col`} />
+          <LanguageSwitcher className={""} />
 
           <ThemeSwitch />
           <button

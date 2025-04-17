@@ -16,13 +16,27 @@ export default async function Page({ params }: DynamicPageProps) {
   const content = dictionary.services[service];
   return (
     <>
-      <section className="">
-        <ThemedH1 className="mb-4 text-3xl font-bold ">
-          {content.top_title}
-        </ThemedH1>
-        <ThemedPLarge>{content.top_paragraph}</ThemedPLarge>
-      </section>
-      <section>
+        <section className="grid items-center max-w-6xl justify-center w-full min-h-[calc(100dvh-160px)]">
+      <div className="animate-page-appear-right">
+        <div
+          className={`sm:rounded-lg grid transition-colors duration-1000
+          `}
+        >
+          <div
+            className={`h-full flex flex-col gap-2 md:gap-4`}
+          >
+
+            <ThemedH1 className="">{content?.top_title}</ThemedH1>
+            <ThemedPLarge className="">
+              {content?.top_paragraph}
+            </ThemedPLarge>
+          </div>
+        </div>
+      </div>
+    </section>
+      <section
+          data-scroll-target
+      >
         <ThemedH2 className="mb-4 text-2xl font-bold text-center">
           {content.middle_title}
         </ThemedH2>

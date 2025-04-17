@@ -1,5 +1,9 @@
-import { SkillLinkButton } from "@components/atoms/Buttons";
-import { ShrinkingThemedP, ThemedH2 } from "@components/atoms/ThemedText";
+import { BadgeButton, SkillLinkButton } from "@components/atoms/Buttons";
+import {
+  ShrinkingThemedP,
+  ThemedH2,
+  ThemedP,
+} from "@components/atoms/ThemedText";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -10,25 +14,27 @@ export const EmploymentSection = ({ content }) => {
       <div className="flex flex-wrap items-center justify-center py-4 gap-8">
         {content.companies.map((company, index) => (
           <div
-            key={company.name+index}
+            key={company.name + index}
             className={`shadow-md gap-2 lg:gap-4 flex flex-col justify-between overflow-hidden h-94 md:w-125 w-full hover:scale-102
                 ${company.colors.shadow}
-                 transition-all rounded-lg bg-light-mist dark:bg-dark-onyx`}>
+                 transition-all rounded-lg bg-light-mist dark:bg-dark-onyx`}
+          >
             <Link
               target="_blank"
               rel="noreferrer"
               href={company.href}
-              className="gap-4 bg-light-graphite hover:bg-light-charcoal dark:bg-dark-slate dark:hover:bg-dark-storm transition-colors flex items-center md:flex-row h-fit flex-col p-2 md:p-6 w-full">
+              className="gap-4 h-36 bg-light-graphite hover:bg-light-charcoal dark:bg-dark-slate dark:hover:bg-dark-storm transition-colors flex items-center md:flex-row flex-col p-2 md:p-6 w-full md:justify-between justify-center"
+            >
               <Image
-                className="h-28 w-fit"
+                className="md:h-full h-1/2 w-fit"
                 src={company.imageUrl}
                 alt={company.name}
                 width={800}
                 height={600}
               />
-              {/* <ThemedH4 className="font-medium">{company.name}</ThemedH4> */}
               <h5
-                className={`${company.colors.text} md:text-2xl text-lg h-fit font-bold`}>
+                className={`${company.colors.text} md:text-2xl text-lg h-fit font-bold`}
+              >
                 {company.jobTitle}
               </h5>
             </Link>
@@ -37,19 +43,22 @@ export const EmploymentSection = ({ content }) => {
               {company.jobDone}
             </ShrinkingThemedP>
 
-            <div className="flex flex-wrap w-full items-center p-2 h-fit">
-              {/* px-2 md:px-6 pb-2 md:pb-6 gap-2 md:gap-4 */}
-              {company.skillsUsed.map((skill, index) => (
-                <a
-                  key={skill.name+index}
-                  href={skill.href}
-                  target="_blank"
-                  rel="noreferrer">
-                  <SkillLinkButton borderColor={company.colors.border}>
-                    {skill.name}
-                  </SkillLinkButton>
-                </a>
-              ))}
+            <div className="h-fit p-2">
+              <ThemedP className="mb-1">Skills used:</ThemedP>
+              <div className="flex flex-wrap gap-2">
+                {company.skillsUsed.map((skill) => (
+                  <a
+                    key={skill.name + index}
+                    href={skill.href}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <BadgeButton key={skill.name} className="">
+                      {skill.name}
+                    </BadgeButton>
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         ))}
@@ -74,10 +83,12 @@ export const NewWorkedWithSection = ({ content }) => {
               key={company.id}
               href={company.href}
               target={company.href ? "_blank" : undefined}
-              className={`overflow-hidden w-48 rounded-sm shadow-lg hover:scale-105 transition`}>
+              className={`overflow-hidden w-48 rounded-sm shadow-lg hover:scale-105 transition`}
+            >
               <div
                 className={`z-20 group grid justify-center transition-all px-2 py-4 bg-light-white15 hover:bg-light-mist bg-light-dusk
-                    dark:bg-dark-onyx dark:hover:bg-dark-shadow`}>
+                    dark:bg-dark-onyx dark:hover:bg-dark-shadow`}
+              >
                 <div className="relative w-28 h-28">
                   <p className="absolute z-10 text-center transition-all translate-x-1/2 translate-y-1/2 opacity-0 group-hover:opacity-100 bottom-1/2 right-1/2">
                     {["current", "nåværende"].includes(company.progress)

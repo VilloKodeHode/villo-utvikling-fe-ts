@@ -12,7 +12,7 @@ export default function ProjectCards({ content }: ComponentProps) {
       {content?.projects.map((project, index) => (
         <div
           key={project.projectName + index}
-          className={`flex flex-col h-[460px] md:h-[550px] lg:h-[600px] justify-between overflow-hidden rounded-lg shadow bg-light-mist darK:bg-dark-onyx
+          className={`flex flex-col h-[520px] md:h-[550px] lg:h-[600px] justify-between overflow-hidden rounded-lg shadow glass-morphism-card
           shadow-black75`}
         >
           <div
@@ -24,7 +24,7 @@ export default function ProjectCards({ content }: ComponentProps) {
               src={
                 project.src ? project.src : "/logo/WindLogoNoTextDarkMode.svg"
               }
-              alt={project.engProjectName}
+              alt={project.projectName}
               width={400}
               height={300}
             />
@@ -32,14 +32,11 @@ export default function ProjectCards({ content }: ComponentProps) {
 
           <div className="h-full p-6">
             <ThemedH5 className="font-bold">{project.projectName}</ThemedH5>
-            <ThemedP
-              className={`mt-2
-                text-light-obsidian dark:text-dark-frost`}
-            >
+            <ThemedP>
               {project.description}
             </ThemedP>
           </div>
-          <div className="ml-3 max-w-fit">
+          <div className="max-w-fit p-4">
             <Link className="w-fit h-fit" href={project.href} target="_blank">
               <ExternalCTA>{content.cta}</ExternalCTA>
             </Link>

@@ -1,7 +1,5 @@
 import { getDictionary } from "get-dictionary";
-import { CompanyInfo } from "@pages/about/sections/CompanyInfoSection";
-import { PaletteSection } from "./sections/PaletteSection";
-import { TextAndImageSection } from "@components/molecyles/Sections";
+import { AltIntroSection, TextAndImageSection } from "@components/molecyles/Sections";
 import { SkillsSection } from "./sections/SkillsSection";
 import { ProjectSection } from "./sections/ProjectSection";
 import { PageProps } from "@interfaces/PageProps";
@@ -11,10 +9,11 @@ export default async function Home({ params }: PageProps) {
   const dictionary = await getDictionary(lang);
   return (
     <>
-      <CompanyInfo content={dictionary.companyInfo} />
+    
+      <AltIntroSection content={dictionary.companyInfo} />
       <TextAndImageSection content={dictionary.introInfo} />
       <SkillsSection content={dictionary.skills} />
-      <PaletteSection />
+      {/* <PaletteSection /> */}
       <ProjectSection content={dictionary.personal_projects} />
       {/* <LetsGoCTA
         type="portfolio"

@@ -4,13 +4,12 @@ import Image from "next/image";
 import { useState } from "react";
 import { deleteCookie, setCookie } from "cookies-next";
 import { ThemedH5, ThemedSmall } from "@components/atoms/ThemedText";
-import { CookieAccept } from "@components/atoms/Buttons";
+import { CookieButton } from "@components/atoms/Buttons";
 import { ComponentProps } from "@interfaces/PageProps";
 
 const CookiePopup = ({ content }: ComponentProps) => {
   const [showPopup, setShowPopup] = useState(false);
   const [beenUsed, setbeenUsed] = useState(false);
-  
 
   const handleCookieAccept = () => {
     // Set a cookie to remember that the user has accepted cookies
@@ -43,35 +42,32 @@ const CookiePopup = ({ content }: ComponentProps) => {
     <div
       className={`${
         showPopup
-          ? "animate-Cookies-slide-in"
+          ? "animate-cookies-slide-in"
           : beenUsed && !showPopup
-          ? "animate-Cookies-slide-out"
+          ? "animate-cookies-slide-out"
           : ""
       } fixed bottom-0 -left-[320px] z-50 flex items-center justify-center group h-fit w-fit`}
     >
       <div
-        className={`min-h-[131px] max-w-[300px] transition-all duration-300 bg-opacity-[0.95] px-6 py-4 outline m-2 rounded-xl
-       
-       bg-light-mist group-hover:bg-light-cloud outline-light-ash
-          dark:bg-dark-slate dark:group-hover:bg-dark-onyx dark:outline-dark-frost
-        `}
+        className={`min-h-[131px] max-w-[300px] transition-all duration-300  px-6 py-4 m-2 glass-morphism rounded-lg backdrop-blur-sm`}
       >
-        <div className="relative grid items-center justify-center gap-2 pt-3">
-          <ThemedH5 className={`pb-2`}>{content?.title}</ThemedH5>
-          <ThemedSmall>{content?.why}</ThemedSmall>
-          <ThemedSmall
-            className={` py-2
-          `}
-          >
+        <div className="relative grid items-center justify-center gap-2 pt-3 text-center text-balance">
+          <ThemedH5 className="pb-2 font-bold text-lg text-light-obsidian dark:text-dark-ice">
+            {content?.title}
+          </ThemedH5>
+          <ThemedSmall className="text-sm text-light-ash dark:text-dark-frost leading-relaxed">
+            {content?.why}
+          </ThemedSmall>
+          <ThemedSmall className="text-xs text-light-charcoal dark:text-dark-glacier leading-snug mt-1">
             {content?.disclaimer}
           </ThemedSmall>
           <div className="flex justify-around gap-2">
-            <CookieAccept onClick={handleAccept} className="">
+            <CookieButton onClick={handleAccept} className="">
               {content?.accept}
-            </CookieAccept>
-            <CookieAccept onClick={handleDecline} className="">
+            </CookieButton>
+            <CookieButton onClick={handleDecline} className="">
               {content?.decline}
-            </CookieAccept>
+            </CookieButton>
           </div>
         </div>
         <button onClick={handleShowPopup}>
@@ -84,7 +80,7 @@ const CookiePopup = ({ content }: ComponentProps) => {
         ${
           showPopup
             ? "bottom-[230px] sm:bottom-[242px] left-[280px] sm:left-[290px]"
-            : "bottom-[4px] left-[320px] sm:bottom-[18px] sm:left-[334px] hover:scale-125 opacity-30 hover:animate-cookie-shake  hover:opacity-100"
+            : "bottom-[4px] left-[320px] sm:bottom-[18px] sm:left-[334px] hover:scale-125 opacity-30 hover:animate-cookie-shake hover:opacity-100"
         }
         `}
           ></Image>

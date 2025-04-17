@@ -20,11 +20,11 @@
     }
   },
   "heroSection": {
-    "slogan": "Bringing your consept to reality",
-    "title": "Websites for small and medium-sized businesses and clubs",
-    "subtitle": "I build websites quickly and efficiently using the latest web technologies. Whether you want a simple solution with a user-friendly system, or a custom website tailored to your needs, you can rely on my expertise.",
-    "cta": "Contact now",
-    "ctaTwo": "Services"
+    "slogan": "Smart websites. Real results.",
+    "title": "For those who want a website that actually works",
+    "subtitle": "I build fast, modern, and user-focused websites for small businesses, individuals, and clubs – using future-proof tech and design that earns trust.",
+    "cta": "Start your project",
+    "ctaTwo": "See what I offer"
   },
   "skills": {
     "title": "My tech-stack",
@@ -494,7 +494,7 @@
           "name": "Villo development",
           "jobTitle": "Webdeveloper",
           "jobDone": "My freelancer gig. I create everthing from simple personal sites to complex e-commerce platforms. In addition I also deliver webcontent and improve SEO for increasing traffic.",
-          "imageUrl": "/images/companies/WindLogoDarkmode.svg",
+          "imageUrl": "/images/logo/WindLogoDarkmode.svg",
           "href": "https://www.villoutvikling.com/",
           "progress": "current",
           "colors": {

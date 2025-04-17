@@ -21,15 +21,15 @@ export const Header = () => {
 
   return (
     <>
-      <header className="transition relative ease-linear duration-200 backdrop-blur-[10px] z-40 h-10 flex items-center justify-between px-4 sm:px-6 lg:px-12 py-6 bg-light-mist dark:bg-dark-onyx text-light-obsidian dark:text-dark-glacier">
+      <header className="transition relative ease-linear duration-200 backdrop-blur-[10px] z-40 h-10 flex items-center justify-between px-4 sm:px-6 lg:px-12 py-6 glass-morphism-plain text-light-obsidian dark:text-dark-glacier">
      
         <div
           className={`grid transition-all z-40 grid-flow-col gap-12
  
           ${
             notTop
-              ? "animate-Slide-in-from-bottom"
-              : "animate-Slide-in-from-top"
+              ? "animate-slide-in-from-bottom"
+              : "animate-slide-in-from-top"
           }`}
         >
           <LanguageSwitcher className="" />
@@ -39,8 +39,8 @@ export const Header = () => {
         <div
           className={`flex gap-4 ${
             notTop
-              ? "animate-Slide-in-from-bottom"
-              : "animate-Slide-in-from-top"
+              ? "animate-slide-in-from-bottom"
+              : "animate-slide-in-from-top"
           }`}
         >
           

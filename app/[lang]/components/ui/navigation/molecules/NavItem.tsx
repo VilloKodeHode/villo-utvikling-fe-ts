@@ -46,13 +46,13 @@ const NavItem = ({
           } absolute w-full h-0 transition-[height] bg-light-violet  dark:bg-dark-lavender`}
         />
       </Link>
-      {(pathName === href ||
+      {/* {(pathName === href ||
         (href.includes("/services") && prevParam() === "/services")) && (
-        <div className="absolute animate-blur-in-out-heavy top-1 w-5 h-full -left-5">
+        <div className="absolute animate-blur-in-out-heavy top-1/3 w-5 h-full -left-5">
           <LogoIconLeft className="h-4.5 right-[3px]" />
           <LogoIconRight className="h-4.5 left-[3px]" />
         </div>
-      )}
+      )} */}
     </div>
   );
 };
@@ -103,7 +103,7 @@ const NavItem = ({
 //                 ? "/logo/WindLogoNoTextLightMode.svg"
 //                 : "/logo/WindLogoNoTextDarkMode.svg"
 //             }
-//             className="w-auto h-full animate-Appear"
+//             className="w-auto h-full animate-appear"
 //             fill="responsive"
 //             alt=""
 //           />
@@ -153,7 +153,7 @@ const NavItem = ({
 //                 ? "/logo/WindLogoNoTextLightMode.svg"
 //                 : "/logo/WindLogoNoTextDarkMode.svg"
 //             }
-//             className="w-auto h-full animate-Appear"
+//             className="w-auto h-full animate-appear"
 //             fill="responsive"
 //             alt=""
 //           />

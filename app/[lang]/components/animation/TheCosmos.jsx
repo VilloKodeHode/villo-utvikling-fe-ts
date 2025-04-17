@@ -1,80 +1,33 @@
 "use client";
 
 import { Canvas } from "@react-three/fiber";
-import { useMemo } from "react";
-import * as THREE from "three";
+import { Suspense } from "react";
 import { useTheme } from "next-themes";
-import generateStarTexture from "./components/generateStarTexture";
-import { createStarLayer, StarLayer } from "./components/StarLayer";
-import { ShootingStar } from "./components/ShootingStar";
 import { Nebula } from "./components/Nebula";
-
-const Starfield = () => {
-  const starTexture = useMemo(() => generateStarTexture(), []);
-
-  const starColors = useMemo(
-    () => [
-      new THREE.Color(0xffffff),
-      new THREE.Color(0xfff4e5),
-      new THREE.Color(0xaecaff),
-      new THREE.Color(0xffccaa),
-      new THREE.Color(0xffaaaa),
-    ],
-    []
-  );
-
-  const layerOne = useMemo(
-    () => createStarLayer(1000, [100, 120], starColors),
-    [starColors]
-  );
-  const layerTwo = useMemo(
-    () => createStarLayer(1000, [120, 140], starColors),
-    [starColors]
-  );
-  const layerThree = useMemo(
-    () => createStarLayer(40, [50, 70], starColors),
-    [starColors]
-  );
-
-  return (
-    <>
-      <StarLayer
-        data={layerOne}
-        scrollFactor={0.005}
-        starTexture={starTexture}
-        rotationSpeed={{ x: 0.00003, y: 0.000016 }}
-      />
-      <StarLayer
-        data={layerTwo}
-        scrollFactor={0.002}
-        starTexture={starTexture}
-        rotationSpeed={{ x: 0.000015, y: 0.000008 }}
-      />
-      <StarLayer
-        data={layerThree}
-        scrollFactor={0.0005}
-        starTexture={starTexture}
-        rotationSpeed={{ x: 0.00008, y: 0.000012 }}
-      />
-      <ShootingStar />
-      <ShootingStar />
-      <ShootingStar />
-    </>
-  );
-};
+import { ArrowDownConstellation } from "./components/ArrowDownConstellation";
+import { ArrowUpContellation } from "./components/ArrowUpConstellation";
+import { Starfield } from "./components/StarField";
 
 export const TheCosmos = () => {
   const { theme } = useTheme();
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full h-full -z-20 pointer-events-none transition-all ${
+      className={`fixed top-0 left-0 w-full h-full -z-20 transition-all ${
         theme === "light" ? "opacity-5" : "opacity-80"
       }`}
     >
-      <Canvas camera={{ position: [0, 0, 0], fov: 75, far: 200 }}>
-        <Nebula  />
-        <Starfield />
+      <Canvas
+        camera={{ position: [0, 0, 0], fov: 75, far: 200 }}
+        eventSource={document.body}
+        eventPrefix="client"
+      >
+        <Suspense fallback={null}>
+          <ArrowUpContellation />
+          <ArrowDownConstellation />
+          <Nebula />
+          <Starfield />
+        </Suspense>
       </Canvas>
     </div>
   );

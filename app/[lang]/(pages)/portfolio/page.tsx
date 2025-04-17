@@ -4,22 +4,19 @@ import { ThemedH1, ThemedP } from "@components/atoms/ThemedText";
 import { EmploymentSection } from "./sections/EmploymentSection";
 import { ClientsSection } from "./sections/ClientSection";
 import { PageProps } from "@interfaces/PageProps";
+import { IntroSection } from "@components/molecyles/Sections";
 
 export default async function Home({ params }: PageProps) {
   const { lang } = await params;
   const dictionary = await getDictionary(lang);
   const content = dictionary.portfolio;
+  //TODO fix page layout here
   return (
     <>
-      <div className="pt-12">
-        <ThemedH1>{content.title} </ThemedH1>
-        <ThemedP className="pt-8 mx-auto text-left max-w-7xl">
-          {content.description}
-        </ThemedP>
-      </div>
+      <IntroSection content={content} />
       <ClientsSection content={content.customer_projects} />
       <EmploymentSection content={content.employment} />
-      
+
       {/* <QuotesSection /> */}
       {/* <LetsGoCTA
         type="email"

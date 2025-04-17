@@ -29,7 +29,7 @@ export async function RootLayout({ children, params }: RootProps) {
   return (
     <html lang={lang ? lang : "no"}>
       <body
-        className={`${figtree.className} min-h-[100vh] transition-colors duration-1000 bg-light-snow dark:bg-dark-midnight overflow-x-hidden antialiased`}>
+        className={`${figtree.className} relative min-h-[100vh] transition-colors duration-1000 bg-light-snow dark:bg-dark-midnight overflow-x-hidden antialiased`}>
         <AppUserProvider>
           {/* <THREESpace /> */}
           <TheCosmos />
@@ -39,7 +39,7 @@ export async function RootLayout({ children, params }: RootProps) {
 
           <main
             //TODO fix the has selector:
-            className={`flex flex-col animate-Appear [&>canvas]:has-[canvas_game]:my-0 items-center px-4 sm:px-6 lg:px-12 justify-start overflow-x-hidden sm:mb-24 mb-12 sm:gap-28 gap-14`}>
+            className={`flex flex-col animate-appear items-center px-4 sm:px-6 lg:px-12 justify-start overflow-x-hidden sm:mb-24 mb-12 sm:gap-28 gap-14`}>
             {children}
           </main>
           <Footer content={dictionary.footer} />

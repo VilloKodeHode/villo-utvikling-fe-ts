@@ -36,18 +36,6 @@
   --color-light-ash: oklch(20% 0.03 290);
   --color-light-obsidian: oklch(16% 0.02 290);
 
-  /* previous lightMode colors: */
-  /* --color-light-violet: #571dff;
-  --color-light-lavender: #858ee0;
-  --color-light-obsidian: #141315;
-  --color-light-ash: #2e2f34;
-  --color-light-graphite: #383844;
-  --color-light-charcoal: #48485b;
-  --color-light-snow: #fefdff;
-  --color-light-mist: #f6f3ff;
-  --color-light-cloud: #efe9ff;
-  --color-light-fog: #e6ddff; */
-
   --text-h1: 4.209rem;
   --text-h2: 3.157rem;
   --text-h3: 2.369rem;
@@ -93,28 +81,17 @@
   --animate-rotate-right: rotateRight ease-in 1s alternate;
   --animate-rotate-left-logo: rotateLeft linear 160s alternate infinite;
   --animate-rotate-right-logo: rotateRight ease-in-out 15s alternate infinite;
-  --animate-Button-hover: buttonHover ease-in 1.5s infinite;
-  --animate-Modal-slide-in: slideRight ease 0.3s;
-  --animate-RPSPop-up: popUp 0.1s ease-in;
-  --animate-glow: glow 3s ease-in-out infinite alternate;
-  --animate-Slide-in-from-left: slideLeft 0.5s ease-in-out;
-  --animate-Tools-slide-in: toolsSlideIn 0.5s ease-in-out forwards;
-  --animate-Tools-slide-out: toolsSlideOut 0.5s ease-in-out forwards;
-  --animate-Cookies-slide-out: cookiesSlideOut 0.5s ease-in-out forwards;
-  --animate-Cookies-slide-in: cookiesSlideIn 0.5s ease-in-out forwards;
-  --animate-Slide-in-from-right: slideInRight 0.5s 1s ease-in-out backwards;
-  --animate-Theme-switch-slide-in: themeInAnimation 0.5s ease-in-out forwards;
-  --animate-Theme-switch-slide-out: themeOutAnimation 0.5s ease-in-out forwards;
-  --animate-Slide-in-from-top: slideDown 0.5s ease-in-out;
-  --animate-Slide-in-from-bottom: slideUp 0.5s ease-in-out forwards;
-  --animate-Appear: appear 0.5s ease-in-out;
-  --animate-Disappear: appear 0.3s ease-in-out backwards;
-  --animate-Page-appear-right: slideInRight 0.6s ease-in-out forwards;
-  --animate-Page-appear-left: slideInLeft 0.3s ease-in-out;
-  --animate-RPSPop-up-delayed: popUp 0.1s ease-in 1s backwards;
-  --animate-RPSPop-up-more-delayed: popUp 0.1s ease-in 2s backwards;
-  --animate-fade-in: fadeIn 1s forwards;
-  --animate-scroll: scroll 35s linear infinite;
+  --animate-tools-slide-in: toolsSlideIn 0.5s ease-in-out forwards;
+  --animate-tools-slide-out: toolsSlideOut 0.5s ease-in-out forwards;
+  --animate-cookies-slide-out: cookiesSlideOut 0.5s ease-in-out forwards;
+  --animate-cookies-slide-in: cookiesSlideIn 0.5s ease-in-out forwards;
+  --animate-theme-switch-slide-in: themeInAnimation 0.5s ease-in-out forwards;
+  --animate-theme-switch-slide-out: themeOutAnimation 0.5s ease-in-out forwards;
+  --animate-slide-in-from-top: slideDown 0.5s ease-in-out;
+  --animate-slide-in-from-bottom: slideUp 0.5s ease-in-out forwards;
+  --animate-appear: appear 0.5s ease-in-out;
+  --animate-page-appear-right: slideInRight 0.6s ease-in-out forwards;
+  --animate-page-appear-left: slideInLeft 0.3s ease-in-out;
   --animate-cog-spin: cogSpin 10s cubic-bezier(0, 1.6, 0.68, 1.1) infinite
     forwards;
   --animate-return-cog-spin: rotateLeft 0.5s ease-out forwards;
@@ -417,6 +394,7 @@
       transform: rotate(360deg);
     }
   }
+
   @keyframes cookieShake {
     0% {
       transform: rotate(0deg) scale(1);
@@ -446,24 +424,35 @@
       transform: rotate(0deg) scale(1);
     }
   }
-}
-@keyframes blurInOut {
-  0% {
-    filter: blur(10px);
+
+  @keyframes blurInOut {
+    0% {
+      filter: blur(10px);
+    }
+    100% {
+      filter: blur(0px);
+    }
   }
-  100% {
-    filter: blur(0px);
+
+  @keyframes blurInOut {
+    0% {
+      filter: blur(10px);
+    }
+    100% {
+      filter: blur(0px);
+    }
+  }
+  
+  @keyframes blurInOutHeavy {
+    0% {
+      filter: blur(15px);
+    }
+    100% {
+      filter: blur(0px);
+    }
   }
 }
 
-@keyframes blurInOutHeavy {
-  0% {
-    filter: blur(15px);
-  }
-  100% {
-    filter: blur(0px);
-  }
-}
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
@@ -535,7 +524,6 @@
       );
     }
 
-
     .interactive-box {
       @apply transition duration-200 ease-linear hover:scale-[1.05] active:scale-95 rounded-sm;
     }
@@ -544,31 +532,62 @@
       @apply text-p leading-p rounded-full transition duration-200 ease-linear hover:scale-[1.05] active:scale-95 px-6 py-4 font-bold uppercase shadow-lg cursor-pointer flex justify-center items-center;
     }
 
+    .button-style-alternative {
+      @apply text-p0 leading-p0 rounded-full transition duration-200 ease-linear hover:scale-[1.05] active:scale-95 px-4 py-2 font-bold uppercase shadow-lg cursor-pointer flex justify-center items-center;
+    }
+
     .glass-morphism {
       @apply bg-light-cloud/50 hover:bg-light-mist/60 
              border border-light-dusk 
              dark:bg-dark-onyx/50 dark:hover:bg-dark-shadow/60 
-             dark:border-dark-shadow;
+             dark:border-dark-shadow backdrop-blur-[2px];
+    }
+
+    .glass-morphism-plain {
+      @apply bg-light-mist/50 transition duration-200
+             dark:bg-dark-onyx/70 backdrop-blur-sm;
+    }
+
+    .glass-morphism-section {
+      @apply bg-light-cloud/50 
+             dark:bg-dark-onyx/50 backdrop-blur-[2px] transition;
+    }
+
+    .glass-morphism-card {
+      @apply bg-light-cloud/50 hover:bg-light-mist/60 
+             border border-light-dusk
+             dark:bg-dark-onyx/50 dark:hover:bg-dark-shadow/60 
+             dark:border-dark-shadow backdrop-blur-[2px] transition;
+    }
+
+    .glass-morphism-card-alternative {
+      @apply bg-light-cloud/50 hover:bg-light-mist/60 
+             border border-light-dusk
+             dark:bg-dark-storm/50 dark:hover:bg-dark-shadow/60 
+             dark:border-dark-shadow backdrop-blur-[2px];
+    }
+
+    .glass-morphism-tool_bar {
+      @apply bg-light-cloud/50 hover:bg-light-mist/60 backdrop-blur-sm
+             border border-light-dusk border-b-2 border-l-0 dark:bg-dark-onyx/50 dark:hover:bg-dark-shadow/60 dark:border-dark-shadow
+             rounded-r-4xl p-3 pr-5;
     }
 
     .glass-morphism-button {
-      @apply bg-light-snow text-light-ash hover:bg-light-violet hover:text-light-snow 
-             outline outline-light-dusk hover:outline-hidden
-             dark:bg-dark-onyx/70 dark:text-dark-frost dark:hover:bg-dark-lavender/90 
-             dark:outline-dark-shadow;
+      @apply bg-light-snow text-light-ash hover:bg-light-violet hover:text-light-snow outline outline-light-dusk hover:outline-hidden dark:bg-dark-onyx/70 dark:text-dark-frost dark:hover:bg-dark-lavender/90  dark:outline-dark-shadow backdrop-blur-sm;
     }
 
     .glass-morphism-button-inverse {
       @apply bg-light-violet text-light-snow hover:bg-light-snow hover:text-light-ash outline-light-dusk hover:outline
              dark:bg-dark-lavender/90 dark:text-dark-frost dark:hover:bg-dark-onyx/70 dark:hover:text-dark-ice 
-             dark:outline-dark-shadow;
+             dark:outline-dark-shadow backdrop-blur-sm;
     }
 
     .glass-morphism-inverse {
       @apply bg-light-dusk/60 hover:bg-light-cloud/50 
              border border-light-charcoal 
              dark:bg-dark-twilight/50 dark:hover:bg-dark-glacier/60 
-             dark:border-dark-shadow;
+             dark:border-dark-shadow backdrop-blur-sm;
     }
   }
 
