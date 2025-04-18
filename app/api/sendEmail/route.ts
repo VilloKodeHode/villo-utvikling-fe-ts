@@ -11,27 +11,27 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Missing fields" }, { status: 400 });
     }
 
-    const signature = `
-    <p style="margin-top: 32px; font-size: 14px; line-height: 1.6; color: #333;">
-        Mvh,
-        <br />
-        <strong>Joakim Villo</strong>
-        <br />
-        Villo Utvikling
-        <br />
-        <a href="tel:+4793285044" style="color: #4a90e2; text-decoration: none;">+47 932 85 044</a>
-        <br />
-        <a href="mailto:Villokodehode@gmail.com" style="color: #4a90e2; text-decoration: none;">Villokodehode@gmail.com</a>
-        <br />
-        <a href="https://www.villoutvikling.com" style="color: #4a90e2; text-decoration: none;">www.villoutvikling.com</a>
-        <br />
-    </p>
-    <img 
-        src="https://www.villoutvikling.com/images/logo/WindLogoLightMode.svg" 
-        alt="Villo Utvikling Logo" 
-        width="120" 
-        style="margin-top: 16px;" 
-    />`;
+    // const signature = `
+    // <p style="margin-top: 32px; font-size: 14px; line-height: 1.6; color: #333;">
+    //     Mvh,
+    //     <br />
+    //     <strong>Joakim Villo</strong>
+    //     <br />
+    //     Villo Utvikling
+    //     <br />
+    //     <a href="tel:+4793285044" style="color: #4a90e2; text-decoration: none;">+47 932 85 044</a>
+    //     <br />
+    //     <a href="mailto:Villokodehode@gmail.com" style="color: #4a90e2; text-decoration: none;">Villokodehode@gmail.com</a>
+    //     <br />
+    //     <a href="https://www.villoutvikling.com" style="color: #4a90e2; text-decoration: none;">www.villoutvikling.com</a>
+    //     <br />
+    // </p>
+    // <img 
+    //     src="https://www.villoutvikling.com/images/logo/WindLogoLightMode.svg" 
+    //     alt="Villo Utvikling Logo" 
+    //     width="120" 
+    //     style="margin-top: 16px;" 
+    // />`;
 
     const response = await resend.emails.send({
       from: "Contact Form <contact@villoutvikling.com>", // Must be verified in Resend

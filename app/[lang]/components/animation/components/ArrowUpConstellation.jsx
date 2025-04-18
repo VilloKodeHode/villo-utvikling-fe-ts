@@ -1,5 +1,5 @@
 "use client";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { useEffect, useMemo, useRef, useState } from "react";
 import * as THREE from "three";
 
@@ -9,8 +9,6 @@ const ArrowUpConstellation = () => {
   const [visible, setVisible] = useState(false);
   const [hovered, setHovered] = useState(false);
   const targetOpacity = useRef(0);
-
-  const { size, camera } = useThree();
 
   const starTexture = useMemo(() => {
     const canvas = document.createElement("canvas");

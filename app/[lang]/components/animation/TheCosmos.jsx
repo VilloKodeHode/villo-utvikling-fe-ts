@@ -2,11 +2,9 @@
 
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
-import { useTheme } from "next-themes";
 import { Nebula } from "./components/Nebula";
 import { ArrowDownConstellation } from "./components/ArrowDownConstellation";
 import { Starfield } from "./components/StarField";
-import { ArrowUpConstellation } from "./components/ArrowUpConstellation";
 
 export const TheCosmos = () => {
 
