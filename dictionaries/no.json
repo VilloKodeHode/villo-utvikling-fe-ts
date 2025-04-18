@@ -704,17 +704,18 @@
   },
   "contactForm": {
     "title": "Kontaktskjema",
-    "description": "Vennligst fyll ut skjemaet under og vi vil komme tilbake til deg så snart som mulig.",
+    "description": "Jeg vil gjerne høre fra deg! Enten det er et raskt spørsmål, en idé til samarbeid eller et helt prosjekt — du har kommet til riktig sted.",
+    "formDescription": "Fortell meg hva du trenger. Er det et nytt prosjekt på gang? Trenger du utviklingshjelp eller bare råd? La oss ta en prat.",
     "nameLabel": "Navn",
-    "namePlaceholder": "Ditt navn",
-    "emailLabel": "Email",
-    "emailPlaceholder": "Din email adresse",
+    "namePlaceholder": "Skriv inn fullt navn",
+    "emailLabel": "E-postadresse",
+    "emailPlaceholder": "Skriv inn e-post så jeg kan svare",
     "messageLabel": "Melding",
-    "messagePlaceholder": "Din melding",
-    "submitButton": "Send",
+    "messagePlaceholder": "Skriv meldingen din her...",
+    "submitButton": "Send melding",
     "thankYouHeading": "Takk for at du tok kontakt!",
-    "thankYouLine1": "Du vil snart få svar på henvendelsen din.",
-    "thankYouLine2": "La oss lage noe fantastisk!",
+    "thankYouLine1": "Meldingen din er sendt og svever nå gjennom de digitale vindene.",
+    "thankYouLine2": "Jeg svarer deg så snart jeg kan. La oss lage noe fantastisk sammen.",
     "confirmButton": "Flotters!"
   }
 }

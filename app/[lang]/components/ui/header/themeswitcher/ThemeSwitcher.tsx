@@ -55,7 +55,7 @@ export const ThemeSwitch: React.FC = () => {
              runAnimation
                ? theme === "light"
                  ? "animate-theme-switch-slide-in"
-                 : "animate-Theme-switch-slide-out"
+                 : "animate-theme-switch-slide-out"
                : ""
            }
           pointer-events-none w-8 h-auto absolute top-0`}
@@ -73,7 +73,7 @@ export const ThemeSwitch: React.FC = () => {
           runAnimation
             ? theme === "dark"
               ? "animate-theme-switch-slide-in"
-              : "animate-Theme-switch-slide-out"
+              : "animate-theme-switch-slide-out"
             : ""
         } pointer-events-none w-8 h-auto absolute top-0`}
       />
