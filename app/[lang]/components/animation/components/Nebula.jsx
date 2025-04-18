@@ -44,7 +44,7 @@ export const Nebula = () => {
 
     // ✅ Parallax effect — slow upward drift when scrolling
     const scrollY = window.scrollY;
-    meshRef.current.position.y = scrollY * 0.02; // tweak this factor as needed
+    meshRef.current.position.y = scrollY * 0.015; // tweak this factor as needed
   });
 
   if (!enabled) return null;

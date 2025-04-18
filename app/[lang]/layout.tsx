@@ -11,14 +11,12 @@ import { getDictionary } from "get-dictionary";
 import { FloatingUtilsBar } from "@components/ui/header/floatingUtilBar/FloatingUtilBar";
 import { TheCosmos } from "@components/animation/TheCosmos";
 import { RootProps } from "@interfaces/PageProps";
-import FloatingScrollToTopCanvas from "@components/animation/components/ArrowUpConstellation";
-
+import FloatingArrowUp from "@components/animation/components/ArrowUpConstellation";
 export const figtree = Figtree({ subsets: ["latin"] });
 export const noto_emoji = Noto_Color_Emoji({
   weight: "400",
   subsets: ["emoji"],
 });
-
 
 //TODO: Lag pris underside (tydeligvis lovpålagt!)
 
@@ -28,31 +26,32 @@ export async function RootLayout({ children, params }: RootProps) {
   return (
     <html lang={lang ? lang : "no"}>
       <body
-        className={`${figtree.className} relative min-h-[100vh] transition-colors duration-1000 bg-light-snow dark:bg-dark-midnight overflow-x-hidden antialiased`}>
+        className={`${figtree.className} relative min-h-[100vh] transition-colors duration-1000 bg-light-snow dark:bg-dark-midnight overflow-x-hidden antialiased`}
+      >
         <AppUserProvider>
           {/* <THREESpace /> */}
-          <FloatingScrollToTopCanvas />
           <TheCosmos />
           <Header />
           <FloatingUtilsBar />
-          <NavBar params={{lang}} content={dictionary.menu_items} />
+          <NavBar params={{ lang }} content={dictionary.menu_items} />
 
           <main
             //TODO fix the has selector:
-            className={`flex flex-col animate-appear items-center px-4 sm:px-6 lg:px-12 justify-start overflow-x-hidden sm:mb-24 mb-12 sm:gap-28 gap-14`}>
+            className={` flex flex-col animate-appear items-center px-4 sm:px-6 lg:px-12 justify-start overflow-x-hidden sm:mb-24 mb-12 sm:gap-28 gap-14`}
+          >
             {children}
           </main>
           <Footer content={dictionary.footer} />
           <SplashScreen />
           <CookiePopup content={dictionary.cookie} />
         </AppUserProvider>
+        <FloatingArrowUp />
       </body>
     </html>
   );
 }
 
 export default RootLayout;
-
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://villo-utvikling-fe-ts.vercel.app/no"),
@@ -89,4 +88,3 @@ export const metadata: Metadata = {
     apple: "/images/logo/WindLogoNoTextLightMode.svg",
   },
 };
-

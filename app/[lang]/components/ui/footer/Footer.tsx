@@ -14,7 +14,7 @@ export default async function Footer({ content }: ComponentProps) {
   const year = new Date().getFullYear();
   return (
     <footer
-      className={`relative py-24 sm:px-6 lg:px-12 px-4
+      className={`z-1 relative py-24 sm:px-6 lg:px-12 px-4
        bg-light-fog dark:bg-dark-onyx`}>
       {/*HUSK Å IMPLEMENTERE FOOTERLINKS COMPONENTS! <FooterLinks Theme={Theme} /> */}
       <div className="flex flex-col items-center justify-center w-full gap-4 sm:justify-between sm:flex-row">

@@ -57,7 +57,6 @@ export async function POST(req: Request) {
           </p>
         </div>
       </div>
-      ${signature}
     `,
     });
 
