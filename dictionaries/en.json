@@ -701,5 +701,20 @@
     "disclaimer": "We do not store information that can identify you as a person. Cookies are stored for 1 year.",
     "accept": "Accept",
     "decline": "Decline"
+  },
+  "contactForm": {
+    "title": "Contact form",
+  "description": "Please fill out the form below and we will get back to you as soon as possible.",
+  "nameLabel": "Name",
+  "namePlaceholder": "Your name",
+  "emailLabel": "Email",
+  "emailPlaceholder": "Your email address",
+  "messageLabel": "Message",
+  "messagePlaceholder": "Your message",
+  "submitButton": "Send",
+  "thankYouHeading": "Thank you for reaching out!",
+  "thankYouLine1": "You will soon receive a reply to your inquiry.",
+  "thankYouLine2": "Let's make something awesome!",
+  "confirmButton": "Roger that!"
   }
 }

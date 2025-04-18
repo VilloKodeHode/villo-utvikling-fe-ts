@@ -701,5 +701,20 @@
     "disclaimer": "Vi lagrer ikke informasjon som kan identifisere deg som person. Cookies blir lagret i 1 år",
     "accept": "Godta",
     "decline": "Avslå"
+  },
+  "contactForm": {
+    "title": "Kontaktskjema",
+    "description": "Vennligst fyll ut skjemaet under og vi vil komme tilbake til deg så snart som mulig.",
+    "nameLabel": "Navn",
+    "namePlaceholder": "Ditt navn",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Din email adresse",
+    "messageLabel": "Melding",
+    "messagePlaceholder": "Din melding",
+    "submitButton": "Send",
+    "thankYouHeading": "Takk for at du tok kontakt!",
+    "thankYouLine1": "Du vil snart få svar på henvendelsen din.",
+    "thankYouLine2": "La oss lage noe fantastisk!",
+    "confirmButton": "Flotters!"
   }
 }

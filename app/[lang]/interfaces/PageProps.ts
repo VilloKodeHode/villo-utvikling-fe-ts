@@ -42,6 +42,7 @@ export interface ButtonProps {
   onClick?: () => void;
   className?: string;
   borderColor?: string;
+  type?: 'submit' | 'button' | 'reset';
 }
 
 export interface RootProps {

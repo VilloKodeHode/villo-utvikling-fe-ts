@@ -129,15 +129,15 @@ export const CTAButton = ({ children, onClick, className }: ButtonProps) => {
     </button>
   );
 };
-
-export function SendCTA({ children, onClick, className }: ButtonProps) {
+export function SendCTA({ children, onClick, className = '', type = 'button' }: ButtonProps) {
   return (
     <button
+      type={type}
       onClick={onClick}
       className={`px-6 outline-2 flex justify-center items-center group hover:outline-hidden py-4 my-4 font-bold uppercase transition duration-100 ease-linear ${className} 
-          text-light-ash bg-light-snow outline-light-ash hover:text-light-snow hover:bg-light-violet
-          dark:text-dark-frost dark:bg-light-obsidian dark:outline-dark-frost dark:hover:bg-dark-lavender"
-      rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.02]`}
+        text-light-ash bg-light-snow outline-light-ash hover:text-light-snow hover:bg-light-violet
+        dark:text-dark-frost dark:bg-light-obsidian dark:outline-dark-frost dark:hover:bg-dark-lavender
+        rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.02]`}
     >
       <>
         {children}

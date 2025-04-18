@@ -1,11 +1,14 @@
+import { IntroSection } from "@components/molecyles/Sections";
+import { PageProps } from "@interfaces/PageProps";
 import { getDictionary } from "get-dictionary";
 
-export default async function Home({ params }) {
-  const dictionary = await getDictionary(params.lang);
-  console.log(dictionary);
+export default async function Home({ params }: PageProps) {
+  const { lang } = await params;
+  const dictionary = await getDictionary(lang);
+  const content = dictionary.contactForm;
   return (
     <>
-      <h1>Coming soon.</h1>
+      <IntroSection content={content} />
     </>
   );
 }

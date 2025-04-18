@@ -5,7 +5,6 @@ import { Suspense } from "react";
 import { useTheme } from "next-themes";
 import { Nebula } from "./components/Nebula";
 import { ArrowDownConstellation } from "./components/ArrowDownConstellation";
-import { ArrowUpContellation } from "./components/ArrowUpConstellation";
 import { Starfield } from "./components/StarField";
 
 export const TheCosmos = () => {
