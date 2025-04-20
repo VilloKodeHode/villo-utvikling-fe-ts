@@ -12,6 +12,8 @@ import { FloatingUtilsBar } from "@components/ui/header/floatingUtilBar/Floating
 import { TheCosmos } from "@components/animation/TheCosmos";
 import { RootProps } from "@interfaces/PageProps";
 import FloatingArrowUp from "@components/animation/components/ArrowUpConstellation";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 export const figtree = Figtree({ subsets: ["latin"] });
 export const noto_emoji = Noto_Color_Emoji({
   weight: "400",
@@ -46,6 +48,8 @@ export async function RootLayout({ children, params }: RootProps) {
           <CookiePopup content={dictionary.cookie} />
         </AppUserProvider>
         <FloatingArrowUp />
+        <SpeedInsights/>
+        <Analytics/>
       </body>
     </html>
   );
