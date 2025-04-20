@@ -10,7 +10,7 @@ export const TheCosmos = () => {
 
   return (
     <div
-  className="fixed top-0 left-0 w-full h-full pointer-events-none"
+  className="fixed top-0 left-0 -z-10 w-full h-full pointer-events-none"
 >
   <Canvas
     camera={{ position: [0, 0, 0], fov: 75, far: 200 }}
