@@ -9,6 +9,9 @@
 # testing
 /coverage
 
+# SEO testing
+/.unlighthouse
+
 # next.js
 /.next/
 /out/

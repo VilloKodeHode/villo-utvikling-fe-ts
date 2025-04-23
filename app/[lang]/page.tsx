@@ -3,6 +3,7 @@ import { PageProps } from "../interfaces/PageProps";
 import { ShowcaseSection } from "app/[lang]/(pages)/index/sections/ShowcaseSection";
 import { getDictionary } from "get-dictionary";
 import { ServicePageContent } from "app/[lang]/(pages)/services/sections/ServicePageContent";
+import { SettingIcon } from "@components/atoms/SvgIcons";
 
 export default async function Home({ params }: PageProps) {
   const { lang } = await params;
@@ -10,6 +11,7 @@ export default async function Home({ params }: PageProps) {
 
   return (
     <>
+    
       <HeroSection params={{ lang }} content={dictionary.heroSection} />
       <ShowcaseSection content={dictionary.showCaseList} />
       <ServicePageContent

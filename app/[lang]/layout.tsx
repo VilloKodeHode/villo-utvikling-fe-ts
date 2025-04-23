@@ -20,6 +20,7 @@ export const noto_emoji = Noto_Color_Emoji({
 });
 
 //TODO: Lag pris underside (tydeligvis lovpålagt!)
+//TODO: Legg til CTAs nederst på hver side for enklere navigasjon
 
 export async function RootLayout({ children, params }: RootProps) {
   const { lang } = await params;

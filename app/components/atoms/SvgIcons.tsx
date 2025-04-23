@@ -87,7 +87,7 @@ export const WorkIcon = () => {
 export const SettingIcon = () => {
   return (
     <svg
-      className={`cursor-pointer h-[48px] flex -translate-y-[1px] w-fit`}
+      className={`transition-all stroke-3 cursor-pointer h-[32px] md:h-[46px] flex w-fit stroke-light-obsidian fill-light-charcoal/80 hover:fill-light-charcoal/100 dark:stroke-dark-ice dark:fill-dark-glacier/70 dark:hover:fill-dark-glacier/100 duration-300`}
       width="200"
       height="200"
       viewBox="0 0 200 200"
@@ -95,7 +95,9 @@ export const SettingIcon = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <g clipPath="url(#clip0_961_87)">
-        <path d="M80.3457 100C80.3457 88.9733 89.1457 80 99.9857 80C110.826 80 119.626 88.9733 119.626 100C119.626 111.027 110.826 120 99.9857 120C89.1457 120 80.3457 111.027 80.3457 100Z" />
+        <path
+          d="M80.3457 100C80.3457 88.9733 89.1457 80 99.9857 80C110.826 80 119.626 88.9733 119.626 100C119.626 111.027 110.826 120 99.9857 120C89.1457 120 80.3457 111.027 80.3457 100Z"
+        />
         <path
           fillRule="evenodd"
           clipRule="evenodd"
