@@ -1,4 +1,6 @@
+# *
 User-agent: *
 Allow: /
 
-Sitemap: https://www.villoutvikling.com/api/sitemap
+# Host
+Host: https://www.villoutvikling.com/

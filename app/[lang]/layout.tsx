@@ -56,7 +56,7 @@ export async function RootLayout({ children, params }: RootProps) {
 export default RootLayout;
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://villo-utvikling-fe-ts.vercel.app/no"),
+  metadataBase: new URL("https://www.villoutvikling.com/en"),
   title: "Villo Utvikling",
   description:
     "Profesjonell frontend- og webutvikling med fokus på responsive, brukervennlige og visuelt tiltalende nettsider for bedrifter, klubber og privatpersoner.",
@@ -65,11 +65,11 @@ export const metadata: Metadata = {
   authors: [{ name: "Joakim Villo - Villo Utvikling" }],
   robots: "index, follow",
   alternates: {
-    canonical: "https://villo-utvikling-fe-ts.vercel.app/no/",
+    canonical: "https://www.villoutvikling.com/en",
   },
   openGraph: {
     type: "website",
-    url: "https://villo-utvikling-fe-ts.vercel.app/no/",
+    url: "https://www.villoutvikling.com/en",
     siteName: "Villo Utvikling",
     title: "Villo Utvikling",
     description:
@@ -77,7 +77,7 @@ export const metadata: Metadata = {
     locale: "no-NO",
     images: [
       {
-        url: "/images/logo/WindLogoNoTextLightMode.svg", // now resolves with metadataBase
+        url: "https://www.villoutvikling.com/images/logo/WindLogoLightMode.svg", // now resolves with metadataBase
         width: 1200,
         height: 630,
         alt: "Villo Utvikling Logo",
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
     ],
   },
   icons: {
-    icon: "/images/logo/WindLogoNoTextLightMode.svg",
-    apple: "/images/logo/WindLogoNoTextLightMode.svg",
+    icon: "https://www.villoutvikling.com/images/logo/WindLogoLightMode.svg",
+    apple: "https://www.villoutvikling.com/images/logo/WindLogoLightMode.svg",
   },
 };
