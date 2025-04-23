@@ -2,7 +2,7 @@ import { getDictionary } from "get-dictionary";
 import { AltIntroSection, TextAndImageSection } from "@components/molecyles/Sections";
 import { SkillsSection } from "./sections/SkillsSection";
 import { ProjectSection } from "./sections/ProjectSection";
-import { PageProps } from "@interfaces/PageProps";
+import { PageProps } from "app/interfaces/PageProps";
 
 export default async function Home({ params }: PageProps) {
   const { lang } = await params;

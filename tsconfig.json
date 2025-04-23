@@ -20,16 +20,16 @@
       }
     ],
     "paths": {
-      "@components/*": ["app/[lang]/components/*"],
-      "@lib/*": ["app/[lang]/lib/*"],
-      "@types/*": ["app/[lang]/types/*"],
-      "@utils/*": ["app/[lang]/utils/*"],
-      "@hooks/*": ["app/[lang]/hooks/*"],
+      "@components/*": ["app/components/*"],
+      "@lib/*": ["app/lib/*"],
+      "@types/*": ["app/types/*"],
+      "@utils/*": ["app/utils/*"],
+      "@hooks/*": ["app/hooks/*"],
       "@pages/*": ["app/[lang]/(pages)/*"],
-      "@contexts/*": ["app/[lang]/contexts/*"],
-      "@data/*": ["app/[lang]/data/*"],
-      "@logic/*": ["app/[lang]/logic/*"],
-      "@interfaces/*": ["app/[lang]/interfaces/*"]
+      "@contexts/*": ["app/contexts/*"],
+      "@data/*": ["app/data/*"],
+      "@logic/*": ["app/logic/*"],
+      "@interfaces/*": ["app/interfaces/*"]
     },
     "target": "ES2017"
   },

@@ -1,6 +1,6 @@
 "use client";
 
-import { AddScrollToElement } from "@logic/handleScroll";
+import { AddScrollToElement } from "app/logic/handleScroll";
 // import { MouseOpacityEffect } from "@logic/mouseOpacityEffect";
 import { ThemeProvider, useTheme } from "next-themes";
 import { useEffect, useState } from "react";

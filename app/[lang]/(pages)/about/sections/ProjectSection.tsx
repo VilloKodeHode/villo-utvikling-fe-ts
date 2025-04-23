@@ -1,6 +1,6 @@
 import { ThemedH1 } from "@components/atoms/ThemedText";
 import ProjectCards from "./ProjectCard";
-import { ComponentProps } from "@interfaces/PageProps";
+import { ComponentProps } from "app/interfaces/PageProps";
 
 export const ProjectSection = ({content}: ComponentProps) => {
   return (

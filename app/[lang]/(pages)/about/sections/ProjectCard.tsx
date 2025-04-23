@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ExternalCTA } from "@components/atoms/Buttons";
 import { ThemedH5, ThemedP } from "@components/atoms/ThemedText";
-import { ComponentProps } from "@interfaces/PageProps";
+import { ComponentProps } from "app/interfaces/PageProps";
 
 export default function ProjectCards({ content }: ComponentProps) {
   return (

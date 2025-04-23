@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ThemedH2, ThemedH4, ThemedP } from "@components/atoms/ThemedText";
 import { ReadMoreButton } from "@components/atoms/Buttons";
-import { PageProps } from "@interfaces/PageProps";
+import { PageProps } from "app/interfaces/PageProps";
 
 export const OfferSection = async ({ params }: PageProps) => {
   const { lang } = await params;

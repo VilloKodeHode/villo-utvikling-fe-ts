@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { ThemedP } from "@components/atoms/ThemedText";
-import { ComponentProps } from "@interfaces/PageProps";
+import { ComponentProps } from "app/interfaces/PageProps";
 import {
   ContactLogoLink,
   FacebookLogoLink,

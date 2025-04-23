@@ -5,7 +5,7 @@ import { useState } from "react";
 import { deleteCookie, setCookie } from "cookies-next";
 import { ThemedH5, ThemedSmall } from "@components/atoms/ThemedText";
 import { CookieButton } from "@components/atoms/Buttons";
-import { ComponentProps } from "@interfaces/PageProps";
+import { ComponentProps } from "app/interfaces/PageProps";
 
 const CookiePopup = ({ content }: ComponentProps) => {
   const [showPopup, setShowPopup] = useState(false);

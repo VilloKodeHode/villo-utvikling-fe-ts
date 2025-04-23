@@ -1,6 +1,6 @@
 import NavItem from "../molecules/NavItem";
 import LogoComponent from "@components/atoms/Logo";
-import { ComponentPropsWithParams } from "@interfaces/PageProps";
+import { ComponentPropsWithParams } from "app/interfaces/PageProps";
 import HamburgerBar from "../hamburgerbar/HamburgerBar";
 
 interface MenuItem {

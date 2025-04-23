@@ -2,15 +2,14 @@ import type { Metadata } from "next";
 import { Figtree, Noto_Color_Emoji } from "next/font/google";
 import "./globals.css";
 import CookiePopup from "@components/ui/cookies/CookiePopup";
-import { AppUserProvider } from "@contexts/UserContext";
+import { AppUserProvider } from "app/contexts/UserContext";
 import { NavBar } from "@components/ui/navigation/navbar/NavBar";
 import { Header } from "@components/ui/header/Header";
-import { SplashScreen } from "@components/ui/splashscreen/SplashScreen";
 import Footer from "@components/ui/footer/Footer";
 import { getDictionary } from "get-dictionary";
 import { FloatingUtilsBar } from "@components/ui/header/floatingUtilBar/FloatingUtilBar";
 import { TheCosmos } from "@components/animation/TheCosmos";
-import { RootProps } from "@interfaces/PageProps";
+import { RootProps } from "app/interfaces/PageProps";
 import FloatingArrowUp from "@components/animation/components/ArrowUpConstellation";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -43,7 +42,6 @@ export async function RootLayout({ children, params }: RootProps) {
             {children}
           </main>
           <Footer content={dictionary.footer} />
-          <SplashScreen />
           <CookiePopup content={dictionary.cookie} />
         <FloatingArrowUp />
         </AppUserProvider>

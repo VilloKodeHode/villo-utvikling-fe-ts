@@ -2,7 +2,7 @@ import { getDictionary } from "get-dictionary";
 
 import { EmploymentSection } from "./sections/EmploymentSection";
 import { ClientsSection } from "./sections/ClientSection";
-import { PageProps } from "@interfaces/PageProps";
+import { PageProps } from "app/interfaces/PageProps";
 import { IntroSection } from "@components/molecyles/Sections";
 
 export default async function Home({ params }: PageProps) {

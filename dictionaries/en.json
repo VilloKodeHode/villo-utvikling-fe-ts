@@ -143,32 +143,32 @@
         {
           "title": "No middleman",
           "description": "Normal this takes a big part of the budget, but not with me! A a final price is set before the project starts",
-          "icon": "/images/service_icons/handshake.svg"
+          "icon": "🤝🏼"
         },
         {
           "title": "Project insight",
           "description": "You get the opportunity to provide feedback throughout the entire development process to achieve the desired result.",
-          "icon": "/images/service_icons/insight.svg"
+          "icon": "🙋🏽"
         },
         {
           "title": "Secure and modern website",
           "description": "To create a website that is secure, user-friendly, and scalable, the latest technology is used.",
-          "icon": "/images/service_icons/security.svg"
+          "icon": "🖥️"
         },
         {
           "title": "User-friendly database",
           "description": "If needed, a database will be integrated for you to manage your website content with.",
-          "icon": "/images/service_icons/database.svg"
+          "icon": "🏢"
         },
         {
           "title": "Search engine optimization",
           "description": "You get more traffic to the site and make it easier to search for it on search engines.",
-          "icon": "/images/service_icons/eyes.svg"
+          "icon": "👁️"
         },
         {
           "title": "Full support",
           "description": "You get taught how you can manage the content on your website by using a content management system.",
-          "icon": "/images/service_icons/training.svg"
+          "icon": "👨🏼‍🏫"
         }
       ],
 
@@ -188,32 +188,32 @@
         {
           "title": "Customized SEO solutions",
           "description": "Tailored to meet your specific business needs and goals.",
-          "icon": "/images/service_icons/search.svg"
+          "icon": "🔍"
         },
         {
           "title": "Higher search engine rankings",
           "description": "Boost visibility on Google and ensure your website reaches your target audience.",
-          "icon": "/images/service_icons/growth.svg"
+          "icon": "📈"
         },
         {
           "title": "SEO-optimized content",
           "description": "Improves content quality and relevance to engage both users and search engines.",
-          "icon": "/images/service_icons/content.svg"
+          "icon": "🔑"
         },
         {
           "title": "Local SEO expertise",
           "description": "Attracts more local customers through targeted local SEO strategies.",
-          "icon": "/images/service_icons/map_pin.svg"
+          "icon": "📍"
         },
         {
           "title": "Increased website traffic",
           "description": "SEO improvements that drive more visitors and make your site easier to find.",
-          "icon": "/images/service_icons/traffic.svg"
+          "icon": "🚦"
         },
         {
           "title": "SEO insights & reporting",
           "description": "Track your SEO progress with detailed analytics and transparent reports.",
-          "icon": "/images/service_icons/graph.svg"
+          "icon": "📊"
         }
       ],
 
@@ -234,32 +234,32 @@
         {
           "title": "Engaging content",
           "description": "Captures your audience's attention and enhances user experience.",
-          "icon": "/images/service_icons/bullseye.svg"
+          "icon": "🎯"
         },
         {
           "title": "Tailor-made solutions",
           "description": "Content crafted to align with your unique business goals and needs.",
-          "icon": "/images/service_icons/tools.svg"
+          "icon": "🛠"
         },
         {
           "title": "User-friendly design",
           "description": "Visually appealing and easy-to-navigate content for your audience.",
-          "icon": "/images/service_icons/palette.svg"
+          "icon": "🎨"
         },
         {
           "title": "Timely delivery",
           "description": "Ensuring your content is ready when you need it.",
-          "icon": "/images/service_icons/hourglass.svg"
+          "icon": "⏳"
         },
         {
           "title": "Responsive content",
           "description": "Seamlessly adapts to various devices and screen sizes.",
-          "icon": "/images/service_icons/mobile.svg"
+          "icon": "📱"
         },
         {
           "title": "Brand-building content",
           "description": "Resonates with your audience, drives engagement, and builds loyalty.",
-          "icon": "/images/service_icons/rocket.svg"
+          "icon": "🚀"
         }
       ],
 
@@ -280,32 +280,32 @@
         {
           "title": "Easy content management",
           "description": "Update your content effortlessly without any technical knowledge. You decide what is displayed",
-          "icon": "/images/service_icons/edit.svg"
+          "icon": "⚙"
         },
         {
           "title": "Scalable solution",
           "description": "Designed to grow with your business and adapt to future needs.",
-          "icon": "/images/service_icons/growth.svg"
+          "icon": "📈"
         },
         {
           "title": "Customized to your needs",
           "description": "Built to match your specific requirements for optimal functionality.",
-          "icon": "/images/service_icons/tuning.svg"
+          "icon": "🎛"
         },
         {
           "title": "Secure data storage",
           "description": "Reliable storage and handling of sensitive information.",
-          "icon": "/images/service_icons/security.svg"
+          "icon": "🔐"
         },
         {
           "title": "Automatic backups",
           "description": "Protects your content from loss and unexpected issues.",
-          "icon": "/images/service_icons/storage.svg"
+          "icon": "💾"
         },
         {
           "title": "Seamless integration",
           "description": "Compatible with popular tools and third-party services.",
-          "icon": "/images/service_icons/lightning.svg"
+          "icon": "🔗"
         }
       ],
 
@@ -323,34 +323,34 @@
       "middle_title": "Why you should choose me connect your social media with your website...",
       "bullitins": [
         {
-          "title": "Seamless platform integration",
+          "title": "Platform integration",
           "description": "Connects effortlessly with Instagram, Facebook, Twitter, and more.",
-          "icon": "/images/service_icons/connect.svg"
+          "icon": "🔗"
         },
         {
           "title": "Automatic content updates",
           "description": "Syncs your social media content directly to your website.",
-          "icon": "/images/service_icons/sync.svg"
+          "icon": "🔄"
         },
         {
           "title": "Time-saving synchronization",
           "description": "Easily publish posts across multiple platforms without extra effort.",
-          "icon": "/images/service_icons/hourglass.svg"
+          "icon": "⏳"
         },
         {
           "title": "Design-matched content",
           "description": "Social media posts are styled to seamlessly match your website's design.",
-          "icon": "/images/service_icons/palette.svg"
+          "icon": "📱"
         },
         {
           "title": "No technical knowledge needed",
           "description": "Easily display and manage content without any coding skills.",
-          "icon": "/images/service_icons/tools.svg"
+          "icon": "🛠"
         },
         {
           "title": "Increased visibility",
           "description": "Enhance your social media reach by sharing content across multiple platforms.",
-          "icon": "/images/service_icons/eyes.svg"
+          "icon": "👀"
         }
       ],
 
@@ -365,7 +365,8 @@
     { "text": "Home", "href": "/{lang}" },
     { "text": "About", "href": "/{lang}/about" },
     { "text": "Portfolio", "href": "/{lang}/portfolio" },
-    { "text": "Contact", "href": "/{lang}/contact" }
+    { "text": "Contact", "href": "/{lang}/contact" },
+    { "text": "Services", "href": "/{lang}/services" }
   ],
 
   "service_cards": [

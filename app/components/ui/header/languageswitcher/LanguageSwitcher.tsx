@@ -1,7 +1,7 @@
 "use client";
 
 //TODO: Check if code works:
-import { redirectedPathname } from "@logic/redirectedPathName";
+import { redirectedPathname } from "app/logic/redirectedPathName";
 import { i18n } from "i18next.config";
 import Image from "next/image";
 import Link from "next/link";

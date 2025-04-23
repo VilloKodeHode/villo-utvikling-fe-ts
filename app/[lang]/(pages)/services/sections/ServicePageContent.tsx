@@ -1,6 +1,6 @@
 import { ReadMoreButton } from "@components/atoms/Buttons";
 import { ThemedH2, ThemedH4, ThemedP } from "@components/atoms/ThemedText";
-import { ComponentPropsWithParams } from "@interfaces/PageProps";
+import { ComponentPropsWithParams } from "app/interfaces/PageProps";
 import Link from "next/link";
 
 export const ServicePageContent = ({

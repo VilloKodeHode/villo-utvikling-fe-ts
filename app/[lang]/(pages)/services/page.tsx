@@ -1,5 +1,5 @@
 import { ServicePageContent } from "@pages/services/sections/ServicePageContent";
-import { PageProps } from "@interfaces/PageProps";
+import { PageProps } from "app/interfaces/PageProps";
 import { getDictionary } from "get-dictionary";
 
 export default async function Home({ params }: PageProps) {

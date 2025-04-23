@@ -1,5 +1,5 @@
 import { HeroSection } from "app/[lang]/(pages)/index/sections/HeroSection";
-import { PageProps } from "./interfaces/PageProps";
+import { PageProps } from "../interfaces/PageProps";
 import { ShowcaseSection } from "app/[lang]/(pages)/index/sections/ShowcaseSection";
 import { getDictionary } from "get-dictionary";
 import { ServicePageContent } from "app/[lang]/(pages)/services/sections/ServicePageContent";

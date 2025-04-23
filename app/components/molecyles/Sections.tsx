@@ -1,5 +1,5 @@
 import { ThemedH1, ThemedH2, ThemedH3, ThemedP, ThemedPLarge } from "@components/atoms/ThemedText";
-import { ComponentProps } from "@interfaces/PageProps";
+import { ComponentProps } from "app/interfaces/PageProps";
 import Image from "next/image";
 
 export const TextAndImageSection = ({ content }: ComponentProps) => {

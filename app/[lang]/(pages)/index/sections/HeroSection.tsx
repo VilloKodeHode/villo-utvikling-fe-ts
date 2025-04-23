@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ThemedH1, ThemedP, ThemedPLarge } from "@components/atoms/ThemedText";
 import { ArrowCTA } from "@components/atoms/Buttons";
 import { ScrollToSectionButton } from "@components/atoms/ScrolltoSectionButton";
-import {ComponentPropsWithParams } from "@interfaces/PageProps";
+import {ComponentPropsWithParams } from "app/interfaces/PageProps";
 
 
 export const HeroSection = ({ params, content }: ComponentPropsWithParams) => {

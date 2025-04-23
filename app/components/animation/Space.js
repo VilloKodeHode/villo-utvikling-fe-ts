@@ -1,7 +1,7 @@
 "use client";
 
-import { useOpacityScroll } from "@logic/scrollOpacity";
-import { useColors } from "@logic/useColors";
+import { useOpacityScroll } from "app/logic/scrollOpacity";
+import { useColors } from "app/logic/useColors";
 import { useTheme } from "next-themes";
 import { useEffect, useRef } from "react";
 import * as THREE from "three";

@@ -1,6 +1,6 @@
 "use client";
 
-import { ButtonProps } from "app/[lang]/interfaces/PageProps";
+import { ButtonProps } from "app/interfaces/PageProps";
 import {
   ArrowRightIcon,
   EmailIcon,
