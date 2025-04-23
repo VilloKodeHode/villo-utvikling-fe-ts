@@ -14,7 +14,7 @@ export const InputWithLabel = ({
 
   return (
     <div className="mb-4">
-      <label htmlFor={name} className="block font-bold mb-2 text-light-black dark:text-dark-white">
+      <label htmlFor={name} className="block font-bold mb-2 text-light-charcoal dark:text-dark-frost">
         {children}
       </label>
       <InputComponent
@@ -30,7 +30,7 @@ export const InputWithLabel = ({
         }
         required
         rows={type === 'textarea' ? 4 : undefined}
-        className="w-full px-4 py-2 border rounded-lg bg-light-white text-light-black border-light-black focus:border-light-primary focus:outline-light-primary dark:bg-dark-black dark:text-dark-white dark:border-dark-white dark:focus:border-dark-primary dark:focus:outline-dark-primary"
+        className="w-full px-4 py-2 focus:outline-3 outline-offset-[-2.5px] border rounded-lg bg-light-mist text-light-charcoal border-light-charcoal focus:outline-light-violet dark:bg-dark-onyx dark:text-dark-frost dark:border-dark-frost dark:focus:outline-dark-lavender"
       />
     </div>
   );

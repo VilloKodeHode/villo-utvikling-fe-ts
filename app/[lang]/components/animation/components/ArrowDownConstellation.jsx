@@ -2,8 +2,11 @@
 import { useMemo, useRef, useState } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";
+import { useTheme } from "next-themes";
 
 export const ArrowDownConstellation = () => {
+  const { theme } = useTheme();
+
   const groupRef = useRef();
   const clickPlaneRef = useRef();
   const { size, camera } = useThree();
@@ -16,16 +19,18 @@ export const ArrowDownConstellation = () => {
     canvas.width = 64;
     canvas.height = 64;
     const ctx = canvas.getContext("2d");
-    if (!ctx) return null;
+    if (!ctx || !theme) return null;
 
+    const isLight = theme === "light";
+    const glowColor = isLight ? "40, 37, 59" : "241,239,255";
     const gradient = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
-    gradient.addColorStop(0, "rgba(255,255,255,1)");
-    gradient.addColorStop(1, "rgba(255,255,255,0)");
+    gradient.addColorStop(0, `rgba(${glowColor}, ${isLight ? 1.5 : 1})`);
+    gradient.addColorStop(1, `rgba(${glowColor}, 0)`);
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, 64, 64);
 
     return new THREE.CanvasTexture(canvas);
-  }, []);
+  }, [theme]);
 
   const basePositions = useMemo(() => {
     const positions = [];
@@ -45,7 +50,10 @@ export const ArrowDownConstellation = () => {
     return positions;
   }, []);
 
-  const positions = useMemo(() => new Float32Array(basePositions.length * 3), [basePositions]);
+  const positions = useMemo(
+    () => new Float32Array(basePositions.length * 3),
+    [basePositions]
+  );
 
   const driftSeeds = useMemo(() => {
     return basePositions.map(() => ({
@@ -65,13 +73,13 @@ export const ArrowDownConstellation = () => {
   useFrame(({ clock }) => {
     const pageHeight = document.documentElement.scrollHeight;
     const shouldHide = pageHeight < window.innerHeight * 1.5;
-  
+
     if (shouldHide) {
       if (groupRef.current) groupRef.current.visible = false;
       if (clickPlaneRef.current) clickPlaneRef.current.visible = false;
       return;
     }
-  
+
     // Normal behavior if page is tall enough
     const t = clock.getElapsedTime();
     const scrollY = window.scrollY;
@@ -83,11 +91,11 @@ export const ArrowDownConstellation = () => {
       (flicker + hoverBoost) * fade,
       0.1
     );
-  
+
     if (groupRef.current) {
       groupRef.current.visible = true;
       groupRef.current.material.opacity = targetOpacity.current;
-  
+
       const driftScale = 0.05;
       basePositions.forEach(([x0, y0, z0], i) => {
         const seed = driftSeeds[i];
@@ -95,23 +103,22 @@ export const ArrowDownConstellation = () => {
         positions[i * 3 + 1] = y0 + Math.cos(t + seed.y) * driftScale;
         positions[i * 3 + 2] = z0;
       });
-  
+
       groupRef.current.geometry.attributes.position.needsUpdate = true;
     }
-  
+
     if (clickPlaneRef.current) {
       const plane = clickPlaneRef.current;
-  
+
       if (!plane.__originalRaycast && plane.raycast) {
         plane.__originalRaycast = plane.raycast;
       }
-  
+
       const shouldBeVisible = fade > 0.01;
       plane.visible = shouldBeVisible;
       plane.raycast = shouldBeVisible ? plane.__originalRaycast : () => {};
     }
   });
-  
 
   const scrollToNextSection = () => {
     const next = document.querySelector("[data-scroll-target]");
@@ -155,7 +162,8 @@ export const ArrowDownConstellation = () => {
           transparent
           opacity={1}
           depthWrite={false}
-          blending={THREE.AdditiveBlending}
+          color={theme === "light" ? new THREE.Color("#111111") : new THREE.Color("#f5f5ff")}
+          blending={theme === "light" ? THREE.NormalBlending : THREE.AdditiveBlending}
         />
       </points>
     </>

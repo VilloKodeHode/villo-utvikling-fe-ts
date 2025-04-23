@@ -1,27 +1,41 @@
 "use client";
 import { Canvas, useFrame } from "@react-three/fiber";
+import { useTheme } from "next-themes";
 import { useEffect, useMemo, useRef, useState } from "react";
 import * as THREE from "three";
 
 const ArrowUpConstellation = () => {
+  const { theme } = useTheme();
   const groupRef = useRef();
   const clickPlaneRef = useRef();
   const [visible, setVisible] = useState(false);
   const [hovered, setHovered] = useState(false);
   const targetOpacity = useRef(0);
 
+  useEffect(() => {
+    console.log(theme);
+  }, []);
+
   const starTexture = useMemo(() => {
     const canvas = document.createElement("canvas");
     canvas.width = 64;
     canvas.height = 64;
     const ctx = canvas.getContext("2d");
+    if (!ctx) return null;
+
     const gradient = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
-    gradient.addColorStop(0, "white");
+    gradient.addColorStop(
+      0.3,
+      theme === "light" ? "rgba(13, 12, 21,1)" : "rgba(244, 243, 255,1)"
+    );
     gradient.addColorStop(1, "transparent");
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, 64, 64);
-    return new THREE.CanvasTexture(canvas);
-  }, []);
+
+    const texture = new THREE.CanvasTexture(canvas);
+    texture.needsUpdate = true;
+    return texture;
+  }, [theme]);
 
   const positions = useMemo(() => {
     const points = [];
@@ -84,7 +98,7 @@ const ArrowUpConstellation = () => {
         <meshBasicMaterial transparent opacity={0} />
       </mesh>
 
-      <points ref={groupRef} position={[0, 0, 0]}>
+      <points ref={groupRef} key={theme} position={[0, 0, 0]}>
         <bufferGeometry>
           <bufferAttribute
             attach="attributes-position"

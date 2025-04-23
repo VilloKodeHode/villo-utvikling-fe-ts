@@ -563,7 +563,7 @@
     .glass-morphism-card-alternative {
       @apply bg-light-cloud/50 hover:bg-light-mist/60 
              border border-light-dusk
-             dark:bg-dark-storm/50 dark:hover:bg-dark-shadow/60 
+             dark:bg-dark-storm/30 dark:hover:bg-dark-storm/80 
              dark:border-dark-shadow backdrop-blur-[2px];
     }
 
@@ -617,12 +617,6 @@
 .gradient-container {
   position: relative;
   background-color: none;
-}
-
-.service-card {
-  /* overflow: hidden; */
-  /* background: linear-gradient(to right, #ff7eb3, #ff758c, #ff6b66, #ff6240);  */
-  /* border-radius: 0.375rem */
 }
 
 .service_icon {

@@ -45,8 +45,8 @@ export async function RootLayout({ children, params }: RootProps) {
           <Footer content={dictionary.footer} />
           <SplashScreen />
           <CookiePopup content={dictionary.cookie} />
-        </AppUserProvider>
         <FloatingArrowUp />
+        </AppUserProvider>
         <SpeedInsights/>
         <Analytics/>
       </body>

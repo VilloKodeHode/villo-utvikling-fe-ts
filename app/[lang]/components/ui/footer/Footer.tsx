@@ -1,10 +1,5 @@
 //Footer component
-//TODO Change to tsx script
 
-import Link from "next/link";
-import { FiMail } from "react-icons/fi";
-import { SlSocialLinkedin } from "react-icons/sl";
-import { VscGithubAlt } from "react-icons/vsc";
 import Image from "next/image";
 import { ThemedP } from "@components/atoms/ThemedText";
 import { ComponentProps } from "@interfaces/PageProps";
@@ -20,8 +15,10 @@ export default async function Footer({ content }: ComponentProps) {
   return (
     <footer
       className={`z-1 relative py-24 sm:px-6 lg:px-12 px-4
-       bg-light-fog dark:bg-dark-onyx`}
+       bg-light-mist dark:bg-dark-onyx`}
     >
+      <div className="absolute w-0 left-0 top-0 h-0.5 duration-1000 transition-[width] dark:w-full bg-dark-slate" />
+      <div className="absolute w-full right-0 top-0 h-0.5 duration-1000 transition-[width] dark:w-0 bg-light-cloud" />
       <div className="flex flex-col items-center justify-center w-full gap-4 sm:justify-between sm:flex-row">
         <div
           className={`flex flex-col gap-2
@@ -30,7 +27,6 @@ export default async function Footer({ content }: ComponentProps) {
         >
           <div className="flex gap-4">
             <ContactLogoLink />
-
             <LinkedInLogoLink />
             <GithubLogoLink />
             <FacebookLogoLink />

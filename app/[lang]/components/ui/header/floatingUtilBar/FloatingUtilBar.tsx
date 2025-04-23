@@ -1,9 +1,9 @@
 "use client";
 
-import { FcSettings } from "react-icons/fc";
 import { useEffect, useState } from "react";
 import LanguageSwitcher from "../languageswitcher/LanguageSwitcher";
 import { ThemeSwitch } from "../themeswitcher/ThemeSwitcher";
+import { SettingIcon } from "@components/atoms/SvgIcons";
 
 //TODO cogwheel going in outside of screen when not fullscreen
 
@@ -53,9 +53,7 @@ export const FloatingUtilsBar = () => {
           }`}
             onClick={toggleToolBar}
           >
-            <FcSettings
-              className={`cursor-pointer h-[48px] flex -translate-y-[1px] w-fit`}
-            ></FcSettings>
+       <SettingIcon/>
           </button>
         </div>
       </div>

@@ -1,10 +1,10 @@
 "use client";
 
 import NavItem from "../molecules/NavItem";
-import { IoCloseSharp } from "react-icons/io5";
-import { GiHamburgerMenu } from "react-icons/gi";
+
 import { useEffect, useRef, useState } from "react";
 import { useTheme } from "next-themes";
+import { CrossIcon, HamburgerIcon } from "@components/atoms/SvgIcons";
 
 export default function HamburgerBar({
   menuItems,
@@ -40,7 +40,7 @@ export default function HamburgerBar({
         onClick={handleMenuToggle}
         aria-label="Toggle menu"
       >
-        <GiHamburgerMenu className="h-10 w-10" />
+        <HamburgerIcon/>
       </button>
 
       <div
@@ -60,9 +60,7 @@ export default function HamburgerBar({
                   onClick={handleMenuToggle}
                   aria-label="Close menu"
                 >
-                  <IoCloseSharp
-                    className={`text-light-violet dark:text-dark-lavender hover:opacity-70 transition duration-500 w-full h-full`}
-                  />
+              <CrossIcon/>
                 </button>
 
                 {/* <LogoComponent params={params} onclick={handleMenuToggle} /> */}

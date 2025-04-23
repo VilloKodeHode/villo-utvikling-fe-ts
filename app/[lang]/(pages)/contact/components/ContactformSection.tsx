@@ -3,7 +3,12 @@
 import { useState } from "react";
 import Image from "next/image";
 import { InputWithLabel } from "./InputWithLabel";
-import { ThemedH1, ThemedH2, ThemedP, ThemedPLarge } from "@components/atoms/ThemedText";
+import {
+  ThemedH1,
+  ThemedH2,
+  ThemedP,
+  ThemedPLarge,
+} from "@components/atoms/ThemedText";
 import CallToActionButton, { SendCTA } from "@components/atoms/Buttons";
 
 export const ContactformSection = ({ content }) => {
@@ -80,7 +85,9 @@ export const ContactformSection = ({ content }) => {
               {content.messageLabel}
             </InputWithLabel>
 
-            <SendCTA type="submit">{content.submitButton}</SendCTA>
+            <SendCTA type="submit">
+              <ThemedP>{content.submitButton}</ThemedP>
+            </SendCTA>
           </form>
         </div>
       ) : (
