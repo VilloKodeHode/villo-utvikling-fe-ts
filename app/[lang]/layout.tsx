@@ -31,7 +31,6 @@ export async function RootLayout({ children, params }: RootProps) {
         className={`${figtree.className} relative min-h-[100vh] transition-colors duration-1000 bg-light-snow dark:bg-dark-midnight overflow-x-hidden antialiased`}
       >
         <AppUserProvider>
-          {/* <THREESpace /> */}
           <TheCosmos />
           <Header />
           <FloatingUtilsBar />

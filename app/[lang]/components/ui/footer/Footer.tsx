@@ -7,51 +7,33 @@ import { SlSocialLinkedin } from "react-icons/sl";
 import { VscGithubAlt } from "react-icons/vsc";
 import Image from "next/image";
 import { ThemedP } from "@components/atoms/ThemedText";
-import { ComponentProps} from "@interfaces/PageProps";
+import { ComponentProps } from "@interfaces/PageProps";
+import {
+  ContactLogoLink,
+  FacebookLogoLink,
+  GithubLogoLink,
+  LinkedInLogoLink,
+} from "@components/atoms/LogoLink";
 
 export default async function Footer({ content }: ComponentProps) {
-
   const year = new Date().getFullYear();
   return (
     <footer
       className={`z-1 relative py-24 sm:px-6 lg:px-12 px-4
-       bg-light-fog dark:bg-dark-onyx`}>
-      {/*HUSK Å IMPLEMENTERE FOOTERLINKS COMPONENTS! <FooterLinks Theme={Theme} /> */}
+       bg-light-fog dark:bg-dark-onyx`}
+    >
       <div className="flex flex-col items-center justify-center w-full gap-4 sm:justify-between sm:flex-row">
-        {/* Contact Information */}
         <div
           className={`flex flex-col gap-2
             text-light-snow dark:text-dark-ice
-          `}>
+          `}
+        >
           <div className="flex gap-4">
-            <Link
-              className="w-fit"
-              href="/contact">
-              <FiMail
-                className={`w-8 h-8  text-light-ash hover:text-light-violet
-                    dark:text-dark-frost dark:hover:text-dark-twilight
-                 duration-200  hover:scale-125`}
-              />
-            </Link>
+            <ContactLogoLink />
 
-            <a
-              href="https://github.com/VilloKodeHode"
-              target="_blank">
-              <VscGithubAlt
-                className={`w-8 h-8  text-light-ash hover:text-light-violet
-                    dark:text-dark-frost dark:hover:text-dark-twilight
-                 duration-200  hover:scale-125`}
-              />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/joakim-villo-71b814a1/"
-              target="_blank">
-              <SlSocialLinkedin
-                className={`w-8 h-8  text-light-ash hover:text-light-violet
-                    dark:text-dark-frost dark:hover:text-dark-twilight
-                 duration-200  hover:scale-125`}
-              />
-            </a>
+            <LinkedInLogoLink />
+            <GithubLogoLink />
+            <FacebookLogoLink />
           </div>
           <ThemedP>Email: Villokodehode@gmail.com</ThemedP>
           <ThemedP>Phone: +47 932 850 44</ThemedP>
@@ -61,10 +43,9 @@ export default async function Footer({ content }: ComponentProps) {
         <div
           className={`flex items-center text-center
             text-light-ash dark:text-white
-          `}>
-          <h4 className="text-h4">
-            {`© ${year} ${content?.companyName}`}
-          </h4>
+          `}
+        >
+          <h4 className="text-h4">{`© ${year} ${content?.companyName}`}</h4>
         </div>
 
         {/* Privacy Policy and Terms of Service 

@@ -1,9 +1,13 @@
 "use client";
 
-import { SiFacebook, SiGithub, SiLinkedin } from "react-icons/si";
 import LanguageSwitcher from "./languageswitcher/LanguageSwitcher";
 import { ThemeSwitch } from "./themeswitcher/ThemeSwitcher";
 import { useEffect, useState } from "react";
+import {
+  FacebookLogoLink,
+  GithubLogoLink,
+  LinkedInLogoLink,
+} from "@components/atoms/LogoLink";
 
 export const Header = () => {
   const [notTop, setNotTop] = useState(false);
@@ -22,7 +26,6 @@ export const Header = () => {
   return (
     <>
       <header className="transition relative ease-linear duration-200 backdrop-blur-[10px] z-40 h-10 flex items-center justify-between px-4 sm:px-6 lg:px-12 py-6 glass-morphism-plain text-light-obsidian dark:text-dark-glacier">
-     
         <div
           className={`grid transition-all z-40 grid-flow-col gap-12
  
@@ -35,7 +38,7 @@ export const Header = () => {
           <LanguageSwitcher className="" />
           <ThemeSwitch />
         </div>
-        
+
         <div
           className={`flex gap-4 ${
             notTop
@@ -43,34 +46,9 @@ export const Header = () => {
               : "animate-slide-in-from-top"
           }`}
         >
-          
-          <a
-            href="https://www.linkedin.com/in/joakim-villo-71b814a1/"
-            target="_blank"
-            className={`transition-all z-40`}
-          >
-            <SiLinkedin
-              className={`w-7 h-7 hover:fill-light-violet dark:hover:fill-dark-lavender mx-auto duration-200 ease-linear hover:scale-105 flex transition-all`}
-            />
-          </a>
-          <a
-            href="https://github.com/VilloKodeHode"
-            target="_blank"
-            className={`transition-all z-40`}
-          >
-            <SiGithub
-              className={`w-7 h-7 hover:fill-light-violet dark:hover:fill-dark-lavender mx-auto duration-200 ease-linear hover:scale-105 flex transition-all`}
-            />
-          </a>
-          <a
-            href="https://www.facebook.com/profile.php?id=61565977223570"
-            target="_blank"
-            className={`transition-all z-40`}
-          >
-            <SiFacebook
-              className={`w-7 h-7 hover:fill-light-violet mx-auto duration-200 ease-linear hover:scale-105 dark:hover:fill-dark-lavender flex transition-all`}
-            />
-          </a>
+          <LinkedInLogoLink />
+          <GithubLogoLink />
+          <FacebookLogoLink />
         </div>
       </header>
     </>
