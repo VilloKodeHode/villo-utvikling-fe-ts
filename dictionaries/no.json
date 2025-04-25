@@ -25,8 +25,7 @@
     "subtitle": "Jeg utvikler moderne, raske og brukervennlige nettsider for små bedrifter, privatpersoner og klubber – med teknologi som tåler fremtiden og design som bygger tillit.",
     "cta": "Start prosjektet",
     "ctaTwo": "Se hva jeg tilbyr"
-  }
-,
+  },
   "skills": {
     "title": "Min tech-stack",
     "paragraph": "Dette er tech-stacken jeg bruker. Jeg bruker de beste metodene for å sikre at nettstedet er raskt, moderne og responsivt.",
@@ -598,7 +597,7 @@
     "title": "Kort om meg",
     "subtitle": "Joakim Villo",
     "paragraph": "Jeg er en utdannet utvikler som for øyeblikket leder et programmerings- og webutviklings-kurs her i Norge. Jeg har to bachelorgrader i andre fagfelt, og tidligere jobb har hatt sammenheng med disse gradene. I 2022 byttet jeg til programmering og koding, som nå har blitt min sanne lidenskap i livet.",
-    "src": "/images/portraits/joakim.webp",
+    "src": "/images/portraits/JoakimNY.jpg",
     "alt": "Joakim Villo"
   },
   "personal_projects": {
