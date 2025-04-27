@@ -17,7 +17,7 @@ export const TextAndImageSection = ({ content }: ComponentProps) => {
       <ThemedH2 className="font-bold">{content?.title}</ThemedH2>
       <div className="animate-PageAppearRight">
         <div
-          className={`sm:rounded-lg grid grid-cols-1 lg:grid-rows-1 grid-rows-2 h-[70dvh] lg:grid-cols-2 transition-colors duration-1000 glass-morphism-section`}>
+          className={`sm:rounded-lg grid grid-cols-1 lg:grid-rows-1 grid-rows-2 h-[85dvh] lg:grid-cols-2 transition-colors duration-1000 glass-morphism-section`}>
           <div
             className={`col-span-1 py-12 h-full flex flex-col justify-center items-center`}>
             <ThemedH3 className="py-5 text-bold">{content?.subtitle}</ThemedH3>
@@ -31,7 +31,7 @@ export const TextAndImageSection = ({ content }: ComponentProps) => {
               width={1200}
               height={1200}
               alt={content?.alt}
-              className="object-cover w-full h-full rounded-b-lg lg:rounded-r-lg lg:rounded-b-none"
+              className="object-cover lg:object-center object-[50%_15%] w-full h-full rounded-b-lg lg:rounded-r-lg lg:rounded-b-none"
             />
           </div>
         </div>

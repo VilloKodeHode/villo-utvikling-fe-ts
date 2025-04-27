@@ -33,11 +33,12 @@ export function middleware(request: NextRequest) {
       '/manifest.json',
       '/favicon.ico',
     ].includes(pathname) ||
-    pathname.startsWith('/images/')
-   
-
-  )
-    return
+    pathname.startsWith('/images/') ||
+    pathname.startsWith('/models/') || 
+    pathname.startsWith('/videos/')     
+  ) {
+    return;
+  }
 
   // Check if there is any supported locale in the pathname
   const pathnameIsMissingLocale = i18n.locales.every(

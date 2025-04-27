@@ -1,15 +1,19 @@
 import { getDictionary } from "get-dictionary";
-import { AltIntroSection, TextAndImageSection } from "@components/molecyles/Sections";
+import {
+  AltIntroSection,
+  TextAndImageSection,
+} from "@components/molecyles/Sections";
 import { SkillsSection } from "./sections/SkillsSection";
 import { ProjectSection } from "./sections/ProjectSection";
 import { PageProps } from "app/interfaces/PageProps";
+import RubicksCubeScene from "@components/animation/components/rubicksCube/RubicsCube";
 
 export default async function Home({ params }: PageProps) {
   const { lang } = await params;
   const dictionary = await getDictionary(lang);
   return (
     <>
-    
+      <RubicksCubeScene />
       <AltIntroSection content={dictionary.companyInfo} />
       <TextAndImageSection content={dictionary.introInfo} />
       <SkillsSection content={dictionary.skills} />
