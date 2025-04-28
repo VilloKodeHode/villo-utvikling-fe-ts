@@ -3,7 +3,7 @@
 // import middleware from "./middelware.ts"
 
 const nextConfig = {
-  transpilePackages: ["three"],
+  basePath: '',
   // middelware: [middleware],
   // i18n: {
   //     defaultLocale: 'no',
