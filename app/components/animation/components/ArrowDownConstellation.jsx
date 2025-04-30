@@ -1,7 +1,14 @@
 "use client";
+
 import { useMemo, useRef, useState } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
-import * as THREE from "three";
+import {
+  CanvasTexture,
+  MathUtils,
+  Color,
+  AdditiveBlending,
+  NormalBlending,
+} from "three"; // ✅ only what you use
 import { useTheme } from "next-themes";
 
 export const ArrowDownConstellation = () => {
@@ -29,7 +36,7 @@ export const ArrowDownConstellation = () => {
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, 64, 64);
 
-    return new THREE.CanvasTexture(canvas);
+    return new CanvasTexture(canvas);
   }, [theme]);
 
   const basePositions = useMemo(() => {
@@ -80,13 +87,12 @@ export const ArrowDownConstellation = () => {
       return;
     }
 
-    // Normal behavior if page is tall enough
     const t = clock.getElapsedTime();
     const scrollY = window.scrollY;
     const fade = Math.max(0, 1 - scrollY / (window.innerHeight * 0.5));
     const flicker = 0.3 + 0.2 * Math.sin(t * 2);
     const hoverBoost = hovered ? 1.0 : 0.0;
-    targetOpacity.current = THREE.MathUtils.lerp(
+    targetOpacity.current = MathUtils.lerp(
       targetOpacity.current,
       (flicker + hoverBoost) * fade,
       0.1
@@ -140,13 +146,17 @@ export const ArrowDownConstellation = () => {
         onPointerOut={() => {
           setHovered(false);
           document.body.style.cursor = "default";
-        }}
-      >
+        }}>
         <planeGeometry args={[6, 6]} />
-        <meshBasicMaterial transparent opacity={0} />
+        <meshBasicMaterial
+          transparent
+          opacity={0}
+        />
       </mesh>
 
-      <points ref={groupRef} position={[0, arrowY, arrowZ]}>
+      <points
+        ref={groupRef}
+        position={[0, arrowY, arrowZ]}>
         <bufferGeometry>
           <bufferAttribute
             attach="attributes-position"
@@ -162,8 +172,10 @@ export const ArrowDownConstellation = () => {
           transparent
           opacity={1}
           depthWrite={false}
-          color={theme === "light" ? new THREE.Color("#111111") : new THREE.Color("#f5f5ff")}
-          blending={theme === "light" ? THREE.NormalBlending : THREE.AdditiveBlending}
+          color={
+            theme === "light" ? new Color("#111111") : new Color("#f5f5ff")
+          }
+          blending={theme === "light" ? NormalBlending : AdditiveBlending}
         />
       </points>
     </>

@@ -45,8 +45,7 @@ export const ContactformSection = ({ content }) => {
   return (
     <section
       data-scroll-target
-      className="px-4 grid max-w-4xl mx-auto sm:px-6 lg:px-8 min-h-[calc(100vh-144px)] place-items-center"
-    >
+      className="px-4 grid max-w-4xl mx-auto sm:px-6 lg:px-8 min-h-[calc(100vh-144px)] place-items-center">
       {!showModal ? (
         <div className="w-full animate-PageAppearRight">
           <ThemedH1 className="mb-4 text-center">{content.heading}</ThemedH1>
@@ -54,14 +53,15 @@ export const ContactformSection = ({ content }) => {
             {content.formDescription}
           </ThemedPLarge>
 
-          <form className="w-full max-w-lg mx-auto" onSubmit={handleSubmit}>
+          <form
+            className="w-full max-w-lg mx-auto"
+            onSubmit={handleSubmit}>
             <InputWithLabel
               name="name"
               type="text"
               placeholder={content.namePlaceholder}
               formData={formData}
-              setFormData={setFormData}
-            >
+              setFormData={setFormData}>
               {content.nameLabel}
             </InputWithLabel>
 
@@ -70,8 +70,7 @@ export const ContactformSection = ({ content }) => {
               type="email"
               placeholder={content.emailPlaceholder}
               formData={formData}
-              setFormData={setFormData}
-            >
+              setFormData={setFormData}>
               {content.emailLabel}
             </InputWithLabel>
 
@@ -80,8 +79,7 @@ export const ContactformSection = ({ content }) => {
               type="textarea"
               placeholder={content.messagePlaceholder}
               formData={formData}
-              setFormData={setFormData}
-            >
+              setFormData={setFormData}>
               {content.messageLabel}
             </InputWithLabel>
 

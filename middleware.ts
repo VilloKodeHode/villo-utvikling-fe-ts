@@ -14,7 +14,7 @@ function getLocale(request: NextRequest): string | undefined {
 
   // Use negotiator and intl-localematcher to get best locale
   const languages = new Negotiator({ headers: negotiatorHeaders }).languages(
-    locales,
+    locales
   );
 
   const locale = matchLocale(languages, locales, i18n.defaultLocale);
@@ -24,26 +24,22 @@ function getLocale(request: NextRequest): string | undefined {
 
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
-  console.log('Requested Path:', pathname);
+  // console.log('Requested Path:', pathname);
 
   //  `/_next/` and `/api/` are ignored by the watcher, but we need to ignore files in `public` manually.
   //  If you have one
   if (
-    [
-      '/manifest.json',
-      '/favicon.ico',
-    ].includes(pathname) ||
-    pathname.startsWith('/images/') ||
-    pathname.startsWith('/models/') || 
-    pathname.startsWith('/videos/')     
+    ["/manifest.json", "/favicon.ico"].includes(pathname) ||
+    pathname.startsWith("/images/") ||
+    pathname.startsWith("/models/") ||
+    pathname.startsWith("/videos/")
   ) {
     return;
   }
 
   // Check if there is any supported locale in the pathname
   const pathnameIsMissingLocale = i18n.locales.every(
-    (locale) =>
-      !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`,
+    (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
   );
 
   // Redirect if there is no locale
@@ -55,8 +51,8 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(
       new URL(
         `/${locale}${pathname.startsWith("/") ? "" : "/"}${pathname}`,
-        request.url,
-      ),
+        request.url
+      )
     );
   }
 }

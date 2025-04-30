@@ -1,7 +1,8 @@
 "use client";
+
 import { useRef, useMemo, useEffect, useState } from "react";
 import { useThree, useFrame } from "@react-three/fiber";
-import * as THREE from "three";
+import { MathUtils, Color, AdditiveBlending } from "three"; // ✅ selective import
 
 export const Nebula = () => {
   const meshRef = useRef();
@@ -9,7 +10,6 @@ export const Nebula = () => {
   const [planeSize, setPlaneSize] = useState({ width: 200, height: 120 });
   const [enabled, setEnabled] = useState(true);
 
-  // ✅ Disable if low-end GPU
   useEffect(() => {
     const isLowEnd =
       gl.capabilities.maxTextureSize < 4096 ||
@@ -21,36 +21,39 @@ export const Nebula = () => {
     }
   }, [gl]);
 
-  // Dynamically size the plane to fill screen (oversized)
   useEffect(() => {
     const distance = 100;
-    const vFOV = THREE.MathUtils.degToRad(camera.fov);
+    const vFOV = MathUtils.degToRad(camera.fov);
     const height = 2 * Math.tan(vFOV / 2) * distance;
     const width = height * camera.aspect;
     setPlaneSize({ width: width * 1.4, height: height * 1.4 });
   }, [camera, size]);
 
-  const uniforms = useMemo(() => ({
-    uTime: { value: 0 },
-    uColor1: { value: new THREE.Color(0xa082ff) },
-    uColor2: { value: new THREE.Color(0x7000fc) },
-    uOpacity: { value: 0.4 }
-  }), []);
+  const uniforms = useMemo(
+    () => ({
+      uTime: { value: 0 },
+      uColor1: { value: new Color(0xa082ff) },
+      uColor2: { value: new Color(0x7000fc) },
+      uOpacity: { value: 0.4 },
+    }),
+    []
+  );
 
   useFrame(({ clock }) => {
     if (!enabled || !meshRef.current) return;
 
     uniforms.uTime.value = clock.getElapsedTime();
 
-    // ✅ Parallax effect — slow upward drift when scrolling
     const scrollY = window.scrollY;
-    meshRef.current.position.y = scrollY * 0.015; // tweak this factor as needed
+    meshRef.current.position.y = scrollY * 0.015;
   });
 
   if (!enabled) return null;
 
   return (
-    <mesh ref={meshRef} position={[0, 0, -100]}>
+    <mesh
+      ref={meshRef}
+      position={[0, 0, -100]}>
       <planeGeometry args={[planeSize.width, planeSize.height]} />
       <shaderMaterial
         fragmentShader={fragmentShader}
@@ -58,7 +61,7 @@ export const Nebula = () => {
         uniforms={uniforms}
         transparent
         depthWrite={false}
-        blending={THREE.AdditiveBlending}
+        blending={AdditiveBlending}
       />
     </mesh>
   );

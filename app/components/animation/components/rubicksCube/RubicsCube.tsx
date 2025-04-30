@@ -3,28 +3,27 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
 import { Suspense, useRef, useState, useEffect } from "react";
-import * as THREE from "three";
+import { Group, Mesh, Vector3 } from "three"; // ✅ selective import
 import type { GLTF } from "three-stdlib";
 
 type GLTFResult = GLTF & {
-  nodes: Record<string, THREE.Mesh>;
+  nodes: Record<string, Mesh>;
 };
 
 function RubicksCubeLoaded({ url }: { url: string }) {
-  const wrapper = useRef<THREE.Group>(null!);
+  const wrapper = useRef<Group>(null!);
   const gltf = useGLTF(url) as unknown as GLTFResult;
   const { scene } = gltf;
 
-  const [cubelets, setCubelets] = useState<THREE.Group[]>([]);
-  const [topFace, setTopFace] = useState<THREE.Group | null>(null);
+  const [cubelets, setCubelets] = useState<Group[]>([]);
+  const [topFace, setTopFace] = useState<Group | null>(null);
 
   useEffect(() => {
-    const worldPos = new THREE.Vector3();
+    const worldPos = new Vector3();
     const coords: { x: number; y: number; z: number; name: string }[] = [];
 
-    // 1) collect every Mesh under the scene
     scene.traverse((obj) => {
-      if (obj instanceof THREE.Mesh) {
+      if (obj instanceof Mesh) {
         obj.getWorldPosition(worldPos);
         coords.push({
           x: parseFloat(worldPos.x.toFixed(3)),
@@ -37,7 +36,6 @@ function RubicksCubeLoaded({ url }: { url: string }) {
 
     console.log("Total mesh instances:", coords.length);
 
-    // 2) dedupe by position
     const keySet = new Set(coords.map((c) => `${c.x},${c.y},${c.z}`));
     const unique = Array.from(keySet).map((key) => {
       const [x, y, z] = key.split(",").map(Number);
@@ -48,17 +46,16 @@ function RubicksCubeLoaded({ url }: { url: string }) {
     console.table(unique);
   }, [scene]);
 
-  // STEP 1: Build one pivot per cubelet by grid-snapping every mesh
   useEffect(() => {
-    const worldPos = new THREE.Vector3();
-    const meshes: THREE.Mesh[] = [];
+    const worldPos = new Vector3();
+    const meshes: Mesh[] = [];
 
     scene.traverse((o) => {
-      if (o instanceof THREE.Mesh) {
+      if (o instanceof Mesh) {
         meshes.push(o);
       }
     });
-    // get rounded grid coords
+
     const coords = meshes.map((m) => {
       m.getWorldPosition(worldPos);
       return {
@@ -69,7 +66,6 @@ function RubicksCubeLoaded({ url }: { url: string }) {
       };
     });
 
-    // discover grid spacing
     const uniq = (arr: number[]) =>
       Array.from(new Set(arr)).sort((a, b) => a - b);
     const xs = uniq(coords.map((c) => c.x));
@@ -79,7 +75,7 @@ function RubicksCubeLoaded({ url }: { url: string }) {
     const dy = ys[1] - ys[0];
     const dz = zs[1] - zs[0];
 
-    const pivotMap = new Map<string, THREE.Group>();
+    const pivotMap = new Map<string, Group>();
     coords.forEach(({ x, y, z, mesh }) => {
       const px = Math.round(x / dx) * dx;
       const py = Math.round(y / dy) * dy;
@@ -88,7 +84,7 @@ function RubicksCubeLoaded({ url }: { url: string }) {
 
       let pivot = pivotMap.get(key);
       if (!pivot) {
-        pivot = new THREE.Group();
+        pivot = new Group();
         pivot.position.set(px, py, pz);
         wrapper.current.add(pivot);
         pivotMap.set(key, pivot);
@@ -103,7 +99,6 @@ function RubicksCubeLoaded({ url }: { url: string }) {
     setCubelets(pivots);
   }, [scene]);
 
-  // STEP 2: Once we have 27 cubelets, carve out the top-face
   useEffect(() => {
     if (cubelets.length !== 27) return;
 
@@ -114,7 +109,7 @@ function RubicksCubeLoaded({ url }: { url: string }) {
       topZ = zs[2];
     const threshold = middleZ + (topZ - middleZ) / 2;
 
-    const faceGroup = new THREE.Group();
+    const faceGroup = new Group();
     faceGroup.position.set(0, 0, topZ);
     wrapper.current.add(faceGroup);
 
@@ -126,7 +121,6 @@ function RubicksCubeLoaded({ url }: { url: string }) {
     setTopFace(faceGroup);
   }, [cubelets]);
 
-  // STEP 3: Rotate that top-face around Z
   useFrame((_, delta) => {
     if (topFace) topFace.rotation.z += delta;
   });

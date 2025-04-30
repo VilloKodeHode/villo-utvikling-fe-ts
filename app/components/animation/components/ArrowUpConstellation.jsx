@@ -1,8 +1,9 @@
 "use client";
+
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useTheme } from "next-themes";
 import { useEffect, useMemo, useRef, useState } from "react";
-import * as THREE from "three";
+import { CanvasTexture, MathUtils, AdditiveBlending } from "three"; // ✅ selective import
 
 const ArrowUpConstellation = () => {
   const { theme } = useTheme();
@@ -32,7 +33,7 @@ const ArrowUpConstellation = () => {
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, 64, 64);
 
-    const texture = new THREE.CanvasTexture(canvas);
+    const texture = new CanvasTexture(canvas);
     texture.needsUpdate = true;
     return texture;
   }, [theme]);
@@ -63,7 +64,7 @@ const ArrowUpConstellation = () => {
     const hoverBoost = hovered ? 0.5 : 0;
 
     const desiredOpacity = (flicker + hoverBoost) * fade;
-    targetOpacity.current = THREE.MathUtils.lerp(
+    targetOpacity.current = MathUtils.lerp(
       targetOpacity.current,
       desiredOpacity,
       0.1
@@ -92,13 +93,18 @@ const ArrowUpConstellation = () => {
         onPointerOut={() => {
           setHovered(false);
           document.body.style.cursor = "default";
-        }}
-      >
+        }}>
         <planeGeometry args={[4, 4]} />
-        <meshBasicMaterial transparent opacity={0} />
+        <meshBasicMaterial
+          transparent
+          opacity={0}
+        />
       </mesh>
 
-      <points ref={groupRef} key={theme} position={[0, 0, 0]}>
+      <points
+        ref={groupRef}
+        key={theme}
+        position={[0, 0, 0]}>
         <bufferGeometry>
           <bufferAttribute
             attach="attributes-position"
@@ -113,7 +119,7 @@ const ArrowUpConstellation = () => {
           map={starTexture}
           transparent
           opacity={1}
-          blending={THREE.AdditiveBlending}
+          blending={AdditiveBlending}
           depthWrite={false}
           depthTest={false}
         />

@@ -1,6 +1,6 @@
 import { useFrame } from "@react-three/fiber";
 import { useMemo, useRef } from "react";
-import * as THREE from "three";
+import { AdditiveBlending, BufferAttribute, BufferGeometry } from "three";
 
 export const createStarLayer = (count, radiusRange, starColors) => {
   const positions = [];
@@ -43,11 +43,11 @@ export const StarLayer = ({
   const ref = useRef();
 
   const geometry = useMemo(() => {
-    const geom = new THREE.BufferGeometry();
-    geom.setAttribute("position", new THREE.BufferAttribute(data.positions, 3));
-    geom.setAttribute("color", new THREE.BufferAttribute(data.colors, 3));
-    geom.setAttribute("size", new THREE.BufferAttribute(data.sizes, 1));
-    geom.setAttribute("offset", new THREE.BufferAttribute(data.offsets, 1));
+    const geom = new BufferGeometry();
+    geom.setAttribute("position", new BufferAttribute(data.positions, 3));
+    geom.setAttribute("color", new BufferAttribute(data.colors, 3));
+    geom.setAttribute("size", new BufferAttribute(data.sizes, 1));
+    geom.setAttribute("offset", new BufferAttribute(data.offsets, 1));
     return geom;
   }, [data]);
 
@@ -80,44 +80,48 @@ export const StarLayer = ({
       ref={ref}
       geometry={geometry}>
       <rawShaderMaterial
-        vertexShader={`
-            precision mediump float;
-            attribute vec3 position;
-            attribute vec3 color;
-            attribute float size;
-            attribute float offset;
-            varying vec3 vColor;
-  
-            uniform mat4 modelViewMatrix;
-            uniform mat4 projectionMatrix;
-            uniform float uTime;
-  
-            void main() {
-              vColor = color;
-              float flicker = 0.75 + 0.25 * sin(uTime * 2.0 + offset);
-              float pointSize = size * flicker;
-              vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
-              gl_PointSize = pointSize * (300.0 / -mvPosition.z);
-              gl_Position = projectionMatrix * mvPosition;
-            }
-          `}
-        fragmentShader={`
-            precision mediump float;
-            varying vec3 vColor;
-            uniform sampler2D pointTexture;
-            uniform float uOpacity;
-  
-            void main() {
-              vec4 tex = texture2D(pointTexture, gl_PointCoord);
-              if (tex.a < 0.05) discard;
-              gl_FragColor = vec4(vColor, tex.a * uOpacity);
-            }
-          `}
+        vertexShader={
+          /* glsl */ `
+          precision mediump float;
+          attribute vec3 position;
+          attribute vec3 color;
+          attribute float size;
+          attribute float offset;
+          varying vec3 vColor;
+
+          uniform mat4 modelViewMatrix;
+          uniform mat4 projectionMatrix;
+          uniform float uTime;
+
+          void main() {
+            vColor = color;
+            float flicker = 0.75 + 0.25 * sin(uTime * 2.0 + offset);
+            float pointSize = size * flicker;
+            vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
+            gl_PointSize = pointSize * (300.0 / -mvPosition.z);
+            gl_Position = projectionMatrix * mvPosition;
+          }
+        `
+        }
+        fragmentShader={
+          /* glsl */ `
+          precision mediump float;
+          varying vec3 vColor;
+          uniform sampler2D pointTexture;
+          uniform float uOpacity;
+
+          void main() {
+            vec4 tex = texture2D(pointTexture, gl_PointCoord);
+            if (tex.a < 0.05) discard;
+            gl_FragColor = vec4(vColor, tex.a * uOpacity);
+          }
+        `
+        }
         uniforms={uniforms}
         vertexColors
         transparent
         depthWrite={false}
-        blending={THREE.AdditiveBlending}
+        blending={AdditiveBlending}
       />
     </points>
   );

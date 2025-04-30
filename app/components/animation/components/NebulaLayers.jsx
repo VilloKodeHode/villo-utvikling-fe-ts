@@ -3,7 +3,7 @@
 
 import { useRef, useMemo } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
-import * as THREE from "three";
+import { Color, AdditiveBlending, DoubleSide } from "three"; // ✅ precise import
 
 // Vertex Shader
 const vertexShader = `
@@ -57,49 +57,65 @@ const fragmentShader = `
 
 // Nebula Layer
 const NebulaLayer = ({ color1, color2, z = -100 }) => {
-    const meshRef = useRef();
-    const { size, camera } = useThree();
-  
-    // Calculate world size at given z-depth
-    const fov = camera.fov;
-    const aspect = size.width / size.height;
-    const distance = Math.abs(z);
-    const height = 2 * Math.tan((fov * Math.PI) / 360) * distance;
-    const width = height * aspect;
-  
-    const uniforms = useMemo(() => ({
+  const meshRef = useRef();
+  const { size, camera } = useThree();
+
+  const fov = camera.fov;
+  const aspect = size.width / size.height;
+  const distance = Math.abs(z);
+  const height = 2 * Math.tan((fov * Math.PI) / 360) * distance;
+  const width = height * aspect;
+
+  const uniforms = useMemo(
+    () => ({
       uTime: { value: 0 },
-      uColor1: { value: new THREE.Color(color1) },
-      uColor2: { value: new THREE.Color(color2) },
+      uColor1: { value: new Color(color1) },
+      uColor2: { value: new Color(color2) },
       uOpacity: { value: 0.1 },
-    }), [color1, color2]);
-  
-    useFrame(({ clock }) => {
-      uniforms.uTime.value = clock.getElapsedTime();
-    });
-  
-    return (
-      <mesh ref={meshRef} position={[0, 0, z]}>
-        <planeGeometry args={[width * 1.1, height * 1.1]} />
-        <shaderMaterial
-          vertexShader={vertexShader}
-          fragmentShader={fragmentShader}
-          uniforms={uniforms}
-          transparent
-          depthWrite={false}
-          blending={THREE.AdditiveBlending}
-          side={THREE.DoubleSide}
-        />
-      </mesh>
-    );
-  };
-  
-  export const NebulaLayers = () => {
-    return (
-      <>
-        <NebulaLayer color1="#6b00b3" color2="#00b39f" z={-100} />
-        <NebulaLayer color1="#ff0080" color2="#3300ff" z={-120} />
-        <NebulaLayer color1="#00ffff" color2="#001a33" z={-140} />
-      </>
-    );
-  };
+    }),
+    [color1, color2]
+  );
+
+  useFrame(({ clock }) => {
+    uniforms.uTime.value = clock.getElapsedTime();
+  });
+
+  return (
+    <mesh
+      ref={meshRef}
+      position={[0, 0, z]}>
+      <planeGeometry args={[width * 1.1, height * 1.1]} />
+      <shaderMaterial
+        vertexShader={vertexShader}
+        fragmentShader={fragmentShader}
+        uniforms={uniforms}
+        transparent
+        depthWrite={false}
+        blending={AdditiveBlending}
+        side={DoubleSide}
+      />
+    </mesh>
+  );
+};
+
+export const NebulaLayers = () => {
+  return (
+    <>
+      <NebulaLayer
+        color1="#6b00b3"
+        color2="#00b39f"
+        z={-100}
+      />
+      <NebulaLayer
+        color1="#ff0080"
+        color2="#3300ff"
+        z={-120}
+      />
+      <NebulaLayer
+        color1="#00ffff"
+        color2="#001a33"
+        z={-140}
+      />
+    </>
+  );
+};

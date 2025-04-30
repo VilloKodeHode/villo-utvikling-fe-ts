@@ -1,4 +1,4 @@
-import * as THREE from "three";
+import { CanvasTexture, LinearFilter, RGBAFormat } from "three";
 
 export default function generateStarTexture() {
   const canvas = document.createElement("canvas");
@@ -14,11 +14,11 @@ export default function generateStarTexture() {
   ctx.fillStyle = gradient;
   ctx.fillRect(0, 0, 64, 64);
 
-  const texture = new THREE.CanvasTexture(canvas);
+  const texture = new CanvasTexture(canvas);
   texture.needsUpdate = true;
-  texture.minFilter = THREE.LinearFilter;
-  texture.magFilter = THREE.LinearFilter;
-  texture.format = THREE.RGBAFormat;
+  texture.minFilter = LinearFilter;
+  texture.magFilter = LinearFilter;
+  texture.format = RGBAFormat;
   texture.transparent = true;
 
   return texture;
