@@ -1,4 +1,3 @@
-// app/layout.tsx
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -14,7 +13,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Joakim Villo - Villo Utvikling" }],
   robots: "index, follow",
   alternates: {
-    canonical: "https://www.villoutvikling.com/no",
+    canonical: "https://www.villoutvikling.com/en",
     languages: {
       no: "https://www.villoutvikling.com/no",
       en: "https://www.villoutvikling.com/en",
@@ -28,14 +27,24 @@ export const metadata: Metadata = {
     siteName: "Villo Utvikling",
     locale: "no-NO",
     type: "website",
-    // ✅ No 'images' field – uses app/opengraph-image.png automatically
+    images: [
+      {
+        url: "https://www.villoutvikling.com/images/logo/Villo_Utvikling_full-Logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Villo Utvikling logo",
+        type: "image/png",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Villo Utvikling",
     description:
       "Profesjonell frontend- og webutvikling med fokus på responsive, brukervennlige og visuelt tiltalende nettsider.",
-    // ✅ No 'images' field – uses app/twitter-image.png automatically
+    images: [
+      "https://www.villoutvikling.com/images/logo/Villo_Utvikling_full-Logo.png",
+    ],
   },
   icons: {
     icon: "/images/logo/logo-lightmode.svg",
