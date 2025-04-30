@@ -4,8 +4,8 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { getCookie, setCookie } from "cookies-next";
 
-export const ThemeSwitch: React.FC = () => {
-  const { setTheme, theme } = useTheme();
+export const ThemeSwitch = () => {
+  const { setTheme, resolvedTheme } = useTheme();
   const [runAnimation, setRunAnimation] = useState<boolean>(false);
   const [hasMounted, setHasMounted] = useState<boolean>(false);
 
@@ -15,7 +15,7 @@ export const ThemeSwitch: React.FC = () => {
 
   const toggleTheme = () => {
     setRunAnimation(true);
-    if (theme === "light") {
+    if (resolvedTheme === "light") {
       setTheme("dark");
       if (getCookie("acceptedCookies")) {
         setCookie("theme", "dark", {
@@ -32,7 +32,7 @@ export const ThemeSwitch: React.FC = () => {
     }
   };
 
-  if (!hasMounted || !theme) {
+  if (!hasMounted) {
     return null;
   }
 
@@ -45,14 +45,14 @@ export const ThemeSwitch: React.FC = () => {
         className={` 
           ${
             runAnimation === false
-              ? theme === "light"
+              ? resolvedTheme === "light"
                 ? "animate-theme-switch-slide-in"
                 : "hidden"
               : ""
           }
            ${
              runAnimation
-               ? theme === "light"
+               ? resolvedTheme === "light"
                  ? "animate-theme-switch-slide-in"
                  : "animate-theme-switch-slide-out"
                : ""
@@ -64,13 +64,13 @@ export const ThemeSwitch: React.FC = () => {
         className={` 
           ${
             runAnimation === false
-              ? theme === "dark"
+              ? resolvedTheme === "dark"
                 ? "animate-theme-switch-slide-in"
                 : "hidden"
               : ""
           } ${
             runAnimation
-              ? theme === "dark"
+              ? resolvedTheme === "dark"
                 ? "animate-theme-switch-slide-in"
                 : "animate-theme-switch-slide-out"
               : ""
