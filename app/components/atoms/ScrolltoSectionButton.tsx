@@ -1,7 +1,7 @@
 "use client";
 
 // import { scrollToSection } from "@logic/scrollLogic"
-import {  CTAButton } from "./Buttons";
+import { CTAButton } from "./Buttons";
 
 export const ScrollToSectionButton = ({ children }) => {
   const scrollToSection = (event: React.MouseEvent, id: string) => {
@@ -23,12 +23,10 @@ export const ScrollToSectionButton = ({ children }) => {
   };
   return (
     <a
+      href="#service_section"
       onClick={(event) => scrollToSection(event, "service_section")}
-      className=""
-    >
-      <CTAButton>
-        {children}
-      </CTAButton>
+      className="">
+      <CTAButton>{children}</CTAButton>
     </a>
   );
 };
