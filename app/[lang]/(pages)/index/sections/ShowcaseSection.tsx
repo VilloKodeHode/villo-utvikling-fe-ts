@@ -27,14 +27,13 @@ export const ShowcaseSection = ({ content }) => {
       <section
         data-scroll-target
         className="relative animate-appear flex items-center justify-center w-full group/imageEffect"
-        id="showcase-section"
-      >
+        id="showcase-section">
         <div className="absolute opacity-5 ease-in-out w-full h-full -z-10 ">
           <Image
             src={`${
               theme === "light"
-                ? "/images/logo/WindLogoNoTextLightMode.svg"
-                : "/images/logo/WindLogoNoTextDarkMode.svg"
+                ? "/images/logo/logo-lightmode.svg"
+                : "/images/logo/logo-darkmode.svg"
             }`}
             className="animate-rotate-left-logo md:w-screen"
             alt=""
@@ -64,8 +63,7 @@ export const ShowcaseSection = ({ content }) => {
             className={`justify-self-end z-10 grid items-center justify-center w-full transition-all 
                 relative md:w-full sm:h-113 h-1/2 outline-offset-4 rounded-2xl overflow-hidden outline-2 
                 outline-light-violet dark:outline-dark-lavender
-                  `}
-          >
+                  `}>
             {content.map((image, index) => (
               <Image
                 key={image.alt}
@@ -103,16 +101,14 @@ export const Showcase = ({ content, setActiveImage, activeImage, index }) => {
             onMouseEnter={() => setActiveImage(index)}
             className={`cursor-pointer font-bold group md:block h-[60px] flex flex-col items-center align-middle
             text-light-violet
-            dark:text-dark-lavender`}
-          >
+            dark:text-dark-lavender`}>
             <span
               className={`group-hover:text-light-violet dark:group-hover:text-dark-lavender 
                 group-hover:opacity-100 transition-all duration-500 opacity-60 h1hidden ${
                   activeImage === index
                     ? "text-dark-lavender"
                     : "text-light-fog dark:text-dark-shadow"
-                }`}
-            >
+                }`}>
               <br />
               Web
             </span>

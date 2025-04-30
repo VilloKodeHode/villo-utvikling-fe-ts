@@ -89,7 +89,7 @@ export const metadata: Metadata = {
     ],
   },
   icons: {
-    icon: "https://www.villoutvikling.com/images/logo/meta/full-logo.png",
-    apple: "https://www.villoutvikling.com/images/logo/meta/full-logo.png",
+    icon: "https://www.villoutvikling.com/images/logo/logo-lightmode.svg",
+    apple: "https://www.villoutvikling.com/images/logo/logo-lightmode.svg",
   },
 };

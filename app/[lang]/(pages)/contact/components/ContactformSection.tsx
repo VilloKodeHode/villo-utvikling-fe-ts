@@ -100,7 +100,7 @@ export const ContactformSection = ({ content }) => {
             </div>
             <Image
               className="animate-pulse"
-              src="/logo/WindLogoNoTextLightMode.svg"
+              src="/logo/logo-lightmode.svg"
               alt="loading..."
               width={200}
               height={200}
