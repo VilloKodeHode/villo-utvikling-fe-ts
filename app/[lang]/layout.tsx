@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     locale: "no-NO",
     images: [
       {
-        url: "https://www.villoutvikling.com/images/logo/WindLogoLightMode.svg", // now resolves with metadataBase
+        url: "https://www.villoutvikling.com/images/logo/meta/full-logo.png", // now resolves with metadataBase
         width: 1200,
         height: 630,
         alt: "Villo Utvikling Logo",
@@ -89,7 +89,7 @@ export const metadata: Metadata = {
     ],
   },
   icons: {
-    icon: "https://www.villoutvikling.com/images/logo/WindLogoLightMode.svg",
-    apple: "https://www.villoutvikling.com/images/logo/WindLogoLightMode.svg",
+    icon: "https://www.villoutvikling.com/images/logo/meta/full-logo.png",
+    apple: "https://www.villoutvikling.com/images/logo/meta/full-logo.png",
   },
 };
