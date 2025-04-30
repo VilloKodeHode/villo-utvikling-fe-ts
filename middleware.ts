@@ -5,7 +5,6 @@ import { match as matchLocale } from "@formatjs/intl-localematcher";
 import Negotiator from "negotiator";
 
 function getLocale(request: NextRequest): string | undefined {
-  // Transform headers for Negotiator
   const negotiatorHeaders: Record<string, string> = {};
   request.headers.forEach((value, key) => {
     negotiatorHeaders[key] = value;
@@ -24,7 +23,7 @@ function getLocale(request: NextRequest): string | undefined {
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
-  // Allow public assets through (manual exclusions for files in /public)
+  // Skip public files
   if (
     ["/manifest.json", "/favicon.ico"].includes(pathname) ||
     pathname.startsWith("/images/") ||
@@ -34,15 +33,20 @@ export function middleware(request: NextRequest) {
     return;
   }
 
-  // Skip redirect if pathname already includes a locale
+  // Already localized
   const pathnameIsMissingLocale = i18n.locales.every(
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
   );
 
-  // ✅ Let '/' render without redirecting (so Discord & bots can preview metadata)
   if (pathnameIsMissingLocale) {
-    if (pathname === "/") {
-      return NextResponse.next(); // Allow root page to render directly
+    const userAgent = request.headers.get("user-agent") || "";
+    const isBot =
+      /discordbot|facebookexternalhit|twitterbot|linkedinbot|whatsapp|slackbot|telegrambot/i.test(
+        userAgent
+      );
+
+    if (pathname === "/" && isBot) {
+      return NextResponse.next(); // ✅ Allow bots to read the homepage metadata
     }
 
     const locale = getLocale(request);
