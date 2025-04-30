@@ -7,24 +7,19 @@ import { ArrowDownConstellation } from "./components/ArrowDownConstellation";
 import { Starfield } from "./components/StarField";
 
 export const TheCosmos = () => {
-
   return (
-    <div
-  className="fixed top-0 left-0 -z-10 w-full h-full pointer-events-none"
->
-  <Canvas
-    camera={{ position: [0, 0, 0], fov: 75, far: 200 }}
-    eventSource={document.body}
-    eventPrefix="client"
-    style={{ pointerEvents: "auto" }}
-  >
-    <Suspense fallback={null}>
-      <ArrowDownConstellation />
-      <Nebula />
-      <Starfield />
-      {/* <ArrowUpConstellation /> */}
-    </Suspense>
-  </Canvas>
-</div>
+    <div className="fixed top-0 left-0 -z-10 w-full h-full pointer-events-none animate-cosmos-appear">
+      <Canvas
+        camera={{ position: [0, 0, 0], fov: 75, far: 200 }}
+        eventSource={document.body}
+        eventPrefix="client"
+        style={{ pointerEvents: "auto" }}>
+        <Suspense fallback={null}>
+          <ArrowDownConstellation />
+          <Nebula />
+          <Starfield />
+        </Suspense>
+      </Canvas>
+    </div>
   );
 };

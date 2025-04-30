@@ -8,11 +8,13 @@ import { Header } from "@components/ui/header/Header";
 import Footer from "@components/ui/footer/Footer";
 import { getDictionary } from "get-dictionary";
 import { FloatingUtilsBar } from "@components/ui/header/floatingUtilBar/FloatingUtilBar";
-import { TheCosmos } from "@components/animation/TheCosmos";
 import { RootProps } from "app/interfaces/PageProps";
-import FloatingArrowUp from "@components/animation/components/ArrowUpConstellation";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import {
+  DynamicFloatingArrowUp,
+  DynamicTheCosmos,
+} from "@components/animation/Dynamic3DExports";
 export const figtree = Figtree({ subsets: ["latin"] });
 export const noto_emoji = Noto_Color_Emoji({
   weight: "400",
@@ -28,26 +30,27 @@ export async function RootLayout({ children, params }: RootProps) {
   return (
     <html lang={lang ? lang : "no"}>
       <body
-        className={`${figtree.className} relative min-h-[100vh] transition-colors duration-1000 bg-light-snow dark:bg-dark-midnight overflow-x-hidden antialiased`}
-      >
+        className={`${figtree.className} relative min-h-[100vh] transition-colors duration-1000 bg-light-snow dark:bg-dark-midnight overflow-x-hidden antialiased`}>
         <AppUserProvider>
-          <TheCosmos />
+          <DynamicTheCosmos />
           <Header />
           <FloatingUtilsBar />
-          <NavBar params={{ lang }} content={dictionary.menu_items} />
+          <NavBar
+            params={{ lang }}
+            content={dictionary.menu_items}
+          />
 
           <main
             //TODO fix the has selector:
-            className={` flex flex-col animate-appear items-center px-4 sm:px-6 lg:px-12 justify-start overflow-x-hidden sm:mb-24 mb-12 sm:gap-28 gap-14`}
-          >
+            className={` flex flex-col animate-appear items-center px-4 sm:px-6 lg:px-12 justify-start overflow-x-hidden sm:mb-24 mb-12 sm:gap-28 gap-14`}>
             {children}
           </main>
           <Footer content={dictionary.footer} />
           <CookiePopup content={dictionary.cookie} />
-        <FloatingArrowUp />
+          <DynamicFloatingArrowUp />
         </AppUserProvider>
-        <SpeedInsights/>
-        <Analytics/>
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
