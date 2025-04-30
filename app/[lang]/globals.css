@@ -442,7 +442,7 @@
       filter: blur(0px);
     }
   }
-  
+
   @keyframes blurInOutHeavy {
     0% {
       filter: blur(15px);
@@ -452,7 +452,6 @@
     }
   }
 }
-
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
@@ -529,7 +528,7 @@
     }
 
     .button-style {
-      @apply text-p leading-p rounded-full transition duration-200 ease-linear hover:scale-[1.05] active:scale-95 px-6 py-4 font-bold uppercase shadow-lg cursor-pointer flex justify-center items-center;
+      @apply sm:text-p text-sm sm:leading-p leading-sm rounded-full transition duration-200 ease-linear hover:scale-[1.05] active:scale-95 px-6 py-4 font-bold uppercase shadow-lg cursor-pointer flex justify-center items-center;
     }
 
     .button-style-alternative {
@@ -620,7 +619,9 @@
 }
 
 .service_icon {
-  text-shadow: 0px 0px 5px var(--color-dark-frost),
-    0px 0px 10px var(--color-dark-ice), 0px 0px 15px var(--color-dark-shadow),
+  text-shadow:
+    0px 0px 5px var(--color-dark-frost),
+    0px 0px 10px var(--color-dark-ice),
+    0px 0px 15px var(--color-dark-shadow),
     0px 0px 20px var(--color-dark-frost);
 }
