@@ -59,7 +59,7 @@ export async function RootLayout({ children, params }: RootProps) {
 export default RootLayout;
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.villoutvikling.com/en"),
+  metadataBase: new URL("https://www.villoutvikling.com"),
   title: "Villo Utvikling",
   description:
     "Profesjonell frontend- og webutvikling med fokus på responsive, brukervennlige og visuelt tiltalende nettsider for bedrifter, klubber og privatpersoner.",
@@ -78,24 +78,12 @@ export const metadata: Metadata = {
     description:
       "Profesjonell frontend- og webutvikling med fokus på responsive, brukervennlige og visuelt tiltalende nettsider for bedrifter, klubber og privatpersoner.",
     locale: "no-NO",
-    images: [
-      {
-        url: "https://github.com/VilloKodeHode/villo-utvikling-fe-ts/blob/main/public/images/logo/meta/full-logo.png?raw=true",
-        width: 1200,
-        height: 630,
-        alt: "Villo Utvikling Logo",
-        type: "image/png",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Villo Utvikling",
     description:
       "Profesjonell frontend- og webutvikling med fokus på responsive, brukervennlige og visuelt tiltalende nettsider.",
-    images: [
-      "https://github.com/VilloKodeHode/villo-utvikling-fe-ts/blob/main/public/images/logo/meta/full-logo.png?raw=true",
-    ],
   },
   icons: {
     icon: "https://www.villoutvikling.com/images/logo/logo-lightmode.svg",

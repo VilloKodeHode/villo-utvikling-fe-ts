@@ -15,16 +15,14 @@ export default async function Footer({ content }: ComponentProps) {
   return (
     <footer
       className={`z-1 relative py-24 sm:px-6 lg:px-12 px-4
-       bg-light-mist dark:bg-dark-onyx`}
-    >
+       bg-light-mist dark:bg-dark-onyx`}>
       <div className="absolute w-0 left-0 top-0 h-0.5 duration-1000 transition-[width] dark:w-full bg-dark-slate" />
       <div className="absolute w-full right-0 top-0 h-0.5 duration-1000 transition-[width] dark:w-0 bg-light-cloud" />
       <div className="flex flex-col items-center justify-center w-full gap-4 sm:justify-between sm:flex-row">
         <div
           className={`flex flex-col gap-2
             text-light-snow dark:text-dark-ice
-          `}
-        >
+          `}>
           <div className="flex gap-4">
             <ContactLogoLink />
             <LinkedInLogoLink />
@@ -39,8 +37,7 @@ export default async function Footer({ content }: ComponentProps) {
         <div
           className={`flex items-center text-center
             text-light-ash dark:text-white
-          `}
-        >
+          `}>
           <h4 className="text-h4">{`© ${year} ${content?.companyName}`}</h4>
         </div>
 
@@ -55,7 +52,7 @@ export default async function Footer({ content }: ComponentProps) {
           </div> */}
       </div>
       <Image
-        src="/logo/Villo_Utvikling_full-Logo.png"
+        src="/images/logo/logo.png"
         width={200}
         height={150}
         alt=""
