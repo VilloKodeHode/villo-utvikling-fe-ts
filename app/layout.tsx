@@ -12,14 +12,6 @@ export const metadata: Metadata = {
       "Profesjonell frontend- og webutvikling med fokus på responsive, brukervennlige og visuelt tiltalende nettsider.",
     url: "https://www.villoutvikling.com",
     siteName: "Villo Utvikling",
-    images: [
-      {
-        url: "/opengraph-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Villo Utvikling Preview",
-      },
-    ],
     locale: "no-NO",
     type: "website",
   },
@@ -28,7 +20,6 @@ export const metadata: Metadata = {
     title: "Villo Utvikling",
     description:
       "Profesjonell frontend- og webutvikling med fokus på responsive, brukervennlige og visuelt tiltalende nettsider.",
-    images: ["/twitter-image.png"],
   },
 };
 
