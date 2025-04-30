@@ -62,21 +62,14 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.villoutvikling.com"),
   title: "Villo Utvikling",
   description:
-    "Profesjonell frontend- og webutvikling med fokus på responsive, brukervennlige og visuelt tiltalende nettsider for bedrifter, klubber og privatpersoner.",
-  keywords:
-    "webutvikling, frontend utvikling, SEO tjenester, webdesign, nettsider, hjemmeside, bedriftside, klubbside, headless CMS, Sanity, MongoDB, JavaScript, freelance utvikler, rimelige webutvikling priser, profesjonell webutvikler, Vestfold, Tønsberg, Sandefjord, Oslo, Norge",
-  authors: [{ name: "Joakim Villo - Villo Utvikling" }],
-  robots: "index, follow",
-  alternates: {
-    canonical: "https://www.villoutvikling.com/en",
-  },
+    "Profesjonell frontend- og webutvikling med fokus på responsive, brukervennlige og visuelt tiltalende nettsider.",
   openGraph: {
     type: "website",
-    url: "https://www.villoutvikling.com/en",
-    siteName: "Villo Utvikling",
     title: "Villo Utvikling",
     description:
-      "Profesjonell frontend- og webutvikling med fokus på responsive, brukervennlige og visuelt tiltalende nettsider for bedrifter, klubber og privatpersoner.",
+      "Profesjonell frontend- og webutvikling med fokus på responsive, brukervennlige og visuelt tiltalende nettsider.",
+    url: "https://www.villoutvikling.com/en",
+    siteName: "Villo Utvikling",
     locale: "no-NO",
   },
   twitter: {
@@ -84,9 +77,5 @@ export const metadata: Metadata = {
     title: "Villo Utvikling",
     description:
       "Profesjonell frontend- og webutvikling med fokus på responsive, brukervennlige og visuelt tiltalende nettsider.",
-  },
-  icons: {
-    icon: "https://www.villoutvikling.com/images/logo/logo-lightmode.svg",
-    apple: "https://www.villoutvikling.com/images/logo/logo-lightmode.svg",
   },
 };
