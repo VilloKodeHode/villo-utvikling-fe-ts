@@ -80,13 +80,20 @@ export const metadata: Metadata = {
     locale: "no-NO",
     images: [
       {
-        url: "https://www.villoutvikling.com/images/logo/meta/full-logo.png", // now resolves with metadataBase
+        url: "https://www.villoutvikling.com/images/logo/meta/full-logo.png",
         width: 1200,
         height: 630,
         alt: "Villo Utvikling Logo",
-        type: "image/svg",
+        type: "image/png",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Villo Utvikling",
+    description:
+      "Profesjonell frontend- og webutvikling med fokus på responsive, brukervennlige og visuelt tiltalende nettsider.",
+    images: ["https://www.villoutvikling.com/images/logo/meta/full-logo.png"],
   },
   icons: {
     icon: "https://www.villoutvikling.com/images/logo/logo-lightmode.svg",
