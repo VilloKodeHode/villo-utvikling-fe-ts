@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.villoutvikling.com/no/
+Host: https://www.villoutvikling.com/
