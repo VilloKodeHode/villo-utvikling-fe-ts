@@ -1,24 +1,4 @@
 {
-  "logo": {
-    "light": {
-      "text": "Home",
-      "href": "/{lang}",
-      "textImage": "/images/logo/logo-text-lightMode.svg",
-      "leftLogo": "/images/logo/logo-left-lightMode.svg",
-      "rightLogo": "/images/logo/logo-right-lightMode.svg",
-      "imageWidth": 180,
-      "imageHeight": 180
-    },
-    "dark": {
-      "text": "Home",
-      "href": "/{lang}",
-      "textImage": "/images/logo/logo-text-darkMode.svg",
-      "leftLogo": "/images/logo/logo-left-darkMode.svg",
-      "rightLogo": "/images/logo/logo-right-darkMode.svg",
-      "imageWidth": 180,
-      "imageHeight": 180
-    }
-  },
   "heroSection": {
     "slogan": "Smart websites. Real results.",
     "title": "For those who want a website that actually works",
