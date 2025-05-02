@@ -364,38 +364,42 @@
     { "text": "Tjenester", "href": "/{lang}/services" }
   ],
 
-  "service_cards": [
-    {
-      "title": "Nettsider av høyeste kvalitet",
-      "text": "Med design som følger de siste trendene og den nyeste teknologien for en moderne nettside.",
-      "href": "/{lang}/services/website",
-      "buttonText": "Les mer"
-    },
-    {
-      "title": "Søkemotoroptimalisering",
-      "text": "Øk trafikken til din nettside med et bredt spekter av SEO (Søkemotoroptimalisering) tjenester.",
-      "href": "/{lang}/services/SEO",
-      "buttonText": "Les mer"
-    },
-    {
-      "title": "Engasjerende nettinnhold",
-      "text": "Engasjerende opplevelser på nettet som kombinerer kraftfulle ord med iøynefallende visuelle elementer.",
-      "href": "/{lang}/services/webcontent",
-      "buttonText": "Les mer"
-    },
-    {
-      "title": "Content Management System (CMS)",
-      "text": "Integrer et innholdshånderingssystem for at du selv skal kunne styre innholdet på din nettside.",
-      "href": "/{lang}/services/CMS",
-      "buttonText": "Les mer"
-    },
-    {
-      "title": "Sosiale media integrasjon",
-      "text": "Koble sammen dine sosiale medier med din nettside for å vise fram innholdet ditt på en ny og spennende måte.",
-      "href": "/{lang}/services/sosialmedia_integration",
-      "buttonText": "Les mer"
-    }
-  ],
+  "service_card_section": {
+    "title": "Tjenester og løsninger",
+    "subtitle": "Jeg tilbyr en rekke tjenester og løsninger for å hjelpe deg med å oppnå dine mål.",
+    "cards": [
+      {
+        "title": "Nettsider av høyeste kvalitet",
+        "text": "Med design som følger de siste trendene og den nyeste teknologien for en moderne nettside.",
+        "href": "/{lang}/services/website",
+        "buttonText": "Les mer"
+      },
+      {
+        "title": "Søkemotoroptimalisering",
+        "text": "Øk trafikken til din nettside med et bredt spekter av SEO (Søkemotoroptimalisering) tjenester.",
+        "href": "/{lang}/services/SEO",
+        "buttonText": "Les mer"
+      },
+      {
+        "title": "Engasjerende nettinnhold",
+        "text": "Engasjerende opplevelser på nettet som kombinerer kraftfulle ord med iøynefallende visuelle elementer.",
+        "href": "/{lang}/services/webcontent",
+        "buttonText": "Les mer"
+      },
+      {
+        "title": "Content Management System (CMS)",
+        "text": "Integrer et innholdshånderingssystem for at du selv skal kunne styre innholdet på din nettside.",
+        "href": "/{lang}/services/CMS",
+        "buttonText": "Les mer"
+      },
+      {
+        "title": "Sosiale media integrasjon",
+        "text": "Koble sammen dine sosiale medier med din nettside for å vise fram innholdet ditt på en ny og spennende måte.",
+        "href": "/{lang}/services/sosialmedia_integration",
+        "buttonText": "Les mer"
+      }
+    ]
+  },
   "portfolio": {
     "title": "Portfolio",
     "description": "Med lidenskap for front-end-utvikling og et forpliktende fokus på å skape brukersentrerte design, gir jeg liv til din visjon. Utforsk prosjektene jeg har hatt gleden av å jobbe med, hver av dem representerer en blanding av kunst og teknologi som definerer min tilnærming",

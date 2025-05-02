@@ -28,11 +28,11 @@ export const ThemedH2 = ({ children, className }: ThemedTextProps) => {
 
 export const ThemedH3 = ({ children, className }: ThemedTextProps) => {
   return (
-    <h2
+    <h3
       className={`text-light-obsidian
        dark:text-dark-ice sm:text-h3 text-h5 leading-h5 sm:leading-h3  ${className}`}>
       {children}
-    </h2>
+    </h3>
   );
 };
 

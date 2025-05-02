@@ -1,5 +1,10 @@
 import { ReadMoreButton } from "@components/atoms/Buttons";
-import { ThemedH2, ThemedH4, ThemedP } from "@components/atoms/ThemedText";
+import {
+  ThemedH2,
+  ThemedH3,
+  ThemedH4,
+  ThemedP,
+} from "@components/atoms/ThemedText";
 import { ComponentPropsWithParams } from "app/interfaces/PageProps";
 import Link from "next/link";
 
@@ -12,20 +17,21 @@ export const ServicePageContent = ({
   const { lang } = params;
 
   return (
-    <section id={id} className={`w-full py-2 scroll-into-view`}>
+    <section
+      id={id}
+      className={`w-full py-2 scroll-into-view`}>
       <div
-        className={`mx-auto flex flex-col gap-10 max-w-7xl  ${
+        className={`flex flex-col items-center justify-center md:gap-10 gap-6 max-w-7xl  ${
           showOnScroll ? "opacity-0 animate-on-scroll" : ""
-        }`}
-      >
-        <ThemedH2 className="font-bold text-center">
-          {lang === "no"
-            ? "Villo Utvikling tilbyr:"
-            : "Villo Development offers:"}
-        </ThemedH2>
-
+        }`}>
+        <div className="grid gap-2">
+          <ThemedH2 className="font-bold text-center">
+            {content?.title}
+          </ThemedH2>
+          <ThemedH3 className="text-center">{content?.subtitle}</ThemedH3>
+        </div>
         <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
-          {content?.map((item) => (
+          {content?.cards?.map((item) => (
             <ServiceCard
               key={item.title}
               title={item.title}
@@ -43,13 +49,13 @@ export const ServicePageContent = ({
 export const ServiceCard = ({ title, text, href, buttonText }) => {
   return (
     <div className="">
-      <Link href={href} className="cursor-pointer">
+      <Link
+        href={href}
+        className="cursor-pointer">
         <div
-          className={`relative z-[99] max-w-sm md:mt-0 md:col-span-1 group grid gap-2 min-h-[240px] p-6 glass-morphism interactive-box`}
-        >
+          className={`relative z-[99] max-w-sm md:mt-0 md:col-span-1 group grid gap-2 min-h-[240px] p-6 glass-morphism interactive-box`}>
           <ThemedH4
-            className={`font-bold z-10 max-w-fit transition-colors dark:group-hover:text-dark-lavender ease-linear group-hover:text-light-violet`}
-          >
+            className={`font-bold z-10 max-w-fit transition-colors dark:group-hover:text-dark-lavender ease-linear group-hover:text-light-violet`}>
             {title}
           </ThemedH4>
           <ThemedP>{text}</ThemedP>

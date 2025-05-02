@@ -10,12 +10,14 @@ export default async function Home({ params }: PageProps) {
 
   return (
     <>
-    
-      <HeroSection params={{ lang }} content={dictionary.heroSection} />
+      <HeroSection
+        params={{ lang }}
+        content={dictionary.heroSection}
+      />
       <ShowcaseSection content={dictionary.showCaseList} />
       <ServicePageContent
         showOnScroll
-        content={dictionary.service_cards}
+        content={dictionary.service_card_section}
         params={{ lang }}
       />
     </>

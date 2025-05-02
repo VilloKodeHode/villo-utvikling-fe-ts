@@ -369,38 +369,42 @@
     { "text": "Services", "href": "/{lang}/services" }
   ],
 
-  "service_cards": [
-    {
-      "title": "Websites of the highest quality",
-      "text": "With design that follows the current trends and the latest the technology for a modern website.",
-      "href": "/{lang}/services/website",
-      "buttonText": "Read more"
-    },
-    {
-      "title": "Search engine optimization",
-      "text": "Increase traffic to your website with a comprehensive range of SEO (Search Engine Optimization) services.",
-      "href": "/{lang}/services/SEO",
-      "buttonText": "Read more"
-    },
-    {
-      "title": "Engaging webcontent",
-      "text": "Captivating experiences that combine powerful words with eye-catching visuals.",
-      "href": "/{lang}/services/webcontent",
-      "buttonText": "Read more"
-    },
-    {
-      "title": "Content Management System (CMS)",
-      "text": "Integrate a content management system so that you can manage your content on your website.",
-      "href": "/{lang}/services/CMS",
-      "buttonText": "Read more"
-    },
-    {
-      "title": "Social media integration",
-      "text": "Connect your social media with your website to show content from your social media on a new and exciting way.",
-      "href": "/{lang}/services/sosialmedia_integration",
-      "buttonText": "Read more"
-    }
-  ],
+  "service_card_section": {
+    "title": "Services and solutions",
+    "subtitle": "I offer a wide range of services to help you achieve your goals",
+    "cards": [
+      {
+        "title": "Websites of the highest quality",
+        "text": "With design that follows the current trends and the latest the technology for a modern website.",
+        "href": "/{lang}/services/website",
+        "buttonText": "Read more"
+      },
+      {
+        "title": "Search engine optimization",
+        "text": "Increase traffic to your website with a comprehensive range of SEO (Search Engine Optimization) services.",
+        "href": "/{lang}/services/SEO",
+        "buttonText": "Read more"
+      },
+      {
+        "title": "Engaging webcontent",
+        "text": "Captivating experiences that combine powerful words with eye-catching visuals.",
+        "href": "/{lang}/services/webcontent",
+        "buttonText": "Read more"
+      },
+      {
+        "title": "Content Management System (CMS)",
+        "text": "Integrate a content management system so that you can manage your content on your website.",
+        "href": "/{lang}/services/CMS",
+        "buttonText": "Read more"
+      },
+      {
+        "title": "Social media integration",
+        "text": "Connect your social media with your website to show content from your social media on a new and exciting way.",
+        "href": "/{lang}/services/sosialmedia_integration",
+        "buttonText": "Read more"
+      }
+    ]
+  },
   "portfolio": {
     "title": "Portfolio",
     "description": "With a passion for front-end development and a commitment to creating user-centric designs, I bring your vision to life. Explore the projects I've had the privilege to work on, each representing the blend of art and technology that defines my approach.",

@@ -10,7 +10,7 @@ export default async function Home({ params }: PageProps) {
       <div className="grid items-center justify-center w-full min-h-[calc(100dvh-160px)]">
         <ServicePageContent
           showOnScroll={false}
-          content={dictionary.service_cards}
+          content={dictionary.service_card_section}
           params={{ lang }}
         />
       </div>

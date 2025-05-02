@@ -7,6 +7,7 @@ const LogoComponent = async ({ onclick, params }) => {
 
   return (
     <Link
+      aria-label={lang === "no" ? "Gå til forsiden" : "Go to homepage"}
       onClick={onclick}
       href={"/" + lang}
       className="relative hover:scale-105 duration-1000 group mt-4">
