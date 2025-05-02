@@ -21,7 +21,7 @@ export const ServicePageContent = ({
       id={id}
       className={`w-full py-2 scroll-into-view`}>
       <div
-        className={`flex flex-col items-center justify-center md:gap-10 gap-6 max-w-7xl  ${
+        className={`flex flex-col mx-auto md:gap-10 gap-6 max-w-7xl  ${
           showOnScroll ? "opacity-0 animate-on-scroll" : ""
         }`}>
         <div className="grid gap-2">
