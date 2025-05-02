@@ -13,7 +13,6 @@ export const ClientsSection = ({ content }) => {
       <ThemedH2 className="px-12 text-center">{content.title} </ThemedH2>
 
       <div className={`z-10 flex flex-wrap justify-center gap-12`}>
-        {/* <KvsLogo/> */}
         {content.projects.map((clientProject) => (
           <a
             key={clientProject.name}
@@ -28,8 +27,8 @@ export const ClientsSection = ({ content }) => {
               className={`z-20 group grid justify-center transition-all glass-morphism-card`}>
               <div className="w-60 h-60  p-8">
                 <Image
-                  placeholder="blur"
-                  blurDataURL="/images/logo/logo-lightmode.svg"
+                  // placeholder="blur"
+                  // blurDataURL="/images/logo/logo-lightmode.svg"
                   className={`object-contain w-full h-full dark:invert`}
                   src={clientProject.imageUrl}
                   alt={clientProject.name}

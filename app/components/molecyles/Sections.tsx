@@ -65,8 +65,6 @@ export const AltIntroSection = ({ content }: ComponentProps) => {
           className={`sm:rounded-lg grid transition-colors duration-1000
           `}>
           <div className={`h-full flex flex-col gap-2 md:gap-4`}>
-            {/* <SimpleLogoComponent /> */}
-
             <ThemedH1 className="">{content?.title}</ThemedH1>
             <ThemedPLarge className="">{content?.paragraphOne}</ThemedPLarge>
             <ThemedPLarge className="">{content?.paragraphTwo}</ThemedPLarge>
