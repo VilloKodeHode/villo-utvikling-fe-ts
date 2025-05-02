@@ -23,6 +23,7 @@ export const ScrollToSectionButton = ({ children }) => {
   };
   return (
     <a
+      aria-label="check out my services"
       href="#service_section"
       onClick={(event) => scrollToSection(event, "service_section")}
       className="">

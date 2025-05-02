@@ -2,8 +2,7 @@ import Link from "next/link";
 import { ThemedH1, ThemedP, ThemedPLarge } from "@components/atoms/ThemedText";
 import { ArrowCTA } from "@components/atoms/Buttons";
 import { ScrollToSectionButton } from "@components/atoms/ScrolltoSectionButton";
-import {ComponentPropsWithParams } from "app/interfaces/PageProps";
-
+import { ComponentPropsWithParams } from "app/interfaces/PageProps";
 
 export const HeroSection = ({ params, content }: ComponentPropsWithParams) => {
   const { lang } = params;
@@ -20,12 +19,13 @@ export const HeroSection = ({ params, content }: ComponentPropsWithParams) => {
           <ThemedPLarge>{content?.subtitle}</ThemedPLarge>
           {/* </div> */}
           <div className="grid justify-start items-center grid-flow-col ml:gap-8 gap-4">
-            <Link className="h-fit" href={`/${lang}/contact`}>
+            <Link
+              aria-label={lang === "no" ? "kontakt oss" : "contact us"}
+              className="h-fit"
+              href={`/${lang}/contact`}>
               <ArrowCTA>{content?.cta}</ArrowCTA>
             </Link>
-            <ScrollToSectionButton>
-              {content?.ctaTwo}
-            </ScrollToSectionButton>
+            <ScrollToSectionButton>{content?.ctaTwo}</ScrollToSectionButton>
           </div>
         </div>
       </div>
