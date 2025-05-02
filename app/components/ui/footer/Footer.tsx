@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { ThemedP } from "@components/atoms/ThemedText";
 import { ComponentProps } from "app/interfaces/PageProps";
 import {
