@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Joakim Villo - Villo Utvikling" }],
   robots: "index, follow",
   alternates: {
-    canonical: "https://www.villoutvikling.com/en",
+    canonical: "https://www.villoutvikling.com/no",
     languages: {
       no: "https://www.villoutvikling.com/no",
       en: "https://www.villoutvikling.com/en",
@@ -50,6 +50,7 @@ export const metadata: Metadata = {
     icon: "/images/logo/logo-lightmode.svg",
     apple: "/images/logo/logo-lightmode.svg",
   },
+  generator: "Next.js 15",
 };
 
 export default function RootLayout({

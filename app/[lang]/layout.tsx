@@ -58,24 +58,47 @@ export async function RootLayout({ children, params }: RootProps) {
 
 export default RootLayout;
 
-export const metadata: Metadata = {
-  metadataBase: new URL("https://www.villoutvikling.com"),
-  title: "Villo Utvikling",
-  description:
-    "Profesjonell frontend- og webutvikling med fokus på responsive, brukervennlige og visuelt tiltalende nettsider.",
-  openGraph: {
-    type: "website",
-    title: "Villo Utvikling",
-    description:
-      "Profesjonell frontend- og webutvikling med fokus på responsive, brukervennlige og visuelt tiltalende nettsider.",
-    url: "https://www.villoutvikling.com/en",
-    siteName: "Villo Utvikling",
-    locale: "no-NO",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Villo Utvikling",
-    description:
-      "Profesjonell frontend- og webutvikling med fokus på responsive, brukervennlige og visuelt tiltalende nettsider.",
-  },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  const baseUrl = "https://www.villoutvikling.com";
+
+  return {
+    metadataBase: new URL(baseUrl),
+    title: {
+      default: "Villo Utvikling",
+      template: "%s | Villo Utvikling",
+    },
+    description: "Profesjonell frontend- og webutvikling ...",
+    openGraph: {
+      url: `${baseUrl}/${lang}`,
+      locale: lang === "no" ? "no-NO" : "en-US",
+      images: [
+        {
+          url: "/images/logo/Villo_Utvikling_full-Logo.png",
+          width: 1200,
+          height: 630,
+          alt: "Villo Utvikling logo",
+          type: "image/png",
+        },
+      ],
+    },
+    twitter: {
+      images: ["/images/logo/Villo_Utvikling_full-Logo.png"],
+    },
+    alternates: {
+      canonical: `${baseUrl}/${lang}`,
+      languages: {
+        no: `${baseUrl}/no`,
+        en: `${baseUrl}/en`,
+      },
+    },
+    icons: {
+      icon: "/images/logo/logo-lightmode.svg",
+      apple: "/images/logo/logo-lightmode.svg",
+    },
+  };
+}
