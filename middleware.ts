@@ -25,7 +25,7 @@ export function middleware(request: NextRequest) {
 
   // Skip public files
   if (
-    ["/manifest.json", "/favicon.ico"].includes(pathname) ||
+    ["/manifest.json", "robots.txt", "/favicon.ico"].includes(pathname) ||
     pathname.startsWith("/images/") ||
     pathname.startsWith("/models/") ||
     pathname.startsWith("/videos/")

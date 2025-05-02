@@ -3,4 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.villoutvikling.com/
+Host: https://www.villoutvikling.com
+
+# Sitemaps
+Sitemap: https://www.villoutvikling.com/sitemap.xml
