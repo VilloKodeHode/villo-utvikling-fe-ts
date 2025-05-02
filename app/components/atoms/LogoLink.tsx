@@ -66,6 +66,7 @@ export const FacebookLogoLink = () => {
 export const ContactLogoLink = () => {
   return (
     <Link
+      aria-label="Send email to Joakim Villo"
       className="w-fit"
       href="/contact">
       <svg
