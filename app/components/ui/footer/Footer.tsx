@@ -1,5 +1,3 @@
-//Footer component
-
 import Image from "next/image";
 import { ThemedP } from "@components/atoms/ThemedText";
 import { ComponentProps } from "app/interfaces/PageProps";
@@ -12,6 +10,7 @@ import {
 
 export default async function Footer({ content }: ComponentProps) {
   const year = new Date().getFullYear();
+
   return (
     <footer
       className={`z-1 relative py-24 sm:px-6 lg:px-12 px-4
@@ -51,13 +50,6 @@ export default async function Footer({ content }: ComponentProps) {
             </Link>
           </div> */}
       </div>
-      <Image
-        src="/images/logo/logo.png"
-        width={200}
-        height={150}
-        alt=""
-        className="absolute bottom-0 right-0 opacity-0"
-      />
     </footer>
   );
 }
