@@ -61,7 +61,7 @@ const ArrowUpConstellation = () => {
     const scrollY = window.scrollY;
     const fade = Math.min(1, scrollY / (window.innerHeight * 0.5));
     const flicker = 0.4 + 0.3 * Math.sin(t * 2);
-    const hoverBoost = hovered ? 0.5 : 0;
+    const hoverBoost = hovered ? 1 : 0.5;
 
     const desiredOpacity = (flicker + hoverBoost) * fade;
     targetOpacity.current = MathUtils.lerp(

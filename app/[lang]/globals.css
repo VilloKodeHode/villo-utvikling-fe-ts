@@ -548,6 +548,11 @@
              dark:bg-dark-onyx/70 backdrop-blur-sm;
     }
 
+    .glass-morphism-ui {
+      @apply bg-light-mist/50 transition duration-200
+             dark:bg-dark-onyx/50 backdrop-blur-sm;
+    }
+
     .glass-morphism-section {
       @apply bg-light-cloud/50 
              dark:bg-dark-onyx/50 backdrop-blur-[2px] transition;

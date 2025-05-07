@@ -25,7 +25,7 @@ export const Header = () => {
 
   return (
     <>
-      <header className="transition relative ease-linear duration-200 backdrop-blur-[10px] z-40 h-10 flex items-center justify-between px-4 sm:px-6 lg:px-12 py-6 glass-morphism-plain text-light-obsidian dark:text-dark-glacier">
+      <header className="transition relative ease-linear duration-200 z-40 h-10 flex items-center justify-between px-4 sm:px-6 lg:px-12 py-6 glass-morphism-ui text-light-obsidian dark:text-dark-glacier">
         <div
           className={`grid transition-all z-40 grid-flow-col gap-12
  
@@ -33,8 +33,7 @@ export const Header = () => {
             notTop
               ? "animate-slide-in-from-bottom"
               : "animate-slide-in-from-top"
-          }`}
-        >
+          }`}>
           <LanguageSwitcher className="" />
           <ThemeSwitch />
         </div>
@@ -44,8 +43,7 @@ export const Header = () => {
             notTop
               ? "animate-slide-in-from-bottom"
               : "animate-slide-in-from-top"
-          }`}
-        >
+          }`}>
           <LinkedInLogoLink />
           <GithubLogoLink />
           <FacebookLogoLink />

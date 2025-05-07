@@ -13,7 +13,7 @@ export default async function Footer({ content }: ComponentProps) {
   return (
     <footer
       className={`z-1 relative py-24 sm:px-6 lg:px-12 px-4
-       bg-light-mist dark:bg-dark-onyx`}>
+       glass-morphism-ui`}>
       <div className="absolute w-0 left-0 top-0 h-0.5 duration-1000 transition-[width] dark:w-full bg-dark-slate" />
       <div className="absolute w-full right-0 top-0 h-0.5 duration-1000 transition-[width] dark:w-0 bg-light-cloud" />
       <div className="flex flex-col items-center justify-center w-full gap-4 sm:justify-between sm:flex-row">

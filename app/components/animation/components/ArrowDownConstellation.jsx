@@ -31,7 +31,7 @@ export const ArrowDownConstellation = () => {
     const isLight = theme === "light";
     const glowColor = isLight ? "40, 37, 59" : "241,239,255";
     const gradient = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
-    gradient.addColorStop(0, `rgba(${glowColor}, ${isLight ? 1.5 : 1})`);
+    gradient.addColorStop(0, `rgba(${glowColor}, ${isLight ? 1.5 : 1})`); //! 1.5 does NOTHING! Change to 1 and remove isLight check
     gradient.addColorStop(1, `rgba(${glowColor}, 0)`);
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, 64, 64);
@@ -90,8 +90,8 @@ export const ArrowDownConstellation = () => {
     const t = clock.getElapsedTime();
     const scrollY = window.scrollY;
     const fade = Math.max(0, 1 - scrollY / (window.innerHeight * 0.5));
-    const flicker = 0.3 + 0.2 * Math.sin(t * 2);
-    const hoverBoost = hovered ? 1.0 : 0.0;
+    const flicker = 0.3 + 0.2 * Math.sin(t * 3);
+    const hoverBoost = hovered ? 1.0 : 0.5;
     targetOpacity.current = MathUtils.lerp(
       targetOpacity.current,
       (flicker + hoverBoost) * fade,
