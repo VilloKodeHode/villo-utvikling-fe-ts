@@ -109,13 +109,13 @@ const fragmentShader = `
     for (int i = 0; i < 5; i++) {
       n += noise(uv + uTime * 0.02) * (0.5 / scale);
       scale *= 2.0;
-      uv *= 2.0;
+      uv *= 2.5;
     }
 
     if (n < 0.5) discard;
 
-    float intensity = smoothstep(0.3, 1.0, n);
+    float intensity = smoothstep(0.35, 1.0, n);
     vec3 color = mix(uColor1, uColor2, intensity);
-    gl_FragColor = vec4(color, intensity * uOpacity * 0.3);
+    gl_FragColor = vec4(color, intensity * uOpacity * 0.7);
   }
 `;
