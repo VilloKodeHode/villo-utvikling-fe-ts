@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://github.com/VilloKodeHode/villo-utvikling-fe-ts/blob/main/public/images/logo/Villo_Utvikling_full-Logo.png?raw=true",
+        url: "/images/logo/Villo_Utvikling_full-Logo.jpg",
         width: 1200,
         height: 630,
         alt: "Villo Utvikling logo",
@@ -42,9 +42,7 @@ export const metadata: Metadata = {
     title: "Villo Utvikling",
     description:
       "Profesjonell frontend- og webutvikling med fokus på responsive, brukervennlige og visuelt tiltalende nettsider.",
-    images: [
-      "https://github.com/VilloKodeHode/villo-utvikling-fe-ts/blob/main/public/images/logo/Villo_Utvikling_full-Logo.png?raw=true",
-    ],
+    images: ["/images/logo/Villo_Utvikling_full-Logo.jpg"],
   },
   icons: {
     icon: "/images/logo/logo-lightmode.svg",

@@ -78,7 +78,7 @@ export async function generateMetadata({
       locale: lang === "no" ? "no-NO" : "en-US",
       images: [
         {
-          url: "/images/logo/Villo_Utvikling_full-Logo.png",
+          url: "/images/logo/Villo_Utvikling_full-Logo.jpg",
           width: 1200,
           height: 630,
           alt: "Villo Utvikling logo",
@@ -87,7 +87,7 @@ export async function generateMetadata({
       ],
     },
     twitter: {
-      images: ["/images/logo/Villo_Utvikling_full-Logo.png"],
+      images: ["/images/logo/Villo_Utvikling_full-Logo.jpg"],
     },
     alternates: {
       canonical: `${baseUrl}/${lang}`,
