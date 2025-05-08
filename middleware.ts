@@ -33,6 +33,18 @@ export function middleware(request: NextRequest) {
     return;
   }
 
+  // Check for language in the URL
+  const url = request.nextUrl;
+  const hostname = url.hostname;
+
+  if (pathname.startsWith("/no")) {
+    // Redirect to Norwegian domain
+    return NextResponse.redirect(`https://villoutvikling.no${pathname}`);
+  } else if (pathname.startsWith("/en")) {
+    // Redirect to English domain
+    return NextResponse.redirect(`https://villoutvikling.com${pathname}`);
+  }
+
   // Already localized
   const pathnameIsMissingLocale = i18n.locales.every(
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
