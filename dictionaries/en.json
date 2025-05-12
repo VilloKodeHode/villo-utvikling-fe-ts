@@ -528,6 +528,43 @@
           ]
         }
       ]
+    },
+    "testimonials": {
+      "sectionTitle": "What my customers say",
+      "testimonials": [
+        {
+          "id": "Kodeverket_quote",
+          "testimonial": "“Joakim has been a central project manager in Kodeverket with a unique ability to understand the customer's needs and see the bigger picture. Without him, we would not have been able to deliver half the quality we have done on our customer projects, as well as achieve such good feedback from our customers. I can only recommend working with Joakim”",
+          "person": "Karl H. Rødland",
+          "src": "/images/quotes/KarlHaakon.jpg",
+          "logoSrc": "/images/quotes/kodeverket_logo.svg",
+          "personTitle": "Managing Director at Kodeverket Bergen"
+        },
+        {
+          "id": "Wileo_quote",
+          "testimonial": "“During our collaboration, I especially saw that you were good at understanding the problem, taking initiative and solving the assignment efficiently. Communication was impeccable and efficient 😊 go you!”",
+          "person": "Ida C. Filtenborg Hansen",
+          "src": "/images/quotes/IdaHansen.avif",
+          "logoSrc": "/images/quotes/wileo_logo.png",
+          "personTitle": "Managing Director at Wileo AS"
+        },
+        {
+          "id": "TrondBorg_quote",
+          "testimonial": "Thank you very much for the help with the development of my website, which resulted in a great outcome. I was actively involved in the process and was able to provide input that was important to me. The result turned out fantastic, with a fabulous response. I have now published the website, and it went very well with a positive response. I am very satisfied with the assistance I received from you.”",
+          "person": "Trond Borg",
+          "src": "/images/quotes/TrondBorg.webp",
+          "logoSrc": "/images/companies/TrondBorg_logo.svg",
+          "personTitle": "Owner of Trond Borg - Virvelløse hobbydyr"
+        },
+        {
+          "id": "Vegard_Kristensen_quote",
+          "testimonial": "“I can strongly recommend Villo development. Good information and different solutions were presented. Communication was very good, and the result was above and beyond expectation. Again, I can recommend Joakim ”",
+          "person": "Vegard Kristensen",
+          "src": "/images/quotes/VegardKristensen.webp",
+          "logoSrc": "/images/companies/KVS-logo-black.svg",
+          "personTitle": "Owner of Kristensen Maintenance Service"
+        }
+      ]
     }
   },
   "showCaseList": [

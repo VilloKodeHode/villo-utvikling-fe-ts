@@ -15,10 +15,11 @@ import {
   DynamicFloatingArrowUp,
   DynamicTheCosmos,
 } from "@components/animation/Dynamic3DExports";
-export const figtree = Figtree({ subsets: ["latin"] });
+export const figtree = Figtree({ subsets: ["latin"], display: "swap" });
 export const noto_emoji = Noto_Color_Emoji({
   weight: "400",
   subsets: ["emoji"],
+  display: "swap",
 });
 
 //TODO: Lag pris underside (tydeligvis lovpålagt!)

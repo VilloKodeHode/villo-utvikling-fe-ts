@@ -525,6 +525,43 @@
           ]
         }
       ]
+    },
+    "testimonials": {
+      "sectionTitle": "Hva sier kundene mine?",
+      "testimonials": [
+        {
+          "id": "Kodeverket_quote",
+          "testimonial": "“Joakim har vært en sentral prosjektleder i Kodeverket med en unik evne til å forstå kundens behov og se det større bilde. Uten han hadde vi ikke klart å levere halvparten av kvaliteten vi har gjort på våre kundeprosjekter, samt oppnå så gode tilbakemeldinger fra kundene våre. Jeg kan kun anbefale å jobbe med Joakim”",
+          "person": "Karl H. Rødland",
+          "src": "/images/quotes/KarlHaakon.jpg",
+          "logoSrc": "/images/quotes/kodeverket_logo.svg",
+          "personTitle": "Daglig leder i Kodeverket Bergen"
+        },
+        {
+          "id": "Wileo_quote",
+          "testimonial": "“I løpet av vårt samarbeid synte jeg spesielt du var god på å forstå problemstillingen, ta initiativ og løse oppdraget effektivt. Kommunikasjon var upåklagelig og effektiv 😊 heia!”",
+          "person": "Ida C. Filtenborg Hansen",
+          "src": "/images/quotes/IdaHansen.avif",
+          "logoSrc": "/images/quotes/wileo_logo.png",
+          "personTitle": "Daglig leder i Wileo AS"
+        },
+        {
+          "id": "TrondBorg_quote",
+          "testimonial": "“Tusen takk for hjelpen i forhold utviklingen av min nettside, med et flott resultat. Jeg fikk hele tiden vært delaktig i prosessen og fikk komme med innspill som var viktige for meg. Resultatet ble supert, med en fabelaktig respons. Da har jeg publisert nettsiden, og det ble veldig bra med god respons. Veldig fornøyd med hjelpen jeg fikk av deg.”",
+          "person": "Trond Borg",
+          "src": "/images/quotes/TrondBorg.webp",
+          "logoSrc": "/images/companies/TrondBorg_logo.svg",
+          "personTitle": "Eier av Trond Borg - Virvelløse hobbydyr"
+        },
+        {
+          "id": "Vegard_Kristensen_quote",
+          "testimonial": "“Kan anbefale Villo utvikling på det sterkeste. God informasjon og forskjellige løsninger ble presentert underveis. Kommunikasjonen har vært meget god, og resultatet ble over all forventning. Igjen, anbefaler Joakim!”",
+          "person": "Vegard Kristensen",
+          "src": "/images/quotes/VegardKristensen.webp",
+          "logoSrc": "/images/companies/KVS-logo-black.svg",
+          "personTitle": "Eier Kristensen Vedlikehold Service"
+        }
+      ]
     }
   },
 
