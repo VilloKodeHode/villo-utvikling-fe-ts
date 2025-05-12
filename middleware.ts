@@ -41,6 +41,15 @@ export function middleware(request: NextRequest) {
     hostname === "localhost" || hostname.startsWith("127.0.0.1");
 
   if (!isLocalhost) {
+    if (hostname === "villoutvikling.no" && pathname.startsWith("/no")) {
+      return NextResponse.next(); // Already on the correct domain and locale
+    } else if (
+      hostname === "villoutvikling.com" &&
+      pathname.startsWith("/en")
+    ) {
+      return NextResponse.next(); // Already on the correct domain and locale
+    }
+
     if (pathname.startsWith("/no")) {
       // Redirect to Norwegian domain
       return NextResponse.redirect(`https://villoutvikling.no${pathname}`);
