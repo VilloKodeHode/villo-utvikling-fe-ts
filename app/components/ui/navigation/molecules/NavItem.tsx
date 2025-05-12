@@ -19,17 +19,22 @@ const NavItem = ({
   textSize,
 }: NavItemProps) => {
   const pathName = usePathname();
-  const prevParam = () => {
-    const result = "/" + pathName.split("/")[pathName.split("/").length - 2];
-    return result.replace(/\/(en|no)$/, "/");
-  };
+  const currentLang =
+    typeof window !== "undefined"
+      ? new URLSearchParams(window.location.search).get("lang") || "no"
+      : "no";
+
+  const hrefWithLang = `${href}${href.includes("?") ? "&" : "?"}lang=${currentLang}`;
+
+  // Extract the previous path segment from `pathName`
+  const prevSegment = pathName.split("/").slice(-2, -1)[0];
 
   return (
     <div
       key={text}
       className={`relative group ${className}`}>
       <Link
-        href={href}
+        href={hrefWithLang}
         className="">
         <p
           className={`${textSize} text-light-obsidian dark:text-dark-ice z-10`}
@@ -39,7 +44,7 @@ const NavItem = ({
         <div
           className={` ${
             pathName === href ||
-            (href.includes("/services") && prevParam() === "/services")
+            (href.includes("/services") && prevSegment === "services")
               ? "h-1.5"
               : "group-hover:h-1.5"
           } absolute w-full h-0 transition-[height] bg-light-violet  dark:bg-dark-lavender`}

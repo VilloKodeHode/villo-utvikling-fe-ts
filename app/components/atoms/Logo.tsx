@@ -1,15 +1,22 @@
+"use client";
+
 import Link from "next/link";
 import { LogoIconLeft, LogoIconRight, LogoText } from "./logo/LogoParts";
 
-const LogoComponent = async ({ onclick, params }) => {
-  const { lang } = await params;
-  // Find the logo object based on the theme
+const LogoComponent = ({ onclick }) => {
+  const currentLang =
+    typeof window !== "undefined"
+      ? new URLSearchParams(window.location.search).get("lang") || "no"
+      : "no"; // Fallback to 'no' if not available
+
+  // Always navigate to the base page with the current language
+  const hrefWithLang = `/?lang=${currentLang}`;
 
   return (
     <Link
-      aria-label={lang === "no" ? "Gå til forsiden" : "Go to homepage"}
+      aria-label={currentLang === "no" ? "Gå til forsiden" : "Go to homepage"}
       onClick={onclick}
-      href={"/" + lang}
+      href={hrefWithLang}
       className="relative hover:scale-105 duration-1000 group mt-4">
       <LogoText />
       <LogoIconLeft className="h-20 -right-1 -top-5" />

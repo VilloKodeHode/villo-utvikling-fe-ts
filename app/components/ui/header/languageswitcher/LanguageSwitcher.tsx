@@ -1,64 +1,57 @@
 "use client";
 
-//TODO: Check if code works:
-import { redirectedPathname } from "app/logic/redirectedPathName";
-import { i18n } from "i18next.config";
 import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
-export default function LanguageSwitcher({className}) {
-  const pathname = usePathname();
+export default function LanguageSwitcher({ className }) {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const [currentLang, setCurrentLang] = useState("no");
 
-  //! Revert back to this if code isnt working:
-  // const redirectedPathname = (locale: Locale) => {
-  //   if (!pathname) return "/";
-  //   const segments = pathname.split("/");
-  //   segments[1] = locale;
-  //   return segments.join("/");
-  // };
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const langParam = searchParams.get("lang");
+      setCurrentLang(langParam === "en" ? "en" : "no");
+    }
+  }, [searchParams]);
 
-  // console.log(i18n.locales)
+  const handleLanguageSwitch = (lang) => {
+    const params = new URLSearchParams(searchParams);
+    params.set("lang", lang);
+    router.push(`?${params.toString()}`); // Update the URL without a full reload
+  };
 
   return (
     <div className={className}>
       <ul className="flex gap-3">
-        {i18n.locales.map((locale) => (
-          <li key={locale}>
-            <Link
-              href={redirectedPathname(pathname, locale)}
-              className={
-                pathname === redirectedPathname(pathname, locale) ? "" : ""
-              }
-            >
-              <Image
-                className={`w-fit h-5 hover:scale-125 transition cursor-pointer ${
-                  pathname === redirectedPathname(pathname, locale)
-                    ? "scale-110 opacity-100 outline-[1px] outline-dark-lavender dark:outline-light-violet"
-                    : "opacity-60"
-                }`}
-                src={`/images/flags/${locale}.png`}
-                width={450}
-                alt={locale}
-                height={300}
-              />
-            </Link>
-          </li>
-        ))}
+        <li>
+          <button
+            onClick={() => handleLanguageSwitch("no")}
+            className={`hover:scale-125 transition cursor-pointer rounded ${currentLang === "no" ? "outline-2 outline-blue-500 bg-blue-100 opacity-100" : "opacity-60"}`}>
+            <Image
+              className="w-fit h-5"
+              src="/images/flags/no.png"
+              width={450}
+              alt="Norwegian"
+              height={300}
+            />
+          </button>
+        </li>
+        <li>
+          <button
+            onClick={() => handleLanguageSwitch("en")}
+            className={`hover:scale-125 transition cursor-pointer rounded ${currentLang === "en" ? "outline-2 outline-blue-500 bg-blue-100 opacity-100" : "opacity-60"}`}>
+            <Image
+              className="w-fit h-5"
+              src="/images/flags/en.png"
+              width={450}
+              alt="English"
+              height={300}
+            />
+          </button>
+        </li>
       </ul>
-      {/* <div className="absolute top-0 left-0 flex items-center justify-center h-screen w-screen bg-dark-twilight dark:bg-orange-700 z-999">
-        <Image
-          className={`h-36 w-36`}
-          src={`${
-            pathname === redirectedPathname("en")
-              ? "/flags/en.png"
-              : "/flags/no.png"
-          }`}
-          width={450}
-          alt={pathname === redirectedPathname("en") ? "en" : "no"}
-          height={300}
-        />
-      </div> */}
     </div>
   );
 }

@@ -342,11 +342,11 @@
   },
 
   "menu_items": [
-    { "text": "Home", "href": "/{lang}" },
-    { "text": "About", "href": "/{lang}/about" },
-    { "text": "Portfolio", "href": "/{lang}/portfolio" },
-    { "text": "Contact", "href": "/{lang}/contact" },
-    { "text": "Services", "href": "/{lang}/services" }
+    { "text": "Home", "href": "/" },
+    { "text": "About", "href": "/about" },
+    { "text": "Portfolio", "href": "/portfolio" },
+    { "text": "Contact", "href": "/contact" },
+    { "text": "Services", "href": "/services" }
   ],
 
   "service_card_section": {
@@ -356,31 +356,31 @@
       {
         "title": "Websites of the highest quality",
         "text": "With design that follows the current trends and the latest the technology for a modern website.",
-        "href": "/{lang}/services/website",
+        "href": "/services/website",
         "buttonText": "Read more"
       },
       {
         "title": "Search engine optimization",
         "text": "Increase traffic to your website with a comprehensive range of SEO (Search Engine Optimization) services.",
-        "href": "/{lang}/services/SEO",
+        "href": "/services/SEO",
         "buttonText": "Read more"
       },
       {
         "title": "Engaging webcontent",
         "text": "Captivating experiences that combine powerful words with eye-catching visuals.",
-        "href": "/{lang}/services/webcontent",
+        "href": "/services/webcontent",
         "buttonText": "Read more"
       },
       {
         "title": "Content Management System (CMS)",
         "text": "Integrate a content management system so that you can manage your content on your website.",
-        "href": "/{lang}/services/CMS",
+        "href": "/services/CMS",
         "buttonText": "Read more"
       },
       {
         "title": "Social media integration",
         "text": "Connect your social media with your website to show content from your social media on a new and exciting way.",
-        "href": "/{lang}/services/sosialmedia_integration",
+        "href": "/services/sosialmedia_integration",
         "buttonText": "Read more"
       }
     ]

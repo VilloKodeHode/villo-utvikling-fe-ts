@@ -25,7 +25,7 @@
       "@types/*": ["app/types/*"],
       "@utils/*": ["app/utils/*"],
       "@hooks/*": ["app/hooks/*"],
-      "@pages/*": ["app/[lang]/(pages)/*"],
+      "@pages/*": ["app/(pages)/*"],
       "@contexts/*": ["app/contexts/*"],
       "@data/*": ["app/data/*"],
       "@logic/*": ["app/logic/*"],

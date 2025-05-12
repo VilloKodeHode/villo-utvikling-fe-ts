@@ -31,15 +31,18 @@ export const ServicePageContent = ({
           <ThemedH3 className="text-center">{content?.subtitle}</ThemedH3>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
-          {content?.cards?.map((item) => (
-            <ServiceCard
-              key={item.title}
-              title={item.title}
-              text={item.text}
-              href={item.href.replace("{lang}", lang)}
-              buttonText={item.buttonText}
-            />
-          ))}
+          {content?.cards?.map((item) => {
+            const resolvedHref = `${item.href}?lang=${lang}`; // Append lang as a query parameter
+            return (
+              <ServiceCard
+                key={item.title}
+                title={item.title}
+                text={item.text}
+                href={resolvedHref}
+                buttonText={item.buttonText}
+              />
+            );
+          })}
         </div>
       </div>
     </section>
@@ -60,7 +63,6 @@ export const ServiceCard = ({ title, text, href, buttonText }) => {
           </ThemedH4>
           <ThemedP>{text}</ThemedP>
           <ReadMoreButton className="self-end">{buttonText}</ReadMoreButton>
-          {/* <div className="absolute group-hover:opacity-80 opacity-0 group-hover:h-[105%] group-hover:w-[103.5%] w-0 h-0 transition-all right-1/2 translate-x-1/2 top-1/2 translate-y-[-50%] sm:rounded-lg -z-99 bg-dark-lavender" /> */}
         </div>
       </Link>
     </div>

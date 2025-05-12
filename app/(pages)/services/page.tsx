@@ -1,9 +1,12 @@
-import { ServicePageContent } from "@pages/services/sections/ServicePageContent";
+import { ServicePageContent } from "app/(pages)/services/sections/ServicePageContent";
 import { PageProps } from "app/interfaces/PageProps";
 import { getDictionary } from "get-dictionary";
+import { useRouter } from "next/router";
 
-export default async function Home({ params }: PageProps) {
-  const { lang } = await params;
+export default async function Home() {
+  const router = useRouter();
+  const lang = router.query.lang || "no"; // Default to 'no' if lang is not provided
+
   const dictionary = await getDictionary(lang);
   return (
     <>

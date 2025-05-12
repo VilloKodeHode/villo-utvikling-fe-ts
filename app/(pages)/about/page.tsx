@@ -6,27 +6,21 @@ import {
 import { SkillsSection } from "./sections/SkillsSection";
 import { ProjectSection } from "./sections/ProjectSection";
 import { PageProps } from "app/interfaces/PageProps";
-// import RubicksCubeScene from "@components/animation/components/rubicksCube/RubicsCube";
+import { headers } from "next/headers";
 
 export default async function Home({ params }: PageProps) {
-  const { lang } = await params;
+  const requestHeaders = await headers(); // Await headers()
+  const langHeader = requestHeaders.get("x-language"); // Get language from middleware
+  const lang: "no" | "en" =
+    langHeader === "en" || langHeader === "no" ? langHeader : "no"; // Validate and cast
+
   const dictionary = await getDictionary(lang);
   return (
     <>
-      {/* <RubicksCubeScene /> */}
       <AltIntroSection content={dictionary.companyInfo} />
       <TextAndImageSection content={dictionary.introInfo} />
       <SkillsSection content={dictionary.skills} />
-      {/* <PaletteSection /> */}
       <ProjectSection content={dictionary.personal_projects} />
-      {/* <LetsGoCTA
-        type="portfolio"
-        engText="Check my portfolio"
-        norText="Sjekk min portfølje"
-        href="/portfolio"
-      >
-        {language === "Norwegian" ? "Portofølje" : "Portfolio"}
-      </LetsGoCTA> */}
     </>
   );
 }
