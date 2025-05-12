@@ -45,7 +45,7 @@ export const Nebula = () => {
     uniforms.uTime.value = clock.getElapsedTime();
 
     const scrollY = window.scrollY;
-    meshRef.current.position.y = scrollY * 0.015;
+    meshRef.current.position.y = scrollY * 0.005;
   });
 
   if (!enabled) return null;

@@ -4,6 +4,7 @@ import { EmploymentSection } from "./sections/EmploymentSection";
 import { ClientsSection } from "./sections/ClientSection";
 import { PageProps } from "app/interfaces/PageProps";
 import { IntroSection } from "@components/molecyles/Sections";
+import { TestemonialsSection } from "./sections/TestemonialsSection";
 
 export default async function Home({ params }: PageProps) {
   const { lang } = await params;
@@ -15,7 +16,7 @@ export default async function Home({ params }: PageProps) {
       <IntroSection content={content} />
       <ClientsSection content={content.customer_projects} />
       <EmploymentSection content={content.employment} />
-      {/* <QuotesSection /> */}
+      <TestemonialsSection content={content.testimonials} />
       {/* <LetsGoCTA
         type="email"
         engText="Make me you coworker!"

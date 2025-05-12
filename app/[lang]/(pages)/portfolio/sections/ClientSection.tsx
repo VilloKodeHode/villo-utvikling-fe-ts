@@ -5,12 +5,12 @@ export const ClientsSection = ({ content }) => {
   return (
     <section
       data-scroll-target
-      className="relative z-10 flex flex-col gap-10 justify-center p-16 mx-auto max-w-7xl min-h-[30vh]">
+      className="relative z-10 flex flex-col gap-10 justify-self-center mx-auto max-w-7xl min-h-[30vh] py-12">
       <div
-        className={`absolute w-screen h-full translate-x-1/2 -z-10 right-1/2 glass-morphism-section`}
+        className={`absolute w-screen h-full translate-x-1/2 -z-10 top-1/2 -translate-y-1/2 right-1/2 glass-morphism-section`}
       />
 
-      <ThemedH2 className="px-12 text-center">{content.title} </ThemedH2>
+      <ThemedH2 className="text-center">{content.title} </ThemedH2>
 
       <div className={`z-10 flex flex-wrap justify-center gap-12`}>
         {content.projects.map((clientProject) => (

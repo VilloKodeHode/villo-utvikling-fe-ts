@@ -37,12 +37,17 @@ export function middleware(request: NextRequest) {
   const url = request.nextUrl;
   const hostname = url.hostname;
 
-  if (pathname.startsWith("/no")) {
-    // Redirect to Norwegian domain
-    return NextResponse.redirect(`https://villoutvikling.no${pathname}`);
-  } else if (pathname.startsWith("/en")) {
-    // Redirect to English domain
-    return NextResponse.redirect(`https://villoutvikling.com${pathname}`);
+  const isLocalhost =
+    hostname === "localhost" || hostname.startsWith("127.0.0.1");
+
+  if (!isLocalhost) {
+    if (pathname.startsWith("/no")) {
+      // Redirect to Norwegian domain
+      return NextResponse.redirect(`https://villoutvikling.no${pathname}`);
+    } else if (pathname.startsWith("/en")) {
+      // Redirect to English domain
+      return NextResponse.redirect(`https://villoutvikling.com${pathname}`);
+    }
   }
 
   // Already localized
