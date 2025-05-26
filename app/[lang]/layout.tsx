@@ -83,7 +83,7 @@ export async function generateMetadata({
           width: 1200,
           height: 630,
           alt: "Villo Utvikling logo",
-          type: "image/png",
+          type: "image/jpg",
         },
       ],
     },
