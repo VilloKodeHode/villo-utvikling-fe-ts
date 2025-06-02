@@ -22,7 +22,7 @@ export const HeroSection = ({ params, content }: ComponentPropsWithParams) => {
             <Link
               aria-label={lang === "no" ? "kontakt oss" : "contact us"}
               className="h-fit"
-              href={`/${lang}/contact`}>
+              href={`/contact`}>
               <ArrowCTA>{content?.cta}</ArrowCTA>
             </Link>
             <ScrollToSectionButton>{content?.ctaTwo}</ScrollToSectionButton>

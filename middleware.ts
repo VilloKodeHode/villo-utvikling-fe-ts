@@ -22,6 +22,10 @@ function getLocale(request: NextRequest): string | undefined {
 
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
+  const url = request.nextUrl;
+  const hostname = url.hostname;
+  const isLocalhost =
+    hostname === "localhost" || hostname.startsWith("127.0.0.1");
 
   // Skip public files
   if (
@@ -33,33 +37,24 @@ export function middleware(request: NextRequest) {
     return;
   }
 
-  // Check for language in the URL
-  const url = request.nextUrl;
-  const hostname = url.hostname;
-
-  const isLocalhost =
-    hostname === "localhost" || hostname.startsWith("127.0.0.1");
-
+  // 1. If on correct domain and locale, allow
   if (!isLocalhost) {
     if (hostname === "villoutvikling.no" && pathname.startsWith("/no")) {
-      return NextResponse.next(); // Already on the correct domain and locale
-    } else if (
-      hostname === "villoutvikling.com" &&
-      pathname.startsWith("/en")
-    ) {
-      return NextResponse.next(); // Already on the correct domain and locale
+      return NextResponse.next();
     }
-
-    if (pathname.startsWith("/no")) {
-      // Redirect to Norwegian domain
+    if (hostname === "villoutvikling.com" && pathname.startsWith("/en")) {
+      return NextResponse.next();
+    }
+    // 2. If on wrong domain for locale, redirect to correct domain
+    if (pathname.startsWith("/no") && hostname !== "villoutvikling.no") {
       return NextResponse.redirect(`https://villoutvikling.no${pathname}`);
-    } else if (pathname.startsWith("/en")) {
-      // Redirect to English domain
+    }
+    if (pathname.startsWith("/en") && hostname !== "villoutvikling.com") {
       return NextResponse.redirect(`https://villoutvikling.com${pathname}`);
     }
   }
 
-  // Already localized
+  // 3. If missing locale in path, add it
   const pathnameIsMissingLocale = i18n.locales.every(
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
   );
@@ -72,7 +67,7 @@ export function middleware(request: NextRequest) {
       );
 
     if (pathname === "/" && isBot) {
-      return NextResponse.next(); // ✅ Allow bots to read the homepage metadata
+      return NextResponse.next();
     }
 
     const locale = getLocale(request);
