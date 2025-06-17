@@ -10,15 +10,23 @@ interface MenuItem {
 
 export const NavBar = ({ content, params }: ComponentPropsWithParams) => {
   const { lang } = params;
+  const isLocal =
+    typeof window !== "undefined" &&
+    (window.location.hostname === "localhost" ||
+      window.location.hostname.startsWith("127."));
 
   const menuItems = content?.map((item: MenuItem) => {
     if (!item.href) {
       console.error("Menu item missing href:", item);
       return { ...item, href: "#" }; // Default to "#" if href is missing
     }
-
-    const hrefWithLang = item.href.replace("{lang}", lang);
-    return { ...item, href: hrefWithLang };
+    let href = item.href.replace("{lang}", lang);
+    // Only prefix with /no or /en locally
+    if (!isLocal) {
+      // Remove /no or /en prefix for production
+      href = href.replace(/^\/(no|en)(\/|$)/, "/");
+    }
+    return { ...item, href };
   });
 
   return (
@@ -29,7 +37,7 @@ export const NavBar = ({ content, params }: ComponentPropsWithParams) => {
           <div className="absolute w-0 left-0 bottom-0 h-0.5 duration-1000 transition-[width] dark:w-full bg-dark-slate" />
           <div className="absolute w-full right-0 bottom-0 h-0.5 duration-1000 transition-[width] dark:w-0 bg-light-cloud" />
           <LogoComponent
-            onclick={null}
+            onclick={undefined}
             params={params}
           />
           <div className="hidden ml-8 md:block">

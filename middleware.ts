@@ -37,24 +37,38 @@ export function middleware(request: NextRequest) {
     return;
   }
 
-  // 1. If on correct domain and locale, allow
+  // --- PRODUCTION: Use domain only, no /no or /en in path ---
   if (!isLocalhost) {
-    if (hostname === "villoutvikling.no" && pathname.startsWith("/no")) {
+    // If on .no, always serve Norwegian
+    if (hostname === "villoutvikling.no") {
+      // Redirect /no/* to clean path
+      if (pathname.startsWith("/no/")) {
+        return NextResponse.redirect(
+          `https://villoutvikling.no${
+            pathname.replace(/^\/no/, "") || "/"
+          }`
+        );
+      }
+      // Allow all other paths
       return NextResponse.next();
     }
-    if (hostname === "villoutvikling.com" && pathname.startsWith("/en")) {
+    // If on .com, always serve English
+    if (hostname === "villoutvikling.com") {
+      // Redirect /en/* to clean path
+      if (pathname.startsWith("/en/")) {
+        return NextResponse.redirect(
+          `https://villoutvikling.com${
+            pathname.replace(/^\/en/, "") || "/"
+          }`
+        );
+      }
+      // Allow all other paths
       return NextResponse.next();
     }
-    // 2. If on wrong domain for locale, redirect to correct domain
-    if (pathname.startsWith("/no") && hostname !== "villoutvikling.no") {
-      return NextResponse.redirect(`https://villoutvikling.no${pathname}`);
-    }
-    if (pathname.startsWith("/en") && hostname !== "villoutvikling.com") {
-      return NextResponse.redirect(`https://villoutvikling.com${pathname}`);
-    }
+    // If on wrong domain, redirect to correct domain (optional, or just allow)
   }
 
-  // 3. If missing locale in path, add it
+  // --- LOCAL DEVELOPMENT: Use /no or /en prefix for language ---
   const pathnameIsMissingLocale = i18n.locales.every(
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
   );

@@ -1,15 +1,17 @@
+"use client";
 import Link from "next/link";
 import { LogoIconLeft, LogoIconRight, LogoText } from "./logo/LogoParts";
 
-const LogoComponent = async ({ onclick, params }) => {
-  const { lang } = await params;
-  // Find the logo object based on the theme
+const LogoComponent = ({ onclick, params }) => {
+  // Support both { lang } and undefined params
+  const lang = params && params.lang ? params.lang : undefined;
+  const homepageHref = lang ? `/${lang}` : "/";
 
   return (
     <Link
       aria-label={lang === "no" ? "Gå til forsiden" : "Go to homepage"}
       onClick={onclick}
-      href={"/" + lang}
+      href={homepageHref}
       className="relative hover:scale-105 duration-1000 group mt-4">
       <LogoText />
       <LogoIconLeft className="h-20 -right-1 -top-5" />

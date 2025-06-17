@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import LanguageSwitcher from "../languageswitcher/LanguageSwitcher";
 import { ThemeSwitch } from "../themeswitcher/ThemeSwitcher";
 import { SettingIcon } from "@components/atoms/SvgIcons";
+import LanguageSwitcher from "../languageswitcher/LanguageSwitcher";
 
 //TODO cogwheel going in outside of screen when not fullscreen
 
@@ -36,8 +36,7 @@ export const FloatingUtilsBar = () => {
           notTop ? "animate-tools-slide-in" : "animate-tools-slide-out"
         }`}>
         <div className={`flex right-0 transition-all top-0 gap-4`}>
-          <LanguageSwitcher className={""} />
-
+          <LanguageSwitcher className="" />
           <ThemeSwitch />
           <button
             aria-label="Settings"
