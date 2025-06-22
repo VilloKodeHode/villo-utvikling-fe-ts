@@ -738,5 +738,31 @@
     "thankYouLine1": "Meldingen din er sendt og svever nå gjennom de digitale vindene.",
     "thankYouLine2": "Jeg svarer deg så snart jeg kan. La oss lage noe fantastisk sammen.",
     "confirmButton": "Flotters!"
+  },
+  "faqSection": {
+    "title": "Ofte stilte spørsmål",
+    "description": "Her finner du svar på noen av de vanligste spørsmålene jeg får",
+    "faq": [
+      {
+        "question": "Hva koster en ny nettside?",
+        "answer": "Prisen varierer etter omfang og funksjonalitet. Ta kontakt for et uforpliktende tilbud tilpasset dine behov."
+      },
+      {
+        "question": "Tilbyr du søkemotoroptimalisering (SEO)?",
+        "answer": "Ja, alle nettsider leveres med grunnleggende SEO og mulighet for videre optimalisering."
+      },
+      {
+        "question": "Hvor lang tid tar det å lage en nettside?",
+        "answer": "Normalt tar det 2–6 uker, avhengig av prosjektets størrelse og kompleksitet."
+      },
+      {
+        "question": "Kan jeg oppdatere innholdet selv?",
+        "answer": "Ja, jeg bruker løsninger som gjør det enkelt for deg å oppdatere tekst og bilder selv."
+      },
+      {
+        "question": "Hva slags support tilbyr du?",
+        "answer": "Jeg tilbyr både oppfølging etter lansering og vedlikeholdsavtaler for å sikre at nettsiden din alltid fungerer optimalt."
+      }
+    ]
   }
 }

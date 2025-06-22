@@ -740,5 +740,32 @@
     "thankYouLine1": "Your message has been sent and is currently sailing through the digital winds.",
     "thankYouLine2": "I'll get back to you as soon as I can. Let's make something awesome together.",
     "confirmButton": "Sounds good!"
+  },
+  "faqSection": {
+    "title": "Frequently Asked Questions",
+    "description": "Got questions? I've got answers. Here are some of the most common questions I receive from clients and visitors. If you have more specific inquiries or need further assistance, feel free to reach out through the contact form.",
+
+    "faq": [
+      {
+        "question": "How much does a new website cost?",
+        "answer": "The price depends on the scope and functionality. Contact me for a non-binding quote tailored to your needs."
+      },
+      {
+        "question": "Do you offer search engine optimization (SEO)?",
+        "answer": "Yes, all websites come with basic SEO and the option for further optimization."
+      },
+      {
+        "question": "How long does it take to build a website?",
+        "answer": "It usually takes 2–6 weeks, depending on the size and complexity of the project."
+      },
+      {
+        "question": "Can I update the content myself?",
+        "answer": "Yes, I use solutions that make it easy for you to update text and images yourself."
+      },
+      {
+        "question": "What kind of support do you offer?",
+        "answer": "I offer both follow-up after launch and maintenance agreements to ensure your website always works optimally."
+      }
+    ]
   }
 }

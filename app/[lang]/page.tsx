@@ -23,6 +23,11 @@ const ServicePageContent = React.lazy(() =>
     (module) => ({ default: module.ServicePageContent })
   )
 );
+const FAQSection = React.lazy(() =>
+  import("app/[lang]/(pages)/index/sections/FAQSection").then(
+    (module) => ({ default: module.FAQSection })
+  )
+);
 
 export default async function Home({ params }: PageProps) {
   const { lang } = await params;
@@ -40,6 +45,7 @@ export default async function Home({ params }: PageProps) {
         content={dictionary.service_card_section}
         params={{ lang }}
       />
+      <FAQSection content={dictionary.faqSection} />
     </Suspense>
   );
 }
