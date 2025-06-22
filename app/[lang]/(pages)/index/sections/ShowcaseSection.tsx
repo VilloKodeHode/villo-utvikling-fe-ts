@@ -4,10 +4,13 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { ShowCaseHeaderText, ThemedP } from "@components/atoms/ThemedText";
 import { useTheme } from "next-themes";
+import { useTranslations } from "next-intl";
 
-export const ShowcaseSection = ({ content }) => {
+export const ShowcaseSection = () => {
+  const t = useTranslations("showcaseSection");
   const { theme } = useTheme();
   const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const content = t.raw("list"); // expects an array in your messages file
 
   const changeToNextImage = () => {
     return activeImageIndex === content.length - 1
@@ -30,15 +33,13 @@ export const ShowcaseSection = ({ content }) => {
         id="showcase-section">
         <div className="absolute opacity-5 ease-in-out w-full h-full -z-10 ">
           <Image
-            src={`${
+            src={
               theme === "light"
                 ? "/images/logo/logo-lightmode.svg"
                 : "/images/logo/logo-darkmode.svg"
-            }`}
+            }
             className="animate-rotate-left-logo md:w-screen"
             alt=""
-            // width={2000}
-            // height={2000}
             fill={true}
           />
         </div>
@@ -58,32 +59,6 @@ export const ShowcaseSection = ({ content }) => {
               {content[activeImageIndex].paragraph}
             </ThemedP>
           </div>
-
-          <div
-            className={`justify-self-end z-10 grid items-center justify-center w-full transition-all 
-                relative md:w-full sm:h-113 h-1/2 outline-offset-4 rounded-2xl overflow-hidden outline-2 
-                outline-light-violet dark:outline-dark-lavender
-                  `}>
-            {content.map((image, index) => (
-              <Image
-                key={image.alt}
-                src={image.src}
-                alt={image.alt}
-                width={700}
-                height={700}
-                className={`${
-                  image.fileType === "svg"
-                    ? "object-contain bg-dark-twilight p-8"
-                    : "object-cover object-left-top"
-                } absolute duration-500 transition-all rounded-[4px] w-full h-full ${
-                  index === activeImageIndex ? "opacity-100" : "opacity-0"
-                } `}
-              />
-            ))}
-          </div>
-          <ThemedP className="max-h-[48px] mb-8 block self-start md:hidden">
-            {content[activeImageIndex].paragraph}
-          </ThemedP>
         </div>
       </section>
     </>

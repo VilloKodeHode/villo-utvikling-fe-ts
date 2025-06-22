@@ -5,7 +5,7 @@ import { animate, stagger } from "animejs";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 
-export const SkillIcons = ({ content }) => {
+export const SkillIcons = ({ skills }) => {
   const iconsContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -41,7 +41,7 @@ export const SkillIcons = ({ content }) => {
         ref={iconsContainerRef}
         className="flex gap-8 animate-on-scroll opacity-0 flex-wrap justify-center transition-colors duration-1000"
       >
-        {content?.skills.map((skill) => (
+        {skills?.map((skill) => (
           <div key={skill.alt}>
             <figure
               className={`relative z-20 hover:scale-95 transition-all flex justify-center p-6 w-36 h-full rounded-sm shadow-lg group glass-morphism-card-alternative`}

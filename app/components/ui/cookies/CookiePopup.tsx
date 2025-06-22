@@ -6,8 +6,10 @@ import { deleteCookie, setCookie } from "cookies-next";
 import { ThemedH5, ThemedSmall } from "@components/atoms/ThemedText";
 import { CookieButton } from "@components/atoms/Buttons";
 import { ComponentProps } from "app/interfaces/PageProps";
+import { useTranslations } from "next-intl";
 
-const CookiePopup = ({ content }: ComponentProps) => {
+const CookiePopup = () => {
+  const t = useTranslations("cookie");
   const [showPopup, setShowPopup] = useState(false);
   const [beenUsed, setbeenUsed] = useState(false);
 
@@ -53,20 +55,20 @@ const CookiePopup = ({ content }: ComponentProps) => {
       >
         <div className="relative grid items-center justify-center gap-2 pt-3 text-center text-balance">
           <ThemedH5 className="pb-2 font-bold text-lg text-light-obsidian dark:text-dark-ice">
-            {content?.title}
+            {t("title")}
           </ThemedH5>
           <ThemedSmall className="text-sm text-light-ash dark:text-dark-frost leading-relaxed">
-            {content?.why}
+            {t("why")}
           </ThemedSmall>
           <ThemedSmall className="text-xs text-light-charcoal dark:text-dark-glacier leading-snug mt-1">
-            {content?.disclaimer}
+            {t("disclaimer")}
           </ThemedSmall>
           <div className="flex justify-around gap-2">
             <CookieButton onClick={handleAccept} className="">
-              {content?.accept}
+              {t("accept")}
             </CookieButton>
             <CookieButton onClick={handleDecline} className="">
-              {content?.decline}
+              {t("decline")}
             </CookieButton>
           </div>
         </div>

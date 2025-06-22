@@ -1,8 +1,10 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { i18n } from "./i18next.config";
+import nextIntlConfig from "./next-intl.config.mjs";
 import { match as matchLocale } from "@formatjs/intl-localematcher";
 import Negotiator from "negotiator";
+
+const { locales, defaultLocale } = nextIntlConfig;
 
 function getLocale(request: NextRequest): string | undefined {
   const negotiatorHeaders: Record<string, string> = {};
@@ -10,12 +12,10 @@ function getLocale(request: NextRequest): string | undefined {
     negotiatorHeaders[key] = value;
   });
 
-  // @ts-expect-error locales are readonly
-  const locales: string[] = i18n.locales;
   const languages = new Negotiator({ headers: negotiatorHeaders }).languages(
     locales
   );
-  const locale = matchLocale(languages, locales, i18n.defaultLocale);
+  const locale = matchLocale(languages, locales, defaultLocale);
 
   return locale;
 }
@@ -60,7 +60,7 @@ export function middleware(request: NextRequest) {
   }
 
   // Already localized
-  const pathnameIsMissingLocale = i18n.locales.every(
+  const pathnameIsMissingLocale = locales.every(
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
   );
 

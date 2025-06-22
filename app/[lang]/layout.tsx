@@ -6,7 +6,7 @@ import { AppUserProvider } from "app/contexts/UserContext";
 import { NavBar } from "@components/ui/navigation/navbar/NavBar";
 import { Header } from "@components/ui/header/Header";
 import Footer from "@components/ui/footer/Footer";
-import { getDictionary } from "get-dictionary";
+import { NextIntlClientProvider } from "next-intl";
 import { FloatingUtilsBar } from "@components/ui/header/floatingUtilBar/FloatingUtilBar";
 import { RootProps } from "app/interfaces/PageProps";
 import { Analytics } from "@vercel/analytics/next";
@@ -27,29 +27,34 @@ export const noto_emoji = Noto_Color_Emoji({
 
 export async function RootLayout({ children, params }: RootProps) {
   const { lang } = await params;
-  const dictionary = await getDictionary(lang);
+  let messages;
+  try {
+    messages = (await import(`../../messages/${lang}.json`)).default;
+  } catch (error) {
+    // fallback to Norwegian if language file not found
+    messages = (await import(`../../messages/no.json`)).default;
+  }
   return (
     <html lang={lang ? lang : "no"}>
       <body
         className={`${figtree.className} relative min-h-[100vh] transition-colors duration-1000 bg-light-snow dark:bg-dark-midnight overflow-x-hidden antialiased`}>
-        <AppUserProvider>
-          <DynamicTheCosmos />
-          <Header />
-          <FloatingUtilsBar />
-          <NavBar
-            params={{ lang }}
-            content={dictionary.menu_items}
-          />
+        <NextIntlClientProvider locale={lang} messages={messages}>
+          <AppUserProvider>
+            <DynamicTheCosmos />
+            <Header />
+            <FloatingUtilsBar />
+            <NavBar params={{ lang }} />
 
-          <main
-            //TODO fix the has selector:
-            className={` flex flex-col animate-appear items-center px-4 sm:px-6 lg:px-12 justify-start overflow-x-hidden sm:mb-24 mb-12 sm:gap-28 gap-14`}>
-            {children}
-          </main>
-          <Footer content={dictionary.footer} />
-          <CookiePopup content={dictionary.cookie} />
-          <DynamicFloatingArrowUp />
-        </AppUserProvider>
+            <main
+              //TODO fix the has selector:
+              className={` flex flex-col animate-appear items-center px-4 sm:px-6 lg:px-12 justify-start overflow-x-hidden sm:mb-24 mb-12 sm:gap-28 gap-14`}>
+              {children}
+            </main>
+            <Footer />
+            <CookiePopup />
+            <DynamicFloatingArrowUp />
+          </AppUserProvider>
+        </NextIntlClientProvider>
         <SpeedInsights />
         <Analytics />
       </body>

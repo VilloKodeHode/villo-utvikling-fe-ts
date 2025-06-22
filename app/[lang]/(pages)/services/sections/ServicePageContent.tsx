@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { ReadMoreButton } from "@components/atoms/Buttons";
 import {
   ThemedH2,
@@ -5,16 +6,15 @@ import {
   ThemedH4,
   ThemedP,
 } from "@components/atoms/ThemedText";
-import { ComponentPropsWithParams } from "app/interfaces/PageProps";
 import Link from "next/link";
 
 export const ServicePageContent = ({
-  params,
-  content,
-  showOnScroll,
+  showOnScroll = false,
   id = "service_section",
-}: ComponentPropsWithParams) => {
-  const { lang } = params;
+}) => {
+  const t = useTranslations("service_card_section");
+  const lang = t("lang"); // Store lang in your messages if needed for links
+  const cards = t.raw("cards"); // expects an array in your messages file
 
   return (
     <section
@@ -26,12 +26,12 @@ export const ServicePageContent = ({
         }`}>
         <div className="grid gap-2">
           <ThemedH2 className="font-bold text-center">
-            {content?.title}
+            {t("title")}
           </ThemedH2>
-          <ThemedH3 className="text-center">{content?.subtitle}</ThemedH3>
+          <ThemedH3 className="text-center">{t("subtitle")}</ThemedH3>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
-          {content?.cards?.map((item) => (
+          {cards.map((item) => (
             <ServiceCard
               key={item.title}
               title={item.title}
@@ -59,8 +59,7 @@ export const ServiceCard = ({ title, text, href, buttonText }) => {
             {title}
           </ThemedH4>
           <ThemedP>{text}</ThemedP>
-          <ReadMoreButton className="self-end">{buttonText}</ReadMoreButton>
-          {/* <div className="absolute group-hover:opacity-80 opacity-0 group-hover:h-[105%] group-hover:w-[103.5%] w-0 h-0 transition-all right-1/2 translate-x-1/2 top-1/2 translate-y-[-50%] sm:rounded-lg -z-99 bg-dark-lavender" /> */}
+          <ReadMoreButton>{buttonText}</ReadMoreButton>
         </div>
       </Link>
     </div>

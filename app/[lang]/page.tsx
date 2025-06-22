@@ -1,5 +1,4 @@
 import React, { Suspense } from "react";
-import { getDictionary } from "get-dictionary";
 import { PageProps } from "../interfaces/PageProps";
 
 const HeroSection = React.lazy(() =>
@@ -18,22 +17,12 @@ const ServicePageContent = React.lazy(() =>
   )
 );
 
-export default async function Home({ params }: PageProps) {
-  const { lang } = await params;
-  const dictionary = await getDictionary(lang);
-
+export default function Home() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <HeroSection
-        params={{ lang }}
-        content={dictionary.heroSection}
-      />
-      <ShowcaseSection content={dictionary.showCaseList} />
-      <ServicePageContent
-        showOnScroll
-        content={dictionary.service_card_section}
-        params={{ lang }}
-      />
+      <HeroSection />
+      <ShowcaseSection />
+      <ServicePageContent showOnScroll />
     </Suspense>
   );
 }

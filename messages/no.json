@@ -1,0 +1,741 @@
+{
+  "heroSection": {
+    "slogan": "Smarte nettsider. Klare resultater.",
+    "title": "Profesjonell webutvikling og moderne nettsider for bedrifter, klubber og privatpersoner",
+    "subtitle": "Få en nettside som bygger tillit, gir resultater og er enkel å bruke – skreddersydd for dine mål og din virksomhet.",
+    "cta": "Start prosjektet",
+    "ctaTwo": "Se hva jeg tilbyr"
+  },
+  "skills": {
+    "title": "Min tech-stack",
+    "paragraph": "Dette er tech-stacken jeg bruker. Jeg bruker de beste metodene for å sikre at nettstedet er raskt, moderne og responsivt.",
+    "skills": [
+      {
+        "name": "HTML",
+        "logo": "html",
+        "imageSrc": "/images/skills/html-logo.png",
+        "alt": "HTML logo",
+        "options": {
+          "saturate": "70",
+          "width": 53.5,
+          "colored": true
+        }
+      },
+      {
+        "name": "CSS",
+        "logo": "css",
+        "imageSrc": "/images/skills/css-logo.png",
+        "alt": "CSS3 logo",
+        "options": {
+          "saturate": "70",
+          "width": 53.5,
+          "colored": true
+        }
+      },
+      {
+        "name": "Javascript",
+        "logo": "javascript",
+        "imageSrc": "/images/skills/javascript-logo.png",
+        "alt": "Javascript logo",
+        "options": {
+          "saturate": "70",
+          "width": 60,
+          "colored": true
+        }
+      },
+      {
+        "name": "React",
+        "logo": "react",
+        "imageSrc": "/images/skills/react-logo.png",
+        "alt": "React logo",
+        "options": {
+          "saturate": "70",
+          "width": 60,
+          "colored": true
+        }
+      },
+      {
+        "name": "Nextjs",
+        "logo": "nextjs",
+        "imageSrc": "/images/skills/nextjs-logo.png",
+        "alt": "Nextjs logo",
+        "options": {
+          "saturate": "10",
+          "width": 53.5,
+          "colored": false
+        }
+      },
+      {
+        "name": "Tailwind CSS",
+        "logo": "tailwindcss",
+        "imageSrc": "/images/skills/tailwindcss-logo.png",
+        "alt": "Tailwind CSS logo",
+        "options": {
+          "saturate": "70",
+          "width": 60,
+          "colored": true
+        }
+      },
+      {
+        "name": "Figma",
+        "logo": "figma",
+        "imageSrc": "/images/skills/figma-logo.png",
+        "alt": "Figma logo",
+        "options": {
+          "saturate": "70",
+          "width": 40,
+          "colored": true
+        }
+      },
+      {
+        "name": "Sanity",
+        "logo": "sanity",
+        "imageSrc": "/images/skills/sanity-logo.png",
+        "alt": "Sanity logo",
+        "options": {
+          "saturate": "70",
+          "width": 45,
+          "colored": true
+        }
+      },
+      {
+        "name": "MongoDB",
+        "logo": "mongodb",
+        "imageSrc": "/images/skills/mongodb-logo.png",
+        "alt": "Mongo DB logo",
+        "options": {
+          "saturate": "70",
+          "width": 60,
+          "colored": true
+        }
+      }
+    ]
+  },
+  "services": {
+    "website": {
+      "top_title": "Trenger du ny nettside?",
+
+      "top_paragraph": "Jeg lager nettsider som er optimalisert for best mulig brukeropplevelse og trafikk på nettet. Den nyeste teknologien blir brukt for å sikre at nettsiden din er rask, moderne og responsiv. Som profesjonell nettsidedesigner spesialiserer jeg meg på å lage imponerende og funksjonelle nettsteder som tilpasses dine unike behov og mål.",
+
+      "middle_title": "Hvorfor du burde velge meg som din nettside-utvikler...",
+
+      "bullitins": [
+        {
+          "title": "Ingen mellomledd",
+          "description": "Normalt tar dette en stor del av budsjettet, men ikke hos meg! Vi avtaler ferdig pris før prosjektet starter.",
+          "icon": "🤝🏼"
+        },
+        {
+          "title": "Full innsikt",
+          "description": "Man får muligheten til å gi tilbakemeldinger under hele utviklingsprosessen for å oppnå best mulig resultat.",
+          "icon": "🙋🏽"
+        },
+        {
+          "title": "Sikker og moderne nettside",
+          "description": "For å lage en nettside som er sikker, brukervennlig og skalerbar brukes den nyeste teknologien.",
+          "icon": "🖥️"
+        },
+        {
+          "title": "Brukervennlig database",
+          "description": "Ved behov integreres en database slik at du kan oppdatere innholdet på siden selv ved behov.",
+          "icon": "🏢"
+        },
+        {
+          "title": "Søkemotoroptimalisering",
+          "description": "Du får mer trafikk til nettsiden og blir lettere å søke opp på søkemotorer.",
+          "icon": "👁️"
+        },
+        {
+          "title": "Full support",
+          "description": "Du får opplæring på hvordan du kan styre innhold og utseende på nettsiden din via en innholdshåndteringssystem.",
+          "icon": "👨🏼‍🏫"
+        }
+      ],
+      "bottom_paragraphs": [
+        "Med års erfaring innen feltet forstår jeg betydningen av en sterk tilstedeværelse på nett i dagens digitale tidsalder. Mine tjenester er skreddersydd for enkeltpersoner og bedrifter som ønsker å etablere eller forbedre sin online tilstedeværelse. Jeg tar en personlig tilnærming til hvert prosjekt, slik at nettstedet ditt ikke bare ser visuelt tiltalende ut, men også fungerer sømløst på alle enheter.",
+        "Enten du lanserer en helt ny nettside eller ønsker å fornye den eksisterende, er jeg her for å gjøre din visjon til virkelighet. Fra brukervennlig navigasjon til iøynefallende designelementer, legger jeg nøye vekt på hver detalj. La oss samarbeide for å skape en nettside som ikke bare gjenspeiler merket ditt, men også gir resultater og etterlater et varig inntrykk på dine besøkende"
+      ]
+    },
+    "SEO": {
+      "top_title": "Trenger du mer besøkende på siden?",
+
+      "top_paragraph": "Ønsker du å øke synligheten på nettet og tiltrekke trafikk til nettsiden din? Våre tilpassede SEO-tjenester er skapt for dine spesifikke forretningsmål. Enten du ønsker å oppnå topp rangering på Google eller dominere det lokale markedet, er vi eksperter på nøkkelordoptimalisering, on-page og off-page SEO-teknikker, samt innholdsforbedring. I tillegg gir vår gjennomsiktige rapportering deg muligheten til å følge fremgangen og se konkrete resultater",
+
+      "middle_title": "Hvorfor velge meg til å oppgradere din SEO...",
+
+      "bullitins": [
+        {
+          "title": "Tilpassede SEO-løsninger",
+          "description": "Skreddersydd for å møte dine spesifikke forretningsbehov og mål.",
+          "icon": "🔍"
+        },
+        {
+          "title": "Høyere søkemotorrangering",
+          "description": "Oppnå bedre synlighet på Google og nå målgruppen din mer effektivt.",
+          "icon": "📈"
+        },
+        {
+          "title": "Kvalitetsinnhold for SEO",
+          "description": "Forbedrer innholdets relevans for både brukere og søkemotorer.",
+          "icon": "🔑"
+        },
+        {
+          "title": "Lokal SEO-strategi",
+          "description": "Tiltrekker flere kunder i ditt nærområde med spesialiserte metoder.",
+          "icon": "📍"
+        },
+        {
+          "title": "Økt nettsidetrafikk",
+          "description": "SEO-tiltak som sikrer at du blir lettere å finne på nett.",
+          "icon": "🚦"
+        },
+        {
+          "title": "Innsikt og rapportering",
+          "description": "Få oversikt over SEO-fremgangen med detaljert rapportering og analyser.",
+          "icon": "📊"
+        }
+      ],
+      "bottom_paragraphs": [
+        "Å velge meg betyr suksess. Vi tilpasser SEO-løsninger eksklusivt for din bedrift, forbedrer nettsidens innhold og struktur for høyere rangering. Vår ekspertise omfatter lokale SEO-strategier, transparent rapportering og maksimal online suksess. Med meg øker du trafikken og blir mer synlig for brukere. Velkommen til å forbedre din online tilstedeværelse.",
+        "Ikke la nettsiden din forbli ubemerket. Forbedre din online synlighet, øk organisk trafikk og forbedre konverteringer med våre ekspert SEO-tjenester. Ta kontakt i dag for å diskutere hvordan vi kan forbedre din SEO-strategi og løfte din bedrift til nye høyder i den digitale verden."
+      ]
+    },
+
+    "webcontent": {
+      "top_title": "Trenger du nettinnhold?",
+
+      "top_paragraph": "Levering av engasjerende og innflytelsesrik webinnhold er min ekspertise. Jeg forstår at innholdet på nettstedet ditt spiller en avgjørende rolle i å tiltrekke og beholde besøkende. Med en lidenskap for effektiv kommunikasjon og en evne for kreativitet, tilbyr jeg profesjonelle tjenester innen webinnholdsskaping til bedrifter og enkeltpersoner som ønsker å skape et varig inntrykk på nettet.",
+
+      "middle_title": "Hvorfor velge meg som din nettinnhold-skaper...",
+
+      "bullitins": [
+        {
+          "title": "Engasjerende innhold",
+          "description": "Fanger målgruppens oppmerksomhet og gir en enestående brukeropplevelse.",
+          "icon": "🎯"
+        },
+        {
+          "title": "Skreddersydde løsninger",
+          "description": "Innhold tilpasset dine spesifikke forretningsbehov og mål.",
+          "icon": "🛠"
+        },
+        {
+          "title": "Brukervennlig design",
+          "description": "Visuelt tiltalende innhold som er enkelt å navigere for målgruppen.",
+          "icon": "🎨"
+        },
+        {
+          "title": "Punktlige leveranser",
+          "description": "Overholdelse av prosjektfrister sikrer at innholdet er klart når du trenger det.",
+          "icon": "⏳"
+        },
+        {
+          "title": "Responsivt innhold",
+          "description": "Fungerer sømløst på ulike enheter og skjermstørrelse.",
+          "icon": "📱"
+        },
+        {
+          "title": "Merkevarebyggende innhold",
+          "description": "Treffer målgruppen, oppfordrer til interaksjon og styrker merkevarelojalitet.",
+          "icon": "🚀"
+        }
+      ],
+      "bottom_paragraphs": [
+        "Med en lidenskap for effektiv kommunikasjon og en evne for kreativitet, tilbyr jeg profesjonelle tjenester innen webinnholdsskaping til bedrifter og enkeltpersoner som ønsker å skape et varig inntrykk på nettet. Min tilnærming til innholdsskaping er skreddersydd for dine unike behov og mål.",
+        "Enten du trenger engasjerende blogginnlegg, informative artikler, overbevisende produktbeskrivelser eller engasjerende innhold for sosiale medier, har jeg ferdighetene som kreves. Jeg gjennomfører grundig research for å sikre at innholdet ikke bare er velinformert, men også relevant for din målgruppe."
+      ]
+    },
+
+    "CMS": {
+      "top_title": "Få brukervennlig kontroll på innholdet på din nettside!",
+
+      "top_paragraph": "Ved å koble til en database til nettsiden din kan du enkelt gjennom et brukervennlig grensesnitt endre på og legge til innhold til nettsiden din. Databasen er skalerbar og kan spesifiseres til akkurat dine behov.",
+
+      "middle_title": "Hvorfor velge meg til å lage en CMS for din nettside...",
+      "bullitins": [
+        {
+          "title": "Enkel administrasjon",
+          "description": "Oppdater innholdet selv, uten behov for teknisk kunnskap. Du bestemmer hva som vises.",
+          "icon": "⚙"
+        },
+        {
+          "title": "Skalerbar løsning",
+          "description": "Vokser i takt med bedriften din og tilpasses fremtidige behov.",
+          "icon": "📈"
+        },
+        {
+          "title": "Tilpasset dine krav",
+          "description": "Utformes etter spesifikke behov for optimal funksjonalitet.",
+          "icon": "🎛"
+        },
+        {
+          "title": "Datasikkerhet",
+          "description": "Trygg lagring og håndtering av sensitiv informasjon.",
+          "icon": "🔐"
+        },
+        {
+          "title": "Automatiske sikkerhetskopier",
+          "description": "Beskytter innholdet ditt mot tap og uforutsette hendelser.",
+          "icon": "💾"
+        },
+        {
+          "title": "Sømløs integrasjon",
+          "description": "Kompatibel med populære verktøy og tredjepartstjenester.",
+          "icon": "🔗"
+        }
+      ],
+      "bottom_paragraphs": [
+        "Å integrere en CMS for sin nettsiden er et strategisk steg for å videreutvikle din bedrift. I stedet for å måtte be andre oppdatere nettsiden din kan man styre dette helt selv, akkurat når man vil. Ønsker man å delegere bort innholds-oppdatering så kan man enkelt gjøre dette ved å ha flere brukertilganger til CMS'en.",
+        "Enten du trenger en CMS til å styre innhold som bilde, tekst, bloggposter, artikler, nettsiden farger eller til og med utseende, har jeg ferdighetene som krever for å lage dette. Jeg lager en robust CMS som kan brukes til alle dine behov."
+      ]
+    },
+
+    "sosialmedia_integration": {
+      "top_title": "Vis innhold fra din sosiale medier på din nettside!",
+
+      "top_paragraph": "Ved å koble sammen dine sosiale medier med din nettside kan du enkelt vise fram innholdet på en ny og spennende måte.",
+
+      "middle_title": "Hvorfor velge meg til å koble sammen din sosiale media med din nettside...",
+
+      "bullitins": [
+        {
+          "title": "Plattformintegrasjon",
+          "description": "Kobles sømløst til Instagram, Facebook, Twitter og flere sosiale medier.",
+          "icon": "🔗"
+        },
+        {
+          "title": "Automatisk innholdsoppdatering",
+          "description": "Synkroniser innhold fra dine sosiale medier direkte til nettsiden.",
+          "icon": "🔄"
+        },
+        {
+          "title": "Tidsbesparende synkronisering",
+          "description": "Publiser innlegg på tvers av plattformer uten ekstra arbeid.",
+          "icon": "⏳"
+        },
+        {
+          "title": "Designtilpasset innhold",
+          "description": "Sosiale innlegg tilpasses nettsidens utseende for en helhetlig stil på alle enheter.",
+          "icon": "📱"
+        },
+        {
+          "title": "Ingen teknisk kunnskap nødvendig",
+          "description": "Vis og administrer innhold enkelt uten behov for noe tekniske kunnskaper.",
+          "icon": "🛠"
+        },
+        {
+          "title": "Økt synlighet",
+          "description": "Forbedrer eksponeringen av din sosiale medieprofil ved å dele innhold på flere plattformer samtidig.",
+          "icon": "👀"
+        }
+      ],
+      "bottom_paragraphs": [
+        "Å koble sammen dine sosiale medier med din nettside gjør at du kan vise fram innholdet ditt på en ny måte. Du kan velge om det skal være de siste innholdet, noe spesifikt, eller alt. På denne måten kan man selv styre innholdet på din egen nettside.",
+        "Enten du trenger en integrasjon til sosiale medier til å vise innhold som bilder, tekst, bloggposter, artikler, videoer, osv, har jeg ferdighetene som krever for å lage fikse dette. Jeg lager en lager en løsning DU blir stolt av å vise frem til verden."
+      ]
+    }
+  },
+
+  "menu_items": [
+    { "text": "Hjem", "href": "/{lang}" },
+    { "text": "Om", "href": "/{lang}/about" },
+    { "text": "Portfolio", "href": "/{lang}/portfolio" },
+    { "text": "Kontakt", "href": "/{lang}/contact" },
+    { "text": "Tjenester", "href": "/{lang}/services" }
+  ],
+
+  "service_card_section": {
+    "title": "Tjenester og løsninger",
+    "subtitle": "Jeg tilbyr en rekke tjenester og løsninger for å hjelpe deg med å oppnå dine mål.",
+    "cards": [
+      {
+        "title": "Nettsider av høyeste kvalitet",
+        "text": "Med design som følger de siste trendene og den nyeste teknologien for en moderne nettside.",
+        "href": "/{lang}/services/website",
+        "buttonText": "Les mer"
+      },
+      {
+        "title": "Søkemotoroptimalisering",
+        "text": "Øk trafikken til din nettside med et bredt spekter av SEO (Søkemotoroptimalisering) tjenester.",
+        "href": "/{lang}/services/SEO",
+        "buttonText": "Les mer"
+      },
+      {
+        "title": "Engasjerende nettinnhold",
+        "text": "Engasjerende opplevelser på nettet som kombinerer kraftfulle ord med iøynefallende visuelle elementer.",
+        "href": "/{lang}/services/webcontent",
+        "buttonText": "Les mer"
+      },
+      {
+        "title": "Content Management System (CMS)",
+        "text": "Integrer et innholdshånderingssystem for at du selv skal kunne styre innholdet på din nettside.",
+        "href": "/{lang}/services/CMS",
+        "buttonText": "Les mer"
+      },
+      {
+        "title": "Sosiale media integrasjon",
+        "text": "Koble sammen dine sosiale medier med din nettside for å vise fram innholdet ditt på en ny og spennende måte.",
+        "href": "/{lang}/services/sosialmedia_integration",
+        "buttonText": "Les mer"
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "description": "Med lidenskap for front-end-utvikling og et forpliktende fokus på å skape brukersentrerte design, gir jeg liv til din visjon. Utforsk prosjektene jeg har hatt gleden av å jobbe med, hver av dem representerer en blanding av kunst og teknologi som definerer min tilnærming",
+    "customer_projects": {
+      "title": "Kundeprosjekter",
+      "projects": [
+        {
+          "name": "Wileo AS",
+          "jobDone": "Lagd landingsside og skapt innhold for nettsiden",
+          "imageUrl": "/images/companies/Wileo-logo.svg",
+          "href": "https://wileo.no/",
+          "completed": true,
+          "projectInfo": "Fullført"
+        },
+        {
+          "name": "Hawii Analyse",
+          "jobDone": "Prosjektleder for bygging av nye Hawii.no.",
+          "imageUrl": "/images/companies/Hawii-logo-black.svg",
+          "href": "https://www.hawiianalyse.no/",
+          "completed": true,
+          "projectInfo": "Fullført"
+        },
+        {
+          "name": "Trond Borg",
+          "jobDone": "Jeg stod for hele Webshoppen hans. Laget med wix",
+          "imageUrl": "/images/companies/TrondBorg_logo.svg",
+          "href": "https://www.trond-borg.com/",
+          "completed": true,
+          "projectInfo": "Fullført"
+        },
+        {
+          "name": "KVS - Kristensen Vedlikehold Service",
+          "jobDone": "Ny hjemmeside for Kristensen Vedlikehold Service. Laget med next.js",
+          "imageUrl": "/images/companies/KVS-full-logo-alternative-black.svg",
+          "href": "https://www.kvstrefelling.no/",
+          "completed": true,
+          "projectInfo": "Fullført"
+        }
+      ]
+    },
+    "employment": {
+      "title": "Erfaring",
+      "companies": [
+        {
+          "name": "Kodeverket Bergen",
+          "jobTitle": "Intern/prosjektleder",
+          "jobDone": "Jeg jobbet som prosjektleder for bygging av nettsiden Hawii.no. Vi brukte Next.js, tailwind css og Sanity for dette prosjektet",
+          "imageUrl": "/images/companies/kodeverket_logo.svg",
+          "href": "https://www.kodeverketbergen.no/",
+          "progress": "ferdig",
+          "colors": {
+            "shadow": "shadow-[#7fe5d3]",
+            "text": "text-[#7fe5d3]",
+            "bg": "bg-[#7fe5d3]",
+            "border": "border-[#7fe5d3]"
+          },
+          "skillsUsed": [
+            { "name": "Next.js", "href": "https://nextjs.org/" },
+            { "name": "Tailwind CSS", "href": "https://tailwindcss.com/" },
+            { "name": "Sanity", "href": "https://www.sanity.io/" }
+          ]
+        },
+        {
+          "name": "Jobloop",
+          "jobTitle": "Faglig kursveileder",
+          "jobDone": "Jeg jobbet som faglig kursveileder for programmering og koding i perioden 2023-2024. Jeg lærte bort HTML, CSS, javascript, figma og react, sammen med en stor bredde utviklerverktøy",
+          "imageUrl": "/images/companies/jobloop_logo.png",
+          "href": "https://www.jobloop.no/",
+          "progress": "ferdig",
+          "colors": {
+            "shadow": "shadow-[#f4a366]",
+            "text": "text-[#f4a366]",
+            "bg": "bg-[#f4a366]",
+            "border": "border-[#f4a366]"
+          },
+          "skillsUsed": [
+            {
+              "name": "HTML",
+              "href": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+            },
+            {
+              "name": "CSS",
+              "href": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+            },
+            {
+              "name": "JavaScript",
+              "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            },
+            { "name": "Figma", "href": "https://www.figma.com/" },
+            { "name": "React", "href": "https://reactjs.org/" }
+          ]
+        },
+        {
+          "name": "Villo utvikling",
+          "jobTitle": "Webutvikler",
+          "jobDone": "Min frilanser jobb. Jeg lager alt fra simple personlige nettsider til nettbutikker, hjemmesider, informasjonssider, osv. I tillegg leverer jeg nettinnhold og forbedrer SEO for økt trafikk.",
+          "imageUrl": "/images/logo/Villo_Utvikling_full-Logo-LM.png",
+          "href": "https://www.villoutvikling.com/",
+          "progress": "nåværende",
+          "colors": {
+            "shadow": "shadow-[#858ee0]",
+            "text": "text-[#858ee0]",
+            "bg": "bg-[#858ee0]",
+            "border": "border-[#858ee0]"
+          },
+          "skillsUsed": [
+            { "name": "Next.js", "href": "https://nextjs.org/" },
+            { "name": "Tailwind CSS", "href": "https://tailwindcss.com/" },
+            { "name": "Sanity", "href": "https://www.sanity.io/" },
+            { "name": "Figma", "href": "https://www.figma.com/" },
+            { "name": "React", "href": "https://reactjs.org/" },
+            { "name": "Wix", "href": "https://wix.com/" }
+          ]
+        },
+        {
+          "name": "Jobloop",
+          "jobTitle": "Kursleder",
+          "jobDone": "I Oktober 2024 fikk jeg en høyere stilling hos Jobloop som lokal kursleder. Mine oppgaver ble utvidet og jeg fikk mer ansvar rundt deltakere og andre veiledere, samt mer ansvar i forhold til administrativt arbeid",
+          "imageUrl": "/images/companies/jobloop_logo.png",
+          "href": "https://www.jobloop.no/",
+          "progress": "nåværende",
+          "colors": {
+            "shadow": "shadow-[#f4a366]",
+            "text": "text-[#f4a366]",
+            "bg": "bg-[#f4a366]",
+            "border": "border-[#f4a366]"
+          },
+          "skillsUsed": [
+            {
+              "name": "HTML",
+              "href": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+            },
+            {
+              "name": "CSS",
+              "href": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+            },
+            {
+              "name": "JavaScript",
+              "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            },
+            { "name": "Figma", "href": "https://www.figma.com/" },
+            { "name": "React", "href": "https://reactjs.org/" }
+          ]
+        }
+      ]
+    },
+    "testimonials": {
+      "sectionTitle": "Hva sier kundene mine?",
+      "testimonials": [
+        {
+          "id": "Kodeverket_quote",
+          "testimonial": "“Joakim har vært en sentral prosjektleder i Kodeverket med en unik evne til å forstå kundens behov og se det større bilde. Uten han hadde vi ikke klart å levere halvparten av kvaliteten vi har gjort på våre kundeprosjekter, samt oppnå så gode tilbakemeldinger fra kundene våre. Jeg kan kun anbefale å jobbe med Joakim”",
+          "person": "Karl H. Rødland",
+          "src": "/images/quotes/KarlHaakon.jpg",
+          "logoSrc": "/images/quotes/kodeverket_logo.svg",
+          "personTitle": "Daglig leder i Kodeverket Bergen"
+        },
+        {
+          "id": "Wileo_quote",
+          "testimonial": "“I løpet av vårt samarbeid synte jeg spesielt du var god på å forstå problemstillingen, ta initiativ og løse oppdraget effektivt. Kommunikasjon var upåklagelig og effektiv 😊 heia!”",
+          "person": "Ida C. Filtenborg Hansen",
+          "src": "/images/quotes/IdaHansen.avif",
+          "logoSrc": "/images/quotes/wileo_logo.png",
+          "personTitle": "Daglig leder i Wileo AS"
+        },
+        {
+          "id": "TrondBorg_quote",
+          "testimonial": "“Tusen takk for hjelpen i forhold utviklingen av min nettside, med et flott resultat. Jeg fikk hele tiden vært delaktig i prosessen og fikk komme med innspill som var viktige for meg. Resultatet ble supert, med en fabelaktig respons. Da har jeg publisert nettsiden, og det ble veldig bra med god respons. Veldig fornøyd med hjelpen jeg fikk av deg.”",
+          "person": "Trond Borg",
+          "src": "/images/quotes/TrondBorg.webp",
+          "logoSrc": "/images/companies/TrondBorg_logo.svg",
+          "personTitle": "Eier av Trond Borg - Virvelløse hobbydyr"
+        },
+        {
+          "id": "Vegard_Kristensen_quote",
+          "testimonial": "“Kan anbefale Villo utvikling på det sterkeste. God informasjon og forskjellige løsninger ble presentert underveis. Kommunikasjonen har vært meget god, og resultatet ble over all forventning. Igjen, anbefaler Joakim!”",
+          "person": "Vegard Kristensen",
+          "src": "/images/quotes/VegardKristensen.webp",
+          "logoSrc": "/images/companies/KVS-logo-black.svg",
+          "personTitle": "Eier Kristensen Vedlikehold Service"
+        }
+      ]
+    }
+  },
+
+  "showCaseList": [
+    {
+      "type": "logo",
+      "fileType": "svg",
+      "src": "/images/logo/Villo_Utvikling_full-Logo-LM.png",
+      "alt": "Villo utvikling",
+      "width": 400,
+      "height": 400,
+      "paragraph": "Engasjerende nettsider for ditt formål: Fra enkle til komplekse nettsider, som er tilpasset alle enheter."
+    },
+    {
+      "type": "design",
+      "fileType": "png",
+      "src": "/images/showcase/HeroDesign.png",
+      "alt": "Web design",
+      "width": 500,
+      "height": 300,
+      "title": "design",
+      "paragraph": "Gjennomgående design som er estetisk og funksjonelt, med fokus på brukervennlighet og konvertering"
+    },
+    {
+      "type": "development",
+      "fileType": "png",
+      "src": "/images/showcase/HeroDevelopment.png",
+      "alt": "Web development",
+      "width": 500,
+      "height": 300,
+      "title": "utvikling",
+      "paragraph": "Ekspertise innenfor utvikling av nettsider som er lette på vedlikeholde og endre innhold på"
+    },
+    {
+      "type": "collage",
+      "fileType": "webp",
+      "src": "/images/showcase/HeroCollage.webp",
+      "alt": "Web content",
+      "width": 500,
+      "height": 300,
+      "title": "innhold",
+      "paragraph": "Originalt høykvalitets innhold til nettsiden din, som er tilpasset ditt formål og målgruppe"
+    }
+  ],
+  "footer": {
+    "companyName": "Villo utvikling"
+  },
+  "companyInfo": {
+    "title": "Norsk Webutvikler",
+    "paragraphOne": "Det er ingenting som gir meg større glede enn å se hvordan mine tjenester har en positiv innvirkning på kundens virksomhet. Målet mitt er å bygge sterke, langsiktige og verdifulle forhold med kundene mine. Dette oppnås ved å levere tjenester av høy kvalitet og åpen kommunikasjonen gjennom arbeidesprosessen.",
+    "paragraphTwo": "Min visjon er å lage gode nettsider for små og mellomstore bedrifter, uten at det skal bli for dyrt, men allikevel å tilby god kvalitet med de nyeste webteknologiene, søkemotoroptimalisering og innhold."
+  },
+  "introInfo": {
+    "title": "Kort om meg",
+    "subtitle": "Joakim Villo",
+    "paragraph": "Jeg er en utdannet utvikler som for øyeblikket leder et programmerings- og webutviklings-kurs her i Norge. Jeg har to bachelorgrader i andre fagfelt, og tidligere jobb har hatt sammenheng med disse gradene. I 2022 byttet jeg til programmering og koding, som nå har blitt min sanne lidenskap i livet.",
+    "src": "/images/portraits/JoakimNy.webp",
+    "alt": "Joakim Villo"
+  },
+  "personal_projects": {
+    "title": "Mine personlige prosjekter",
+    "cta": "Sjekk ut",
+    "projects": [
+      {
+        "projectName": "Gavehjelper app",
+        "textColor": "text-Villo-white",
+        "src": "/images/projects/GH-collage.png",
+        "mobileSrc": "/images/projects/GH1.png",
+        "alt": "Gift helper",
+        "cardColor": "bg-[#e882db]",
+        "href": "https://villokodehode.github.io/gift-helper-web/",
+        "hrefCode": "https://github.com/VilloKodeHode/gift-helper-web",
+        "description": "En app for å hjelpe deg med å finne gaver til andre. Ingen kjente bugs, men gaveutvalget er ikke så stort enda. Kan endres etter behov og integreres inn i andre websider."
+      },
+      {
+        "projectName": "Flerstegs skjema",
+        "textColor": "text-Villo-white",
+        "src": "/images/projects/MSF-collage.png",
+        "mobileSrc": "/images/projects/Multi page form.png",
+        "alt": "Flersteg skjema",
+        "cardColor": "bg-[#f8828e]",
+        "href": "https://villokodehode.github.io/multi-step-form/",
+        "hrefCode": "https://github.com/VilloKodeHode/multi-step-form",
+        "description": "Flertrinns bestillingsskjema som kan tilpasses for å fungere som et bestillingsskjema for en nettside."
+      },
+      {
+        "projectName": "Pokedex v1 og v2",
+        "textColor": "text-Villo-white",
+        "src": "/images/projects/POKEDEXV1-collage.png",
+        "mobileSrc": "/images/projects/POKEDEXV1-1.png",
+        "alt": "Pokedex v1",
+        "cardColor": "bg-[#e7cf63]",
+        "href": "https://villokodehode.github.io/PokeAPI/",
+        "hrefCode": "https://github.com/VilloKodeHode/PokeAPI",
+        "description": " En REST-API app for å vise en rekke pokémoner. Bruker 3-lags henting for å hente all data. Nylig opprettet en forbedret versjon, men mangler litt styling (lenke innenfor samme app)."
+      },
+      {
+        "projectName": "Stein, sakser, papir spill",
+        "textColor": "text-Villo-white",
+        "src": "/images/projects/RPS-collage.png",
+        "mobileSrc": "/images/projects/RPS.png",
+        "alt": "Stein sakser papir app",
+        "cardColor": "bg-[#6792e2]",
+        "href": "https://villokodehode.github.io/Rock--Paper--Scissors--Lizard--Spock-game/#/",
+        "hrefCode": "https://github.com/VilloKodeHode/Rock--Paper--Scissors--Lizard--Spock-game",
+        "description": "Dette er et stein, saks, papir-spill med to utvidede versjoner. Spillet er fullstendig tilpassbart, slik at det kan tilpasses til ønsket spesifikasjon."
+      },
+      {
+        "projectName": "Rådgivningsgenerator",
+        "textColor": "text-Villo-white",
+        "src": "/images/projects/AG-collage.png",
+        "mobileSrc": "/images/projects/Advice generator.png",
+        "alt": "App for gode råd",
+        "cardColor": "bg-[#86e5c1]",
+        "href": "https://villokodehode.github.io/advice-generator/",
+        "hrefCode": "https://github.com/VilloKodeHode/advice-generator",
+        "description": "Enkel app som henter råd fra en API. Prosjektet var raskt å lage. Bugs: Jeg oppdaget nylig at den ikke fungerer i Firefox (jeg har planer om å fikse dette)."
+      },
+      {
+        "projectName": "Mockup-side: Kjælevenner",
+        "textColor": "text-Villo-white",
+        "src": "/images/projects/KV-collage.png",
+        "mobileSrc": "/images/projects/KV-collage.png",
+        "alt": "Kjælevenner mockup side",
+        "cardColor": "bg-[#86e5c1]",
+        "href": "https://voffoffer-k602v0ypn-villokodehode.vercel.app/",
+        "hrefCode": "https://github.com/VilloKodeHode/voffoffer",
+        "description": "En webside med informasjon om husdyr. Prosjekter som dette er enkle og raske å sette opp. Foreløpig bare på norsk."
+      },
+      {
+        "projectName": "Mockup-side: Ola's Matlaging",
+        "textColor": "text-Villo-white",
+        "src": "/images/projects/OM-collage.png",
+        "mobileSrc": "/images/projects/OM-collage.png",
+        "alt": "Ola's Matlaging mockup side",
+        "cardColor": "bg-[#86e5c1]",
+        "href": "https://olas-matlaging.vercel.app/",
+        "hrefCode": "https://github.com/VilloKodeHode/om-site",
+        "description": "En satire webside om en fiktiv kokk. Ekstremt enkle oppskrifter for personer som ikke vet hvordan man skal lage mat. Koblet til Sanity CMS for enkelt innholdsoppdatering. Foreløpig bare på engelsk."
+      },
+      {
+        "projectName": "Stein, sakser, papir spill - Omega versjon",
+        "textColor": "text-Villo-white",
+        "src": "/images/projects/RPS-collage.png",
+        "mobileSrc": "/images/projects/RPS.png",
+        "alt": "Stein sakser papir app v2.",
+        "cardColor": "bg-[#6792e2]",
+        "href": "https://rps-omega-seven.vercel.app/",
+        "hrefCode": "https://github.com/VilloKodeHode/rps-omega",
+        "description": "Spillet er blitt utvidet videre. I tillegg er koden koden blitt mye mer skalerbar, refaktorert og generell forbedret. Er nå koblet til en database (MongoDB)"
+      }
+    ]
+  },
+  "cookie": {
+    "title": "Cookies",
+    "why": "Denne nettsiden bruker cookies for å forbedre brukeropplevelsen din",
+    "disclaimer": "Vi lagrer ikke informasjon som kan identifisere deg som person. Cookies blir lagret i 1 år",
+    "accept": "Godta",
+    "decline": "Avslå"
+  },
+  "contactForm": {
+    "title": "Kontaktskjema",
+    "description": "Jeg vil gjerne høre fra deg! Enten det er et raskt spørsmål, en idé til samarbeid eller et helt prosjekt — du har kommet til riktig sted.",
+    "formDescription": "Fortell meg hva du trenger. Er det et nytt prosjekt på gang? Trenger du utviklingshjelp eller bare råd? La oss ta en prat.",
+    "nameLabel": "Navn",
+    "namePlaceholder": "Skriv inn fullt navn",
+    "emailLabel": "E-postadresse",
+    "emailPlaceholder": "Skriv inn e-post så jeg kan svare",
+    "messageLabel": "Melding",
+    "messagePlaceholder": "Skriv meldingen din her...",
+    "submitButton": "Send melding",
+    "thankYouHeading": "Takk for at du tok kontakt!",
+    "thankYouLine1": "Meldingen din er sendt og svever nå gjennom de digitale vindene.",
+    "thankYouLine2": "Jeg svarer deg så snart jeg kan. La oss lage noe fantastisk sammen.",
+    "confirmButton": "Flotters!"
+  }
+}

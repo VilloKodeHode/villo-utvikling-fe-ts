@@ -1,22 +1,16 @@
-import { getDictionary } from "get-dictionary";
-
 import { EmploymentSection } from "./sections/EmploymentSection";
 import { ClientsSection } from "./sections/ClientSection";
-import { PageProps } from "app/interfaces/PageProps";
 import { IntroSection } from "@components/molecyles/Sections";
 import { TestemonialsSection } from "./sections/TestemonialsSection";
 
-export default async function Home({ params }: PageProps) {
-  const { lang } = await params;
-  const dictionary = await getDictionary(lang);
-  const content = dictionary.portfolio;
+export default function Home() {
   //TODO fix page layout here
   return (
     <>
-      <IntroSection content={content} />
-      <ClientsSection content={content.customer_projects} />
-      <EmploymentSection content={content.employment} />
-      <TestemonialsSection content={content.testimonials} />
+      <IntroSection />
+      <ClientsSection />
+      <EmploymentSection />
+      <TestemonialsSection />
       {/* <LetsGoCTA
         type="email"
         engText="Make me you coworker!"

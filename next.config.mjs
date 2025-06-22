@@ -1,16 +1,13 @@
+import createNextIntlPlugin from 'next-intl/plugin';
 import bundleAnalyzer from "@next/bundle-analyzer";
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  // your custom Next.js config here (i18n, images, etc)
-};
-
-// Enable analyzer conditionally
+const withNextIntl = createNextIntlPlugin('./next-intl.config.mjs');
 const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === "true",
 });
 
-// Wrap the config
-const configWithAnalyzer = withBundleAnalyzer(nextConfig);
+const nextConfig = {
+  // your custom Next.js config here (i18n, images, etc)
+};
 
-export default configWithAnalyzer;
+export default withBundleAnalyzer(withNextIntl(nextConfig));

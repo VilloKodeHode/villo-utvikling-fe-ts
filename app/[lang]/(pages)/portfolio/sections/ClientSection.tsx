@@ -1,7 +1,10 @@
+import { useTranslations } from "next-intl";
 import { CTOThemedP, ThemedH2 } from "@components/atoms/ThemedText";
 import Image from "next/image";
 
-export const ClientsSection = ({ content }) => {
+export const ClientsSection = () => {
+  const t = useTranslations("portfolio.clients");
+  const projects = t.raw("projects"); // expects an array in your messages file
   return (
     <section
       data-scroll-target
@@ -10,10 +13,10 @@ export const ClientsSection = ({ content }) => {
         className={`absolute w-screen h-full translate-x-1/2 -z-10 top-1/2 -translate-y-1/2 right-1/2 glass-morphism-section`}
       />
 
-      <ThemedH2 className="text-center">{content.title} </ThemedH2>
+      <ThemedH2 className="text-center">{t("title")} </ThemedH2>
 
       <div className={`z-10 flex flex-wrap justify-center gap-12`}>
-        {content.projects.map((clientProject) => (
+        {projects.map((clientProject) => (
           <a
             key={clientProject.name}
             href={clientProject.href}
@@ -27,8 +30,6 @@ export const ClientsSection = ({ content }) => {
               className={`z-20 group grid justify-center transition-all glass-morphism-card`}>
               <div className="w-60 h-60  p-8">
                 <Image
-                  // placeholder="blur"
-                  // blurDataURL="/images/logo/logo-lightmode.svg"
                   className={`object-contain w-full h-full dark:invert`}
                   src={clientProject.imageUrl}
                   alt={clientProject.name}

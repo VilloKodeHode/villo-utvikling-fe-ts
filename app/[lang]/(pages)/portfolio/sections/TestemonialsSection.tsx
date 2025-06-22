@@ -1,16 +1,19 @@
+import { useTranslations } from "next-intl";
 import { ThemedH2, ThemedH5, ThemedP } from "@components/atoms/ThemedText";
 import Image from "next/image";
 
-export const TestemonialsSection = ({ content }) => {
+export const TestemonialsSection = () => {
+  const t = useTranslations("portfolio.testimonials");
+  const testimonials = t.raw("testimonials"); // expects an array in your messages file
   return (
     <div className="flex flex-col items-center gap-8">
       <div className="text-center">
         <ThemedH2 className="px-12 text-center">
-          {content.sectionTitle}
+          {t("sectionTitle")}
         </ThemedH2>
       </div>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-        {content.testimonials.map((testimonial) => (
+        {testimonials.map((testimonial) => (
           <div
             key={testimonial.id}
             className="grid grid-cols-1 xl:grid-cols-[1fr_2fr] overflow-hidden 2xl:grid-rows-1 grid-rows-[270px_1fr] gap-4 rounded-xl glass-morphism-card">
@@ -39,7 +42,7 @@ export const TestemonialsSection = ({ content }) => {
                     - {testimonial.person}
                   </ThemedH5>
                   <ThemedH5 className="z-20 max-w-xs pl-4 font-thin">
-                    {content.personTitle}
+                    {t("personTitle")}
                   </ThemedH5>
                 </div>
               </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import Image from "next/image";
 import { InputWithLabel } from "./InputWithLabel";
@@ -11,7 +12,8 @@ import {
 } from "@components/atoms/ThemedText";
 import CallToActionButton, { SendCTA } from "@components/atoms/Buttons";
 
-export const ContactformSection = ({ content }) => {
+export const ContactformSection = () => {
+  const t = useTranslations("contactForm");
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -48,9 +50,9 @@ export const ContactformSection = ({ content }) => {
       className="px-4 grid max-w-4xl mx-auto sm:px-6 lg:px-8 min-h-[calc(100vh-144px)] place-items-center">
       {!showModal ? (
         <div className="w-full animate-PageAppearRight">
-          <ThemedH1 className="mb-4 text-center">{content.heading}</ThemedH1>
+          <ThemedH1 className="mb-4 text-center">{t("heading")}</ThemedH1>
           <ThemedPLarge className="mb-6 text-center">
-            {content.formDescription}
+            {t("formDescription")}
           </ThemedPLarge>
 
           <form
@@ -58,57 +60,38 @@ export const ContactformSection = ({ content }) => {
             onSubmit={handleSubmit}>
             <InputWithLabel
               name="name"
-              type="text"
-              placeholder={content.namePlaceholder}
-              formData={formData}
-              setFormData={setFormData}>
-              {content.nameLabel}
-            </InputWithLabel>
-
+              label={t("nameLabel")}
+              value={formData.name}
+              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+              required
+            />
             <InputWithLabel
               name="email"
-              type="email"
-              placeholder={content.emailPlaceholder}
-              formData={formData}
-              setFormData={setFormData}>
-              {content.emailLabel}
-            </InputWithLabel>
-
+              label={t("emailLabel")}
+              value={formData.email}
+              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              required
+            />
             <InputWithLabel
               name="message"
-              type="textarea"
-              placeholder={content.messagePlaceholder}
-              formData={formData}
-              setFormData={setFormData}>
-              {content.messageLabel}
-            </InputWithLabel>
-
-            <SendCTA type="submit">
-              <ThemedP>{content.submitButton}</ThemedP>
-            </SendCTA>
+              label={t("messageLabel")}
+              value={formData.message}
+              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+              required
+              textarea
+            />
+            <div className="flex justify-center mt-6">
+              <SendCTA type="submit">{t("sendButton")}</SendCTA>
+            </div>
           </form>
         </div>
       ) : (
-        <div className="flex items-center justify-center w-full">
-          <div className="relative flex flex-col items-center justify-center gap-8 p-8 rounded-3xl bg-light-mist dark:bg-dark-onyx shadow-xl max-w-xl">
-            <ThemedH2 className="text-center">
-              {content.thankYouHeading}
-            </ThemedH2>
-            <div className="text-center">
-              <ThemedP>{content.thankYouLine1}</ThemedP>
-              <ThemedP>{content.thankYouLine2}</ThemedP>
-            </div>
-            <Image
-              className="animate-pulse"
-              src="/logo/logo-lightmode.svg"
-              alt="loading..."
-              width={200}
-              height={200}
-            />
-            <CallToActionButton onClick={resetForm}>
-              {content.confirmButton}
-            </CallToActionButton>
-          </div>
+        <div className="w-full animate-PageAppearRight text-center">
+          <ThemedH2 className="mb-4">{t("thankYouHeading")}</ThemedH2>
+          <ThemedP className="mb-6">{t("thankYouMessage")}</ThemedP>
+          <button onClick={resetForm} className="mt-4">
+            <CallToActionButton>{t("resetButton")}</CallToActionButton>
+          </button>
         </div>
       )}
     </section>

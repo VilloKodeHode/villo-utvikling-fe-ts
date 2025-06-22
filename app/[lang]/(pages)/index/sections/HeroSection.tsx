@@ -1,11 +1,12 @@
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { ThemedH1, ThemedP, ThemedPLarge } from "@components/atoms/ThemedText";
 import { ArrowCTA } from "@components/atoms/Buttons";
 import { ScrollToSectionButton } from "@components/atoms/ScrolltoSectionButton";
-import { ComponentPropsWithParams } from "app/interfaces/PageProps";
 
-export const HeroSection = ({ params, content }: ComponentPropsWithParams) => {
-  const { lang } = params;
+export const HeroSection = () => {
+  const t = useTranslations("heroSection");
+  const lang = t("lang"); // Store lang in your messages if needed for links
 
   return (
     <section
@@ -13,19 +14,17 @@ export const HeroSection = ({ params, content }: ComponentPropsWithParams) => {
       id="HeroSection">
       <div className="animate-page-appear-right">
         <div className="grid sm:gap-8 gap-4">
-          <ThemedP className="w-fit">{content?.slogan}</ThemedP>
-          <ThemedH1>{content?.title}</ThemedH1>
-          {/* <div className="md:block hidden"> */}
-          <ThemedPLarge>{content?.subtitle}</ThemedPLarge>
-          {/* </div> */}
+          <ThemedP className="w-fit">{t("slogan")}</ThemedP>
+          <ThemedH1>{t("title")}</ThemedH1>
+          <ThemedPLarge>{t("subtitle")}</ThemedPLarge>
           <div className="grid justify-start items-center grid-flow-col ml:gap-8 gap-4">
             <Link
-              aria-label={lang === "no" ? "kontakt oss" : "contact us"}
+              aria-label={t("ctaAriaLabel")}
               className="h-fit"
               href={`/${lang}/contact`}>
-              <ArrowCTA>{content?.cta}</ArrowCTA>
+              <ArrowCTA>{t("cta")}</ArrowCTA>
             </Link>
-            <ScrollToSectionButton>{content?.ctaTwo}</ScrollToSectionButton>
+            <ScrollToSectionButton>{t("ctaTwo")}</ScrollToSectionButton>
           </div>
         </div>
       </div>

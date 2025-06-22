@@ -1,5 +1,5 @@
 import { ThemedP } from "@components/atoms/ThemedText";
-import { ComponentProps } from "app/interfaces/PageProps";
+import { useTranslations } from "next-intl";
 import {
   ContactLogoLink,
   FacebookLogoLink,
@@ -7,7 +7,8 @@ import {
   LinkedInLogoLink,
 } from "@components/atoms/LogoLink";
 
-export default async function Footer({ content }: ComponentProps) {
+export default function Footer() {
+  const t = useTranslations("footer");
   const year = new Date().getFullYear();
 
   return (
@@ -27,16 +28,16 @@ export default async function Footer({ content }: ComponentProps) {
             <GithubLogoLink />
             <FacebookLogoLink />
           </div>
-          <ThemedP>Email: Villokodehode@gmail.com</ThemedP>
-          <ThemedP>Phone: +47 932 850 44</ThemedP>
-          <ThemedP>Address: Pikåsveien 1D, 3160 Stokke</ThemedP>
+          <ThemedP>Email: {t("email")}</ThemedP>
+          <ThemedP>Phone: {t("phone")}</ThemedP>
+          <ThemedP>Address: {t("address")}</ThemedP>
         </div>
         {/* Copyright Information */}
         <div
           className={`flex items-center text-center
             text-light-ash dark:text-white
           `}>
-          <h4 className="text-h4">{`© ${year} ${content?.companyName}`}</h4>
+          <h4 className="text-h4">{`© ${year} ${t("companyName")}`}</h4>
         </div>
 
         {/* Privacy Policy and Terms of Service 

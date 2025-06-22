@@ -1,0 +1,743 @@
+{
+  "heroSection": {
+    "slogan": "Smart websites. Real results.",
+    "title": "Professional web development and modern websites for businesses, clubs, and individuals",
+    "subtitle": "Get a website that builds trust, delivers results, and is easy to use – tailored to your goals and your business.",
+    "cta": "Start your project",
+    "ctaTwo": "See what I offer"
+  },
+  "skills": {
+    "title": "My tech-stack",
+    "paragraph": "This is my tech-stack. I use the best methods to ensure that the website is fast, modern and responsive.",
+    "skills": [
+      {
+        "name": "HTML",
+        "logo": "html",
+        "imageSrc": "/images/skills/html-logo.png",
+        "alt": "HTML logo",
+        "options": {
+          "saturate": "70",
+          "width": 53.5,
+          "colored": true
+        }
+      },
+      {
+        "name": "CSS",
+        "logo": "css",
+        "imageSrc": "/images/skills/css-logo.png",
+        "alt": "CSS3 logo",
+        "options": {
+          "saturate": "70",
+          "width": 53.5,
+          "colored": true
+        }
+      },
+      {
+        "name": "Javascript",
+        "logo": "javascript",
+        "imageSrc": "/images/skills/javascript-logo.png",
+        "alt": "Javascript logo",
+        "options": {
+          "saturate": "70",
+          "width": 60,
+          "colored": true
+        }
+      },
+      {
+        "name": "React",
+        "logo": "react",
+        "imageSrc": "/images/skills/react-logo.png",
+        "alt": "React logo",
+        "options": {
+          "saturate": "70",
+          "width": 60,
+          "colored": true
+        }
+      },
+      {
+        "name": "Nextjs",
+        "logo": "nextjs",
+        "imageSrc": "/images/skills/nextjs-logo.png",
+        "alt": "Nextjs logo",
+        "options": {
+          "saturate": "10",
+          "width": 53.5,
+          "colored": false
+        }
+      },
+      {
+        "name": "Tailwind CSS",
+        "logo": "tailwindcss",
+        "imageSrc": "/images/skills/tailwindcss-logo.png",
+        "alt": "Tailwind CSS logo",
+        "options": {
+          "saturate": "70",
+          "width": 60,
+          "colored": true
+        }
+      },
+      {
+        "name": "Figma",
+        "logo": "figma",
+        "imageSrc": "/images/skills/figma-logo.png",
+        "alt": "Figma logo",
+        "options": {
+          "saturate": "70",
+          "width": 40,
+          "colored": true
+        }
+      },
+      {
+        "name": "Sanity",
+        "logo": "sanity",
+        "imageSrc": "/images/skills/sanity-logo.png",
+        "alt": "Sanity logo",
+        "options": {
+          "saturate": "70",
+          "width": 45,
+          "colored": true
+        }
+      },
+      {
+        "name": "MongoDB",
+        "logo": "mongodb",
+        "imageSrc": "/images/skills/mongodb-logo.png",
+        "alt": "Mongo DB logo",
+        "options": {
+          "saturate": "70",
+          "width": 60,
+          "colored": true
+        }
+      }
+    ]
+  },
+  "services": {
+    "website": {
+      "top_title": "Need a new website?",
+
+      "top_paragraph": "I create websites that are optimized for the best user experience and web traffic. The latest technology is used to ensure that your website is fast, secure, and responsive. As a professional website designer, I specialize in crafting stunning and functional websites that cater to your unique needs and goals.",
+
+      "middle_title": "Why you should choose me as your website-developer...",
+
+      "bullitins": [
+        {
+          "title": "No middleman",
+          "description": "Normal this takes a big part of the budget, but not with me! A a final price is set before the project starts",
+          "icon": "🤝🏼"
+        },
+        {
+          "title": "Project insight",
+          "description": "You get the opportunity to provide feedback throughout the entire development process to achieve the desired result.",
+          "icon": "🙋🏽"
+        },
+        {
+          "title": "Secure and modern website",
+          "description": "To create a website that is secure, user-friendly, and scalable, the latest technology is used.",
+          "icon": "🖥️"
+        },
+        {
+          "title": "User-friendly database",
+          "description": "If needed, a database will be integrated for you to manage your website content with.",
+          "icon": "🏢"
+        },
+        {
+          "title": "Search engine optimization",
+          "description": "You get more traffic to the site and make it easier to search for it on search engines.",
+          "icon": "👁️"
+        },
+        {
+          "title": "Full support",
+          "description": "You get taught how you can manage the content on your website by using a content management system.",
+          "icon": "👨🏼‍🏫"
+        }
+      ],
+
+      "bottom_paragraphs": [
+        "With years of experience in the field, I understand the importance of a strong online presence in today's digital age. My services are tailored to individuals and businesses looking to establish or enhance their online footprint. I take a personalized approach to every project, ensuring that your website not only looks visually appealing but also functions seamlessly across devices.",
+        "Whether you're launching a brand-new website or looking to revamp your existing one, I'm here to turn your vision into a reality. From user-friendly navigation to eye-catching design elements, I pay meticulous attention to every detail. Let's work together to create a website that not only reflects your brand but also drives results and leaves a lasting impression on your visitors."
+      ]
+    },
+    "SEO": {
+      "top_title": "Need more visitors on your website?",
+
+      "top_paragraph": "Looking to boost online visibility and drive traffic to your website? Our tailored SEO services are designed for your unique business goals. Whether it's achieving top rankings on Google or local market dominance, we specialize in keyword optimization, on/off-page SEO, and content enhancement. Plus, our transparent reporting lets you track progress and see tangible results.",
+
+      "middle_title": "Why you should choose me upgrade your SEO...",
+
+      "bullitins": [
+        {
+          "title": "Customized SEO solutions",
+          "description": "Tailored to meet your specific business needs and goals.",
+          "icon": "🔍"
+        },
+        {
+          "title": "Higher search engine rankings",
+          "description": "Boost visibility on Google and ensure your website reaches your target audience.",
+          "icon": "📈"
+        },
+        {
+          "title": "SEO-optimized content",
+          "description": "Improves content quality and relevance to engage both users and search engines.",
+          "icon": "🔑"
+        },
+        {
+          "title": "Local SEO expertise",
+          "description": "Attracts more local customers through targeted local SEO strategies.",
+          "icon": "📍"
+        },
+        {
+          "title": "Increased website traffic",
+          "description": "SEO improvements that drive more visitors and make your site easier to find.",
+          "icon": "🚦"
+        },
+        {
+          "title": "SEO insights & reporting",
+          "description": "Track your SEO progress with detailed analytics and transparent reports.",
+          "icon": "📊"
+        }
+      ],
+
+      "bottom_paragraphs": [
+        "Choosing me means success. We tailor SEO solutions exclusively for your business, improve your website's content and structure for higher rankings. Our expertise includes local SEO strategies, transparent reporting, and maximum online success. With me, you'll increase traffic and become more visible to users. Welcome to improving your online presence.",
+        "Don't let your website go unnoticed. Improve your online visibility, increase organic traffic, and enhance conversions with our expert SEO services. Contact us today to discuss how we can enhance your SEO strategy and elevate your business to new heights in the digital world."
+      ]
+    },
+
+    "webcontent": {
+      "top_title": "Need webcontent?",
+
+      "paragraph": "Delivering engaging and impactful web content is my expertise. I understand that the content on your website plays a pivotal role in attracting and retaining visitors. With a passion for effective communication and a flair for creativity, I offer professional web content creation services to businesses and individuals looking to make a lasting impression online.",
+
+      "middle_title": "Why you should choose me as your webcontent-creator...",
+
+      "bullitins": [
+        {
+          "title": "Engaging content",
+          "description": "Captures your audience's attention and enhances user experience.",
+          "icon": "🎯"
+        },
+        {
+          "title": "Tailor-made solutions",
+          "description": "Content crafted to align with your unique business goals and needs.",
+          "icon": "🛠"
+        },
+        {
+          "title": "User-friendly design",
+          "description": "Visually appealing and easy-to-navigate content for your audience.",
+          "icon": "🎨"
+        },
+        {
+          "title": "Timely delivery",
+          "description": "Ensuring your content is ready when you need it.",
+          "icon": "⏳"
+        },
+        {
+          "title": "Responsive content",
+          "description": "Seamlessly adapts to various devices and screen sizes.",
+          "icon": "📱"
+        },
+        {
+          "title": "Brand-building content",
+          "description": "Resonates with your audience, drives engagement, and builds loyalty.",
+          "icon": "🚀"
+        }
+      ],
+
+      "bottom_paragraphs": [
+        "With a passion for effective communication and a flair for creativity, I offer professional web content creation services to businesses and individuals looking to make a lasting impression online. My approach to content creation is tailored to your unique needs and objectives.",
+        "Whether you require compelling blog posts, informative articles, persuasive product descriptions, or engaging social media content, I have the skills to deliver. I conduct thorough research to ensure that the content is not only well-informed but also relevant to your target audience."
+      ]
+    },
+
+    "CMS": {
+      "top_title": "Get user-friendly control of your content on your website!",
+
+      "top_paragraph": "By connecting a database to your website, you can easily change and add content to your website. The database is scalable and can be customized to your specific needs.",
+
+      "middle_title": "Why you should choose me create a CMS for your website...",
+
+      "bullitins": [
+        {
+          "title": "Easy content management",
+          "description": "Update your content effortlessly without any technical knowledge. You decide what is displayed",
+          "icon": "⚙"
+        },
+        {
+          "title": "Scalable solution",
+          "description": "Designed to grow with your business and adapt to future needs.",
+          "icon": "📈"
+        },
+        {
+          "title": "Customized to your needs",
+          "description": "Built to match your specific requirements for optimal functionality.",
+          "icon": "🎛"
+        },
+        {
+          "title": "Secure data storage",
+          "description": "Reliable storage and handling of sensitive information.",
+          "icon": "🔐"
+        },
+        {
+          "title": "Automatic backups",
+          "description": "Protects your content from loss and unexpected issues.",
+          "icon": "💾"
+        },
+        {
+          "title": "Seamless integration",
+          "description": "Compatible with popular tools and third-party services.",
+          "icon": "🔗"
+        }
+      ],
+
+      "bottom_paragraphs": [
+        "Integrating a database for your website is a strategic step towards futher developing your company. Instead of manually updating the content on your website, you can easily manage it yourself. If you want to delegate content updates it can easily be achieved by adding multiple users to the CMS.",
+        "Either you need a CMS to manage images, text, blog posts, articles, website colors or even the websites design, I have the skills to do this. I am here to create a robust CMS that can be used for all your needs."
+      ]
+    },
+
+    "sosialmedia_integration": {
+      "top_title": "Show content from your social media on your website!",
+
+      "top_paragraph": "By connecting your social media with your website, you can easily show content from your social media in a new and exiting way.",
+
+      "middle_title": "Why you should choose me connect your social media with your website...",
+      "bullitins": [
+        {
+          "title": "Platform integration",
+          "description": "Connects effortlessly with Instagram, Facebook, Twitter, and more.",
+          "icon": "🔗"
+        },
+        {
+          "title": "Automatic content updates",
+          "description": "Syncs your social media content directly to your website.",
+          "icon": "🔄"
+        },
+        {
+          "title": "Time-saving synchronization",
+          "description": "Easily publish posts across multiple platforms without extra effort.",
+          "icon": "⏳"
+        },
+        {
+          "title": "Design-matched content",
+          "description": "Social media posts are styled to seamlessly match your website's design.",
+          "icon": "📱"
+        },
+        {
+          "title": "No technical knowledge needed",
+          "description": "Easily display and manage content without any coding skills.",
+          "icon": "🛠"
+        },
+        {
+          "title": "Increased visibility",
+          "description": "Enhance your social media reach by sharing content across multiple platforms.",
+          "icon": "👀"
+        }
+      ],
+
+      "bottom_paragraphs": [
+        "By connecting your sosial media with your website you can show your content in a new way. You can choose between showing the latest content, specific contant, or everything. This way you can manage the content on your own website.",
+        "Either you need an integration with social media to display images, text, blog posts, articles, videos, etc, I have the skills to do this. I will create a solution that you will be proud to show the world."
+      ]
+    }
+  },
+
+  "menu_items": [
+    { "text": "Home", "href": "/{lang}" },
+    { "text": "About", "href": "/{lang}/about" },
+    { "text": "Portfolio", "href": "/{lang}/portfolio" },
+    { "text": "Contact", "href": "/{lang}/contact" },
+    { "text": "Services", "href": "/{lang}/services" }
+  ],
+
+  "service_card_section": {
+    "title": "Services and solutions",
+    "subtitle": "I offer a wide range of services to help you achieve your goals",
+    "cards": [
+      {
+        "title": "Websites of the highest quality",
+        "text": "With design that follows the current trends and the latest the technology for a modern website.",
+        "href": "/{lang}/services/website",
+        "buttonText": "Read more"
+      },
+      {
+        "title": "Search engine optimization",
+        "text": "Increase traffic to your website with a comprehensive range of SEO (Search Engine Optimization) services.",
+        "href": "/{lang}/services/SEO",
+        "buttonText": "Read more"
+      },
+      {
+        "title": "Engaging webcontent",
+        "text": "Captivating experiences that combine powerful words with eye-catching visuals.",
+        "href": "/{lang}/services/webcontent",
+        "buttonText": "Read more"
+      },
+      {
+        "title": "Content Management System (CMS)",
+        "text": "Integrate a content management system so that you can manage your content on your website.",
+        "href": "/{lang}/services/CMS",
+        "buttonText": "Read more"
+      },
+      {
+        "title": "Social media integration",
+        "text": "Connect your social media with your website to show content from your social media on a new and exciting way.",
+        "href": "/{lang}/services/sosialmedia_integration",
+        "buttonText": "Read more"
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "description": "With a passion for front-end development and a commitment to creating user-centric designs, I bring your vision to life. Explore the projects I've had the privilege to work on, each representing the blend of art and technology that defines my approach.",
+    "customer_projects": {
+      "title": "Customer projects",
+      "projects": [
+        {
+          "name": "Wileo AS",
+          "jobDone": "Created landing page and content for the website",
+          "imageUrl": "/images/companies/Wileo-logo.svg",
+          "href": "https://wileo.no/",
+          "completed": false,
+          "projectInfo": "Completed"
+        },
+        {
+          "name": "Hawii Analytics",
+          "jobDone": "Project Manager for building the new Hawii.no website.",
+          "imageUrl": "/images/companies/Hawii-logo-black.svg",
+          "href": "https://www.hawiianalyse.no/",
+          "completed": true,
+          "projectInfo": "Completed"
+        },
+        {
+          "name": "Trond Borg",
+          "jobDone": "Complete webstore with wix",
+          "imageUrl": "/images/companies/TrondBorg_logo.svg",
+          "href": "https://www.trond-borg.com/",
+          "completed": true,
+          "projectInfo": "Completed"
+        },
+        {
+          "name": "KVS - Kristensen Vedlikehold Service",
+          "jobDone": "New company homepage for KVS. Made with next.js",
+          "imageUrl": "/images/companies/KVS-full-logo-alternative-black.svg",
+          "href": "https://www.kvstrefelling.no/",
+          "completed": true,
+          "projectInfo": "Completed"
+        }
+      ]
+    },
+    "employment": {
+      "title": "Employment",
+      "companies": [
+        {
+          "name": "Kodeverket Bergen",
+          "jobTitle": "Intern/project-leader",
+          "jobDone": "Here I worked as a project manager for building the website Hawii.no. We used Next.js, tailwind css and Sanity for this project",
+          "imageUrl": "/images/companies/kodeverket_logo.svg",
+          "href": "https://www.kodeverketbergen.no/",
+          "progress": "done",
+          "colors": {
+            "shadow": "shadow-[#7fe5d3]",
+            "text": "text-[#7fe5d3]",
+            "bg": "bg-[#7fe5d3]"
+          },
+          "skillsUsed": [
+            { "name": "Next.js", "href": "https://nextjs.org/" },
+            { "name": "Tailwind CSS", "href": "https://tailwindcss.com/" },
+            { "name": "Sanity", "href": "https://www.sanity.io/" }
+          ]
+        },
+        {
+          "name": "Jobloop",
+          "jobTitle": "Course instructor",
+          "jobDone": "In this job I worked as a course instructor for programming and coding in the period 2023-2024. I taught HTML, CSS, Javascipt, Figma, and React, along with a wide range of developer tools",
+          "imageUrl": "/images/companies/jobloop_logo.png",
+          "href": "https://www.jobloop.no/",
+          "progress": "done",
+          "colors": {
+            "shadow": "shadow-[#f4a366]",
+            "text": "text-[#f4a366]",
+            "bg": "bg-[#f4a366]"
+          },
+          "skillsUsed": [
+            {
+              "name": "HTML",
+              "href": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+            },
+            {
+              "name": "CSS",
+              "href": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+            },
+            {
+              "name": "JavaScript",
+              "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            },
+            { "name": "Figma", "href": "https://www.figma.com/" },
+            { "name": "React", "href": "https://reactjs.org/" }
+          ]
+        },
+        {
+          "name": "Villo development",
+          "jobTitle": "Webdeveloper",
+          "jobDone": "My freelancer gig. I create everthing from simple personal sites to complex e-commerce platforms. In addition I also deliver webcontent and improve SEO for increasing traffic.",
+          "imageUrl": "/images/logo/Villo_Utvikling_full-Logo-LM.png",
+          "href": "https://www.villoutvikling.com/",
+          "progress": "current",
+          "colors": {
+            "shadow": "shadow-[#a082ff]",
+            "text": "text-[#a082ff]",
+            "bg": "bg-[#a082ff]"
+          },
+          "skillsUsed": [
+            { "name": "Next.js", "href": "https://nextjs.org/" },
+            { "name": "Tailwind CSS", "href": "https://tailwindcss.com/" },
+            { "name": "Sanity", "href": "https://www.sanity.io/" },
+            { "name": "Figma", "href": "https://www.figma.com/" },
+            { "name": "React", "href": "https://reactjs.org/" },
+            { "name": "Wix", "href": "https://wix.com/" }
+          ]
+        },
+        {
+          "name": "Jobloop",
+          "jobTitle": "Course Leader",
+          "jobDone": "In October 2024 I got promoted within Jobloop to a local course leader. My tasks extended to management, including more responsibility in regards to participants, course instructors and administrative work",
+          "imageUrl": "/images/companies/jobloop_logo.png",
+          "href": "https://www.jobloop.no/",
+          "progress": "current",
+          "colors": {
+            "shadow": "shadow-[#f4a366]",
+            "text": "text-[#f4a366]",
+            "bg": "bg-[#f4a366]"
+          },
+          "skillsUsed": [
+            {
+              "name": "HTML",
+              "href": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+            },
+            {
+              "name": "CSS",
+              "href": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+            },
+            {
+              "name": "JavaScript",
+              "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            },
+            { "name": "Figma", "href": "https://www.figma.com/" },
+            { "name": "React", "href": "https://reactjs.org/" },
+            { "name": "Tailwind CSS", "href": "https://tailwindcss.com/" },
+            { "name": "Next.js", "href": "https://nextjs.org/" }
+          ]
+        }
+      ]
+    },
+    "testimonials": {
+      "sectionTitle": "What my customers say",
+      "testimonials": [
+        {
+          "id": "Kodeverket_quote",
+          "testimonial": "“Joakim has been a central project manager in Kodeverket with a unique ability to understand the customer's needs and see the bigger picture. Without him, we would not have been able to deliver half the quality we have done on our customer projects, as well as achieve such good feedback from our customers. I can only recommend working with Joakim”",
+          "person": "Karl H. Rødland",
+          "src": "/images/quotes/KarlHaakon.jpg",
+          "logoSrc": "/images/quotes/kodeverket_logo.svg",
+          "personTitle": "Managing Director at Kodeverket Bergen"
+        },
+        {
+          "id": "Wileo_quote",
+          "testimonial": "“During our collaboration, I especially saw that you were good at understanding the problem, taking initiative and solving the assignment efficiently. Communication was impeccable and efficient 😊 go you!”",
+          "person": "Ida C. Filtenborg Hansen",
+          "src": "/images/quotes/IdaHansen.avif",
+          "logoSrc": "/images/quotes/wileo_logo.png",
+          "personTitle": "Managing Director at Wileo AS"
+        },
+        {
+          "id": "TrondBorg_quote",
+          "testimonial": "Thank you very much for the help with the development of my website, which resulted in a great outcome. I was actively involved in the process and was able to provide input that was important to me. The result turned out fantastic, with a fabulous response. I have now published the website, and it went very well with a positive response. I am very satisfied with the assistance I received from you.”",
+          "person": "Trond Borg",
+          "src": "/images/quotes/TrondBorg.webp",
+          "logoSrc": "/images/companies/TrondBorg_logo.svg",
+          "personTitle": "Owner of Trond Borg - Virvelløse hobbydyr"
+        },
+        {
+          "id": "Vegard_Kristensen_quote",
+          "testimonial": "“I can strongly recommend Villo development. Good information and different solutions were presented. Communication was very good, and the result was above and beyond expectation. Again, I can recommend Joakim ”",
+          "person": "Vegard Kristensen",
+          "src": "/images/quotes/VegardKristensen.webp",
+          "logoSrc": "/images/companies/KVS-logo-black.svg",
+          "personTitle": "Owner of Kristensen Maintenance Service"
+        }
+      ]
+    }
+  },
+  "showCaseList": [
+    {
+      "type": "logo",
+      "fileType": "svg",
+      "src": "/images/logo/Villo_Utvikling_full-Logo-LM.png",
+      "alt": "Villo development",
+      "width": 400,
+      "height": 400,
+      "paragraph": "Engaging websites for your business: From simple to complex websites, tailored to all devices."
+    },
+    {
+      "type": "design",
+      "fileType": "png",
+      "src": "/images/showcase/HeroDesign.png",
+      "alt": "Web design",
+      "width": 500,
+      "height": 300,
+      "title": "design",
+      "paragraph": "Consistent design that is aesthetic and functional, with a focus on user-friendliness and conversion"
+    },
+    {
+      "type": "development",
+      "fileType": "png",
+      "src": "/images/showcase/HeroDevelopment.png",
+      "alt": "Web development",
+      "width": 500,
+      "height": 300,
+      "title": "development",
+      "paragraph": "Expertise in developing websites that are easy to maintain and change content on"
+    },
+    {
+      "type": "collage",
+      "fileType": "webp",
+      "src": "/images/showcase/HeroCollage.webp",
+      "alt": "Web content",
+      "width": 500,
+      "height": 300,
+      "title": "content",
+      "paragraph": "Original high-quality content for your website, customized for your purpose and target audience"
+    }
+  ],
+  "footer": {
+    "companyName": "Villo development"
+  },
+  "companyInfo": {
+    "title": "Norwegian web developer",
+    "paragraphOne": "Seeing my services make a positive impact on a customer's business is what I love the most. My goal is to build strong, long-lasting, and valuable relationships with my customers. I do this by providing high-quality services and open communication throughout the work process",
+    "paragraphTwo": "My vision is to create good websites for small and medium-sized businesses without it becoming too expensive, while still offering high quality with the latest web technologies, search engine optimization, and content."
+  },
+  "introInfo": {
+    "title": "About me",
+    "subtitle": "Joakim Villo",
+    "paragraph": "I'm a trained developer who's currently a leader in programming and web development courses held here in Norway. I hold two bachelor's degrees in other fields, and previous work has been related to those degrees. In 2022, I switched to programming and coding, which has now become my true passion in life.",
+    "src": "/images/portraits/JoakimNy.webp",
+    "alt": "Joakim Villo"
+  },
+  "personal_projects": {
+    "title": "Personal projects",
+    "cta": "check it out",
+    "projects": [
+      {
+        "projectName": "Gift helper",
+        "textColor": "text-Villo-white",
+        "src": "/images/projects/GH-collage.png",
+        "mobileSrc": "/images/projects/GH1.png",
+        "alt": "Gift helper",
+        "cardColor": "bg-[#e882db]",
+        "href": "https://villokodehode.github.io/gift-helper-web/",
+        "hrefCode": "https://github.com/VilloKodeHode/gift-helper-web",
+        "description": "An app to help you find gifts for others. No known bugs, but the selection of gifts is not very extensive yet. It can be modified as needed and integrated into other websites."
+      },
+      {
+        "projectName": "Multistep form",
+        "textColor": "text-Villo-white",
+        "src": "/images/projects/MSF-collage.png",
+        "mobileSrc": "/images/projects/Multi page form.png",
+        "alt": "Flersteg skjema",
+        "cardColor": "bg-[#f8828e]",
+        "href": "https://villokodehode.github.io/multi-step-form/",
+        "hrefCode": "https://github.com/VilloKodeHode/multi-step-form",
+        "description": "Multi-step order form that can be customized and adapted to serve as an order form for a website."
+      },
+      {
+        "projectName": "Pokedex v1 and v2",
+        "textColor": "text-Villo-white",
+        "src": "/images/projects/POKEDEXV1-collage.png",
+        "mobileSrc": "/images/projects/POKEDEXV1-1.png",
+        "alt": "Pokedex v1",
+        "cardColor": "bg-[#e7cf63]",
+        "href": "https://villokodehode.github.io/PokeAPI/",
+        "hrefCode": "https://github.com/VilloKodeHode/PokeAPI",
+        "description": "A REST API app for displaying a variety of pokemons. Uses 3-layered fetching to retrieve all data. Recently created an improved version, but lacks some styling (link within the same app)."
+      },
+      {
+        "projectName": "Rock, paper, scissors game",
+        "textColor": "text-Villo-white",
+        "src": "/images/projects/RPS-collage.png",
+        "mobileSrc": "/images/projects/RPS.png",
+        "alt": "Stein sakser papir app",
+        "cardColor": "bg-[#6792e2]",
+        "href": "https://villokodehode.github.io/Rock--Paper--Scissors--Lizard--Spock-game/#/",
+        "hrefCode": "https://github.com/VilloKodeHode/Rock--Paper--Scissors--Lizard--Spock-game",
+        "description": "This is a rock-paper-scissors game with two expanded versions. The game is fully customizable, allowing for easy adaptation to any desired specifications."
+      },
+      {
+        "projectName": "Advice generator",
+        "textColor": "text-Villo-white",
+        "src": "/images/projects/AG-collage.png",
+        "mobileSrc": "/images/projects/Advice generator.png",
+        "alt": "App for gode råd",
+        "cardColor": "bg-[#86e5c1]",
+        "href": "https://villokodehode.github.io/advice-generator/",
+        "hrefCode": "https://github.com/VilloKodeHode/advice-generator",
+        "description": "A simple app that fetches advice from an API. The project was quick to develop. Known issue: Recently discovered that it does not work on Firefox (planned to fix)."
+      },
+      {
+        "projectName": "Mockup-site: Kjælevenner",
+        "textColor": "text-Villo-white",
+        "src": "/images/projects/KV-collage.png",
+        "mobileSrc": "/images/projects/KV-collage.png",
+        "alt": "Kjælevenner mockup side",
+        "cardColor": "bg-[#86e5c1]",
+        "href": "https://voffoffer-k602v0ypn-villokodehode.vercel.app/",
+        "hrefCode": "https://github.com/VilloKodeHode/voffoffer",
+        "description": "A webpage with information about house pets. Projects like this are easy and quick to setup. Currently only in norwegian."
+      },
+      {
+        "projectName": "Mockup-site: Ola's Matlaging",
+        "textColor": "text-Villo-white",
+        "src": "/images/projects/OM-collage.png",
+        "mobileSrc": "/images/projects/OM-collage.png",
+        "alt": "Ola's Matlaging mockup side",
+        "cardColor": "bg-[#86e5c1]",
+        "href": "https://olas-matlaging.vercel.app/",
+        "hrefCode": "https://github.com/VilloKodeHode/om-site",
+        "description": "A satire webpage about a fictional chef. Extremlly simple recipes for people who don't know how to cook. Connected with Sanity CMS for easy content update. Currently only in english"
+      },
+      {
+        "projectName": "Rock, paper, scissors game - Omega version",
+        "textColor": "text-Villo-white",
+        "src": "/images/projects/RPS-collage.png",
+        "mobileSrc": "/images/projects/RPS.png",
+        "alt": "Stein sakser papir app v2.",
+        "cardColor": "bg-[#6792e2]",
+        "href": "https://rps-omega-seven.vercel.app/",
+        "hrefCode": "https://github.com/VilloKodeHode/rps-omega",
+        "description": "The game is extended even further. Also the code is alot more scalable, refactored and generally improved upon. Now connected a database (MongoDB)"
+      }
+    ]
+  },
+  "cookie": {
+    "title": "Cookies",
+    "why": "This website uses cookies to improve your experience.",
+    "disclaimer": "We do not store information that can identify you as a person. Cookies are stored for 1 year.",
+    "accept": "Accept",
+    "decline": "Decline"
+  },
+  "contactForm": {
+    "title": "Contact Form",
+    "description": "I'd love to hear from you. Whether it's a quick question, a collaboration idea, or a full project — you're in the right place.",
+    "formDescription": "Tell me what you're looking for. Are you starting something exciting? Need advice or development help? Let's talk.",
+    "nameLabel": "Your Name",
+    "namePlaceholder": "Enter your full name",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "Enter your email so I can reply",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Write your message here...",
+    "submitButton": "Send Message",
+    "thankYouHeading": "Thanks for reaching out!",
+    "thankYouLine1": "Your message has been sent and is currently sailing through the digital winds.",
+    "thankYouLine2": "I'll get back to you as soon as I can. Let's make something awesome together.",
+    "confirmButton": "Sounds good!"
+  }
+}

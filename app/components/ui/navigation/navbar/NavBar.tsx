@@ -2,21 +2,19 @@ import NavItem from "../molecules/NavItem";
 import LogoComponent from "@components/atoms/Logo";
 import { ComponentPropsWithParams } from "app/interfaces/PageProps";
 import HamburgerBar from "../hamburgerbar/HamburgerBar";
+import { useTranslations } from "next-intl";
 
-interface MenuItem {
-  text: string;
-  href: string;
-}
-
-export const NavBar = ({ content, params }: ComponentPropsWithParams) => {
+export const NavBar = ({ params }: { params: { lang: string } }) => {
+  const t = useTranslations("menu_items");
   const { lang } = params;
 
-  const menuItems = content?.map((item: MenuItem) => {
+  const menuItems = t.raw("list"); // Use t.raw to get the array
+
+  const processedMenuItems = menuItems.map((item: any) => {
     if (!item.href) {
       console.error("Menu item missing href:", item);
-      return { ...item, href: "#" }; // Default to "#" if href is missing
+      return { ...item, href: "#" };
     }
-
     const hrefWithLang = item.href.replace("{lang}", lang);
     return { ...item, href: hrefWithLang };
   });
@@ -33,9 +31,8 @@ export const NavBar = ({ content, params }: ComponentPropsWithParams) => {
             params={params}
           />
           <div className="hidden ml-8 md:block">
-            {/* TODO: Check what rounded-bl-full does */}
             <div className="flex-row hidden justify-end h-full items-center rounded-bl-full gap-8 w-full md:flex">
-              {menuItems.map((item, index) => (
+              {processedMenuItems.map((item, index) => (
                 <NavItem
                   textSize="text-p"
                   key={item.text + "navitem" + index}
@@ -48,7 +45,7 @@ export const NavBar = ({ content, params }: ComponentPropsWithParams) => {
         </div>
         <HamburgerBar
           params={{ lang }}
-          menuItems={menuItems}
+          menuItems={processedMenuItems}
         />
       </div>
     </>

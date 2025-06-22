@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { BadgeButton } from "@components/atoms/Buttons";
 import {
   ShrinkingThemedP,
@@ -7,12 +8,14 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 
-export const EmploymentSection = ({ content }) => {
+export const EmploymentSection = () => {
+  const t = useTranslations("portfolio.employment");
+  const companies = t.raw("companies"); // expects an array in your messages file
   return (
     <section className="px-4 gap-10 grid max-w-7xl sm:px-6 lg:px-8">
-      <ThemedH2 className="px-12 text-center">{content.title} </ThemedH2>
+      <ThemedH2 className="px-12 text-center">{t("title")} </ThemedH2>
       <div className="flex flex-wrap items-center justify-center py-4 gap-8">
-        {content.companies.map((company, index) => (
+        {companies.map((company, index) => (
           <div
             key={company.name + index}
             className={`shadow-md gap-2 lg:gap-4 flex flex-col justify-between overflow-hidden h-94 md:w-125 w-full hover:scale-102
@@ -44,7 +47,7 @@ export const EmploymentSection = ({ content }) => {
             </ShrinkingThemedP>
 
             <div className="h-fit p-2">
-              <ThemedP className="mb-1">Skills used:</ThemedP>
+              <ThemedP className="mb-1">{t("skillsUsedLabel")}</ThemedP>
               <div className="flex flex-wrap gap-2">
                 {company.skillsUsed.map((skill) => (
                   <a
