@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Villo Utvikling - Hjem",
+  description:
+    "Velkommen til Villo Utvikling. Profesjonell frontend- og webutvikling for bedrifter, klubber og privatpersoner.",
+};
+
 import React, { Suspense } from "react";
 import { getDictionary } from "get-dictionary";
 import { PageProps } from "../interfaces/PageProps";

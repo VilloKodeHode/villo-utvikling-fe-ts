@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Om Villo Utvikling",
+  description:
+    "Lær mer om Villo Utvikling, kompetanse, erfaring og prosjekter innen webutvikling og frontend.",
+};
+
 import { getDictionary } from "get-dictionary";
 import {
   AltIntroSection,

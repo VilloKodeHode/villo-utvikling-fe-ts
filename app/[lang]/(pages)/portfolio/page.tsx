@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Portefølje - Villo Utvikling",
+  description: "Se utvalgte prosjekter, referanser og kundeprosjekter levert av Villo Utvikling.",
+};
+
 import { getDictionary } from "get-dictionary";
 
 import { EmploymentSection } from "./sections/EmploymentSection";
