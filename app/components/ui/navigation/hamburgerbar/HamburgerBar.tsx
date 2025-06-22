@@ -30,7 +30,7 @@ export default function HamburgerBar({
 
   //TODO fix logoComponent error
   return (
-    <div className="z-100 flex absolute pr-2 sm:pr-4 lg:pr-8 top-0 right-0 items-center h-full rounded-bl-full md:hidden">
+    <div className="z-100 flex absolute pr-8 top-0 right-0 items-center h-full rounded-bl-full md:hidden">
       <button
         className={`block ml-8 duration-200 cursor-pointer hover:scale-110 ${
           theme === "light"

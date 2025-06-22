@@ -11,9 +11,9 @@ const LogoComponent = async ({ onclick, params }) => {
       onClick={onclick}
       href={"/" + lang}
       className="relative hover:scale-105 duration-1000 group mt-4">
-      <LogoText />
-      <LogoIconLeft className="h-20 -right-1 -top-5" />
-      <LogoIconRight className="h-20 -right-7.5 -top-5" />
+      <LogoText className="scale-70 ml:scale-100" />
+      <LogoIconLeft className="h-20 ml:-right-1 right-4 ml:-top-5 -top-4 scale-70 ml:scale-100" />
+      <LogoIconRight className="h-20 ml:-right-7.5 -right-1.5 ml:-top-5 -top-4 scale-70 ml:scale-100" />
     </Link>
   );
 };

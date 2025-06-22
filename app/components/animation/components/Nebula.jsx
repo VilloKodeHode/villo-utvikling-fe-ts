@@ -107,12 +107,12 @@ const fragmentShader = `
     float scale = 1.0;
 
     for (int i = 0; i < 5; i++) {
-      n += noise(uv + uTime * 0.02) * (0.5 / scale);
+      n += noise(uv + uTime * 0.02) * (0.4 / scale);
       scale *= 2.0;
       uv *= 2.5;
     }
 
-    if (n < 0.5) discard;
+    if (n < 0.1) discard;
 
     float intensity = smoothstep(0.35, 1.0, n);
     vec3 color = mix(uColor1, uColor2, intensity);

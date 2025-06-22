@@ -347,6 +347,7 @@
   "service_card_section": {
     "title": "Tjenester og løsninger",
     "subtitle": "Jeg tilbyr en rekke tjenester og løsninger for å hjelpe deg med å oppnå dine mål.",
+    "description": "Enten du trenger en ny nettside, forbedre din SEO, skape engasjerende nettinnhold eller integrere et innholdshåndteringssystem, har jeg løsningen for deg. Mine tjenester er skreddersydd for å møte dine spesifikke behov og mål. Se under for alle tjenestene jeg tilbyr, eller kontakt meg for å snakke om tjenester jeg kan tilby utenom det som står oppført.",
     "cards": [
       {
         "title": "Nettsider av høyeste kvalitet",

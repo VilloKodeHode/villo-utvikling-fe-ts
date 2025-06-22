@@ -25,7 +25,7 @@ export const NavBar = ({ content, params }: ComponentPropsWithParams) => {
     <>
       <div className="relative">
         <div
-          className={`flex z-100 w-full px-2 sm:px-4 lg:px-8 h-[112px] justify-between items-center glass-morphism-ui border-t-[1px] border-light-cloud dark:border-dark-slate overflow-x-hidden `}>
+          className={`flex z-100 w-full px-4 sm:px-6 lg:px-8 h-[112px] justify-between items-center glass-morphism-ui border-t-[1px] border-light-cloud dark:border-dark-slate overflow-x-hidden `}>
           <div className="absolute w-0 left-0 bottom-0 h-0.5 duration-1000 transition-[width] dark:w-full bg-dark-slate" />
           <div className="absolute w-full right-0 bottom-0 h-0.5 duration-1000 transition-[width] dark:w-0 bg-light-cloud" />
           <LogoComponent

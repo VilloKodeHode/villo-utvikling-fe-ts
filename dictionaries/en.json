@@ -352,6 +352,7 @@
   "service_card_section": {
     "title": "Services and solutions",
     "subtitle": "I offer a wide range of services to help you achieve your goals",
+    "description": "From creating stunning websites to optimizing your online presence, I provide tailored solutions that meet your unique needs. Whether you're a business, organization, or individual, my services are designed to deliver results and enhance your digital footprint. Check below what services I offer, or contact me if you require something else.",
     "cards": [
       {
         "title": "Websites of the highest quality",

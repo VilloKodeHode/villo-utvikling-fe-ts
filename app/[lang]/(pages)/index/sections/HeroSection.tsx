@@ -18,7 +18,7 @@ export const HeroSection = ({ params, content }: ComponentPropsWithParams) => {
           {/* <div className="md:block hidden"> */}
           <ThemedPLarge>{content?.subtitle}</ThemedPLarge>
           {/* </div> */}
-          <div className="grid justify-start items-center grid-flow-col ml:gap-8 gap-4">
+          <div className="grid justify-start w-full ml:w-fit items-center ml:grid-cols-2 grid-cols-1 ml:grid-flow-col ml:gap-8 gap-4">
             <Link
               aria-label={lang === "no" ? "kontakt oss" : "contact us"}
               className="h-fit"

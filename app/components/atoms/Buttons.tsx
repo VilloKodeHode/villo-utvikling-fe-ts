@@ -88,7 +88,7 @@ export function ArrowCTA({ children, onClick, className }: ButtonProps) {
   return (
     <button
       onClick={onClick}
-      className={`relative pr-12 group xl:w-fit origin-center glass-morphism-button button-style ${className}`}>
+      className={`relative pr-12 group w-full ml:w-fit origin-center glass-morphism-button button-style ${className}`}>
       <>
         {children}
         <ArrowRightIcon />
@@ -114,7 +114,7 @@ export const CTAButton = ({ children, onClick, className }: ButtonProps) => {
   return (
     <button
       onClick={onClick}
-      className={`group xl:w-fit ${className} glass-morphism-button-inverse button-style`}>
+      className={`group w-full ml:w-fit ${className} glass-morphism-button-inverse button-style`}>
       <>{children}</>
     </button>
   );

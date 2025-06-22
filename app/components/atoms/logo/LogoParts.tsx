@@ -35,10 +35,10 @@ export const LogoIconRight = ({className}) => {
   );
 };
 
-export const LogoText = () => {
+export const LogoText = ({className}) => {
   return (
     <svg
-    className="z-20 h-16 lg:p-1 w-fit animate-page-appear-right duration-1000"
+    className={`z-20 h-16 lg:p-1 w-fit animate-page-appear-right duration-1000 ${className}`}
       width="573"
       height="182"
       viewBox="0 0 573 182"

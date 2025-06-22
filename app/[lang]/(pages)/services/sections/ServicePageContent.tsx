@@ -20,17 +20,23 @@ export const ServicePageContent = ({
     <section
       id={id}
       className={`w-full py-2 scroll-into-view`}>
+   
       <div
         className={`flex flex-col mx-auto md:gap-10 gap-6 max-w-7xl  ${
           showOnScroll ? "opacity-0 animate-on-scroll" : ""
         }`}>
-        <div className="grid gap-2">
+               {showOnScroll && (
+               <div className="grid gap-2">
           <ThemedH2 className="font-bold text-center">
             {content?.title}
           </ThemedH2>
           <ThemedH3 className="text-center">{content?.subtitle}</ThemedH3>
         </div>
-        <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
+        )}
+   
+        <div
+         data-scroll-target={showOnScroll ? false : true}
+        className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
           {content?.cards?.map((item) => (
             <ServiceCard
               key={item.title}
