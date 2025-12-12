@@ -1,4 +1,4 @@
-import { Locale } from "../i18n/routing";
+import { Locale } from "@i18n/routing";
 
 export interface DictionaryContent {
   [key: string]: any;

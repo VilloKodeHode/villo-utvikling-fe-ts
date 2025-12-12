@@ -25,9 +25,9 @@
       "@app-types/*": ["types/*"],
       "@utils/*": ["utils/*"],
       "@hooks/*": ["hooks/*"],
-      "@pages/*": ["app/(pages)/*"],
       "@contexts/*": ["contexts/*"],
-      "@data/*": ["data/*"]
+      "@data/*": ["data/*"],
+      "@i18n/*": ["i18n/*"]
     },
     "target": "ES2017"
   },

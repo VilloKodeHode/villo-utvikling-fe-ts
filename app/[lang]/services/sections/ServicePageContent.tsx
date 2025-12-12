@@ -6,16 +6,13 @@ import {
   ThemedP,
 } from "@components/atoms/ThemedText";
 import type { ComponentPropsWithParams } from "@app-types/PageProps";
-import Link from "next/link";
+import { Link } from "@i18n/routing";
 
 export const ServicePageContent = ({
-  params,
   content,
   showOnScroll,
   id = "service_section",
 }: ComponentPropsWithParams) => {
-  const { lang } = params;
-
   return (
     <section
       id={id}
@@ -36,7 +33,7 @@ export const ServicePageContent = ({
               key={item.title}
               title={item.title}
               text={item.text}
-              href={item.href.replace("{lang}", lang)}
+              href={item.href}
               buttonText={item.buttonText}
             />
           ))}

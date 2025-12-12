@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@i18n/routing";
 import { ThemedH2, ThemedH4, ThemedP } from "@components/atoms/ThemedText";
 import { ReadMoreButton } from "@components/atoms/Buttons";
 import type { PageProps } from "@app-types/PageProps";
@@ -26,7 +26,7 @@ export const OfferSection = async ({ params }: PageProps) => {
               engTitle="High-Quality websites"
               norText="Med design som følger de siste trendene og den nyeste teknologien for en moderne nettside."
               engText="With design that follows the current trends and the latest the technology for a modern website."
-              href="/services_provided/website"
+              href="/services/website"
             />
             <OfferSectionCard
               params={params}
@@ -34,7 +34,7 @@ export const OfferSection = async ({ params }: PageProps) => {
               engTitle="Search engine optimization"
               norText="Øk trafikken til din nettside med et bredt spekter av SEO (Søkemotoroptimalisering) tjenester."
               engText="Increase traffic to your website with a comprehensive range of SEO (Search Engine Optimization) services."
-              href="/services_provided/SEO"
+              href="/services/SEO"
             />
             <OfferSectionCard
               params={params}
@@ -42,7 +42,7 @@ export const OfferSection = async ({ params }: PageProps) => {
               engTitle="Engaging webcontent"
               norText="Engasjerende opplevelser på nettet som kombinerer kraftfulle ord med iøynefallende visuelle elementer."
               engText="Captivating experiences that combine powerful words with eye-catching visuals."
-              href="/services_provided/webcontent"
+              href="/services/webcontent"
             />
             <OfferSectionCard
               params={params}
@@ -50,7 +50,7 @@ export const OfferSection = async ({ params }: PageProps) => {
               engTitle="Content Management System (CMS)"
               norText="Integrer et innholdshånderingssystem for at du selv skal kunne styre innholdet på din nettside."
               engText="Integrate a content management system so that you can manage your content on your website."
-              href="/services_provided/CMS"
+              href="/services/CMS"
             />
             <OfferSectionCard
               params={params}
@@ -58,7 +58,7 @@ export const OfferSection = async ({ params }: PageProps) => {
               engTitle="Social media integration"
               norText="Koble sammen dine sosiale medier med din nettside for å vise fram innholdet ditt på en ny og spennende måte."
               engText="Connect your social media with your website to show content from your social media on a new and exciting way."
-              href="/services_provided/sosialmedia_integration"
+              href="/services/sosialmedia_integration"
             />
           </div>
         </div>

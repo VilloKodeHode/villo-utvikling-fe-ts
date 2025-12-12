@@ -1,5 +1,5 @@
 // Enhanced: Returns full URL with correct domain for each locale
-import { type Locale } from "../i18n/routing";
+import { type Locale } from "@i18n/routing";
 
 export const redirectedPathname = (pathname: string, locale: Locale) => {
   if (!pathname) return "/";

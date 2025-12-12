@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@i18n/routing";
 import { ThemedH1, ThemedP, ThemedPLarge } from "@components/atoms/ThemedText";
 import { ArrowCTA } from "@components/atoms/Buttons";
 import { ScrollToSectionButton } from "@components/atoms/ScrolltoSectionButton";

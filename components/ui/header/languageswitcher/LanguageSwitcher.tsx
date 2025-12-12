@@ -2,7 +2,7 @@
 
 //TODO: Check if code works:
 import { redirectedPathname } from "@utils/redirectedPathName";
-import { routing } from "../../../../i18n/routing";
+import { routing } from "@i18n/routing";
 import Image from "next/image";
 // Use <a> instead of <Link> for external domain navigation
 import { usePathname } from "next/navigation";
