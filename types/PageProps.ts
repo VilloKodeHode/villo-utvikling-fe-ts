@@ -46,6 +46,6 @@ export interface ButtonProps {
 export interface RootProps {
   children: React.ReactNode;
   params: Promise<{
-    lang: Locale;
+    lang: string;
   }>;
 }

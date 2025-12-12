@@ -92,7 +92,7 @@ export default async function RootLayout({ children, params }: RootProps) {
             <Header />
             <FloatingUtilsBar />
             <NavBar
-              params={{ lang }}
+              params={{ lang: lang as any }}
               content={dictionary.menu_items}
             />
 
