@@ -1,0 +1,40 @@
+
+> villo-utvikling-fe-ts@0.1.0 build
+> next build
+
+   ▲ Next.js 15.3.1
+   - Environments: .env.local
+
+   Creating an optimized production build ...
+Failed to compile.
+
+./app/[lang]/about/page.tsx
+Module not found: Can't resolve 'get-dictionary'
+
+https://nextjs.org/docs/messages/module-not-found
+
+./app/[lang]/about/sections/SkillsSection.tsx
+Module not found: Can't resolve 'app/(pages)/about/sections/organisms/SkillIcons'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/[lang]/about/page.tsx
+
+./app/[lang]/contact/page.tsx
+Module not found: Can't resolve 'get-dictionary'
+
+https://nextjs.org/docs/messages/module-not-found
+
+./app/[lang]/portfolio/page.tsx
+Module not found: Can't resolve 'get-dictionary'
+
+https://nextjs.org/docs/messages/module-not-found
+
+./app/[lang]/services/[service]/page.tsx
+Module not found: Can't resolve 'get-dictionary'
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+> Build failed because of webpack errors
