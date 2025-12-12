@@ -20,7 +20,17 @@ export const routing = defineRouting({
             locales: ["en"],
           },
           {
+            domain: "www.villoutvikling.com",
+            defaultLocale: "en",
+            locales: ["en"],
+          },
+          {
             domain: "villoutvikling.no",
+            defaultLocale: "no",
+            locales: ["no"],
+          },
+          {
+            domain: "www.villoutvikling.no",
             defaultLocale: "no",
             locales: ["no"],
           },

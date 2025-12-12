@@ -30,7 +30,7 @@ export const FloatingUtilsBar = () => {
     <div
       className={`fixed duration-1000 top-2 z-150 transition-all ${
         showToolBar ? "" : "-translate-x-40"
-      }`}>
+      } ${notTop ? "" : "pointer-events-none"}`}>
       <div
         className={`glass-morphism-tool_bar transition-all group flex items-center justify-between ${
           notTop ? "animate-tools-slide-in" : "animate-tools-slide-out"
