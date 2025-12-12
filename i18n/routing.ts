@@ -2,14 +2,30 @@ import { defineRouting } from "next-intl/routing";
 import { createNavigation } from "next-intl/navigation";
 
 export const routing = defineRouting({
+  // Optional: Hide the default locale prefix (e.g. /om-oss instead of /no/om-oss)
+  localePrefix: 'as-needed',
   // A list of all locales that are supported
   locales: ["en", "no"],
 
   // Used when no locale matches
   defaultLocale: "no",
 
-  // Optional: Hide the default locale prefix (e.g. /om-oss instead of /no/om-oss)
-  // localePrefix: 'as-needed'
+  // Domain-based routing for production
+  domains:
+    process.env.NODE_ENV === "production"
+      ? [
+          {
+            domain: "villoutvikling.com",
+            defaultLocale: "en",
+            locales: ["en"],
+          },
+          {
+            domain: "villoutvikling.no",
+            defaultLocale: "no",
+            locales: ["no"],
+          },
+        ]
+      : undefined,
 });
 
 export const { Link, redirect, usePathname, useRouter } =

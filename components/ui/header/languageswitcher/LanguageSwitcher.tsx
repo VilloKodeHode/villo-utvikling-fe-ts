@@ -7,8 +7,11 @@ import Image from "next/image";
 // Use <a> instead of <Link> for external domain navigation
 import { usePathname } from "next/navigation";
 
+import { useLocale } from "next-intl";
+
 export default function LanguageSwitcher({ className }) {
   const pathname = usePathname();
+  const currentLocale = useLocale();
 
   return (
     <div className={className}>
@@ -17,10 +20,10 @@ export default function LanguageSwitcher({ className }) {
           <li key={locale}>
             <a
               href={redirectedPathname(pathname, locale)}
-              className={pathname.startsWith(`/${locale}`) ? "" : ""}>
+              className={currentLocale === locale ? "" : ""}>
               <Image
                 className={`w-fit h-5 hover:scale-125 transition cursor-pointer ${
-                  pathname.startsWith(`/${locale}`)
+                  currentLocale === locale
                     ? "scale-110 opacity-100 outline-[1px] outline-dark-lavender dark:outline-light-violet"
                     : "opacity-60"
                 }`}

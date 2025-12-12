@@ -29,9 +29,9 @@ const Nebula = dynamic(
 export const TheCosmos = () => {
   const pathname = usePathname();
 
-  const shouldRender = pathname !== "/";
+  // const shouldRender = pathname !== "/";
 
-  if (!shouldRender) return null;
+  // if (!shouldRender) return null;
   return (
     <div className="fixed top-0 left-0 -z-10 w-full h-full pointer-events-none animate-cosmos-appear">
       <Canvas
