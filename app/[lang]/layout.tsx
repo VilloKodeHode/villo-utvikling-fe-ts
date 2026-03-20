@@ -37,10 +37,10 @@ export const metadata: Metadata = {
   authors: [{ name: "Joakim Villo - Villo Utvikling" }],
   robots: "index, follow",
   alternates: {
-    canonical: "https://www.villoutvikling.com/no",
+    canonical: "https://www.villoutvikling.no",
     languages: {
-      no: "https://www.villoutvikling.com/no",
-      en: "https://www.villoutvikling.com/en",
+      no: "https://www.villoutvikling.no",
+      en: "https://www.villoutvikling.com",
     },
   },
   openGraph: {
@@ -85,7 +85,7 @@ export default async function RootLayout({ children, params }: RootProps) {
   return (
     <html lang={lang ? lang : "no"}>
       <body
-        className={`${figtree.className} relative min-h-[100vh] transition-colors duration-1000 bg-light-snow dark:bg-dark-midnight overflow-x-hidden antialiased`}>
+        className={`${figtree.className} relative min-h-screen transition-colors duration-1000 bg-light-snow dark:bg-dark-midnight overflow-x-hidden antialiased`}>
         <NextIntlClientProvider messages={messages}>
           <AppUserProvider>
             <DynamicTheCosmos />
