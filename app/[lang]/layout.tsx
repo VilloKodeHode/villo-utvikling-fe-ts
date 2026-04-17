@@ -83,7 +83,7 @@ export default async function RootLayout({ children, params }: RootProps) {
   const dictionary = messages as any;
 
   return (
-    <html lang={lang ? lang : "no"}>
+    <html lang={lang ? lang : "no"} suppressHydrationWarning>
       <body
         className={`${figtree.className} relative min-h-screen transition-colors duration-1000 bg-light-snow dark:bg-dark-midnight overflow-x-hidden antialiased`}>
         <NextIntlClientProvider messages={messages}>

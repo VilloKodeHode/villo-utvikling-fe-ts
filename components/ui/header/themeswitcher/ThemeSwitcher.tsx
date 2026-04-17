@@ -41,7 +41,7 @@ export const ThemeSwitch = () => {
     <button
       aria-label="Toggle theme"
       type="button"
-      className="relative cursor-pointer hover:scale-105 transition-all active:scale-90 w-[24px] h-[24px] grid-flow-col"
+      className="relative cursor-pointer hover:scale-105 transition-all active:scale-90 w-6 h-6 grid-flow-col"
       onClick={toggleTheme}>
       <LightModeIcon
         className={` 
