@@ -9,8 +9,11 @@ import {
 import { noto_emoji } from "../../layout";
 import type { DynamicPageProps } from "@app-types/PageProps";
 
+import { setRequestLocale } from "next-intl/server";
+
 export default async function Page({ params }: DynamicPageProps) {
   const { service, lang } = await params;
+  setRequestLocale(lang as any);
 
   const dictionary = await getDictionary(lang);
   const content = dictionary.services[service];

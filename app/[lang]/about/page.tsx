@@ -1,4 +1,5 @@
 import { getDictionary } from "@lib/get-dictionary";
+import { setRequestLocale } from "next-intl/server";
 import {
   AltIntroSection,
   TextAndImageSection,
@@ -10,6 +11,7 @@ import type { PageProps } from "@app-types/PageProps";
 
 export default async function Home({ params }: PageProps) {
   const { lang } = await params;
+  setRequestLocale(lang as any);
   const dictionary = await getDictionary(lang);
   return (
     <>

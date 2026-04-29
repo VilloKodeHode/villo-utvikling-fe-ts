@@ -1,4 +1,5 @@
 import { getDictionary } from "@lib/get-dictionary";
+import { setRequestLocale } from "next-intl/server";
 
 import { EmploymentSection } from "./sections/EmploymentSection";
 import { ClientsSection } from "./sections/ClientSection";
@@ -8,6 +9,7 @@ import { TestemonialsSection } from "./sections/TestemonialsSection";
 
 export default async function Home({ params }: PageProps) {
   const { lang } = await params;
+  setRequestLocale(lang as any);
   const dictionary = await getDictionary(lang);
   const content = dictionary.portfolio;
   //TODO fix page layout here

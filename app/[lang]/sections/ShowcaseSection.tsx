@@ -29,11 +29,10 @@ export const ShowcaseSection = ({ content }) => {
         id="showcase-section">
         <div className="absolute opacity-5 ease-in-out w-full h-full -z-10 ">
           <Image
-            src={`${
-              theme === "light"
+            src={`${theme === "light"
                 ? "/images/logo/logo-lightmode.svg"
                 : "/images/logo/logo-darkmode.svg"
-            }`}
+              }`}
             className="animate-rotate-left-logo md:w-screen"
             alt=""
             // width={2000}
@@ -70,13 +69,11 @@ export const ShowcaseSection = ({ content }) => {
                 alt={image.alt}
                 width={700}
                 height={700}
-                className={`${
-                  image.fileType === "svg"
+                className={`${image.fileType === "svg"
                     ? "object-contain bg-dark-twilight p-8"
                     : "object-cover object-left-top"
-                } absolute duration-500 transition-all rounded-[4px] w-full h-full ${
-                  index === activeImageIndex ? "opacity-100" : "opacity-0"
-                } `}
+                  } absolute duration-500 transition-all rounded-[4px] w-full h-full ${index === activeImageIndex ? "opacity-100" : "opacity-0"
+                  } `}
               />
             ))}
           </div>
@@ -103,15 +100,14 @@ export const Showcase = ({ content, setActiveImage, activeImage, index }) => {
             dark:text-dark-lavender`}>
             <span
               className={`group-hover:text-light-violet dark:group-hover:text-dark-lavender 
-                group-hover:opacity-100 transition-all duration-500 opacity-60 h1hidden ${
-                  activeImage === index
-                    ? "text-dark-lavender"
-                    : "text-light-fog dark:text-dark-shadow"
+                group-hover:opacity-100 transition-all duration-500 opacity-60 h1hidden ${activeImage === index
+                  ? "text-dark-lavender"
+                  : "text-light-fog dark:text-dark-shadow"
                 }`}>
               <br />
               Web
             </span>
-            {content[index].type}
+            {content[index].title}
             {/* <div className={`${ activeImage === index ? "w-[106.5px]" : "w-0"}  h-0.5 transition-all bg-light-violet dark:bg-dark-lavender`} /> */}
           </span>
         </ShowCaseHeaderText>

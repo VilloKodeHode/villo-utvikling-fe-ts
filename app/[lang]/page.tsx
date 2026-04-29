@@ -2,6 +2,7 @@ import React, { Suspense } from "react";
 import { getDictionary } from "@lib/get-dictionary";
 import type { PageProps } from "@app-types/PageProps";
 import { HeroSection } from "./sections/HeroSection";
+import { setRequestLocale } from "next-intl/server";
 
 const ShowcaseSection = React.lazy(() =>
   import("./sections/ShowcaseSection").then((module) => ({
@@ -16,6 +17,7 @@ const ServicePageContent = React.lazy(() =>
 
 export default async function Home({ params }: PageProps) {
   const { lang } = await params;
+  setRequestLocale(lang as any);
   const dictionary = await getDictionary(lang);
 
   return (

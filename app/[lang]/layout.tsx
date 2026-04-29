@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Figtree, Noto_Color_Emoji } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
 import "../globals.css";
 import CookiePopup from "@components/ui/cookies/CookiePopup";
 import { AppUserProvider } from "@contexts/UserContext";
@@ -75,8 +75,13 @@ export const metadata: Metadata = {
   generator: "Next.js 16",
 };
 
+export function generateStaticParams() {
+  return [{ lang: "en" }, { lang: "no" }];
+}
+
 export default async function RootLayout({ children, params }: RootProps) {
   const { lang } = await params;
+  setRequestLocale(lang as any);
   const messages = await getMessages();
 
   // Cast messages to any for legacy component compatibility
