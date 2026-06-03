@@ -6,7 +6,7 @@ import {
   ThemedPLarge,
 } from "@components/atoms/ThemedText";
 import type { ComponentProps } from "@app-types/PageProps";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export const TextAndImageSection = ({ content }: ComponentProps) => {
   //TODO Make wider

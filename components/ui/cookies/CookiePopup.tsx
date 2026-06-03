@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useState } from "react";
 import { deleteCookie, setCookie } from "cookies-next";
 import { ThemedH5, ThemedSmall } from "@components/atoms/ThemedText";

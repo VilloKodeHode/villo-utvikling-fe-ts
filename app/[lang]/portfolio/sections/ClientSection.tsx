@@ -1,5 +1,5 @@
 import { CTOThemedP, ThemedH2 } from "@components/atoms/ThemedText";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export const ClientsSection = ({ content }) => {
   return (

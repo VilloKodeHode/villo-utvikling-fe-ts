@@ -104,6 +104,8 @@ const THREESpace = () => {
   useColors(particles, theme);
 
   return (
+    // <div/>
+    // </div>
     <div className="fixed top-0 -z-20 transition-all ">
       <canvas
         ref={canvasRef}
@@ -114,8 +116,6 @@ const THREESpace = () => {
         }`}
       />
     </div>
-    // <div/>
-    // </div>
   );
 };
 

@@ -4,7 +4,7 @@ import {
   ThemedH2,
   ThemedP,
 } from "@components/atoms/ThemedText";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 
 export const EmploymentSection = ({ content }) => {

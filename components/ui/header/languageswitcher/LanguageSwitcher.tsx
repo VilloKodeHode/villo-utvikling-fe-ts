@@ -3,7 +3,7 @@
 //TODO: Check if code works:
 import { redirectedPathname } from "@utils/redirectedPathName";
 import { routing } from "@i18n/routing";
-import Image from "next/image";
+import Image from "next/legacy/image";
 // Use <a> instead of <Link> for external domain navigation
 import { usePathname } from "next/navigation";
 

@@ -1,6 +1,6 @@
 //Component for displaying project layout
 
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import { ExternalCTA } from "@components/atoms/Buttons";
 import { ThemedH5, ThemedP } from "@components/atoms/ThemedText";
