@@ -422,6 +422,14 @@
           "href": "https://www.kvstrefelling.no/",
           "completed": true,
           "projectInfo": "Completed"
+        },
+        {
+          "name": "Bavakt",
+          "jobDone": "New company homepage for Bavakt. Made with next.js and Sanity.io as headless CMS",
+          "imageUrl": "/images/companies/bavakt-logo_black-4.svg",
+          "href": "https://www.bavakt.no/",
+          "completed": false,
+          "projectInfo": "Last phase of the project"
         }
       ]
     },

@@ -417,6 +417,14 @@
           "href": "https://www.kvstrefelling.no/",
           "completed": true,
           "projectInfo": "Fullført"
+        },
+        {
+          "name": "Bavakt",
+          "jobDone": "Nytt firma-nettsted for Bavakt. Laget med next.js og Sanity.io som headless CMS",
+          "imageUrl": "/images/companies/bavakt-logo_black-4.svg",
+          "href": "https://www.bavakt.no/",
+          "completed": false,
+          "projectInfo": "Siste fase av prosjektet"
         }
       ]
     },
