@@ -1,5 +1,5 @@
 import { ThemedH2, ThemedH5, ThemedP } from "@components/atoms/ThemedText";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 export const TestemonialsSection = ({ content }) => {
   return (
