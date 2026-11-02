@@ -61,6 +61,7 @@ export const ThemeSwitch = () => {
            }
           pointer-events-none w-8 h-auto absolute top-0`}
       />
+
       <DarkModeIcon
         className={` 
           ${
